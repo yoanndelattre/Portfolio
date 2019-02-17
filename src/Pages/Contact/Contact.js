@@ -4,10 +4,9 @@ import Navbar from '../../Navbar/Navbar'
 
 class Contact extends Component {
     render () {
-        console.log(this.props.location.pathname)
         return (
             <div>
-                {Navbar}
+                <Navbar/>
                 <div className="main">
                     <h1>Contact</h1>
                 </div>

@@ -6,7 +6,7 @@ class Projects extends Component {
     render () {
         return (
             <div>
-                {Navbar}
+                <Navbar/>
                 <div className="main">
                     <h1>Projects</h1>
                 </div>
