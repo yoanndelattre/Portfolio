@@ -4,6 +4,7 @@ import Navbar from '../../Navbar/Navbar'
 
 class Contact extends Component {
     render () {
+        console.log(this.props.location.pathname)
         return (
             <div>
                 {Navbar}

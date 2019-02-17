@@ -12,7 +12,7 @@ export default function MainRouter () {
         <Router>
             <div>
                 <Route exact path="/" component={Home}/>
-                <Route exact path="/Projects" component={Projects}/>
+                <Route exact path="/Projets" component={Projects}/>
                 <Route exact path="/Contact" component={Contact} />
             </div>
         </Router>
