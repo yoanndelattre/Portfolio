@@ -46,16 +46,18 @@
 }
 
 .form > input{
-    float: right;
     padding:8px 12px;
-    margin:8px 0 0;
     font-family:'Montserrat',sans-serif;
+    font-size: 15px;
     border:2px solid rgb(77, 92, 102);
     background:0;
     color:#5a5a6e;
     cursor:pointer;
     transition:all .3s;
-    border-radius: 5px
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
 }
 .form > input:hover{
     background: rgb(77, 92, 102);
