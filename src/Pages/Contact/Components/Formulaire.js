@@ -23,7 +23,8 @@ export default class Formulaire extends Component {
     render () {
         return (
             <form 
-                onSubmit={this.props.handleSubmit} 
+                onSubmit={this.props.handleSubmit}
+                style={{ border: this.props.borderForm }} 
                 className="form" 
                 onKeyPress={event => {
                     if (event.which === 13 /* Enter */) {
