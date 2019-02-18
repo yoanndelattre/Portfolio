@@ -25,7 +25,9 @@ class Contact extends Component {
     }
 
     async handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault(
+            this.setState({ name: '', email: '', message: '' })
+        )
 
         const { name, email, message } = this.state
 
@@ -40,7 +42,7 @@ class Contact extends Component {
         return (
             <div>
                 <Navbar/>
-                <Formulaire handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+                <Formulaire name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
             </div>
         )
     }

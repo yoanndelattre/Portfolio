@@ -31,9 +31,9 @@ export default class Formulaire extends Component {
                     }
                 }}>
                 <h2>CONTACTEZ-MOI</h2>
-                <p type="Nom:"><input required name="name" onChange={this.props.handleChange} ></input></p>
-                <p type="Email:"><input required name="email" onChange={this.props.handleChange} ></input></p>
-                <p type="Message:"><input required name="message" onChange={this.props.handleChange} ></input></p>
+                <p type="Nom:"><input value={this.props.name} required name="name" onChange={this.props.handleChange} ></input></p>
+                <p type="Email:"><input value={this.props.email} required name="email" onChange={this.props.handleChange} ></input></p>
+                <p type="Message:"><input value={this.props.message} required name="message" onChange={this.props.handleChange} ></input></p>
                 <input style={{ display: this.state.displaySubmit }} type="submit" value="Envoyer" />
                 <ReCAPTCHA style={{ display: this.state.displayCapcha }} onChange={this.onChange} sitekey="6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG"/>
             </form>
