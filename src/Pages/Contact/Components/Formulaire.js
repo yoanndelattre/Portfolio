@@ -4,11 +4,11 @@ import React from 'react'
 import './Formulaire.css'
 
 export const Formulaire = (  
-    <form className="form">
+    <form className="form" method="POST">
         <h2>CONTACTEZ-MOI</h2>
         <p type="Nom:"><input required></input></p>
         <p type="Email:"><input required></input></p>
         <p type="Message:"><input required></input></p>
-        <button>Envoyer</button>
+        <input type="submit" value="Envoyer" />
     </form>
 )
