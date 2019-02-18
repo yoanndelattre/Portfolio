@@ -2,7 +2,9 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://mailsend-portfolio.herokuapp.com",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-router-dom": "^4.3.1",
