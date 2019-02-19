@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 import Navbar from '../../Navbar/Navbar'
+import Card from './Components/Card'
+
+//css
+import './Projects.css'
 
 class Projects extends Component {
     render () {
@@ -9,6 +13,7 @@ class Projects extends Component {
                 <Navbar/>
                 <div className="main">
                     <h1>Projects</h1>
+                    
                 </div>
             </div>
         )
