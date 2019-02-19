@@ -26,7 +26,7 @@ class Contact extends Component {
 
     async handleSubmit(e) {
         e.preventDefault(
-            this.setState({ name: '', email: '', message: '' })
+            this.setState({ name: '', email: '', message: '' }),
         )
 
         const { name, email, message } = this.state
@@ -36,6 +36,7 @@ class Contact extends Component {
             email,
             message
         })
+        console.log(form)
     }
 
     render () {

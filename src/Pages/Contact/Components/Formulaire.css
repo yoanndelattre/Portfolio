@@ -1,6 +1,5 @@
 .form{
-    width:370px;
-    height:430px;
+    outline: none;
     background:#e6e6e6;
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
@@ -13,6 +12,7 @@
 }
 
 .form > h2{
+    outline: none;
     margin:10px 0;
     padding-bottom:10px;
     width:203px;
@@ -21,6 +21,7 @@
 }
 
 .form > p > input{
+    outline: none;
     width:100%;
     padding:10px;
     box-sizing:border-box;
@@ -34,10 +35,12 @@
 }
 
 .form > p > input:focus{
+    outline: none;
     border-bottom:2px solid rgb(77, 92, 102)
 }
 
 .form > p:before{
+    outline: none;
     content:attr(type);
     display:block;
     margin:28px 0 0;
@@ -46,10 +49,8 @@
 }
 
 .form > input{
-    padding:8px 12px;
+    outline: none;
     font-family:'Montserrat',sans-serif;
-    font-size: 15px;
-    border:2px solid rgb(77, 92, 102);
     background:0;
     color:#5a5a6e;
     cursor:pointer;
@@ -60,6 +61,7 @@
     text-align: center;
 }
 .form > input:hover{
+    outline: none;
     background: rgb(77, 92, 102);
     color:#fff
 }
