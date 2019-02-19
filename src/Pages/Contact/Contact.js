@@ -37,6 +37,7 @@ class Contact extends Component {
             email,
             message
         })
+        console.log(form)
     }
 
     render () {
