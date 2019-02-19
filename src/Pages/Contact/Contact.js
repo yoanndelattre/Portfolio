@@ -13,8 +13,7 @@ class Contact extends Component {
         this.state = {
             name: '',
             email: '',
-            message: '',
-            borderForm: 'none'
+            message: ''
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -27,7 +26,7 @@ class Contact extends Component {
 
     async handleSubmit(e) {
         e.preventDefault(
-            this.setState({ name: '', email: '', message: '', borderForm: '3px solid green' }),
+            this.setState({ name: '', email: '', message: '' }),
         )
 
         const { name, email, message } = this.state
@@ -44,7 +43,7 @@ class Contact extends Component {
         return (
             <div>
                 <Navbar/>
-                <Formulaire borderForm={this.state.borderForm} name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+                <Formulaire name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
             </div>
         )
     }
