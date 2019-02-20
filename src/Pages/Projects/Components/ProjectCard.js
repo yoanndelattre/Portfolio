@@ -5,7 +5,7 @@ import { FlippingCard, FlippingCardBack, FlippingCardFront, UserCard } from 'rea
 import './ProjectCard.css'
 
 export const ProjectCard1 = (
-    <FlippingCard>
+    <FlippingCard className="ProjectCard1" >
 		<FlippingCardFront>
   		    <UserCard name="Project1" cardClass="FrontCard FrontProjectCard1">
 				ProjectCard1
@@ -18,7 +18,7 @@ export const ProjectCard1 = (
 )
 
 export const ProjectCard2 = (
-    <FlippingCard>
+    <FlippingCard className="ProjectCard2" >
 		<FlippingCardFront>
   		    <UserCard name="Project2" cardClass="FrontCard FrontProjectCard2">
 				ProjectCard2
@@ -31,7 +31,7 @@ export const ProjectCard2 = (
 )
 
 export const ProjectCard3 = (
-    <FlippingCard>
+    <FlippingCard className="ProjectCard3" >
 		<FlippingCardFront>
   		    <UserCard name="Project3" cardClass="FrontCard FrontProjectCard3">
 				ProjectCard3
@@ -44,7 +44,7 @@ export const ProjectCard3 = (
 )
 
 export const ProjectCard4 = (
-    <FlippingCard>
+    <FlippingCard className="ProjectCard4" >
 		<FlippingCardFront>
   		    <UserCard name="Project4" cardClass="FrontCard FrontProjectCard4">
 				ProjectCard4
@@ -57,7 +57,7 @@ export const ProjectCard4 = (
 )
 
 export const ProjectCard5 = (
-    <FlippingCard>
+    <FlippingCard className="ProjectCard5" >
 		<FlippingCardFront>
   		    <UserCard name="Project5" cardClass="FrontCard FrontProjectCard5">
 				ProjectCard5
