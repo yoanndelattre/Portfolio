@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // Captcha
 import ReCAPTCHA from "react-google-recaptcha";
 
-//css
+// css
 import './Formulaire.css'
 
 export default class Formulaire extends Component {

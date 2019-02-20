@@ -1,21 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
+// Components
 import Navbar from '../../Navbar/Navbar'
-import Card from './Components/Card'
+import { ProjectCard1, ProjectCard2, ProjectCard3, ProjectCard4, ProjectCard5 } from './Components/ProjectCard'
 
-//css
+// css
 import './Projects.css'
 
 class Projects extends Component {
     render () {
         return (
-            <div>
+            <Fragment>
                 <Navbar/>
-                <div className="main">
-                    <h1>Projects</h1>
-                    
-                </div>
-            </div>
+                    <h1 className="title">Mes Projects</h1>
+                    <div className="cards">
+                        {ProjectCard1}
+                        {ProjectCard2}
+                        {ProjectCard3}
+                        {ProjectCard4}
+                        {ProjectCard5}
+                    </div>
+            </Fragment>
         )
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-//css
+// css
 import './NotFound.css'
 
 const NotFound = () => (
