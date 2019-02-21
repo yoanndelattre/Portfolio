@@ -11,9 +11,9 @@ class LinkGithubProject extends Component {
         return (
             <div className="repo-github-link">
 			    <a href={this.props.LinkGithub} >
-					<button type="button" class="repo-github-link-button">
+					<button type="button" className="repo-github-link-button">
 						<img className="repo-github-link-button_ico" src={github_logo} alt="github logo" />
-						<span class="repo-github-link-button_text">Dépôt GitHub du Projet</span>
+						<span className="repo-github-link-button_text">Dépôt GitHub du Projet</span>
 					</button>
 				</a>
 			</div>

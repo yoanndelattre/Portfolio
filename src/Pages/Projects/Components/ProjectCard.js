@@ -23,6 +23,10 @@ export const ProjectCard1 = (
       <FlippingCardBack>
 				<div className="BackCard">
 					<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Portfolio"} />
+					<div className="details">
+						<h3 className="title-details">Détails:</h3>
+						<p className="text-details">Ce site est hébergé sur un NAS Synology Ds216j avec le package Web Station à l'aide d'Apache comme serveur HTTP. Après la demande d’approbation de l’administrateur, les modifications du dépôt GitHub sont automatiquement déployées sur le NAS.</p>
+					</div>
 				</div>
   	  </FlippingCardBack>
     </FlippingCard>
