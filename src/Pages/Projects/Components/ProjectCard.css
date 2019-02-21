@@ -1,10 +1,15 @@
 .FrontCard {
-    background: yellow;
+    background: rgb(216, 216, 216);
 }
 
 .BackCard {
     height: 100%;
     width: 100%;
-    background: red;
+    background: linear-gradient(rgb(180, 180, 180), rgb(78, 78, 78));
     text-align: center;
+}
+
+.PositionName {
+    font-size: 12px;
+    color: rgb(29, 29, 29);
 }
