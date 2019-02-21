@@ -1,10 +1,38 @@
 .FrontCard {
-    background: yellow;
+    background: rgb(194, 194, 194);
 }
 
 .BackCard {
     height: 100%;
     width: 100%;
-    background: red;
+    background: linear-gradient(rgb(180, 180, 180), rgb(78, 78, 78));
     text-align: center;
+}
+
+.PositionName {
+    font-size: 13px;
+    color: rgb(29, 29, 29);
+}
+
+.details {
+    margin: 22px 13px 0 13px;
+    padding: 1px 12px 3px 12px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+}
+
+.title-details {
+    text-align: start;
+    margin-top: 22px;
+    margin-block-start: 5px;
+    margin-block-end: 4px;
+}
+
+.text-details {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    margin: 0 7px;
+    margin-block-start: 5px;
+    margin-block-end: 6px;
+    font-size: 15px;
 }

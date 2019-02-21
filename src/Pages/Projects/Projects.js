@@ -12,7 +12,7 @@ class Projects extends Component {
         return (
             <Fragment>
                 <Navbar/>
-                    <h1 className="title">Mes Projects</h1>
+                    <h1 className="title">Mes Projets</h1>
                     <div className="cards">
                         {ProjectCard1}
                         {ProjectCard2}
