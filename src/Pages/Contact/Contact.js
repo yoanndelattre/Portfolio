@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 
+// Components
 import Navbar from '../../Navbar/Navbar'
 import Formulaire from './Components/Formulaire'
 
@@ -41,10 +42,10 @@ class Contact extends Component {
 
     render () {
         return (
-            <div>
+            <Fragment>
                 <Navbar/>
                 <Formulaire name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-            </div>
+            </Fragment>
         )
     }
 }

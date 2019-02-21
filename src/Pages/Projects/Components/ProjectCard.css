@@ -1,0 +1,10 @@
+.FrontCard {
+    background: yellow;
+}
+
+.BackCard {
+    height: 100%;
+    width: 100%;
+    background: red;
+    text-align: center;
+}
