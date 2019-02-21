@@ -1,3 +1,9 @@
 .title {
     text-align: center;
 }
+
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
