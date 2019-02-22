@@ -15,16 +15,16 @@
 
 #### For ```"type"``` :
 
-* *```dev```* : For the general development of the application (this branch is created rather at the beginning of the project or for the development of the next version of the application) .
+* *```dev```* : For the general development of the application (this branch is created rather at the beginning of the project or for the development of the next version of the application).
 
 * *```feature```* : For the development of a new feature.
 
-* *```hotfix```* : For quick fixes (one or two commit) .
+* *```hotfix```* : For quick fixes (one or two commit).
 
 
 #### For ```"target"``` :
 
-* Name of the new feature or bug name resolved (```hotfix/FailLogin```) .
+* Name of the new feature or bug name resolved (```hotfix/FailLogin```).
 
 
 
@@ -45,7 +45,7 @@
 
 #### For ```"type"``` : 
 
-* *```build```* : Modification of the build system (for example modification of the *package.json* file) .
+* *```build```* : Modification of the build system (for example modification of the *package.json* file).
 
 * *```docs```* : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
 
