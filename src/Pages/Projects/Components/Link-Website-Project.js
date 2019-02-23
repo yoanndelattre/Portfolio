@@ -13,7 +13,7 @@ class LinkWebsiteProject extends Component {
 			    <a rel="noopener noreferrer" target="_blank" href={this.props.LinkWebsite} >
 					<button type="button" className="website-link-button">
 						<img className="website-link-button_ico" src={web_logo} alt="website logo" />
-						<span className="website-link-button_text">Visualizer Docker Swarm</span>
+						<span className="website-link-button_text">{this.props.TitleWebsite}</span>
 					</button>
 				</a>
 			</div>
