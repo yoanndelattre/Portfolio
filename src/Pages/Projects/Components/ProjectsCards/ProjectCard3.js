@@ -24,7 +24,11 @@ export const ProjectCard3 = (
       <FlippingCardBack>
 				<div className="BackCard FrontCard BackProjectCard3">
 					<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Markdown-Editor"} />
-					<LinkWebsiteProject LinkWebsite={"https://visualizer-docker.yoanndelattre.com"}/>
+					<LinkWebsiteProject TitleWebsite={"Markdown Editor"} LinkWebsite={"https://markdown.yoanndelattre.com"}/>
+					<div className="details">
+						<h3 className="title-details">Détails:</h3>
+						<p className="text-details">Site web traducteur instantané de markdown, le texte tapé est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".</p>
+					</div>
 				</div>
   	  </FlippingCardBack>
     </FlippingCard>
