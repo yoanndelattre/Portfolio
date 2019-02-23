@@ -18,7 +18,7 @@ export const ProjectCard4 = (
 				header={capture_chatbox}
 				name="Chatbox" 
 				positionName={<p className="PositionName">Site web permettant à différents utilisateurs de communiquer.</p>} 
-				cardClass="FrontCard FrontProjectCard3" 
+				cardClass="FrontCard FrontProjectCard4" 
 			/>
   	  	</FlippingCardFront>
       	<FlippingCardBack>

@@ -10,7 +10,7 @@
 }
 
 .PositionName {
-    font-size: 13px;
+    font-size: 14px;
     color: rgb(29, 29, 29);
 }
 
@@ -35,4 +35,8 @@
     margin-block-start: 5px;
     margin-block-end: 6px;
     font-size: 15px;
+}
+
+.PositionNameProjectCard5 {
+    font-size: 13px; 
 }
