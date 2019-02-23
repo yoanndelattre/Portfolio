@@ -70,8 +70,6 @@
 
 * ```SystemLoading``` *(loading between pages).*
 
-* ```Analytics``` *(Google Analytics).*
-
 
 #### For ```"subject"``` :
 
