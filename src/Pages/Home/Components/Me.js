@@ -26,15 +26,17 @@ class Me extends Component {
                     </div>
                     <div className="social-me_card">
                         <h3>Réseaux Sociaux</h3>
-                        <a className="twitter-btn" target="blank" href="https://twitter.com/yoanndelattre_">
-                            <img width="64px" src={twitter_btn} alt="twitter button" />
-                        </a>
-                        <a className="linkedin-btn" target="blank" href="https://www.linkedin.com/in/yoann-delattre">
-                            <img width="64px" src={linkedin_btn} alt="linkedin button" />
-                        </a>
-                        <a className="github-btn" target="blank" href="https://github.com/yoanndelattre">
-                            <img width="64px" src={github_btn} alt="github button" />
-                        </a>
+                        <div>
+                            <a className="twitter-btn" target="blank" href="https://twitter.com/yoanndelattre_">
+                                <img width="30px" src={twitter_btn} alt="twitter button" />
+                            </a>
+                            <a className="linkedin-btn" target="blank" href="https://www.linkedin.com/in/yoann-delattre">
+                                <img width="30px" src={linkedin_btn} alt="linkedin button" />
+                            </a>
+                            <a className="github-btn" target="blank" href="https://github.com/yoanndelattre">
+                                <img width="30px" src={github_btn} alt="github button" />
+                            </a>
+                        </div>
                     </div>
                     <div className="devtools-me_card">
                         <h2>Mes outils de travail</h2>

@@ -1,35 +1,64 @@
+/* Main Card */ 
 .me_card {
-    padding: 12px;
-    background: red;
+    padding: 20px;
+    background: rgb(107, 107, 107);
     display: table;
     margin: 12px auto;
 }
 
+/* About Card */ 
 .about-me_card {
-    background: green;
-    padding: 12px;
-    margin: 12px;
+    background: rgb(63, 63, 63);
+    padding: 17px;
+    margin: 0 0 12px 0;
     display: inline-block;
 }
 
 .about-me_card > img {
-    width: 250px;
+    width: 190px;
     float: left;
+    border-radius: 8px;
 }
 
 .about-me_card > div {
     float: right;
-    margin-left: 12px;
+    margin-left: 20px;
+    font-size: 17px;
+    margin-top: 30px;
+    color: rgb(214, 214, 214)
 }
 
+/* Social Card */ 
 .social-me_card {
-    background: purple;
+    background: rgb(63, 63, 63);
     float: right;
-    margin: 12px;
+    margin: 0 12px;
     padding: 12px;
 }
 
+.social-me_card > h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.social-me_card > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 12px;
+}
+
+.social-me_card > div > a {
+    transition: all .1s ease-in-out;
+}
+
+.social-me_card > div > a:hover {
+    transform: scale(1.2);
+}
+
+/* DevTools Card */ 
 .devtools-me_card {
-    background: yellow;
+    background: rgb(63, 63, 63);
     padding: 12px;
+    color: rgb(214, 214, 214);
 }
