@@ -41,26 +41,26 @@ class Me extends Component {
                     <div className="devtools-me_card">
                         <h2>Mes outils de travail</h2>
                         <h3>Logiciels :</h3>
-                        <p>Visual Code Studio</p>
-                        <p>Photoshop CC 2019</p>
-                        <p>Git</p>
-                        <p>Chocolatey</p>
-                        <p>Docker Toolbox</p>
-                        <p>Kitematic</p>
-                        <p>Logmein Hamachi</p>
-                        <p>NodeJs</p>
-                        <p>VirtualBox</p>
-                        <p>VmWare</p>
-                        <p>ungit</p>
-                        <p>create-react-app</p>
+                        <p><a href="https://code.visualstudio.com" target="blank">Visual Code Studio</a></p>
+                        <p><a href="https://www.adobe.com/fr/products/photoshop.html" target="blank">Photoshop CC 2019</a></p>
+                        <p><a href="https://git-scm.com" target="blank">Git</a></p>
+                        <p><a href="https://chocolatey.org" target="blank">Chocolatey</a></p>
+                        <p><a href="https://github.com/docker/toolbox/releases" target="blank">Docker Toolbox</a></p>
+                        <p><a href="https://kitematic.com" target="blank">Kitematic</a></p>
+                        <p><a href="https://www.vpn.net" target="blank">Logmein Hamachi</a></p>
+                        <p><a href="https://nodejs.org" target="blank">NodeJs</a></p>
+                        <p><a href="https://www.virtualbox.org" target="blank">VirtualBox</a></p>
+                        <p><a href="https://www.vmware.com" target="blank">VmWare</a></p>
+                        <p><a href="https://github.com/FredrikNoren/ungit" target="blank">ungit</a></p>
+                        <p><a href="https://facebook.github.io/create-react-app" target="blank">create-react-app</a></p>
                         <h3>Site Web :</h3>
-                        <p>Todoist</p>
-                        <p>Trello</p>
-                        <p>Zapier</p>
-                        <p>Heroku</p>
-                        <p>Netlify</p>
-                        <p>Codeanywhere</p>
-                        <p>Google Domains</p>
+                        <p><a href="https://todoist.com" target="blank">Todoist</a></p>
+                        <p><a href="https://trello.com" target="blank">Trello</a></p>
+                        <p><a href="https://zapier.com" target="blank">Zapier</a></p>
+                        <p><a href="https://heroku.com" target="blank">Heroku</a></p>
+                        <p><a href="https://netlify.com" target="blank">Netlify</a></p>
+                        <p><a href="https://codeanywhere.com" target="blank">Codeanywhere</a></p>
+                        <p><a href="https://domains.google.com" target="blank">Google Domains</a></p>
                     </div>
                 </div>
             </Fragment>
