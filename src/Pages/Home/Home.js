@@ -1,16 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
+// Components
 import Navbar from '../../Navbar/Navbar'
+import Me from './Components/Me'
+
+// css
+import './Home.css'
 
 class Home extends Component {
     render () {
         return (
-            <div>
+            <Fragment>
                 <Navbar/>
-                <div className="main">
-                    <h1>Home</h1>
+                <div className="home_card">
+                    <Me/>
                 </div>
-            </div>
+            </Fragment>
         )
     }
 }

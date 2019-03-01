@@ -1,0 +1,35 @@
+.me_card {
+    padding: 12px;
+    background: red;
+    display: table;
+    margin: 12px auto;
+}
+
+.about-me_card {
+    background: green;
+    padding: 12px;
+    margin: 12px;
+    display: inline-block;
+}
+
+.about-me_card > img {
+    width: 250px;
+    float: left;
+}
+
+.about-me_card > div {
+    float: right;
+    margin-left: 12px;
+}
+
+.social-me_card {
+    background: purple;
+    float: right;
+    margin: 12px;
+    padding: 12px;
+}
+
+.devtools-me_card {
+    background: yellow;
+    padding: 12px;
+}
