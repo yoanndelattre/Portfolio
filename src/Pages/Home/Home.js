@@ -12,6 +12,7 @@ class Home extends Component {
         return (
             <Fragment>
                 <Navbar/>
+                <span className="version">v1.0</span>
                 <div className="home_card">
                     <Me/>
                 </div>

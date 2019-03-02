@@ -7,6 +7,7 @@ import Photo_Profil from '../img/Photo-Profil.jpg'
 import twitter_btn from './logo/twitter.png'
 import linkedin_btn from './logo/linkedin.png'
 import github_btn from './logo/github.png'
+import vscode_logo from './logo/devtools/VSCode.png'
 
 // css
 import './Me.css'
@@ -41,7 +42,7 @@ class Me extends Component {
                     <div className="devtools-me_card">
                         <h2>Mes outils de travail</h2>
                         <h3>Logiciels :</h3>
-                        <p><a href="https://code.visualstudio.com" target="blank">Visual Code Studio</a></p>
+                        <p><a href="https://code.visualstudio.com" target="blank">Visual Code Studio</a><img src={vscode_logo} alt="vscode logo" /></p>
                         <p><a href="https://www.adobe.com/fr/products/photoshop.html" target="blank">Photoshop CC 2019</a></p>
                         <p><a href="https://git-scm.com" target="blank">Git</a></p>
                         <p><a href="https://chocolatey.org" target="blank">Chocolatey</a></p>

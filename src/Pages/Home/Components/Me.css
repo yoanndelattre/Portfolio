@@ -74,15 +74,21 @@
 .devtools-me_card > p > a {
     color: rgb(214, 214, 214);
     text-decoration: none;
-    margin-left: 4px;
+    margin: 4px;
     transition: all .1s ease-in-out;
+}
+
+.devtools-me_card > p > img {
+    width: 23px;
+    margin-left: 12px;
+    margin-bottom: -5px;
 }
 
 .devtools-me_card > p > a:hover {
     border: 1px solid rgb(164, 165, 159);
     border-radius: 12px;
     padding: 4px;
-    margin-left: 0;
+    margin: 0;
     background: rgb(153, 153, 153);
     color: black;
     transform: scale(1.2);
