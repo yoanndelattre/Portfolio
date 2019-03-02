@@ -45,16 +45,16 @@ class Me extends Component {
                         </div>
                     </div>
                     <div className="social-me_card">
-                        <h3>Réseaux Sociaux</h3>
+                        <h2>Réseaux Sociaux</h2>
                         <div>
                             <a className="twitter-btn" target="blank" href="https://twitter.com/yoanndelattre_">
-                                <img width="30px" src={twitter_btn} alt="twitter button" />
+                                <img width="27px" src={twitter_btn} alt="twitter logo" />
                             </a>
                             <a className="linkedin-btn" target="blank" href="https://www.linkedin.com/in/yoann-delattre">
-                                <img width="30px" src={linkedin_btn} alt="linkedin button" />
+                                <img width="26px" src={linkedin_btn} alt="linkedin logo" />
                             </a>
                             <a className="github-btn" target="blank" href="https://github.com/yoanndelattre">
-                                <img width="30px" src={github_btn} alt="github button" />
+                                <img width="26px" src={github_btn} alt="github logo" />
                             </a>
                         </div>
                     </div>
@@ -73,6 +73,7 @@ class Me extends Component {
                         <p><a href="https://www.vmware.com" target="blank">VmWare</a><img className="logo" src={vmware_logo} alt="vmware logo"/></p>
                         <p><a href="https://github.com/FredrikNoren/ungit" target="blank">ungit</a><img className="logo" src={ungit_logo} alt="ungit logo"/></p>
                         <p><a href="https://facebook.github.io/create-react-app" target="blank">create-react-app</a><img className="logo" src={react_logo} alt="react logo"/></p>
+                        <hr/>
                         <h3>Site Web :</h3>
                         <p><a href="https://todoist.com" target="blank">Todoist</a><img className="logo" src={todoist_logo} alt="todoist logo"/></p>
                         <p><a href="https://trello.com" target="blank">Trello</a><img className="logo" src={trello_logo} alt="trello logo"/></p>

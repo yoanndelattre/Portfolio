@@ -3,29 +3,31 @@
     padding: 20px;
     background: rgb(107, 107, 107);
     display: table;
-    margin: 12px auto;
+    margin: 22px auto;
 }
 
 /* About Card */ 
 .about-me_card {
     background: rgb(63, 63, 63);
     padding: 17px;
-    margin: 0 0 12px 0;
+    margin-bottom: 12px;
     display: inline-block;
     border-radius: 8px;
 }
 
 .about-me_card > img {
-    width: 190px;
+    width: 180px;
     float: left;
     border-radius: 8px;
+    margin-left: 4px;
 }
 
 .about-me_card > div {
     float: right;
     margin-left: 20px;
+    margin-right: 5px;
     font-size: 17px;
-    margin-top: 30px;
+    margin-top: 15px;
     color: rgb(214, 214, 214)
 }
 
@@ -33,14 +35,16 @@
 .social-me_card {
     background: rgb(63, 63, 63);
     float: right;
-    margin: 0 12px;
+    margin-left: 20px;
     padding: 12px;
     border-radius: 8px;
 }
 
-.social-me_card > h3 {
+.social-me_card > h2 {
     margin: 0;
     text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 18px;
 }
 
 .social-me_card > div {
@@ -65,13 +69,28 @@
     border-radius: 8px;
 }
 
+.devtools-me_card > h2 {
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+}
+
+.devtools-me_card > hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-radius: 1px;
+    border-top: 2px solid rgb(107, 107, 107);;
+    margin: 0 14px 0 14px;
+}
+
 .devtools-me_card > h3 {
     margin-bottom: 22px;
-    margin-top: 40px;
+    margin-top: 27px;
+    margin-left: 8px;
 }
 
 .devtools-me_card > p {
-    margin: 22px 0;
+    margin: 22px 0 22px 14px;
 }
 
 .devtools-me_card > p > a {
@@ -100,4 +119,13 @@
 .devtools-me_card > p > a:hover + .logo {
     display: inline-block;
     margin-left: 12px
+}
+
+@media only screen and (max-width: 768px) {
+    /* Social Card */ 
+    .social-me_card {
+        float: none;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
 }
