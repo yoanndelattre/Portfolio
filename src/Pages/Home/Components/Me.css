@@ -98,7 +98,6 @@
     text-decoration: none;
     margin: 4px;
     padding: 0;
-    transition: all .1s ease-in-out;
 }
 
 .devtools-me_card > p > a:hover {
@@ -112,13 +111,13 @@
 
 .devtools-me_card > p > img {
     display: none;
-    margin-bottom: -5px;
+    margin-bottom: -6px;
 }
 
 /* Animations Hover Logo App */
 .devtools-me_card > p > a:hover + .logo {
     display: inline-block;
-    margin-left: 12px
+    margin-left: 12px;
 }
 
 @media only screen and (max-width: 768px) {
