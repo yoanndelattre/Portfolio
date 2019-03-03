@@ -48,13 +48,13 @@ class Me extends Component {
                         <h2>Réseaux Sociaux</h2>
                         <div>
                             <a className="twitter-btn" target="blank" href="https://twitter.com/yoanndelattre_">
-                                <img width="27px" src={twitter_btn} alt="twitter logo" />
+                                <img src={twitter_btn} alt="twitter logo" />
                             </a>
                             <a className="linkedin-btn" target="blank" href="https://www.linkedin.com/in/yoann-delattre">
-                                <img width="26px" src={linkedin_btn} alt="linkedin logo" />
+                                <img src={linkedin_btn} alt="linkedin logo" />
                             </a>
                             <a className="github-btn" target="blank" href="https://github.com/yoanndelattre">
-                                <img width="26px" src={github_btn} alt="github logo" />
+                                <img src={github_btn} alt="github logo" />
                             </a>
                         </div>
                     </div>
