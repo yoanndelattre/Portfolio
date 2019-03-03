@@ -11,10 +11,24 @@ import { ProjectCard5 } from './Components/ProjectsCards/ProjectCard5'
 // css
 import './Projects.css'
 
+// background
+import Projectsbackground from './img/Projectsbackground.jpg'
+
 class Projects extends Component {
+
+    state = {
+        backgroundImage: `url(${ Projectsbackground })`
+    }
+
+    componentDidMount () {
+        if (window.innerWidth <= 768) {
+            this.setState({ backgroundImage: "none" })
+        }
+    }
+
     render () {
         return (
-            <Fragment>
+            <div className="projectsContainer" style={{ backgroundImage: this.state.backgroundImage}}>
                 <Navbar/>
                     <h1 className="title">Mes Projets</h1>
                     <div className="cards">
@@ -24,7 +38,7 @@ class Projects extends Component {
                         {ProjectCard4}
                         {ProjectCard5}
                     </div>
-            </Fragment>
+            </div>
         )
     }
 }
