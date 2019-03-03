@@ -97,11 +97,11 @@
     color: rgb(214, 214, 214);
     text-decoration: none;
     margin: 4px;
+    padding: 0;
     transition: all .1s ease-in-out;
 }
 
 .devtools-me_card > p > a:hover {
-    border: 1px solid rgb(164, 165, 159);
     border-radius: 12px;
     padding: 4px;
     margin: 0;
@@ -127,5 +127,14 @@
         float: none;
         margin-left: 0;
         margin-bottom: 15px;
+    }
+
+    /* About Card */ 
+    .about-me_card > img {
+        width: 110px;
+    }
+    .about-me_card > div {
+        font-size: 14px;
+        margin-top: 0;
     }
 }
