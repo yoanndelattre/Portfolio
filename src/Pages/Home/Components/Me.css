@@ -38,6 +38,7 @@
     margin-left: 20px;
     padding: 12px;
     border-radius: 8px;
+    margin-top: 10%;
 }
 
 .social-me_card > h2 {
@@ -124,8 +125,7 @@
     /* Social Card */ 
     .social-me_card {
         float: none;
-        margin-left: 0;
-        margin-bottom: 15px;
+        margin: 0 0 15px 0;
     }
 
     /* About Card */ 
@@ -135,5 +135,10 @@
     .about-me_card > div {
         font-size: 14px;
         margin-top: 0;
+    }
+
+    /* Animations Hover Logo App */
+    .devtools-me_card > p > a:hover + .logo {
+        display: none;
     }
 }
