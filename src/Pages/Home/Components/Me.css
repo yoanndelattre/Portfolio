@@ -1,0 +1,143 @@
+/* Main Card */ 
+.me_card {
+    padding: 20px;
+    background: rgb(107, 107, 107);
+    display: table;
+    margin: 22px auto;
+}
+
+/* About Card */ 
+.about-me_card {
+    background: rgb(63, 63, 63);
+    padding: 17px;
+    margin-bottom: 12px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.about-me_card > img {
+    float: left;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+.about-me_card > div {
+    float: right;
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 17px;
+    margin-top: 15px;
+    color: rgb(214, 214, 214)
+}
+
+/* Social Card */ 
+.social-me_card {
+    background: rgb(63, 63, 63);
+    float: right;
+    margin-left: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+.social-me_card > h2 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 18px;
+}
+
+.social-me_card > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 12px;
+}
+
+.social-me_card > div > a {
+    transition: all .1s ease-in-out;
+}
+
+.social-me_card > div > a:hover {
+    transform: scale(1.2);
+}
+
+/* DevTools Card */ 
+.devtools-me_card {
+    background: rgb(63, 63, 63);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.devtools-me_card > h2 {
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+}
+
+.devtools-me_card > hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-radius: 1px;
+    border-top: 2px solid rgb(107, 107, 107);;
+    margin: 0 44px 0 44px;
+}
+
+.devtools-me_card > h3 {
+    margin-bottom: 22px;
+    margin-top: 27px;
+    margin-left: 8px;
+}
+
+.devtools-me_card > p {
+    margin: 22px 0 22px 14px;
+}
+
+.devtools-me_card > p > a {
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+    margin: 4px;
+    padding: 0;
+}
+
+.devtools-me_card > p > a:hover {
+    border-radius: 12px;
+    padding: 4px;
+    margin: 0;
+    background: rgb(153, 153, 153);
+    color: black;
+    transform: scale(1.2);
+}
+
+.devtools-me_card > p > img {
+    display: none;
+    margin-bottom: -6px;
+}
+
+/* Animations Hover Logo App */
+.devtools-me_card > p > a:hover + .logo {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Social Card */ 
+    .social-me_card {
+        float: none;
+        margin: 0 0 15px 0;
+    }
+
+    /* About Card */ 
+    .about-me_card > img {
+        width: 110px;
+    }
+    .about-me_card > div {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    /* Animations Hover Logo App */
+    .devtools-me_card > p > a:hover + .logo {
+        display: none;
+    }
+}
