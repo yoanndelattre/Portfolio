@@ -37,7 +37,7 @@ class Home extends Component {
             <Fragment>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
-                        type="spin"
+                        type="bars"
                         color="#fff"
                         width={'10%'}
                     />
