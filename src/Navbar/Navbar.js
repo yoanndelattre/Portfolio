@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SliderColorMode from './Components/SliderColorMode'
 
 //css
 import './Navbar.css'
@@ -13,6 +14,9 @@ class Navbar extends Component {
                 <header>
                     <div className="link">
                         <h1>Portfolio</h1>
+                        <div className="switch-color">
+                            <SliderColorMode/>
+                        </div>
                         <a href="/Contact" >Contact</a>
                         <a href="/Projets" >Projets</a>
                         <a style={{backgroundColor: '#A4A4A4'}} href="/" >Home</a>
@@ -30,6 +34,9 @@ class Navbar extends Component {
                 <header>
                     <div className="link">
                         <h1>Portfolio</h1>
+                        <div className="switch-color">
+                            <SliderColorMode/>
+                        </div>
                         <a href="/Contact" >Contact</a>
                         <a style={{backgroundColor: '#A4A4A4'}} href="/Projets" >Projets</a>
                         <a href="/" >Home</a>
@@ -48,6 +55,9 @@ class Navbar extends Component {
                 <header>
                     <div className="link">
                         <h1>Portfolio</h1>
+                        <div className="switch-color">
+                            <SliderColorMode/>
+                        </div>
                         <a style={{backgroundColor: '#A4A4A4'}} href="/Contact" >Contact</a>
                         <a href="/Projets" >Projets</a>
                         <a href="/" >Home</a>

@@ -32,6 +32,12 @@
     margin-left: 12px;
 }
 
+.switch-color {
+    float: left;
+    margin-left: 25px;
+    margin-top: 6px;
+}
+
 
 @media only screen and (max-width: 768px) {
     
