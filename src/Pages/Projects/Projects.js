@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
+import ReactLoading from 'react-loading'
 import { ProjectCard1 } from './Components/ProjectsCards/ProjectCard1'
 import { ProjectCard2 } from './Components/ProjectsCards/ProjectCard2'
 import { ProjectCard3 } from './Components/ProjectsCards/ProjectCard3'
@@ -17,7 +18,11 @@ import Projectsbackground from './img/Projectsbackground.jpg'
 class Projects extends Component {
 
     state = {
-        backgroundImage: `url(${ Projectsbackground })`
+        backgroundImage: `url(${ Projectsbackground })`,
+
+        //load
+        displayApp: 'none',
+        displayLoading: 'flex',
     }
 
     componentDidMount () {
@@ -26,19 +31,32 @@ class Projects extends Component {
         }
     }
 
+    Loading = () => {
+        this.setState ({ displayApp: 'block', displayLoading: 'none' })
+    }
+
     render () {
         return (
-            <div className="projectsContainer" style={{ backgroundImage: this.state.backgroundImage}}>
-                <Navbar/>
-                    <h1 className="title">Mes Projets</h1>
-                    <div className="cards">
-                        {ProjectCard1}
-                        {ProjectCard2}
-                        {ProjectCard3}
-                        {ProjectCard4}
-                        {ProjectCard5}
-                    </div>
-            </div>
+            <Fragment>
+                <div className="loadingpage" style={{ display: this.state.displayLoading }}>
+                    <ReactLoading
+                        type="bars"
+                        color="#fff"
+                        width={'10%'}
+                    />
+                </div>
+                <div onLoad={this.Loading} className="projectsContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage}}>
+                    <Navbar/>
+                        <h1 className="title">Mes Projets</h1>
+                        <div className="cards">
+                            {ProjectCard1}
+                            {ProjectCard2}
+                            {ProjectCard3}
+                            {ProjectCard4}
+                            {ProjectCard5}
+                        </div>
+                </div>
+            </Fragment>
         )
     }
 }

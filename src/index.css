@@ -8,3 +8,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.loadingpage {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+}
