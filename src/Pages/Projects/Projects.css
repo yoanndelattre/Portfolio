@@ -17,3 +17,10 @@
     flex-flow: row wrap;
     justify-content: space-around;
 }
+
+@media only screen and (max-width: 768px) {
+    .title {
+        margin-top: 75px;
+        margin-bottom: 0;
+    }
+}

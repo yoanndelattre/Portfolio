@@ -140,4 +140,9 @@
     .devtools-me_card > p > a:hover + .logo {
         display: none;
     }
+
+    /* Main Card */ 
+    .me_card {
+        margin-top: 55px
+    }
 }

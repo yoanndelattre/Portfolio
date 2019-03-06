@@ -35,7 +35,11 @@
 .switch-color {
     float: left;
     margin-left: 25px;
-    margin-top: 6px;
+    margin-top: 7px;
+}
+
+.switch-color-smart {
+    display: none;
 }
 
 
@@ -52,5 +56,20 @@
 
     .link > h1 {
         display: none;
+    }
+
+    .switch-color {
+        display: none;
+    }
+
+    .switch-color-smart {
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 65px;
+        left: 12px;
+        background: white;
+        padding: 4px 8px;
+        border-radius: 16px;
     }
 }

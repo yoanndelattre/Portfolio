@@ -62,3 +62,26 @@
     width: 18px;
     margin: 6px 0 0 8px;
 }
+
+@media only screen and (max-width: 768px) {
+    .ico-sun {
+        width: 18px;
+        margin: 4px 8px 0 0;
+    }
+    
+    .ico-moon{
+        float: right;
+        width: 14px;
+        margin: 4px 0 0 8px;
+    }
+
+    .switch {
+        width: 50px;
+        height: 24px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+    }
+}

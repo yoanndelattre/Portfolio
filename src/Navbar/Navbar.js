@@ -23,6 +23,9 @@ class Navbar extends Component {
                         <a style={{backgroundColor: '#A4A4A4'}} className='smart-screen' href="/" >Home</a>
                         <a className='smart-screen' href="/Projets" >Projets</a>
                         <a className='smart-screen' href="/Contact" >Contact</a>
+                        <div className="switch-color-smart">
+                            <SliderColorMode/>
+                        </div>
                     </div>
                 </header>
             )
@@ -43,6 +46,9 @@ class Navbar extends Component {
                         <a className='smart-screen' href="/" >Home</a>
                         <a style={{backgroundColor: '#A4A4A4'}} className='smart-screen' href="/Projets" >Projets</a>
                         <a className='smart-screen' href="/Contact" >Contact</a>
+                        <div className="switch-color-smart">
+                            <SliderColorMode/>
+                        </div>
                     </div>
                 </header>
             )
@@ -64,6 +70,9 @@ class Navbar extends Component {
                         <a className='smart-screen' href="/" >Home</a>
                         <a className='smart-screen' href="/Projets" >Projets</a>
                         <a style={{backgroundColor: '#A4A4A4'}} className='smart-screen' href="/Contact" >Contact</a>
+                        <div className="switch-color-smart">
+                            <SliderColorMode/>
+                        </div>
                     </div>
                 </header>
             )
