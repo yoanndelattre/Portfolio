@@ -17,6 +17,9 @@ class Navbar extends Component {
         if (event.target.checked === false) {
             localStorage.removeItem('DarkMode')
         }
+
+        // Update Component
+        this.props.UpdateComponent()
     }
 
     render () {

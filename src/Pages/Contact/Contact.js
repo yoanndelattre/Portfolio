@@ -33,6 +33,10 @@ class Contact extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    componentDidMount () {
+        this.UpdateComponent()
+    }
+
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -56,6 +60,16 @@ class Contact extends Component {
         console.log(form)
     }
 
+    UpdateComponent = () => {
+        if (localStorage.getItem('DarkMode') === "true") {
+            console.log('true')
+        }
+        
+        if (localStorage.getItem('DarkMode') === null) {
+            console.log('false')
+        }
+    }
+
     render () {
 
         setTimeout( () => {
@@ -72,7 +86,7 @@ class Contact extends Component {
                     />
                 </div>
                 <div style={{ display: this.state.displayApp }}>
-                    <Navbar/>
+                    <Navbar UpdateComponent={this.UpdateComponent} />
                     <Formulaire Loading={this.Loading} heightForm={this.state.heightForm} widthForm={this.state.widthForm} borderForm={this.state.borderForm} borderSubmit={this.state.borderSubmit} paddingSubmit={this.state.paddingSubmit} fontSizeSubmit={this.state.fontSizeSubmit} valueSubmit={this.state.valueSubmit} name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
                 </div>
             </Fragment>

@@ -29,10 +29,21 @@ class Projects extends Component {
         if (window.innerWidth <= 768) {
             this.setState({ backgroundImage: "none" })
         }
+        this.UpdateComponent()
     }
 
     Loading = () => {
         this.setState ({ displayApp: 'block', displayLoading: 'none' })
+    }
+
+    UpdateComponent = () => {
+        if (localStorage.getItem('DarkMode') === "true") {
+            console.log('true')
+        }
+        
+        if (localStorage.getItem('DarkMode') === null) {
+            console.log('false')
+        }
     }
 
     render () {
@@ -46,7 +57,7 @@ class Projects extends Component {
                     />
                 </div>
                 <div onLoad={this.Loading} className="projectsContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage}}>
-                    <Navbar/>
+                    <Navbar UpdateComponent={this.UpdateComponent} />
                         <h1 className="title">Mes Projets</h1>
                         <div className="cards">
                             {ProjectCard1}

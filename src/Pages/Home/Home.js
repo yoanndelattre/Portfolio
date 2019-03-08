@@ -26,10 +26,21 @@ class Home extends Component {
         if (window.innerWidth <= 768) {
             this.setState({ backgroundImage: "none", backgroundColor: 'rgb(107, 107, 107)' })
         }
+        this.UpdateComponent()
     }
 
     Loading = () => {
         this.setState ({ displayApp: 'block', displayLoading: 'none' })
+    }
+
+    UpdateComponent = () => {
+        if (localStorage.getItem('DarkMode') === "true") {
+            console.log('true')
+        }
+        
+        if (localStorage.getItem('DarkMode') === null) {
+            console.log('false')
+        }
     }
 
     render () {
@@ -43,7 +54,7 @@ class Home extends Component {
                     />
                 </div>
                 <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundColor }}>
-                    <Navbar/>
+                    <Navbar UpdateComponent={this.UpdateComponent} />
                     <span className="version">v1.0</span>
                     <div className="home_card">
                         <Me/>
