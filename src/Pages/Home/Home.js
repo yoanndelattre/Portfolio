@@ -20,12 +20,16 @@ class Home extends Component {
         //load
         displayApp: 'none',
         displayLoading: 'flex',
+
+        //DarkMode
+        ColorText: '',
+        backgroundMeCard: '',
+        backgroundMeCardSmart: '',
+        backgroundVersion: '',
+        backgroundCard: '',
     }
 
     componentDidMount () {
-        if (window.innerWidth <= 768) {
-            this.setState({ backgroundImage: "none", backgroundColor: 'rgb(107, 107, 107)' })
-        }
         this.UpdateComponent()
     }
 
@@ -35,11 +39,23 @@ class Home extends Component {
 
     UpdateComponent = () => {
         if (localStorage.getItem('DarkMode') === "true") {
-            console.log('true')
+            this.setState ({ backgroundMeCard: "rgb(107, 107, 107)", backgroundVersion: "gray", ColorText: 'white', backgroundCard: "rgb(63, 63, 63)" })
         }
         
         if (localStorage.getItem('DarkMode') === null) {
-            console.log('false')
+            this.setState ({ backgroundMeCard: "rgb(218, 218, 218)", backgroundVersion: "rgb(218, 218, 218)", ColorText: "black", backgroundCard: "rgb(165, 165, 165)" })
+        }
+
+        
+        if (window.innerWidth <= 768) {
+            this.setState({ backgroundImage: "none" })
+            if (localStorage.getItem('DarkMode') === "true") {
+                this.setState ({ backgroundMeCardSmart: "rgb(107, 107, 107)" })
+            }
+            
+            if (localStorage.getItem('DarkMode') === null) {
+                this.setState ({ backgroundMeCardSmart: "rgb(218, 218, 218)" })
+            }
         }
     }
 
@@ -55,9 +71,9 @@ class Home extends Component {
                 </div>
                 <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundColor }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                    <span className="version">v1.0</span>
+                    <span className="version" style={{ background: this.state.backgroundVersion, color: this.state.ColorText }} >v1.0</span>
                     <div className="home_card">
-                        <Me/>
+                        <Me ColorText={this.state.ColorText} backgroundMeCard={this.state.backgroundMeCard} backgroundCard={this.state.backgroundCard} />
                     </div>
                 </div>
             </Fragment>
