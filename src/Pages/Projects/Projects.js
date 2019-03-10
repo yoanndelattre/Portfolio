@@ -19,6 +19,7 @@ class Projects extends Component {
 
     state = {
         backgroundImage: `url(${ Projectsbackground })`,
+        backgroundContainer: "",
 
         //load
         displayApp: 'none',
@@ -32,6 +33,19 @@ class Projects extends Component {
     componentDidMount () {
         if (window.innerWidth <= 768) {
             this.setState({ backgroundImage: "none" })
+
+            if (localStorage.getItem('DarkMode') === "true") {
+                this.setState ({ 
+                    backgroundContainer: "rgb(88, 88, 88)"
+                })
+            }
+            
+            if (localStorage.getItem('DarkMode') === null) {
+                this.setState ({
+                    backgroundContainer: "rgb(165, 165, 165)"
+                })
+            }
+
         }
         this.UpdateComponent()
     }
@@ -54,6 +68,22 @@ class Projects extends Component {
                 backgroundFlippingCardBack: "rgb(218, 218, 218)"
             })
         }
+
+        if (window.innerWidth <= 768) {
+
+            if (localStorage.getItem('DarkMode') === "true") {
+                this.setState ({ 
+                    backgroundContainer: "rgb(88, 88, 88)"
+                })
+            }
+            
+            if (localStorage.getItem('DarkMode') === null) {
+                this.setState ({
+                    backgroundContainer: "rgb(165, 165, 165)"
+                })
+            }
+
+        }
     }
 
     render () {
@@ -66,7 +96,7 @@ class Projects extends Component {
                         width={'10%'}
                     />
                 </div>
-                <div onLoad={this.Loading} className="projectsContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage}}>
+                <div onLoad={this.Loading} className="projectsContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
                         <h1 className="title">Mes Projets</h1>
                         <div className="cards">

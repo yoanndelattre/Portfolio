@@ -15,7 +15,7 @@ class Home extends Component {
 
     state = {
         backgroundImage: `url(${ Mainbackground })`,
-        backgroundColor: 'none',
+        backgroundContainer: "",
         
         //load
         displayApp: 'none',
@@ -30,6 +30,22 @@ class Home extends Component {
     }
 
     componentDidMount () {
+        if (window.innerWidth <= 768) {
+            this.setState({ backgroundImage: "none" })
+
+            if (localStorage.getItem('DarkMode') === "true") {
+                this.setState ({ 
+                    backgroundContainer: "rgb(88, 88, 88)"
+                })
+            }
+            
+            if (localStorage.getItem('DarkMode') === null) {
+                this.setState ({
+                    backgroundContainer: "rgb(165, 165, 165)"
+                })
+            }
+
+        }
         this.UpdateComponent()
     }
 
@@ -58,13 +74,12 @@ class Home extends Component {
 
         
         if (window.innerWidth <= 768) {
-            this.setState({ backgroundImage: "none" })
             if (localStorage.getItem('DarkMode') === "true") {
-                this.setState ({ backgroundMeCardSmart: "rgb(107, 107, 107)" })
+                this.setState ({ backgroundMeCardSmart: "rgb(107, 107, 107)", backgroundContainer: "rgb(88, 88, 88)" })
             }
             
             if (localStorage.getItem('DarkMode') === null) {
-                this.setState ({ backgroundMeCardSmart: "rgb(218, 218, 218)" })
+                this.setState ({ backgroundMeCardSmart: "rgb(218, 218, 218)", backgroundContainer: "rgb(165, 165, 165)" })
             }
         }
     }
@@ -79,7 +94,7 @@ class Home extends Component {
                         width={'10%'}
                     />
                 </div>
-                <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundColor }}>
+                <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
                     <span className="version" style={{ background: this.state.backgroundVersion, color: this.state.ColorText }} >v1.0</span>
                     <div className="home_card">
