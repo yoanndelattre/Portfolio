@@ -71,8 +71,8 @@ class Me extends Component {
                         <p><a style={{ color: this.props.ColorText }} href="https://nodejs.org" target="blank">NodeJs</a><img className="logo" src={nodejs_logo} alt="nodejs logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://www.virtualbox.org" target="blank">VirtualBox</a><img className="logo" src={virtualbox_logo} alt="virtualbox logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://www.vmware.com" target="blank">VmWare</a><img className="logo" src={vmware_logo} alt="vmware logo"/></p>
-                        <p><a style={{ color: this.props.ColorText }} href="https://github.com/FredrikNoren/ungit" target="blank">ungit</a><img className="logo" src={ungit_logo} alt="ungit logo"/></p>
-                        <p><a style={{ color: this.props.ColorText }} href="https://facebook.github.io/create-react-app" target="blank">create-react-app</a><img className="logo" src={react_logo} alt="react logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://github.com/FredrikNoren/ungit" target="blank">Ungit</a><img className="logo" src={ungit_logo} alt="ungit logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://facebook.github.io/create-react-app" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
                         <hr/>
                         <h3>Site Web :</h3>
                         <p><a style={{ color: this.props.ColorText }} href="https://todoist.com" target="blank">Todoist</a><img className="logo" src={todoist_logo} alt="todoist logo"/></p>
