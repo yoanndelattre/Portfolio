@@ -1,5 +1,4 @@
 .link {
-    background-color: #333;
     overflow: hidden;
 }
 
@@ -12,11 +11,6 @@
     text-decoration: none;
     font-size: 17px;
 }
-  
-.link a:hover {
-    background-color: #ddd;
-    color: black;
-}
 
 .link > .smart-screen {
     display: none;
@@ -25,7 +19,6 @@
 .link > h1 {
     float: left;
     display: block;
-    color: #f2f2f2;
     text-align: center;
     text-decoration: none;
     font-size: 17px;
@@ -68,7 +61,6 @@
         position: absolute;
         top: 65px;
         left: 12px;
-        background: white;
         padding: 4px 8px;
         border-radius: 16px;
     }

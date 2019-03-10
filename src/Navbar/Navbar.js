@@ -10,6 +10,21 @@ import moon_ico from './ico/moon.png'
 
 class Navbar extends Component {
 
+    state = {
+        ColorText: '',
+        backgroundNavBar: '',
+        backgroundNavBarSmart: '',
+        ColorTextFocus: '',
+        backgroundTextFocusHome: '',
+        backgroundTextFocusProjects: '',
+        backgroundTextFocusContact: '',
+
+    }
+
+    componentDidMount () {
+        this.UpdateComponent()
+    }
+
     handleChange = (event) => {
         if (event.target.checked === true) {
             localStorage.setItem('DarkMode', true)
@@ -20,6 +35,17 @@ class Navbar extends Component {
 
         // Update Component
         this.props.UpdateComponent()
+        this.UpdateComponent()
+    }
+
+    UpdateComponent = () => {
+        if (localStorage.getItem('DarkMode') === "true") {
+            this.setState ({ backgroundNavBar: "#333", ColorText: 'white', backgroundNavBarSmart: "rgb(165, 165, 165)", ColorTextFocus: "black", backgroundTextFocusHome: "rgb(218, 218, 218)", backgroundTextFocusProjects: "rgb(218, 218, 218)", backgroundTextFocusContact: "rgb(218, 218, 218)" })
+        }
+        
+        if (localStorage.getItem('DarkMode') === null) {
+            this.setState ({ backgroundNavBar: "rgb(218, 218, 218)", ColorText: 'black', backgroundNavBarSmart: "rgb(218, 218, 218)", ColorTextFocus: "white", backgroundTextFocusHome: "rgb(51, 51, 51)", backgroundTextFocusProjects: "rgb(51, 51, 51)", backgroundTextFocusContact: "rgb(51, 51, 51)" })
+        }
     }
 
     render () {
@@ -39,18 +65,18 @@ class Navbar extends Component {
         if(window.location.pathname === "/") {
             return (
                 <header>
-                    <div className="link">
-                        <h1>Portfolio</h1>
+                    <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
+                        <h1 style={{ color: this.state.ColorText }}>Portfolio</h1>
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
-                        <a href="/Contact" >Contact</a>
-                        <a href="/Projets" >Projets</a>
-                        <a style={{backgroundColor: '#A4A4A4'}} href="/" >Home</a>
-                        <a style={{backgroundColor: '#A4A4A4'}} className='smart-screen' href="/" >Home</a>
-                        <a className='smart-screen' href="/Projets" >Projets</a>
-                        <a className='smart-screen' href="/Contact" >Contact</a>
-                        <div className="switch-color-smart">
+                        <a style={{ color: this.state.ColorText }} href="/Contact" >Contact</a>
+                        <a style={{ color: this.state.ColorText }} href="/Projets" >Projets</a>
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusHome}} href="/" >Home</a>
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusHome}} className='smart-screen' href="/" >Home</a>
+                        <a style={{ color: this.state.ColorText }} className='smart-screen' href="/Projets" >Projets</a>
+                        <a style={{ color: this.state.ColorText }} className='smart-screen' href="/Contact" >Contact</a>
+                        <div style={{ background: this.state.backgroundNavBarSmart }} className="switch-color-smart">
                         {SliderColorMode}
                         </div>
                     </div>
@@ -62,18 +88,18 @@ class Navbar extends Component {
         if(window.location.pathname === "/Projets") {
             return (
                 <header>
-                    <div className="link">
-                        <h1>Portfolio</h1>
+                    <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
+                        <h1 style={{ color: this.state.ColorText }}>Portfolio</h1>
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
-                        <a href="/Contact" >Contact</a>
-                        <a style={{backgroundColor: '#A4A4A4'}} href="/Projets" >Projets</a>
-                        <a href="/" >Home</a>
-                        <a className='smart-screen' href="/" >Home</a>
-                        <a style={{backgroundColor: '#A4A4A4'}} className='smart-screen' href="/Projets" >Projets</a>
-                        <a className='smart-screen' href="/Contact" >Contact</a>
-                        <div className="switch-color-smart">
+                        <a style={{ color: this.state.ColorText }} href="/Contact" >Contact</a>
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusProjects}} href="/Projets" >Projets</a>
+                        <a style={{ color: this.state.ColorText }} href="/" >Home</a>
+                        <a style={{ color: this.state.ColorText }} className='smart-screen' href="/" >Home</a>
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusProjects }} className='smart-screen' href="/Projets" >Projets</a>
+                        <a style={{ color: this.state.ColorText }} className='smart-screen' href="/Contact" >Contact</a>
+                        <div style={{ background: this.state.backgroundNavBarSmart }} className="switch-color-smart">
                             {SliderColorMode}
                         </div>
                     </div>
@@ -86,18 +112,18 @@ class Navbar extends Component {
         if(window.location.pathname === "/Contact") {
             return (
                 <header>
-                    <div className="link">
-                        <h1>Portfolio</h1>
+                    <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
+                        <h1 style={{ color: this.state.ColorText }}>Portfolio</h1>
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
-                        <a style={{backgroundColor: '#A4A4A4'}} href="/Contact" >Contact</a>
-                        <a href="/Projets" >Projets</a>
-                        <a href="/" >Home</a>
-                        <a className='smart-screen' href="/" >Home</a>
-                        <a className='smart-screen' href="/Projets" >Projets</a>
-                        <a style={{backgroundColor: '#A4A4A4'}} className='smart-screen' href="/Contact" >Contact</a>
-                        <div className="switch-color-smart">
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusContact }} href="/Contact" >Contact</a>
+                        <a style={{ color: this.state.ColorText }} href="/Projets" >Projets</a>
+                        <a style={{ color: this.state.ColorText }} href="/" >Home</a>
+                        <a style={{ color: this.state.ColorText }} className='smart-screen' href="/" >Home</a>
+                        <a style={{ color: this.state.ColorText }} className='smart-screen' href="/Projets" >Projets</a>
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusContact }} className='smart-screen' href="/Contact" >Contact</a>
+                        <div style={{ background: this.state.backgroundNavBarSmart }} className="switch-color-smart">
                             {SliderColorMode}
                         </div>
                     </div>
