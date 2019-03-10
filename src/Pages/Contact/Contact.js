@@ -44,7 +44,16 @@ class Contact extends Component {
     async handleSubmit(e) {
         e.preventDefault(
             this.setState({ name: '', email: '', message: '' }),
-            this.setState({ valueSubmit: '✓', fontSizeSubmit: '35px', paddingSubmit: '0 6px', borderSubmit: '2px solid green', borderForm: '3px solid green', widthForm: '367px', heightForm: '427px' }),
+            this.setState({ 
+                valueSubmit: '✓', 
+                fontSizeSubmit: '35px', 
+                paddingSubmit: '0 6px', 
+                borderSubmit: '2px solid green', 
+                borderForm: '3px solid green', 
+                widthForm: '367px', 
+                heightForm: '427px'
+            }),
+            
             setTimeout(() => {
                 window.location.reload();
             }, 7500)

@@ -39,11 +39,21 @@ class Home extends Component {
 
     UpdateComponent = () => {
         if (localStorage.getItem('DarkMode') === "true") {
-            this.setState ({ backgroundMeCard: "rgb(107, 107, 107)", backgroundVersion: "gray", ColorText: 'white', backgroundCard: "rgb(63, 63, 63)" })
+            this.setState ({ 
+                backgroundMeCard: "rgb(107, 107, 107)", 
+                backgroundVersion: "gray", 
+                ColorText: 'white', 
+                backgroundCard: "rgb(63, 63, 63)" 
+            })
         }
         
         if (localStorage.getItem('DarkMode') === null) {
-            this.setState ({ backgroundMeCard: "rgb(218, 218, 218)", backgroundVersion: "rgb(218, 218, 218)", ColorText: "black", backgroundCard: "rgb(165, 165, 165)" })
+            this.setState ({ 
+                backgroundMeCard: "rgb(218, 218, 218)", 
+                backgroundVersion: "rgb(218, 218, 218)", 
+                ColorText: "black", 
+                backgroundCard: "rgb(165, 165, 165)" 
+            })
         }
 
         

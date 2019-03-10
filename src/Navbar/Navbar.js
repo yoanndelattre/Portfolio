@@ -40,11 +40,27 @@ class Navbar extends Component {
 
     UpdateComponent = () => {
         if (localStorage.getItem('DarkMode') === "true") {
-            this.setState ({ backgroundNavBar: "#333", ColorText: 'white', backgroundNavBarSmart: "rgb(165, 165, 165)", ColorTextFocus: "black", backgroundTextFocusHome: "rgb(218, 218, 218)", backgroundTextFocusProjects: "rgb(218, 218, 218)", backgroundTextFocusContact: "rgb(218, 218, 218)" })
+            this.setState ({ 
+                backgroundNavBar: "#333", 
+                ColorText: 'white', 
+                backgroundNavBarSmart: "rgb(165, 165, 165)", 
+                ColorTextFocus: "black", 
+                backgroundTextFocusHome: "rgb(218, 218, 218)", 
+                backgroundTextFocusProjects: "rgb(218, 218, 218)", 
+                backgroundTextFocusContact: "rgb(218, 218, 218)" 
+            })
         }
         
         if (localStorage.getItem('DarkMode') === null) {
-            this.setState ({ backgroundNavBar: "rgb(218, 218, 218)", ColorText: 'black', backgroundNavBarSmart: "rgb(218, 218, 218)", ColorTextFocus: "white", backgroundTextFocusHome: "rgb(51, 51, 51)", backgroundTextFocusProjects: "rgb(51, 51, 51)", backgroundTextFocusContact: "rgb(51, 51, 51)" })
+            this.setState ({ 
+                backgroundNavBar: "rgb(218, 218, 218)", 
+                ColorText: 'black', 
+                backgroundNavBarSmart: "rgb(218, 218, 218)", 
+                ColorTextFocus: "white", 
+                backgroundTextFocusHome: "rgb(51, 51, 51)", 
+                backgroundTextFocusProjects: "rgb(51, 51, 51)", 
+                backgroundTextFocusContact: "rgb(51, 51, 51)" 
+            })
         }
     }
 
