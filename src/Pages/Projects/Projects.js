@@ -3,11 +3,11 @@ import React, { Component, Fragment } from 'react'
 // Components
 import Navbar from '../../Navbar/Navbar'
 import ReactLoading from 'react-loading'
-import { ProjectCard1 } from './Components/ProjectsCards/ProjectCard1'
-import { ProjectCard2 } from './Components/ProjectsCards/ProjectCard2'
-import { ProjectCard3 } from './Components/ProjectsCards/ProjectCard3'
-import { ProjectCard4 } from './Components/ProjectsCards/ProjectCard4'
-import { ProjectCard5 } from './Components/ProjectsCards/ProjectCard5'
+import ProjectCard1 from './Components/ProjectsCards/ProjectCard1'
+import ProjectCard2 from './Components/ProjectsCards/ProjectCard2'
+import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
+import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
+import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
 
 // css
 import './Projects.css'
@@ -23,6 +23,10 @@ class Projects extends Component {
         //load
         displayApp: 'none',
         displayLoading: 'flex',
+
+        //DarkMode
+        textFlippingCardBack: "",
+        backgroundFlippingCardBack: "",
     }
 
     componentDidMount () {
@@ -38,11 +42,17 @@ class Projects extends Component {
 
     UpdateComponent = () => {
         if (localStorage.getItem('DarkMode') === "true") {
-            console.log('true')
+            this.setState ({ 
+                textFlippingCardBack: "white",
+                backgroundFlippingCardBack: "rgb(51, 51, 51)" 
+            })
         }
         
         if (localStorage.getItem('DarkMode') === null) {
-            console.log('false')
+            this.setState ({
+                textFlippingCardBack: "black",
+                backgroundFlippingCardBack: "rgb(218, 218, 218)"
+            })
         }
     }
 
@@ -60,11 +70,11 @@ class Projects extends Component {
                     <Navbar UpdateComponent={this.UpdateComponent} />
                         <h1 className="title">Mes Projets</h1>
                         <div className="cards">
-                            {ProjectCard1}
-                            {ProjectCard2}
-                            {ProjectCard3}
-                            {ProjectCard4}
-                            {ProjectCard5}
+                            <ProjectCard1 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard2 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard3 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard4 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard5 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                         </div>
                 </div>
             </Fragment>
