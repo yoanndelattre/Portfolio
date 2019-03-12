@@ -118,7 +118,9 @@ class Contact extends Component {
     }
 
     ThemeCapcha = () => {
-        return <ReCAPTCHA theme="light" style={{ display: this.state.displayCapcha }} onChange={this.onChange} sitekey="6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG" />
+        const token_key = "6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG"
+
+        return <ReCAPTCHA theme="light" style={{ display: this.state.displayCapcha }} onChange={this.onChange} sitekey={token_key} />
     }
 
     onChange = () => {
