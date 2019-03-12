@@ -1,6 +1,5 @@
 .form{
     outline: none;
-    background:#e6e6e6;
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
     margin:calc(50vh - 220px) auto;
@@ -16,8 +15,6 @@
     margin:10px 0;
     padding-bottom:10px;
     width:203px;
-    color:rgb(77, 92, 102);
-    border-bottom:3px solid rgb(77, 92, 102)
 }
 
 .form > p > input{
@@ -36,7 +33,6 @@
 
 .form > p > input:focus{
     outline: none;
-    border-bottom:2px solid rgb(77, 92, 102)
 }
 
 .form > p:before{
@@ -45,7 +41,14 @@
     display:block;
     margin:28px 0 0;
     font-size:14px;
-    color:#5a5a5a
+}
+
+.classPlaceholderFormLight:before {
+    color: rgb(77, 92, 102)
+}
+
+.classPlaceholderFormDark:before {
+    color: #e6e6e6
 }
 
 .form > input{
@@ -64,4 +67,9 @@
     outline: none;
     background: rgb(77, 92, 102);
     color:#fff
+}
+
+.Capcha {
+    display: flex;
+    justify-content: center;
 }

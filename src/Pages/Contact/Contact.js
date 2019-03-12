@@ -29,6 +29,12 @@ class Contact extends Component {
             //load
             displayApp: 'none',
             displayLoading: 'flex',
+
+            //DarkMode
+            ColorText: "",
+            BorderH2: "",
+            backgroundForm: "",
+            classPlaceholderForm: "",
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -86,11 +92,23 @@ class Contact extends Component {
 
     UpdateComponent = () => {
         if (localStorage.getItem('DarkMode') === "true") {
-            this.setState ({ backgroundContainer: "rgb(88, 88, 88)" })
+            this.setState ({ 
+                backgroundContainer: "rgb(88, 88, 88)",
+                ColorText: "#e6e6e6",
+                BorderH2: "3px solid #e6e6e6",
+                backgroundForm: "#6C6C6C" ,
+                classPlaceholderForm: "classPlaceholderFormDark",
+            })
         }
         
         if (localStorage.getItem('DarkMode') === null) {
-            this.setState ({ backgroundContainer: "rgb(165, 165, 165)" })
+            this.setState ({ 
+                backgroundContainer: "rgb(165, 165, 165)",
+                ColorText: "rgb(77, 92, 102)",
+                BorderH2: "3px solid rgb(77, 92, 102)",
+                backgroundForm: "#e6e6e6",
+                classPlaceholderForm: "classPlaceholderFormLight",
+            })
         }
     }
 
@@ -111,7 +129,7 @@ class Contact extends Component {
                 </div>
                 <div style={{ display: this.state.displayApp, backgroundColor: this.state.backgroundContainer, height: "100%" }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                    <Formulaire Loading={this.Loading} heightForm={this.state.heightForm} widthForm={this.state.widthForm} borderForm={this.state.borderForm} borderSubmit={this.state.borderSubmit} paddingSubmit={this.state.paddingSubmit} fontSizeSubmit={this.state.fontSizeSubmit} valueSubmit={this.state.valueSubmit} name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+                    <Formulaire classPlaceholderForm={this.state.classPlaceholderForm} backgroundForm={this.state.backgroundForm} BorderH2={this.state.BorderH2} ColorText={this.state.ColorText} Loading={this.Loading} heightForm={this.state.heightForm} widthForm={this.state.widthForm} borderForm={this.state.borderForm} borderSubmit={this.state.borderSubmit} paddingSubmit={this.state.paddingSubmit} fontSizeSubmit={this.state.fontSizeSubmit} valueSubmit={this.state.valueSubmit} name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
                 </div>
             </Fragment>
         )
