@@ -21,6 +21,9 @@ export default class Formulaire extends Component {
     }
 
     render () {
+
+        const token_key = "6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG"
+
         return (
             <form 
                 onSubmit={this.props.handleSubmit}
@@ -37,7 +40,7 @@ export default class Formulaire extends Component {
                 <p className={this.props.classPlaceholderForm} type="Message:"><input style={{ color: this.props.ColorText }} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} ></input></p>
                 <input style={{ display: this.state.displaySubmit, fontSize: this.props.fontSizeSubmit, padding: this.props.paddingSubmit, border: this.props.borderSubmit }} type="submit" value={this.props.valueSubmit} />
                 <div className="Capcha">
-                    <ReCAPTCHA theme="light" style={{ display: this.state.displayCapcha }} onChange={this.onChange} sitekey="6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG"/>
+                    <ReCAPTCHA theme="light" style={{ display: this.state.displayCapcha }} onChange={this.onChange} sitekey={token_key} />
                 </div>
             </form>
         )
