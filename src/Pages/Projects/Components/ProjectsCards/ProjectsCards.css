@@ -1,5 +1,9 @@
-.FrontCard {
-    background: rgb(194, 194, 194);
+.classUserCardWhite {
+    background: rgb(218, 218, 218)
+}
+
+.classUserCardDark {
+    background: rgb(51, 51, 51)
 }
 
 .BackCard {
@@ -9,9 +13,15 @@
     text-align: center;
 }
 
+.titleUserCard {
+    font-size: 18px;
+    margin: 0;
+    padding: 0
+
+}
+
 .PositionName {
     font-size: 14px;
-    color: rgb(29, 29, 29);
 }
 
 .details {

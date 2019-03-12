@@ -20,19 +20,25 @@ class Projects extends Component {
     state = {
         backgroundImage: `url(${ Projectsbackground })`,
         backgroundContainer: "",
+        classprojectsContainer: "",
 
         //load
         displayApp: 'none',
         displayLoading: 'flex',
 
         //DarkMode
-        textFlippingCardBack: "",
+        textFlippingCard: "",
         backgroundFlippingCardBack: "",
+        classUserCard: "",
+        textTitle: '',
     }
 
     componentDidMount () {
         if (window.innerWidth <= 768) {
-            this.setState({ backgroundImage: "none" })
+            this.setState({ 
+                backgroundImage: "none",
+                classprojectsContainer: "projectsContainerSmart" 
+            })
 
             if (localStorage.getItem('DarkMode') === "true") {
                 this.setState ({ 
@@ -47,6 +53,12 @@ class Projects extends Component {
             }
 
         }
+        else {
+            this.setState({ 
+                classprojectsContainer: "projectsContainer" 
+            }) 
+        }
+
         this.UpdateComponent()
     }
 
@@ -57,15 +69,19 @@ class Projects extends Component {
     UpdateComponent = () => {
         if (localStorage.getItem('DarkMode') === "true") {
             this.setState ({ 
-                textFlippingCardBack: "white",
-                backgroundFlippingCardBack: "rgb(51, 51, 51)" 
+                textFlippingCard: "white",
+                backgroundFlippingCardBack: "rgb(51, 51, 51)",
+                classUserCard: "classUserCardDark",
+                textTitle: "black",
             })
         }
         
         if (localStorage.getItem('DarkMode') === null) {
             this.setState ({
-                textFlippingCardBack: "black",
-                backgroundFlippingCardBack: "rgb(218, 218, 218)"
+                textFlippingCard: "black",
+                backgroundFlippingCardBack: "rgb(218, 218, 218)",
+                classUserCard: "classUserCardWhite",
+                textTitle: "white",
             })
         }
 
@@ -96,15 +112,15 @@ class Projects extends Component {
                         width={'10%'}
                     />
                 </div>
-                <div onLoad={this.Loading} className="projectsContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
+                <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                        <h1 className="title">Mes Projets</h1>
+                        <h1 style={{ color: this.state.textTitle }} className="title">Mes Projets</h1>
                         <div className="cards">
-                            <ProjectCard1 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard2 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard3 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard4 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard5 textFlippingCardBack={this.state.textFlippingCardBack} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard1 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard2 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard3 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard4 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard5 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                         </div>
                 </div>
             </Fragment>

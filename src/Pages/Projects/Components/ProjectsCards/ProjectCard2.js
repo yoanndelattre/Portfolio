@@ -17,17 +17,17 @@ export default class ProjectCard2 extends Component {
 					<UserCard 
 						avatar={logo_docker_swarm} 
 						header={img_raspberrypi}
-						name="Cluster Raspberry Pi" 
-						positionName={<p className="PositionName">Cluster de deux Raspberry Pi 3 avec Docker Swarm.</p>} 
-						cardClass="FrontCard FrontProjectCard1" 
+						name={<h2 style={{ color: this.props.textFlippingCard }} className="titleUserCard">Cluster Raspberry Pi</h2>} 
+						positionName={<p style={{ color: this.props.textFlippingCard }} className="PositionName">Cluster de deux Raspberry Pi 3 avec Docker Swarm.</p>} 
+						cardClass={this.props.classUserCard} 
 					/>
 				</FlippingCardFront>
 				<FlippingCardBack>
 					<div className="BackCard FrontCard BackProjectCard2">
 						<LinkWebsiteProject TitleWebsite={"Cluster Live Viewer"} LinkWebsite={"https://visualizer-docker.yoanndelattre.com"} />
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
-							<h3 style={{ color: this.props.textFlippingCardBack }} className="title-details">Détails:</h3>
-							<p style={{ color: this.props.textFlippingCardBack }} className="text-details">Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) fonctionnent avec Docker Swarm. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.</p>
+							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">Détails:</h3>
+							<p style={{ color: this.props.textFlippingCard }} className="text-details">Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) fonctionnent avec Docker Swarm. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.</p>
 						</div>
 					</div>
 				</FlippingCardBack>
