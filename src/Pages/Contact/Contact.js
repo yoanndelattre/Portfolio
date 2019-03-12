@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
+import ReCAPTCHA from "react-google-recaptcha";
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -29,6 +30,10 @@ class Contact extends Component {
             //load
             displayApp: 'none',
             displayLoading: 'flex',
+
+            //display Captcha
+            displaySubmit: 'none',
+            displayCapcha: 'inline-block',
 
             //DarkMode
             ColorText: "",
@@ -112,6 +117,17 @@ class Contact extends Component {
         }
     }
 
+    ThemeCapcha = () => {
+        return <ReCAPTCHA theme="light" style={{ display: this.state.displayCapcha }} onChange={this.onChange} sitekey="6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG" />
+    }
+
+    onChange = () => {
+        setTimeout(() => {
+            this.setState({ displaySubmit: 'block' })
+            this.setState({ displayCapcha: 'none' }) 
+        }, 1000);
+    }
+
     render () {
 
         setTimeout( () => {
@@ -129,7 +145,27 @@ class Contact extends Component {
                 </div>
                 <div style={{ display: this.state.displayApp, backgroundColor: this.state.backgroundContainer, height: "100%" }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                    <Formulaire classPlaceholderForm={this.state.classPlaceholderForm} backgroundForm={this.state.backgroundForm} BorderH2={this.state.BorderH2} ColorText={this.state.ColorText} Loading={this.Loading} heightForm={this.state.heightForm} widthForm={this.state.widthForm} borderForm={this.state.borderForm} borderSubmit={this.state.borderSubmit} paddingSubmit={this.state.paddingSubmit} fontSizeSubmit={this.state.fontSizeSubmit} valueSubmit={this.state.valueSubmit} name={this.state.name} email={this.state.email} message={this.state.message} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+                    <Formulaire 
+                        displaySubmit={this.state.displaySubmit} 
+                        ThemeCapcha={this.ThemeCapcha} 
+                        classPlaceholderForm={this.state.classPlaceholderForm} 
+                        backgroundForm={this.state.backgroundForm} 
+                        BorderH2={this.state.BorderH2} 
+                        ColorText={this.state.ColorText} 
+                        Loading={this.Loading} 
+                        heightForm={this.state.heightForm} 
+                        widthForm={this.state.widthForm} 
+                        borderForm={this.state.borderForm} 
+                        borderSubmit={this.state.borderSubmit} 
+                        paddingSubmit={this.state.paddingSubmit} 
+                        fontSizeSubmit={this.state.fontSizeSubmit} 
+                        valueSubmit={this.state.valueSubmit} 
+                        name={this.state.name} 
+                        email={this.state.email}
+                        message={this.state.message} 
+                        handleChange={this.handleChange} 
+                        handleSubmit={this.handleSubmit} 
+                    />
                 </div>
             </Fragment>
         )
