@@ -20,7 +20,7 @@ export default class Formulaire extends Component {
                 <p className={this.props.classPlaceholderForm} type="Nom:"><input style={{ color: this.props.ColorText }} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} ></input></p>
                 <p className={this.props.classPlaceholderForm} type="Email:"><input style={{ color: this.props.ColorText }} type="email" value={this.props.email} required name="email" onChange={this.props.handleChange} ></input></p>
                 <p className={this.props.classPlaceholderForm} type="Message:"><input style={{ color: this.props.ColorText }} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} ></input></p>
-                <input style={{ display: this.props.displaySubmit, fontSize: this.props.fontSizeSubmit, padding: this.props.paddingSubmit, border: this.props.borderSubmit }} type="submit" value={this.props.valueSubmit} />
+                <input style={{ display: this.props.displaySubmit, fontSize: this.props.fontSizeSubmit, padding: this.props.paddingSubmit, border: this.props.borderSubmit, color: this.props.ColorText }} type="submit" value={this.props.valueSubmit} />
                 <div className="Capcha">
                     <this.props.ThemeCapcha/>
                 </div>

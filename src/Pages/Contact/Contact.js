@@ -20,7 +20,7 @@ class Contact extends Component {
             valueSubmit: 'Envoyer',
             fontSizeSubmit: '15px',
             paddingSubmit: '8px 12px',
-            borderSubmit: '2px solid rgb(77, 92, 102)',
+            borderSubmit: '',
             borderForm: 'none',
             widthForm: '370px',
             heightForm: '430px',
@@ -90,6 +90,7 @@ class Contact extends Component {
                 BorderH2: "3px solid #e6e6e6",
                 backgroundForm: "#6C6C6C" ,
                 classPlaceholderForm: "classPlaceholderFormDark",
+                borderSubmit: "2px solid #e6e6e6",
             })
         }
         
@@ -100,6 +101,7 @@ class Contact extends Component {
                 BorderH2: "3px solid rgb(77, 92, 102)",
                 backgroundForm: "#e6e6e6",
                 classPlaceholderForm: "classPlaceholderFormLight",
+                borderSubmit: "2px solid rgb(77, 92, 102)"
             })
         }
     }
