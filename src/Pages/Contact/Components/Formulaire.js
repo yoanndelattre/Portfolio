@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import './Formulaire.css'
 
 export default class Formulaire extends Component {
+
     render () {
         return (
             <form 

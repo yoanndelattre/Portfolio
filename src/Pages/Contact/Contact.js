@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
-import ReCAPTCHA from "react-google-recaptcha";
+import Reaptcha from 'reaptcha';
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -47,19 +47,6 @@ class Contact extends Component {
     }
 
     componentDidMount () {
-
-        if (localStorage.getItem('DarkMode') === "true") {
-            this.setState ({ 
-                backgroundContainer: "rgb(88, 88, 88)"
-            })
-        }
-        
-        if (localStorage.getItem('DarkMode') === null) {
-            this.setState ({
-                backgroundContainer: "rgb(165, 165, 165)"
-            })
-        }
-
         this.UpdateComponent()
     }
 
@@ -119,23 +106,26 @@ class Contact extends Component {
 
     ThemeCapcha = () => {
         const token_key = "6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG"
-
-        return <ReCAPTCHA theme="light" style={{ display: this.state.displayCapcha }} onChange={this.onChange} sitekey={token_key} />
+        
+        return (
+        <div style={{ display: this.state.displayCapcha }}>
+            <Reaptcha onRender={this.Loading} onVerify={this.onVerify} sitekey={token_key} />
+        </div>
+        )
     }
 
-    onChange = () => {
+    onVerify = () => {
         setTimeout(() => {
             this.setState({ displaySubmit: 'block' })
             this.setState({ displayCapcha: 'none' }) 
         }, 1000);
     }
 
+    Loading = () => {
+        this.setState ({ displayApp: 'block', displayLoading: 'none' })
+    }
+
     render () {
-
-        setTimeout( () => {
-            this.setState ({ displayApp: 'block', displayLoading: 'none' })
-        }, 1000);
-
         return (
             <Fragment>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
@@ -154,7 +144,6 @@ class Contact extends Component {
                         backgroundForm={this.state.backgroundForm} 
                         BorderH2={this.state.BorderH2} 
                         ColorText={this.state.ColorText} 
-                        Loading={this.Loading} 
                         heightForm={this.state.heightForm} 
                         widthForm={this.state.widthForm} 
                         borderForm={this.state.borderForm} 
