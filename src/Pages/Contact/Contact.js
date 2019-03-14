@@ -10,33 +10,38 @@ import Formulaire from './Components/Formulaire'
 
 class Contact extends Component {
 
-    state = {
-        name: '',
-        email: '',
-        message: '',
-        valueSubmit: 'Envoyer',
-        fontSizeSubmit: '15px',
-        paddingSubmit: '8px 12px',
-        borderSubmit: '',
-        borderForm: 'none',
-        widthForm: '370px',
-        heightForm: '430px',
+    constructor() {
+        super()
+        this.state = {
+            name: '',
+            email: '',
+            message: '',
+            valueSubmit: 'Envoyer',
+            fontSizeSubmit: '15px',
+            paddingSubmit: '8px 12px',
+            borderSubmit: '',
+            borderForm: 'none',
+            widthForm: '370px',
+            heightForm: '430px',
+            backgroundContainer: "",
 
-        backgroundContainer: "",
+            //load
+            displayApp: 'none',
+            displayLoading: 'flex',
 
-        //load
-        displayApp: 'none',
-        displayLoading: 'flex',
-        
-        //display Captcha
-        displaySubmit: 'none',
-        displayCapcha: 'inline-block',
+            //display Captcha
+            displaySubmit: 'none',
+            displayCapcha: 'inline-block',
+	
+            //DarkMode
+            ColorText: "",
+	        BorderH2: "",
+            backgroundForm: "",
+            classPlaceholderForm: "",
+        }
 
-        //DarkMode
-        ColorText: "",
-        BorderH2: "",
-        backgroundForm: "",
-        classPlaceholderForm: "",
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount () {
