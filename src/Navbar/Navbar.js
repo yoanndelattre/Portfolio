@@ -101,12 +101,24 @@ class Navbar extends Component {
 
         const SliderColorMode = (
             <Fragment>
-                <img className="ico-sun" src={sun_ico} alt="sun mode" />
+                <img 
+                    className="ico-sun" 
+                    src={sun_ico} 
+                    alt="sun mode" 
+                />
                 <label className="switch">
-                    <input defaultChecked={localStorage.getItem('DarkMode')} onChange={this.handleChange} type="checkbox"/>
+                    <input 
+                        defaultChecked={localStorage.getItem('DarkMode')} 
+                        onChange={this.handleChange} 
+                        type="checkbox"
+                    />
                     <span className="slider"></span>
                 </label>
-                <img className="ico-moon" src={moon_ico} alt="sun mode" />
+                <img 
+                    className="ico-moon" 
+                    src={moon_ico} 
+                    alt="sun mode" 
+                />
             </Fragment>
         )
 
@@ -115,19 +127,43 @@ class Navbar extends Component {
             return (
                 <header>
                     <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
-                        <h1 style={{ color: this.state.ColorText }}>Portfolio</h1>
+                        
+                        <h1 style={{ color: this.state.ColorText }}>
+                            Portfolio
+                        </h1>
+                        
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} href="/Contact" >Contact</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} href="/Projets" >Projets</a>
-                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusHome}} href="/" >Home</a>
-                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusHome}} className='smart-screen' href="/" >Home</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} className='smart-screen' href="/Projets" >Projets</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} className='smart-screen' href="/Contact" >Contact</a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} href="/Contact" >
+                            Contact
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} href="/Projets" >
+                            Projets
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusHome}} href="/" >
+                            Home
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusHome}} className='smart-screen' href="/" >
+                            Home
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} className='smart-screen' href="/Projets" >
+                            Projets
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} className='smart-screen' href="/Contact" >
+                            Contact
+                        </a>
+                        
                         <div style={{ background: this.state.backgroundNavBarSmart }} className="switch-color-smart">
-                        {SliderColorMode}
+                            {SliderColorMode}
                         </div>
+
                     </div>
                 </header>
             )
@@ -138,19 +174,43 @@ class Navbar extends Component {
             return (
                 <header>
                     <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
-                        <h1 style={{ color: this.state.ColorText }}>Portfolio</h1>
+                        
+                        <h1 style={{ color: this.state.ColorText }}>
+                            Portfolio
+                        </h1>
+                        
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} href="/Contact" >Contact</a>
-                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusProjects}} href="/Projets" >Projets</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} href="/" >Home</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} className='smart-screen' href="/" >Home</a>
-                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusProjects }} className='smart-screen' href="/Projets" >Projets</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} className='smart-screen' href="/Contact" >Contact</a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} href="/Contact" >
+                            Contact
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusProjects}} href="/Projets" >
+                            Projets
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} href="/" >
+                            Home
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} className='smart-screen' href="/" >
+                            Home
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusProjects }} className='smart-screen' href="/Projets" >
+                            Projets
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} className='smart-screen' href="/Contact" >
+                            Contact
+                        </a>
+                        
                         <div style={{ background: this.state.backgroundNavBarSmart }} className="switch-color-smart">
                             {SliderColorMode}
                         </div>
+                    
                     </div>
                 </header>
             )
@@ -162,19 +222,43 @@ class Navbar extends Component {
             return (
                 <header>
                     <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
-                        <h1 style={{ color: this.state.ColorText }}>Portfolio</h1>
+                        
+                        <h1 style={{ color: this.state.ColorText }}>
+                            Portfolio
+                        </h1>
+                        
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
-                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusContact }} href="/Contact" >Contact</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} href="/Projets" >Projets</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} href="/" >Home</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} className='smart-screen' href="/" >Home</a>
-                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} className='smart-screen' href="/Projets" >Projets</a>
-                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusContact }} className='smart-screen' href="/Contact" >Contact</a>
+                        
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusContact }} href="/Contact" >
+                            Contact
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} href="/Projets" >
+                            Projets
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} href="/" >
+                            Home
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverHome }} onMouseEnter={this.OnMouseEnterHome} onMouseLeave={() => {this.setState ({ backgroundTextHoverHome: "" })}} className='smart-screen' href="/" >
+                            Home
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverProjects }} onMouseEnter={this.OnMouseEnterProjects} onMouseLeave={() => {this.setState ({ backgroundTextHoverProjects: "" })}} className='smart-screen' href="/Projets" >
+                            Projets
+                        </a>
+                        
+                        <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusContact }} className='smart-screen' href="/Contact" >
+                            Contact
+                        </a>
+                        
                         <div style={{ background: this.state.backgroundNavBarSmart }} className="switch-color-smart">
                             {SliderColorMode}
                         </div>
+                    
                     </div>
                 </header>
             )
