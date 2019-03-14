@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
+import ReactLoading from 'react-loading'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
 import Me from './Components/Me'
-import ReactLoading from 'react-loading'
 
 // css
 import './Home.css'
@@ -96,9 +96,15 @@ class Home extends Component {
                 </div>
                 <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                    <span className="version" style={{ background: this.state.backgroundVersion, color: this.state.ColorText }} >v1.0</span>
+                    <span className="version" style={{ background: this.state.backgroundVersion, color: this.state.ColorText }}>
+                        v1.0
+                    </span>
                     <div className="home_card">
-                        <Me ColorText={this.state.ColorText} backgroundMeCard={this.state.backgroundMeCard} backgroundCard={this.state.backgroundCard} />
+                        <Me 
+                            ColorText={this.state.ColorText} 
+                            backgroundMeCard={this.state.backgroundMeCard} 
+                            backgroundCard={this.state.backgroundCard} 
+                        />
                     </div>
                 </div>
             </Fragment>
