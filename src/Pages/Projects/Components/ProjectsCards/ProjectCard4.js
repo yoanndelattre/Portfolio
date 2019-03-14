@@ -28,8 +28,12 @@ export default class ProjectCard4 extends Component {
 						<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Web-Chatbox"} />
 						<LinkWebsiteProject TitleWebsite={"Chatbox"} LinkWebsite={"https://chatbox.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
-							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">Détails:</h3>
-							<p style={{ color: this.props.textFlippingCard }} className="text-details">Site web permettant à différents utilisateurs de communiquer sous un pseudo qu'ils auront au préalablement indiqués sur la page de connexion.</p>
+							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
+								Détails:
+							</h3>
+							<p style={{ color: this.props.textFlippingCard }} className="text-details">
+								Site web permettant à différents utilisateurs de communiquer sous un pseudo qu'ils auront au préalablement indiqués sur la page de connexion.
+							</p>
 						</div>
 					</div>
   	  	</FlippingCardBack>

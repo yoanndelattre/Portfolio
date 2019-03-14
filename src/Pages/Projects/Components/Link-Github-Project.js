@@ -13,7 +13,9 @@ class LinkGithubProject extends Component {
 			    <a rel="noopener noreferrer" target="_blank" href={this.props.LinkGithub} >
 					<button type="button" className="repo-github-link-button">
 						<img className="repo-github-link-button_ico" src={github_logo} alt="github logo" />
-						<span className="repo-github-link-button_text">Dépôt GitHub du Projet</span>
+						<span className="repo-github-link-button_text">
+							Dépôt GitHub du Projet
+						</span>
 					</button>
 				</a>
 			</div>

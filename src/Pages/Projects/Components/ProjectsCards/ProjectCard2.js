@@ -26,8 +26,12 @@ export default class ProjectCard2 extends Component {
 					<div className="BackCard FrontCard BackProjectCard2">
 						<LinkWebsiteProject TitleWebsite={"Cluster Live Viewer"} LinkWebsite={"https://visualizer-docker.yoanndelattre.com"} />
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
-							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">Détails:</h3>
-							<p style={{ color: this.props.textFlippingCard }} className="text-details">Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) fonctionnent avec Docker Swarm. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.</p>
+							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
+								Détails:
+							</h3>
+							<p style={{ color: this.props.textFlippingCard }} className="text-details">
+								Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) fonctionnent avec Docker Swarm. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.
+							</p>
 						</div>
 					</div>
 				</FlippingCardBack>

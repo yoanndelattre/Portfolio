@@ -28,8 +28,12 @@ export default class ProjectCard3 extends Component {
 						<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Markdown-Editor"} />
 						<LinkWebsiteProject TitleWebsite={"Markdown Editor"} LinkWebsite={"https://markdown.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
-							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">Détails:</h3>
-							<p style={{ color: this.props.textFlippingCard }} className="text-details">Site web traducteur instantané de markdown, le texte tapé est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".</p>
+							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
+								Détails:
+							</h3>
+							<p style={{ color: this.props.textFlippingCard }} className="text-details">
+								Site web traducteur instantané de markdown, le texte tapé est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".
+							</p>
 						</div>
 					</div>
 				</FlippingCardBack>

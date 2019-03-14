@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
+import ReactLoading from 'react-loading'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
-import ReactLoading from 'react-loading'
 import ProjectCard1 from './Components/ProjectsCards/ProjectCard1'
 import ProjectCard2 from './Components/ProjectsCards/ProjectCard2'
 import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
@@ -114,7 +114,9 @@ class Projects extends Component {
                 </div>
                 <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                        <h1 style={{ color: this.state.textTitle }} className="title">Mes Projets</h1>
+                        <h1 style={{ color: this.state.textTitle }} className="title">
+                            Mes Projets
+                        </h1>
                         <div className="cards">
                             <ProjectCard1 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                             <ProjectCard2 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
