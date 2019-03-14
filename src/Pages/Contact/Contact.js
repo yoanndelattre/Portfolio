@@ -10,40 +10,33 @@ import Formulaire from './Components/Formulaire'
 
 class Contact extends Component {
 
-    constructor() {
-        super()
+    state = {
+        name: '',
+        email: '',
+        message: '',
+        valueSubmit: 'Envoyer',
+        fontSizeSubmit: '15px',
+        paddingSubmit: '8px 12px',
+        borderSubmit: '',
+        borderForm: 'none',
+        widthForm: '370px',
+        heightForm: '430px',
 
-        this.state = {
-            name: '',
-            email: '',
-            message: '',
-            valueSubmit: 'Envoyer',
-            fontSizeSubmit: '15px',
-            paddingSubmit: '8px 12px',
-            borderSubmit: '',
-            borderForm: 'none',
-            widthForm: '370px',
-            heightForm: '430px',
+        backgroundContainer: "",
 
-            backgroundContainer: "",
+        //load
+        displayApp: 'none',
+        displayLoading: 'flex',
+        
+        //display Captcha
+        displaySubmit: 'none',
+        displayCapcha: 'inline-block',
 
-            //load
-            displayApp: 'none',
-            displayLoading: 'flex',
-
-            //display Captcha
-            displaySubmit: 'none',
-            displayCapcha: 'inline-block',
-
-            //DarkMode
-            ColorText: "",
-            BorderH2: "",
-            backgroundForm: "",
-            classPlaceholderForm: "",
-        }
-
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+        //DarkMode
+        ColorText: "",
+        BorderH2: "",
+        backgroundForm: "",
+        classPlaceholderForm: "",
     }
 
     componentDidMount () {
@@ -51,13 +44,17 @@ class Contact extends Component {
     }
 
     handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value })
+        this.setState({ 
+            [e.target.name]: e.target.value 
+        })
     }
 
     async handleSubmit(e) {
         e.preventDefault(
-            this.setState({ name: '', email: '', message: '' }),
-            this.setState({ 
+            this.setState({
+                name: '', 
+                email: '', 
+                message: '', 
                 valueSubmit: '✓', 
                 fontSizeSubmit: '35px', 
                 paddingSubmit: '0 6px', 
@@ -110,21 +107,30 @@ class Contact extends Component {
         const token_key = "6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG"
         
         return (
-        <div style={{ display: this.state.displayCapcha }}>
-            <Reaptcha onRender={this.Loading} onVerify={this.onVerify} sitekey={token_key} />
-        </div>
+            <div style={{ display: this.state.displayCapcha }}>
+                <Reaptcha 
+                    onRender={this.Loading} 
+                    onVerify={this.onVerify} 
+                    sitekey={token_key} 
+                />
+            </div>
         )
     }
 
     onVerify = () => {
         setTimeout(() => {
-            this.setState({ displaySubmit: 'block' })
-            this.setState({ displayCapcha: 'none' }) 
+            this.setState({ 
+                displaySubmit: 'block', 
+                displayCapcha: 'none' 
+            })
         }, 1000);
     }
 
     Loading = () => {
-        this.setState ({ displayApp: 'block', displayLoading: 'none' })
+        this.setState ({ 
+            displayApp: 'block', 
+            displayLoading: 'none' 
+        })
     }
 
     render () {
