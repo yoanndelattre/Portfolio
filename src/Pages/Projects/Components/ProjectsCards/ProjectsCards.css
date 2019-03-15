@@ -49,3 +49,9 @@
 .PositionNameProjectCard5 {
     font-size: 13px; 
 }
+
+/* Reset background default card class name */
+
+.card {
+    background-color: none;
+}
