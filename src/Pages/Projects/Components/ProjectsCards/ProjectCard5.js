@@ -18,8 +18,8 @@ export default class ProjectCard5 extends Component {
 					<UserCard 
 						avatar={logo_website} 
 						header={capture_recipe_box}
-						name={<h2 style={{ color: this.props.textFlippingCard }} className="titleUserCard">Boîte à Recette</h2>} 
-						positionName={<p style={{ color: this.props.textFlippingCard }} className="PositionName PositionNameProjectCard5">Site web permettant à différents utilisateurs d’héberger leurs recettes.</p>} 
+						name={<h2 className="titleUserCard">Boîte à Recette</h2>} 
+						positionName={<p className="PositionName PositionNameProjectCard5">Site web permettant à différents utilisateurs d’héberger leurs recettes.</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>

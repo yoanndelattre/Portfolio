@@ -29,7 +29,6 @@ class Projects extends Component {
         //DarkMode
         textFlippingCard: "",
         backgroundFlippingCardBack: "",
-        classUserCard: "",
         textTitle: '',
     }
 
@@ -118,11 +117,11 @@ class Projects extends Component {
                             Mes Projets
                         </h1>
                         <div className="cards">
-                            <ProjectCard1 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard2 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard3 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard4 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard5 classUserCard={this.state.classUserCard} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard1 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard2 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard3 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard4 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard5 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                         </div>
                 </div>
             </Fragment>

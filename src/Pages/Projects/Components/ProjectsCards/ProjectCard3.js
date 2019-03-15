@@ -18,8 +18,8 @@ export default class ProjectCard3 extends Component {
 					<UserCard 
 						avatar={logo_website} 
 						header={capture_markdown_editor}
-						name={<h2 style={{ color: this.props.textFlippingCard }} className="titleUserCard">Traducteur Markdown</h2>} 
-						positionName={<p style={{ color: this.props.textFlippingCard }} className="PositionName">Site web traducteur instantané de markdown.</p>} 
+						name={<h2 className="titleUserCard">Traducteur Markdown</h2>} 
+						positionName={<p className="PositionName">Site web traducteur instantané de markdown.</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>

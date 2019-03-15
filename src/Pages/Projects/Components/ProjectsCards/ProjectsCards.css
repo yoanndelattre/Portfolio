@@ -1,11 +1,3 @@
-.classUserCardWhite {
-    background: rgb(218, 218, 218)
-}
-
-.classUserCardDark {
-    background: rgb(51, 51, 51)
-}
-
 .BackCard {
     height: 100%;
     width: 100%;
@@ -16,12 +8,13 @@
 .titleUserCard {
     font-size: 18px;
     margin: 0;
-    padding: 0
-
+    padding: 0;
+    color: black;
 }
 
 .PositionName {
     font-size: 14px;
+    color: black;
 }
 
 .details {

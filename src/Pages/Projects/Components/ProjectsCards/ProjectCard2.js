@@ -17,8 +17,8 @@ export default class ProjectCard2 extends Component {
 					<UserCard 
 						avatar={logo_docker_swarm} 
 						header={img_raspberrypi}
-						name={<h2 style={{ color: this.props.textFlippingCard }} className="titleUserCard">Cluster Raspberry Pi</h2>} 
-						positionName={<p style={{ color: this.props.textFlippingCard }} className="PositionName">Cluster de deux Raspberry Pi 3 avec Docker Swarm.</p>} 
+						name={<h2 className="titleUserCard">Cluster Raspberry Pi</h2>} 
+						positionName={<p className="PositionName">Cluster de deux Raspberry Pi 3 avec Docker Swarm.</p>} 
 						cardClass={this.props.classUserCard} 
 					/>
 				</FlippingCardFront>
