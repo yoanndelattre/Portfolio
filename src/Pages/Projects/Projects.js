@@ -8,7 +8,7 @@ import ProjectCard2 from './Components/ProjectsCards/ProjectCard2'
 import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
 import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
 import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
-import {ReportProblem} from '../Report-Problem/Report-Problem'
+import {ReportProblem} from '../../Report-Problem/Report-Problem'
 
 // css
 import './Projects.css'

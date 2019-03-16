@@ -6,7 +6,7 @@ import Reaptcha from 'reaptcha';
 import Navbar from '../../Navbar/Navbar'
 import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
-import {ReportProblem} from '../Report-Problem/Report-Problem'
+import {ReportProblem} from '../../Report-Problem/Report-Problem'
 
 
 class Contact extends Component {

@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading'
 // Components
 import Navbar from '../../Navbar/Navbar'
 import Me from './Components/Me'
-import {ReportProblem} from '../Report-Problem/Report-Problem'
+import {ReportProblem} from '../../Report-Problem/Report-Problem'
 
 // css
 import './Home.css'
