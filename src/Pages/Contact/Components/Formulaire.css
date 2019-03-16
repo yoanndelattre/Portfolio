@@ -64,7 +64,7 @@
 }
 .form > input:hover{
     outline: none;
-    background: rgb(77, 92, 102);
+    background: rgb(153, 153, 153);
     color:#fff
 }
 
