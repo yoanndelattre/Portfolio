@@ -6,6 +6,7 @@ import Reaptcha from 'reaptcha';
 import Navbar from '../../Navbar/Navbar'
 import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
+import {ReportProblem} from '../Report-Problem/Report-Problem'
 
 
 class Contact extends Component {
@@ -170,6 +171,7 @@ class Contact extends Component {
                         handleChange={this.handleChange} 
                         handleSubmit={this.handleSubmit} 
                     />
+                    {ReportProblem}
                 </div>
             </Fragment>
         )

@@ -8,6 +8,7 @@ import ProjectCard2 from './Components/ProjectsCards/ProjectCard2'
 import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
 import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
 import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
+import {ReportProblem} from '../Report-Problem/Report-Problem'
 
 // css
 import './Projects.css'
@@ -113,16 +114,17 @@ class Projects extends Component {
                 </div>
                 <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                        <h1 style={{ color: this.state.textTitle }} className="title">
-                            Mes Projets
-                        </h1>
-                        <div className="cards">
-                            <ProjectCard1 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard2 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard3 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard4 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard5 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        </div>
+                    <h1 style={{ color: this.state.textTitle }} className="title">
+                        Mes Projets
+                    </h1>
+                    <div className="cards">
+                        <ProjectCard1 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard2 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard3 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard4 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard5 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                    </div>
+                    {ReportProblem}
                 </div>
             </Fragment>
         )
