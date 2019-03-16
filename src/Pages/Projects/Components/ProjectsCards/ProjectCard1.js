@@ -4,7 +4,7 @@ import LinkGithubProject from '../Link-Github-Project'
 
 // img
 import logo_website from '../logo/logo-website.png'
-import capture_portfolio from '../img/capture-portfolio.png'
+import capture_portfolio from '../img/capture-portfolio.JPG'
 
 // css 
 import './ProjectsCards.css'
