@@ -12,7 +12,7 @@ const NotFound = () => (
 			<h2>Oops! This Page Could Not Be Found</h2>
 			<p>Sorry but the page you are looking for does not exist, have been removed. name changed or is temporarily unavailable</p>
 			<a href="/">Go To Homepage</a>
-      <a href="/Contact">Report a Problem</a>
+      <a target="blank" href="https://github.com/yoanndelattre/Portfolio/issues">Report a Problem</a>
 		</div>
 	</div>
 )
