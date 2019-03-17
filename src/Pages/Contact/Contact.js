@@ -77,7 +77,7 @@ class Contact extends Component {
 
         const { name, email, message } = this.state
 
-        const form = await axios.post('/api/form', {
+        const form = await axios.post('https://mailsend-portfolio.herokuapp.com/api/form', {
             name,
             email,
             message
