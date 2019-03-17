@@ -14,6 +14,7 @@ class Contact extends Component {
     constructor() {
         super()
         this.state = {
+            verifyCaptcha: '',
             name: '',
             email: '',
             message: '',
@@ -56,33 +57,35 @@ class Contact extends Component {
     }
 
     async handleSubmit(e) {
-        e.preventDefault(
-            this.setState({
-                name: '', 
-                email: '', 
-                message: '', 
-                valueSubmit: '✓', 
-                fontSizeSubmit: '35px', 
-                paddingSubmit: '0 6px', 
-                borderSubmit: '2px solid green', 
-                borderForm: '3px solid green', 
-                widthForm: '367px', 
-                heightForm: '427px'
-            }),
-            
-            setTimeout(() => {
-                window.location.reload();
-            }, 7500)
-        )
-
-        const { name, email, message } = this.state
-
-        const form = await axios.post('https://mailsend-portfolio.herokuapp.com/api/form', {
-            name,
-            email,
-            message
-        })
-        console.log(form)
+        if (this.state.verifyCaptcha === "true") {
+            e.preventDefault(
+                this.setState({
+                    name: '', 
+                    email: '', 
+                    message: '', 
+                    valueSubmit: '✓', 
+                    fontSizeSubmit: '35px', 
+                    paddingSubmit: '0 6px', 
+                    borderSubmit: '2px solid green', 
+                    borderForm: '3px solid green', 
+                    widthForm: '367px', 
+                    heightForm: '427px'
+                }),
+                
+                setTimeout(() => {
+                    window.location.reload();
+                }, 7500)
+            )
+    
+            const { name, email, message } = this.state
+    
+            const form = await axios.post('https://mailsend-portfolio.herokuapp.com/api/form', {
+                name,
+                email,
+                message
+            })
+            console.log(form)
+        }
     }
 
     UpdateComponent = () => {
@@ -124,6 +127,8 @@ class Contact extends Component {
     }
 
     onVerify = () => {
+        this.setState({ verifyCaptcha: "true" })
+
         setTimeout(() => {
             this.setState({ 
                 displaySubmit: 'block', 
