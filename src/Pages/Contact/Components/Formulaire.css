@@ -72,3 +72,9 @@
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-height: 534px) {
+    .form{
+        transform: scale(0.7)
+    }
+}
