@@ -1,13 +1,14 @@
 import React, { Component, Fragment } from 'react'
+import ReactLoading from 'react-loading'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
-import ReactLoading from 'react-loading'
-import { ProjectCard1 } from './Components/ProjectsCards/ProjectCard1'
-import { ProjectCard2 } from './Components/ProjectsCards/ProjectCard2'
-import { ProjectCard3 } from './Components/ProjectsCards/ProjectCard3'
-import { ProjectCard4 } from './Components/ProjectsCards/ProjectCard4'
-import { ProjectCard5 } from './Components/ProjectsCards/ProjectCard5'
+import ProjectCard1 from './Components/ProjectsCards/ProjectCard1'
+import ProjectCard2 from './Components/ProjectsCards/ProjectCard2'
+import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
+import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
+import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
+import {ReportProblem} from '../../Report-Problem/Report-Problem'
 
 // css
 import './Projects.css'
@@ -19,20 +20,86 @@ class Projects extends Component {
 
     state = {
         backgroundImage: `url(${ Projectsbackground })`,
+        backgroundContainer: "",
+        classprojectsContainer: "",
 
         //load
         displayApp: 'none',
         displayLoading: 'flex',
+
+        //DarkMode
+        textFlippingCard: "",
+        backgroundFlippingCardBack: "",
+        textTitle: '',
     }
 
     componentDidMount () {
         if (window.innerWidth <= 768) {
-            this.setState({ backgroundImage: "none" })
+            this.setState({ 
+                backgroundImage: "none",
+                classprojectsContainer: "projectsContainerSmart" 
+            })
+
+            if (localStorage.getItem('DarkMode') === "true") {
+                this.setState ({ 
+                    backgroundContainer: "rgb(88, 88, 88)"
+                })
+            }
+            
+            if (localStorage.getItem('DarkMode') === null) {
+                this.setState ({
+                    backgroundContainer: "rgb(165, 165, 165)"
+                })
+            }
+
         }
+        else {
+            this.setState({ 
+                classprojectsContainer: "projectsContainer" 
+            }) 
+        }
+
+        this.UpdateComponent()
     }
 
     Loading = () => {
         this.setState ({ displayApp: 'block', displayLoading: 'none' })
+    }
+
+    UpdateComponent = () => {
+        if (localStorage.getItem('DarkMode') === "true") {
+            this.setState ({ 
+                textFlippingCard: "white",
+                backgroundFlippingCardBack: "rgb(51, 51, 51)",
+                classUserCard: "classUserCardDark",
+                textTitle: "black",
+            })
+        }
+        
+        if (localStorage.getItem('DarkMode') === null) {
+            this.setState ({
+                textFlippingCard: "black",
+                backgroundFlippingCardBack: "rgb(218, 218, 218)",
+                classUserCard: "classUserCardWhite",
+                textTitle: "white",
+            })
+        }
+
+        if (window.innerWidth <= 768) {
+
+            if (localStorage.getItem('DarkMode') === "true") {
+                this.setState ({ 
+                    backgroundContainer: "rgb(88, 88, 88)"
+                })
+            }
+            
+            if (localStorage.getItem('DarkMode') === null) {
+                this.setState ({
+                    backgroundContainer: "rgb(165, 165, 165)"
+                })
+            }
+
+        }
     }
 
     render () {
@@ -45,16 +112,19 @@ class Projects extends Component {
                         width={'10%'}
                     />
                 </div>
-                <div onLoad={this.Loading} className="projectsContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage}}>
-                    <Navbar/>
-                        <h1 className="title">Mes Projets</h1>
-                        <div className="cards">
-                            {ProjectCard1}
-                            {ProjectCard2}
-                            {ProjectCard3}
-                            {ProjectCard4}
-                            {ProjectCard5}
-                        </div>
+                <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
+                    <Navbar UpdateComponent={this.UpdateComponent} />
+                    <h1 style={{ color: this.state.textTitle }} className="title">
+                        Mes Projets
+                    </h1>
+                    <div className="cards">
+                        <ProjectCard1 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard2 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard3 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard4 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard5 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                    </div>
+                    {ReportProblem}
                 </div>
             </Fragment>
         )

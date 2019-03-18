@@ -1,14 +1,12 @@
 /* Main Card */ 
 .me_card {
     padding: 20px;
-    background: rgb(107, 107, 107);
     display: table;
     margin: 22px auto;
 }
 
 /* About Card */ 
 .about-me_card {
-    background: rgb(63, 63, 63);
     padding: 17px;
     margin-bottom: 12px;
     display: inline-block;
@@ -27,12 +25,10 @@
     margin-right: 5px;
     font-size: 17px;
     margin-top: 15px;
-    color: rgb(214, 214, 214)
 }
 
 /* Social Card */ 
 .social-me_card {
-    background: rgb(63, 63, 63);
     float: right;
     margin-left: 20px;
     padding: 12px;
@@ -64,7 +60,6 @@
 
 /* DevTools Card */ 
 .devtools-me_card {
-    background: rgb(63, 63, 63);
     padding: 12px;
     border-radius: 8px;
 }
@@ -94,7 +89,6 @@
 }
 
 .devtools-me_card > p > a {
-    color: rgb(214, 214, 214);
     text-decoration: none;
     margin: 4px;
     padding: 0;
@@ -105,7 +99,6 @@
     padding: 4px;
     margin: 0;
     background: rgb(153, 153, 153);
-    color: black;
     transform: scale(1.2);
 }
 
@@ -139,5 +132,10 @@
     /* Animations Hover Logo App */
     .devtools-me_card > p > a:hover + .logo {
         display: none;
+    }
+
+    /* Main Card */ 
+    .me_card {
+        margin-top: 65px
     }
 }

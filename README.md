@@ -70,6 +70,8 @@
 
 * ```SystemLoading``` *(loading between pages).*
 
+* ```ColorMode``` *(Dark Mode).*
+
 
 #### For ```"subject"``` :
 

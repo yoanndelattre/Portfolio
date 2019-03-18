@@ -1,6 +1,14 @@
 /* Main Container Background */ 
 .projectsContainer {
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.projectsContainerSmart {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -16,4 +24,11 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+    .title {
+        margin-top: 75px;
+        margin-bottom: 0;
+    }
 }

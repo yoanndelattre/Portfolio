@@ -1,7 +1,3 @@
-.FrontCard {
-    background: rgb(194, 194, 194);
-}
-
 .BackCard {
     height: 100%;
     width: 100%;
@@ -9,15 +5,21 @@
     text-align: center;
 }
 
+.titleUserCard {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
 .PositionName {
     font-size: 14px;
-    color: rgb(29, 29, 29);
+    color: black;
 }
 
 .details {
     margin: 22px 13px 0 13px;
     padding: 1px 12px 3px 12px;
-    background-color: rgb(233, 233, 233);
     border-radius: 5px;
 }
 
