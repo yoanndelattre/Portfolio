@@ -13,7 +13,7 @@ steps:
   args: ['cp', '-R', './build/*', 'gs://webapp-portfolio/Website/']
 
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', 'gs://config-deploy/cloudbuildDeploy.yaml', '.']
+  args: ['cp', 'gs://config-deploy-portfolio/cloudbuildDeploy.yaml', '.']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['builds', 'submit', '--config', './cloudbuildDeploy.yaml', '--no-source']
