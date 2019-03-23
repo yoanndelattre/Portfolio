@@ -10,4 +10,4 @@ steps:
   args: ['-m', 'rm', 'gs://webapp-portfolio/Website/**']
 
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', './build/*', 'gs://webapp-portfolio/SendMail/']
+  args: ['cp', './build/*', 'gs://webapp-portfolio/Website/']
