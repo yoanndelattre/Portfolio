@@ -1,13 +1,13 @@
 steps:
 
-- name: 'gcr.io/cloud-builders/npm'
+- id: "install dependency"
+  name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 
-- name: 'gcr.io/cloud-builders/npm'
+- id: "build static files"
+  name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
 
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['-m', 'rm', 'gs://webapp-portfolio/Website/**']
-
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', '-R', './build/*', 'gs://webapp-portfolio/Website/']
+- id: "Sync static files in bucket"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['-m', 'rsync', '-d', '-r', './build/', 'gs://website-portfolio/']
