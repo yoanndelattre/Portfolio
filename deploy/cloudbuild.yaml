@@ -10,4 +10,4 @@ steps:
 
 - id: "Sync static files in bucket"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['-m', 'rsync', '-d', '-r', './build/', 'gs://website-portfolio/']
+  args: ['-m', 'rsync', '-d', '-r', './build/', 'gs://website-portfolio/app_files/']
