@@ -10,7 +10,7 @@ steps:
 
 - id: "Sync static files in bucket"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['-m', 'rsync', '-d', '-r', './build/', 'gs://website-portfolio/app_files/']
+  args: ['-m', 'rsync', '-d', '-r', './build/', 'gs://website-portfolio/']
 
 - id: "Download git repo for config App Engine"
   name: 'gcr.io/cloud-builders/git'
