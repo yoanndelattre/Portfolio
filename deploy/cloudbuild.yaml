@@ -18,4 +18,4 @@ steps:
   
 - id: "DEPLOY ON APP ENGINE"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['builds', 'submit', '--config', './Config-App-Engine-Portfolio/master/cloudbuildDeploy.yaml', './Config-App-Engine-Portfolio/master/']
+  args: ['builds', 'submit', '--config', './Config-App-Engine-Portfolio/master/cloudbuildDeploy.yaml', './Config-App-Engine-Portfolio/']
