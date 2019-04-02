@@ -30,7 +30,7 @@ export default class ProjectCard1 extends Component {
 							Détails:
 						</h3>
 						<p style={{ fontSize: '14px', color: this.props.textFlippingCard }} className="text-details">
-							Ce site est hébergé sur un NAS Synology Ds216j avec le package Web Station à l'aide d'Apache comme serveur HTTP. Après la demande d’approbation de l’administrateur, les modifications du dépôt GitHub sont automatiquement déployées sur le NAS.
+							Ce site est hébergé sur Google Cloud Platform avec le service App Engine. Après la demande d’approbation de l’administrateur, les modifications du dépôt GitHub sont automatiquement déployé sur App Engine grâce à Cloud Build.
 						</p>
 					</div>
 				</div>
