@@ -79,7 +79,7 @@ class Contact extends Component {
     
             const { name, email, message } = this.state
     
-            const form = await axios.post('https://portfolio-perso-07.appspot.com/mail/send', {
+            const form = await axios.post('https://yoanndelattre.com/mail/send', {
                 name,
                 email,
                 message
