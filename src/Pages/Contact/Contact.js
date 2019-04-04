@@ -145,25 +145,6 @@ class Contact extends Component {
     }
 
     render () {
-
-        if (this.state.name) {
-            window.addEventListener('beforeunload', (event) => {
-                event.returnValue = `Are you sure you want to leave?`;
-            });
-        }
-
-        if (this.state.email) {
-            window.addEventListener('beforeunload', (event) => {
-                event.returnValue = `Are you sure you want to leave?`;
-            });
-        }
-
-        if (this.state.message) {
-            window.addEventListener('beforeunload', (event) => {
-                event.returnValue = `Are you sure you want to leave?`;
-            });
-        }
-
         return (
             <Fragment>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
