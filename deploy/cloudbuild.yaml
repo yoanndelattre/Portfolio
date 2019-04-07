@@ -1,5 +1,9 @@
 steps:
 
+- id: "Copy script Analytics"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', "gs://analytics_portfolio-box-config/index.html", "./public/index.html"]
+
 - id: "install dependency"
   name: 'gcr.io/cloud-builders/npm'
   args: ['install']
