@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import ReactLoading from 'react-loading'
+import axios from 'axios'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -28,6 +29,9 @@ class Home extends Component {
         backgroundMeCardSmart: '',
         backgroundVersion: '',
         backgroundCard: '',
+
+        // Releases number Repo GitHub
+        ReleasesRepo: '',
     }
 
     componentDidMount () {
@@ -48,6 +52,10 @@ class Home extends Component {
 
         }
         this.UpdateComponent()
+
+        // Releases number Repo GitHub
+        axios.get('https://api.github.com/repos/yoanndelattre/Portfolio/releases/latest')
+            .then(response => this.setState({ ReleasesRepo: response.data.tag_name}))
     }
 
     Loading = () => {
@@ -98,7 +106,7 @@ class Home extends Component {
                 <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
                     <span className="version" style={{ background: this.state.backgroundVersion, color: this.state.ColorText }}>
-                        v1.0
+                        {this.state.ReleasesRepo}
                     </span>
                     <div className="home_card">
                         <Me 
