@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import Reaptcha from 'reaptcha';
-import ReactGA from 'react-ga'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -71,11 +70,6 @@ class Contact extends Component {
                     borderForm: '3px solid green', 
                     widthForm: '367px', 
                     heightForm: '427px'
-                }),
-
-                ReactGA.event({
-                    category: 'Contact Email Send',
-                    action: 'Send',
                 }),
                 
                 setTimeout(() => {
