@@ -10,7 +10,7 @@ import NotFound from './Pages/NotFound/NotFound'
 
 export default function MainRouter () {
 
-    console.log(process.env.TOKEN_GOOGLE_ANALYTICS)
+    console.log(process.env.BRANCH)
     ReactGA.initialize(process.env.TOKEN_GOOGLE_ANALYTICS);
 
     function fireTracking() {
