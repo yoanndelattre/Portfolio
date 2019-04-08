@@ -32,7 +32,7 @@ export default class ProjectCard5 extends Component {
 								Détails:
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web permettant à différents utilisateurs d’héberger leurs recettes et de les modifier grâce à un système d’authentification via un compte Google, Facebook ou Twitter.
+								Site web permettant à différents utilisateurs d’héberger leurs recettes et de les modifier grâce à un système d’authentification via un compte Google ou Facebook.
 							</p>
 						</div>
 					</div>
