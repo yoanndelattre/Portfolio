@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import Reaptcha from 'reaptcha';
+import {Helmet} from 'react-helmet'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -147,6 +148,9 @@ class Contact extends Component {
     render () {
         return (
             <Fragment>
+                <Helmet>
+                    <title>Contact • Yoann Delattre | Portfolio</title>
+                </Helmet>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
                         type="bars"

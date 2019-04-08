@@ -1,10 +1,14 @@
 import React from 'react'
+import {Helmet} from 'react-helmet'
 
 // css
 import './NotFound.css'
 
 const NotFound = () => (
   <div id="notfound">
+	<Helmet>
+        <title>404 Error NotFound</title>
+    </Helmet>
 		<div className="notfound">
 			<div className="notfound-404">
 				<h1>404</h1>
