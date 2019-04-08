@@ -17,9 +17,9 @@ export default class Formulaire extends Component {
                     }
                 }}>
                 
-                <h2 style={{ color: this.props.ColorText, borderBottom: this.props.BorderH2 }}>
+                <h1 style={{ color: this.props.ColorText, borderBottom: this.props.BorderH2 }}>
                     CONTACTEZ-MOI
-                </h2>
+                </h1>
                 
                 <p className={this.props.classPlaceholderForm} type="Nom:">
                     <input style={{ color: this.props.ColorText }} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />

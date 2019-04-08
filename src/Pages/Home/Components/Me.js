@@ -38,10 +38,10 @@ class Me extends Component {
                 <div className="me_card" style={{ background: this.props.backgroundMeCard, color: this.props.ColorText }} >
                     <div style={{ background: this.props.backgroundCard }} className="about-me_card">
                         <img src={Photo_Profil} alt="profil"/>
-                        <div>
-                            <p>Yoann Delattre</p>
-                            <p>16 ans</p>
-                            <p>1er STI2D</p>
+                        <div className="info-me">
+                            <h1>Yoann Delattre</h1>
+                            <h1>16 ans</h1>
+                            <h1>1er STI2D</h1>
                         </div>
                     </div>
                     <div style={{ background: this.props.backgroundCard }} className="social-me_card">

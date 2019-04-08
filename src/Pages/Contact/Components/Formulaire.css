@@ -10,11 +10,12 @@
     position:relative
 }
 
-.form > h2{
+.form > h1{
+    font-size: 1.5em;
     outline: none;
     margin:10px 0;
     padding-bottom:10px;
-    width:203px;
+    width:206px;
 }
 
 .form > p > input{

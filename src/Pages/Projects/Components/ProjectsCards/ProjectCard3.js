@@ -18,7 +18,7 @@ export default class ProjectCard3 extends Component {
 					<UserCard 
 						avatar={logo_website} 
 						header={capture_markdown_editor}
-						name={<h2 className="titleUserCard">Traducteur Markdown</h2>} 
+						name={<h1 className="titleUserCard">Traducteur Markdown</h1>} 
 						positionName={<p className="PositionName">Site web traducteur instantané de markdown.</p>} 
 						cardClass={this.props.classUserCard}  
 					/>

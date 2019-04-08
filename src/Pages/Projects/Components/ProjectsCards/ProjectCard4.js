@@ -18,7 +18,7 @@ export default class ProjectCard4 extends Component {
 					<UserCard 
 						avatar={logo_website} 
 						header={capture_chatbox}
-						name={<h2 className="titleUserCard">Chatbox</h2>} 
+						name={<h1 className="titleUserCard">Chatbox</h1>} 
 						positionName={<p className="PositionName">Site web permettant à différents utilisateurs de communiquer.</p>} 
 						cardClass={this.props.classUserCard}  
 					/>

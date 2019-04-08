@@ -27,6 +27,11 @@
     margin-top: 15px;
 }
 
+.info-me > h1 {
+    font-size: 17px;
+    font-weight: normal
+}
+
 /* Social Card */ 
 .social-me_card {
     float: right;

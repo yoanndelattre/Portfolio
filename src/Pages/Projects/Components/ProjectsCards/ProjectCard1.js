@@ -17,7 +17,7 @@ export default class ProjectCard1 extends Component {
 				<UserCard 
 					avatar={logo_website} 
 					header={capture_portfolio} 
-					name={<h2 className="titleUserCard">Portfolio (ce site)</h2>}
+					name={<h1 className="titleUserCard">Portfolio (ce site)</h1>}
 					positionName={<p className="PositionName">Site web public qui expose mes projets et permet de me contacter.</p>} 
 					cardClass={this.props.classUserCard} 
 				/>
