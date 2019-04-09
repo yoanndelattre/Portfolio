@@ -12,14 +12,22 @@ steps:
   name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
 
-- id: "Sync static files in bucket"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['-m', 'rsync', '-d', '-r', './build/', 'gs://website_portfolio-builded/']
-
-- id: "Download git repo for config App Engine"
+- id: "Download Express server"
   name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-07/r/Config-App-Engine-Portfolio']
-  
-- id: "DEPLOY ON APP ENGINE"
+  args: ['clone', 'https://source.developers.google.com/p/portfolio-236817/r/github_yoanndelattre_express-server-gcp', './master/github_yoanndelattre_express-server-gcp']
+
+- id: "Create app_files folder"
+  name: 'ubuntu'
+  args: ['bash', './master/github_yoanndelattre_express-server-gcp/deploy/CreateFolderApp.sh']
+
+- id: "Move Website Portfolio Project folder"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['rsync', '-d', '-r', './build/.', './master/github_yoanndelattre_express-server-gcp/app_files/']
+
+- id: "Move WebsiteConfigAppEngine.yaml in github_yoanndelattre_express-server-gcp folder"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['mv', './deploy/WebsiteConfigAppEngine.yaml', './master/github_yoanndelattre_express-server-gcp/']
+
+- id: "DEPLOY APP ENGINE"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['builds', 'submit', '--config', './Config-App-Engine-Portfolio/master/cloudbuildDeploy.yaml', './Config-App-Engine-Portfolio/']
+  args: ['app', 'deploy', './master/github_yoanndelattre_express-server-gcp/WebsiteConfigAppEngine.yaml', './deploy/dispatch.yaml', '--version=1']
