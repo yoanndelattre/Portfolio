@@ -14,7 +14,7 @@ steps:
 
 - id: "Download Express server"
   name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://source.developers.google.com/p/portfolio-236817/r/github_yoanndelattre_express-server-gcp', './master/github_yoanndelattre_express-server-gcp']
+  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-07/r/github_yoanndelattre_express-server-gcp', './master/github_yoanndelattre_express-server-gcp']
 
 - id: "Create app_files folder"
   name: 'ubuntu'
