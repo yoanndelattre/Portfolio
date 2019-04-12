@@ -2,7 +2,7 @@ steps:
 
 - id: "Copy index html Analytics"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://analytics_portfolio-box-config/index.html", "./public/index.html"]
+  args: ['cp', "gs://analytics_portfolio-perso-box-config/index.html", "./public/index.html"]
 
 - id: "Install dependency"
   name: 'gcr.io/cloud-builders/npm'
@@ -14,7 +14,7 @@ steps:
 
 - id: "Download Express server"
   name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-07/r/github_yoanndelattre_express-server-gcp', './master/github_yoanndelattre_express-server-gcp']
+  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-237410/r/github_yoanndelattre_express-server-gcp', './master/github_yoanndelattre_express-server-gcp']
 
 - id: "Create app_files folder"
   name: 'ubuntu'
