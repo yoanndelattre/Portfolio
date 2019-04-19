@@ -22,7 +22,7 @@ class ShareButton extends Component {
         const title = 'Yoann Delattre | Portfolio'
 
         return (
-            <div className='buttons'>
+            <div className='buttons' style={{display: this.props.display}}>
                 <FacebookShareButton
                     url={shareUrl}
                     quote={title}

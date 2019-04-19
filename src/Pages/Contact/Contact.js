@@ -42,6 +42,9 @@ class Contact extends Component {
 	        BorderH2: "",
             backgroundForm: "",
             classPlaceholderForm: "",
+
+            //DisplayShareButton
+            displayShareButton: 'flex',
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -50,6 +53,10 @@ class Contact extends Component {
 
     componentDidMount () {
         this.UpdateComponent()
+
+        if (window.innerWidth <= 768) {
+            this.setState ({ displayShareButton: 'none' })
+        }
     }
 
     handleChange = e => {
@@ -181,7 +188,7 @@ class Contact extends Component {
                         handleChange={this.handleChange} 
                         handleSubmit={this.handleSubmit} 
                     />
-                    <ShareButton/>
+                    <ShareButton display={this.state.displayShareButton}/>
                     {ReportProblem}
                 </div>
             </Fragment>

@@ -116,7 +116,7 @@ class Home extends Component {
                             backgroundCard={this.state.backgroundCard} 
                         />
                     </div>
-                    <ShareButton/>
+                    <ShareButton display='flex'/>
                     {ReportProblem}
                 </div>
             </Fragment>
