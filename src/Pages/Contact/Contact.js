@@ -8,6 +8,7 @@ import Navbar from '../../Navbar/Navbar'
 import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
+import ShareButton from '../../Share-Button/ShareButton'
 
 
 class Contact extends Component {
@@ -41,6 +42,9 @@ class Contact extends Component {
 	        BorderH2: "",
             backgroundForm: "",
             classPlaceholderForm: "",
+
+            //DisplayShareButton
+            displayShareButton: 'flex',
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -49,6 +53,10 @@ class Contact extends Component {
 
     componentDidMount () {
         this.UpdateComponent()
+
+        if (window.innerWidth <= 768) {
+            this.setState ({ displayShareButton: 'none' })
+        }
     }
 
     handleChange = e => {
@@ -180,6 +188,7 @@ class Contact extends Component {
                         handleChange={this.handleChange} 
                         handleSubmit={this.handleSubmit} 
                     />
+                    <ShareButton display={this.state.displayShareButton}/>
                     {ReportProblem}
                 </div>
             </Fragment>

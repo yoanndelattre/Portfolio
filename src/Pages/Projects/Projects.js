@@ -10,6 +10,7 @@ import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
 import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
 import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
+import ShareButton from '../../Share-Button/ShareButton'
 
 // css
 import './Projects.css'
@@ -32,6 +33,9 @@ class Projects extends Component {
         textFlippingCard: "",
         backgroundFlippingCardBack: "",
         textTitle: '',
+
+        //DisplayShareButton
+        displayShareButton: 'flex',
     }
 
     componentDidMount () {
@@ -52,6 +56,8 @@ class Projects extends Component {
                     backgroundContainer: "rgb(165, 165, 165)"
                 })
             }
+
+            this.setState ({ displayShareButton: 'none' })
 
         }
         else {
@@ -128,6 +134,7 @@ class Projects extends Component {
                         <ProjectCard4 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                         <ProjectCard5 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                     </div>
+                    <ShareButton display={this.state.displayShareButton}/>
                     {ReportProblem}
                 </div>
             </Fragment>
