@@ -6,6 +6,7 @@ import axios from 'axios'
 import Navbar from '../../Navbar/Navbar'
 import Me from './Components/Me'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
+import ShareButton from '../../Share-Button/ShareButton'
 
 // css
 import './Home.css'
@@ -115,6 +116,7 @@ class Home extends Component {
                             backgroundCard={this.state.backgroundCard} 
                         />
                     </div>
+                    <ShareButton/>
                     {ReportProblem}
                 </div>
             </Fragment>

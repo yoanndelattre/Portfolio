@@ -8,6 +8,7 @@ import Navbar from '../../Navbar/Navbar'
 import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
+import ShareButton from '../../Share-Button/ShareButton'
 
 
 class Contact extends Component {
@@ -180,6 +181,7 @@ class Contact extends Component {
                         handleChange={this.handleChange} 
                         handleSubmit={this.handleSubmit} 
                     />
+                    <ShareButton/>
                     {ReportProblem}
                 </div>
             </Fragment>

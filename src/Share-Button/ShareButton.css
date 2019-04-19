@@ -1,0 +1,30 @@
+.buttons {
+    display: flex;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+.button {
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:active {
+    transform: scale(0.9)
+}
+
+@media only screen and (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        margin: 0 6px 5px 0;
+    }
+
+    .email-share-button {
+        margin-bottom: 0
+    }
+}
