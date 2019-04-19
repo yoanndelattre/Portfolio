@@ -26,7 +26,8 @@ class ShareButton extends Component {
                 <FacebookShareButton
                     url={shareUrl}
                     quote={title}
-                    className="button facebook-share-button">
+                    className="button facebook-share-button"
+                    hashtag='#Portfolio'>
                     <FacebookIcon
                         size={this.state.sizeButton}
                         round 
@@ -34,7 +35,7 @@ class ShareButton extends Component {
                 </FacebookShareButton>
                 <LinkedinShareButton
                     url={shareUrl}
-                    quote={title}
+                    title={title}
                     className="button linkedin-share-button">
                     <LinkedinIcon
                         size={this.state.sizeButton}
@@ -43,7 +44,8 @@ class ShareButton extends Component {
                 </LinkedinShareButton>
                 <TwitterShareButton
                     url={shareUrl}
-                    quote={title}
+                    title={title + ' →'}
+                    via='yoanndelattre_'
                     className="button twitter-share-button">
                     <TwitterIcon
                         size={this.state.sizeButton}
@@ -51,8 +53,8 @@ class ShareButton extends Component {
                     />
                 </TwitterShareButton>
                 <EmailShareButton
-                    url={shareUrl}
-                    quote={title}
+                    subject={title}
+                    body={title + ' → ' + shareUrl}
                     className="button email-share-button">
                     <EmailIcon
                         size={this.state.sizeButton}
