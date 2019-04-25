@@ -4,7 +4,7 @@ steps:
   name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', "gs://analytics_portfolio-perso-box-config/index.html", "./public/index.html"]
   
- - id: "Copy robots.txt file"
+- id: "Copy robots.txt file"
   name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', "gs://analytics_portfolio-perso-box-config/robots.txt", "./public/"]
 
