@@ -24,7 +24,7 @@ export default class ProjectCard2 extends Component {
 				</FlippingCardFront>
 				<FlippingCardBack>
 					<div className="BackCard FrontCard BackProjectCard2">
-						<LinkWebsiteProject TitleWebsite={"Cluster Live Viewer"} LinkWebsite={"https://visualizer-docker.yoanndelattre.com"} />
+					<LinkWebsiteProject TitleWebsite={"Kubernetes Website"} LinkWebsite={"https://kubernetes.io"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
 								Détails:
