@@ -1,0 +1,37 @@
+.repo-github-link-button {
+    white-space: nowrap;
+    box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.05);
+    padding: 0;
+    height: 40px;
+    margin-top: 12px;
+    background: #24292e;
+    color: #737373;
+    border-radius: 5px;
+    border-width: 0;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.repo-github-link-button:hover {
+    transform: scale(1.1);
+}
+      
+.repo-github-link-button_ico {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px 0 8px 8px;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+}
+
+.repo-github-link-button_text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 14px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto',arial,sans-serif;
+    color: rgb(255, 255, 255);
+}

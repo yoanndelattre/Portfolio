@@ -1,0 +1,44 @@
+.BackCard {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(180, 180, 180), rgb(78, 78, 78));
+    text-align: center;
+}
+
+.titleUserCard {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.PositionName {
+    font-size: 14px;
+    color: black;
+}
+
+.details {
+    margin: 22px 13px 0 13px;
+    padding: 1px 12px 3px 12px;
+    border-radius: 5px;
+}
+
+.title-details {
+    text-align: start;
+    margin-top: 22px;
+    margin-block-start: 5px;
+    margin-block-end: 4px;
+}
+
+.text-details {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    margin: 0 7px;
+    margin-block-start: 5px;
+    margin-block-end: 6px;
+    font-size: 15px;
+}
+
+.PositionNameProjectCard5 {
+    font-size: 13px; 
+}

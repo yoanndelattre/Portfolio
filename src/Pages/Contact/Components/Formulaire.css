@@ -1,0 +1,81 @@
+.form{
+    outline: none;
+    border-radius:8px;
+    box-shadow:0 0 40px -10px #000;
+    margin:calc(50vh - 220px) auto;
+    padding:20px 30px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative
+}
+
+.form > h1{
+    font-size: 1.5em;
+    outline: none;
+    margin:10px 0;
+    padding-bottom:10px;
+    width:206px;
+}
+
+.form > p > input{
+    outline: none;
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    background:none;
+    outline:none;
+    resize:none;
+    border:0;
+    font-family:'Montserrat',sans-serif;
+    transition:all .3s;
+    border-bottom:2px solid #bebed2
+}
+
+.form > p > input:focus{
+    outline: none;
+}
+
+.form > p:before{
+    outline: none;
+    content:attr(type);
+    display:block;
+    margin:28px 0 0;
+    font-size:14px;
+}
+
+.classPlaceholderFormLight:before {
+    color: rgb(77, 92, 102)
+}
+
+.classPlaceholderFormDark:before {
+    color: #e6e6e6
+}
+
+.form > input{
+    outline: none;
+    font-family:'Montserrat',sans-serif;
+    background:0;
+    cursor:pointer;
+    transition:all .3s;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.form > input:hover{
+    outline: none;
+    background: rgb(153, 153, 153);
+    color:#fff
+}
+
+.Capcha {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-height: 534px) {
+    .form{
+        transform: scale(0.7)
+    }
+}

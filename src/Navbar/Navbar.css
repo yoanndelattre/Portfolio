@@ -1,0 +1,67 @@
+.link {
+    overflow: hidden;
+}
+
+.link a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.link > .smart-screen {
+    display: none;
+}
+
+.link > h1 {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 12px;
+}
+
+.switch-color {
+    float: left;
+    margin-left: 25px;
+    margin-top: 7px;
+}
+
+.switch-color-smart {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    
+    .link a {
+        display: none;
+    } 
+
+    .link > .smart-screen {
+        display: block;
+        float: left;
+    }
+
+    .link > h1 {
+        display: none;
+    }
+
+    .switch-color {
+        display: none;
+    }
+
+    .switch-color-smart {
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 65px;
+        left: 12px;
+        padding: 4px 8px;
+        border-radius: 16px;
+    }
+}
