@@ -32,7 +32,7 @@ export default class ProjectCard4 extends Component {
 								Détails:
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web permettant à différents utilisateurs de communiquer sous un pseudo qu'ils auront au préalablement indiqué sur la page de connexion.
+								Site web permettant à différents utilisateurs de communiquer sous un pseudo qu'ils auront préalablement indiqué sur la page de connexion.
 							</p>
 						</div>
 					</div>

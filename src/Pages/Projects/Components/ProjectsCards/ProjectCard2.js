@@ -30,7 +30,7 @@ export default class ProjectCard2 extends Component {
 								Détails:
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) fonctionnent avec Kubernetes. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.
+								Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.
 							</p>
 						</div>
 					</div>

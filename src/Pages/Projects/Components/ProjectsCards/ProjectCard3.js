@@ -32,7 +32,7 @@ export default class ProjectCard3 extends Component {
 								Détails:
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web traducteur instantané de markdown, le texte tapé est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".
+								Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".
 							</p>
 						</div>
 					</div>
