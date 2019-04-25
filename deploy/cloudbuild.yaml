@@ -10,7 +10,7 @@ steps:
 
 - id: "Copy sitemap.xml file"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://analytics_markdown-box-config/sitemap.xml", "./public/"]
+  args: ['cp', "gs://analytics_portfolio-perso-box-config/sitemap.xml", "./public/"]
 
 - id: "Install dependency"
   name: 'gcr.io/cloud-builders/npm'
