@@ -3,7 +3,7 @@ import { FlippingCard, FlippingCardBack, FlippingCardFront, UserCard } from 'rea
 import LinkWebsiteProject from '../Link-Website-Project'
 
 // img
-import logo_docker_swarm from '../logo/logo-docker-swarm.png'
+import logo_kube from '../logo/kube-logo.png'
 import img_raspberrypi from '../img/raspberry-pi-3-bplus.jpg'
 
 // css 
@@ -15,10 +15,10 @@ export default class ProjectCard2 extends Component {
 			<FlippingCard className="ProjectCard2" >
 				<FlippingCardFront>
 					<UserCard 
-						avatar={logo_docker_swarm} 
+						avatar={logo_kube} 
 						header={img_raspberrypi}
 						name={<h1 className="titleUserCard">Cluster Raspberry Pi</h1>} 
-						positionName={<p className="PositionName">Cluster de deux Raspberry Pi 3 avec Docker Swarm.</p>} 
+						positionName={<p className="PositionName">Cluster de deux Raspberry Pi 3 avec Kubernetes.</p>} 
 						cardClass={this.props.classUserCard} 
 					/>
 				</FlippingCardFront>
@@ -30,7 +30,7 @@ export default class ProjectCard2 extends Component {
 								Détails:
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) fonctionnent avec Docker Swarm. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.
+								Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) fonctionnent avec Kubernetes. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.
 							</p>
 						</div>
 					</div>
