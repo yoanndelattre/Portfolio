@@ -62,7 +62,7 @@ https://development-portfolio.netlify.com
 
 * ```perf``` : Performance improvement.
 
-* ```refactor``` : Change of the code which does not change the functioning (suppression of spaces for example) .      
+* ```refactor``` : Change of the code which does not change the functioning (delete of spaces for example) .      
      
     
 #### For ```"scope"``` (optional) :
