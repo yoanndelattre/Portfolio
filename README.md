@@ -4,7 +4,7 @@
 
 ## Development URL server (sync with "dev" branch) :
 
-https://development-portfolio.netlify.com
+https://beta.yoanndelattre.com
 
 &nbsp;
 &nbsp;
