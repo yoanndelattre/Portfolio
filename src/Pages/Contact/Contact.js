@@ -40,7 +40,7 @@ class Contact extends Component {
             //DarkMode
             ColorText: "",
 	        BorderH2: "",
-            backgroundForm: "",
+            backgroundInput: "",
             classPlaceholderForm: "",
 
             //DisplayShareButton
@@ -103,7 +103,7 @@ class Contact extends Component {
                 backgroundContainer: "rgb(88, 88, 88)",
                 ColorText: "#e6e6e6",
                 BorderH2: "3px solid #e6e6e6",
-                backgroundForm: "#6C6C6C" ,
+                backgroundInput: "#6C6C6C" ,
                 classPlaceholderForm: "classPlaceholderFormDark",
                 borderSubmit: "2px solid #e6e6e6",
             })
@@ -114,7 +114,7 @@ class Contact extends Component {
                 backgroundContainer: "rgb(165, 165, 165)",
                 ColorText: "rgb(77, 92, 102)",
                 BorderH2: "3px solid rgb(77, 92, 102)",
-                backgroundForm: "#e6e6e6",
+                backgroundInput: "#e6e6e6",
                 classPlaceholderForm: "classPlaceholderFormLight",
                 borderSubmit: "2px solid rgb(77, 92, 102)"
             })
@@ -172,7 +172,7 @@ class Contact extends Component {
                         displaySubmit={this.state.displaySubmit} 
                         ThemeCapcha={this.ThemeCapcha} 
                         classPlaceholderForm={this.state.classPlaceholderForm} 
-                        backgroundForm={this.state.backgroundForm} 
+                        backgroundInput={this.state.backgroundInput} 
                         BorderH2={this.state.BorderH2} 
                         ColorText={this.state.ColorText} 
                         heightForm={this.state.heightForm} 
