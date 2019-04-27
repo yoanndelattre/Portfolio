@@ -28,6 +28,8 @@ import netlify_logo from './logo/devtools/netlify.png'
 import codeanywhere_logo from './logo/devtools/codeanywhere.png'
 import google_domains_logo from './logo/devtools/google_domains.png'
 import gcp_logo from './logo/devtools/gcp.png'
+import k8s_logo from './logo/devtools/k8s.png'
+import minikube_logo from './logo/devtools/minikube.png'
 
 // css
 import './Me.css'
@@ -74,6 +76,7 @@ class Me extends Component {
                         <p><a style={{ color: this.props.ColorText }} href="https://www.vmware.com" target="blank">VmWare</a><img className="logo" src={vmware_logo} alt="vmware logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://github.com/FredrikNoren/ungit" target="blank">Ungit</a><img className="logo" src={ungit_logo} alt="ungit logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://facebook.github.io/create-react-app" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://github.com/kubernetes/minikube/releases" target="blank">Minikube</a><img className="logo" src={minikube_logo} alt="react logo"/></p>
                         <hr/>
                         <h3>Site Web :</h3>
                         <p><a style={{ color: this.props.ColorText }} href="https://todoist.com" target="blank">Todoist</a><img className="logo" src={todoist_logo} alt="todoist logo"/></p>
@@ -84,6 +87,7 @@ class Me extends Component {
                         <p><a style={{ color: this.props.ColorText }} href="https://codeanywhere.com" target="blank">Codeanywhere</a><img className="logo" src={codeanywhere_logo} alt="codeanywhere logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://domains.google.com" target="blank">Google Domains</a><img className="logo" src={google_domains_logo} alt="google domains logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://cloud.google.com" target="blank">Google Cloud Platform</a><img className="logo" src={gcp_logo} alt="google cloud platform logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://kubernetes.io/docs" target="blank">Kubernetes</a><img className="logo" src={k8s_logo} alt="kubernetes logo"/></p>
                     </div>
                 </div>
             </Fragment>
