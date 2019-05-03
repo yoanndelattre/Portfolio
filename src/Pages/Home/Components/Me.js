@@ -31,6 +31,8 @@ import gcp_logo from './logo/devtools/gcp.png'
 import k8s_logo from './logo/devtools/k8s.png'
 import minikube_logo from './logo/devtools/minikube.png'
 import docker_desktop_logo from './logo/devtools/docker_desktop.png'
+import github_logo from './logo/devtools/github.png'
+import gitlab_logo from './logo/devtools/gitlab.png'
 
 // css
 import './Me.css'
@@ -90,6 +92,8 @@ class Me extends Component {
                         <p><a style={{ color: this.props.ColorText }} href="https://domains.google.com" target="blank">Google Domains</a><img className="logo" src={google_domains_logo} alt="google domains logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://cloud.google.com" target="blank">Google Cloud Platform</a><img className="logo" src={gcp_logo} alt="google cloud platform logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://kubernetes.io/docs" target="blank">Kubernetes</a><img className="logo" src={k8s_logo} alt="kubernetes logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://github.com" target="blank">GitHub</a><img className="logo" src={github_logo} alt="github logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://gitlab.com" target="blank">GitLab</a><img className="logo" src={gitlab_logo} alt="gitlab logo"/></p>
                     </div>
                 </div>
             </Fragment>
