@@ -9,7 +9,7 @@ spec:
         app: portfolio-dev
     spec:
       containers:
-      - image: portfolio-dev:dev
+      - image: portfolio-dev
         name: portfolio-dev-container   
         ports:
         - containerPort:  3000
