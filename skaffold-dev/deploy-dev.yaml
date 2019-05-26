@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name:  portfolio-dev
+spec:
+  template:
+    metadata:
+      labels:
+        app: portfolio-dev
+    spec:
+      containers:
+      - image: portfolio-dev
+        name: portfolio-dev-container   
+        ports:
+        - containerPort:  3000
+          name:  webview
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio-dev-srv
+spec:
+  selector:
+    app: portfolio-dev
+  ports:
+  - port: 3000
+  type: LoadBalancer
