@@ -79,6 +79,8 @@ https://beta.yoanndelattre.com
 
 * ```ColorMode``` *(Dark Mode).*
 
+* ```GCP``` *(Strategy of deployment on Google Gloud Platfrom).*
+
 
 #### For ```"subject"``` :
 
