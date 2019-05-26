@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
-import Reaptcha from 'reaptcha';
+import Reaptcha from 'reaptcha'
 import {Helmet} from 'react-helmet'
+import Noty from 'noty'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -9,6 +10,10 @@ import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
 import ShareButton from '../../Share-Button/ShareButton'
+
+// css
+import '../../../node_modules/noty/lib/noty.css'
+import '../../../node_modules/noty/lib/themes/bootstrap-v4.css'
 
 
 class Contact extends Component {
@@ -80,6 +85,8 @@ class Contact extends Component {
                     widthForm: '367px', 
                     heightForm: '427px'
                 }),
+
+                this.NotificationSpamMail(),
                 
                 setTimeout(() => {
                     window.location.reload();
@@ -151,6 +158,15 @@ class Contact extends Component {
             displayApp: 'block', 
             displayLoading: 'none' 
         })
+    }
+
+    NotificationSpamMail = () => {
+        new Noty({
+            text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
+            theme: 'bootstrap-v4',
+            type: 'success',
+            layout: 'bottomCenter'
+        }).show();
     }
 
     render () {
