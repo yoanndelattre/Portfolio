@@ -81,6 +81,8 @@ https://beta.yoanndelattre.com
 
 * ```GCP``` *(Strategy of deployment on Google Gloud Platfrom).*
 
+* ```Skaffold``` *(Skaffold development environment).*
+
 
 #### For ```"subject"``` :
 
