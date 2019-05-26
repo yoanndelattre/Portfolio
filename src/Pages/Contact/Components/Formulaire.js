@@ -43,11 +43,6 @@ export default class Formulaire extends Component {
                     <div className="Capcha">
                         <this.props.ThemeCapcha/>
                     </div>
-                    <div className="help-mailsend">
-                        <span style={{ color: this.props.ColorText, background: this.props.backgroundInput }}>▲</span>
-                        <div></div>
-                        <p style={{ color: this.props.ColorText, background: this.props.backgroundInput }}>Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.</p>
-                    </div>
                 </form>
             </Fragment>
         )
