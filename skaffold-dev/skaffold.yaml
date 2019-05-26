@@ -1,0 +1,12 @@
+apiVersion: skaffold/v1beta11
+kind: Config
+
+build:
+  artifacts:
+  - image: portfolio-dev:dev
+    context: ../
+
+deploy:
+  kubectl:
+    manifests:
+    - deploy-dev.yaml
