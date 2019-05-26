@@ -4,7 +4,7 @@
 
 ## Development URL server with Netlify (sync with "dev" branch) :
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/749084b0-af57-4589-8bad-7469abd2a3c6/deploy-status)](https://app.netlify.com/sites/development-portfolio/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/749084b0-af57-4589-8bad-7469abd2a3c6/deploy-status)](https://beta.yoanndelattre.com)
 
 https://beta.yoanndelattre.com
 
