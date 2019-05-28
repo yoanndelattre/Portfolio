@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:lts
     working_directory: ~/project
@@ -13,20 +13,6 @@ jobs:
       - run:
           name: Install dependency
           command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-  test:
-    docker:
-      - image: circleci/node:lts
-    working_directory: ~/project
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
       - run:
           name: Run test
           command: npm run test
