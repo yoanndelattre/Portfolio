@@ -1,5 +1,10 @@
 # Portfolio
 &nbsp;
+
+## Continuous Integration Status Badge with CircleCi on ```master``` branch :
+
+[![CircleCI](https://circleci.com/gh/yoanndelattre/Portfolio/tree/master.svg?style=svg)](https://circleci.com/gh/yoanndelattre/Portfolio/tree/master)
+
 &nbsp;
 
 ## Development URL server with Netlify (sync with "dev" branch) :
