@@ -62,9 +62,11 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * *```fix```* : Bug fix (usually in the ```hotfix``` branch) .
 
-* ```perf``` : Performance improvement.
+* *```test```* : Change test strategy with reactjs .
 
-* ```refactor``` : Change of the code which does not change the functioning (delete of spaces for example) .      
+* *```perf```* : Performance improvement.
+
+* *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .      
      
     
 #### For ```"scope"``` (optional) :
