@@ -107,7 +107,7 @@ class Home extends Component {
                 <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
                     <span className="version" style={{ background: this.state.backgroundVersion, color: this.state.ColorText }}>
-                        {this.state.ReleasesRepo}
+                        <a className="version-link" href="https://github.com/yoanndelattre/Portfolio/releases" target="_blank" style={{ color: this.state.ColorText }}>{this.state.ReleasesRepo}</a>
                     </span>
                     <div className="home_card">
                         <Me 
