@@ -1,10 +1,17 @@
 # Portfolio
 &nbsp;
+
+## Continuous Integration Status Badge with CircleCi on ```master``` branch :
+
+[![CircleCI](https://circleci.com/gh/yoanndelattre/Portfolio/tree/master.svg?style=svg)](https://circleci.com/gh/yoanndelattre/Portfolio/tree/master)
+
 &nbsp;
 
-## Development URL server (sync with "dev" branch) :
+## Development URL server with Netlify (sync with "dev" branch) :
 
-https://beta.yoanndelattre.com
+[![Netlify Status](https://api.netlify.com/api/v1/badges/749084b0-af57-4589-8bad-7469abd2a3c6/deploy-status)](https://beta.yoanndelattre.com)
+
+Link dev server -> https://beta.yoanndelattre.com
 
 &nbsp;
 &nbsp;
@@ -60,9 +67,11 @@ https://beta.yoanndelattre.com
 
 * *```fix```* : Bug fix (usually in the ```hotfix``` branch) .
 
-* ```perf``` : Performance improvement.
+* *```test```* : Change test strategy with reactjs .
 
-* ```refactor``` : Change of the code which does not change the functioning (delete of spaces for example) .      
+* *```perf```* : Performance improvement.
+
+* *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .      
      
     
 #### For ```"scope"``` (optional) :
@@ -78,6 +87,10 @@ https://beta.yoanndelattre.com
 * ```SystemLoading``` *(loading between pages).*
 
 * ```ColorMode``` *(Dark Mode).*
+
+* ```GCP``` *(Strategy of deployment on Google Gloud Platfrom).*
+
+* ```Skaffold``` *(Skaffold development environment).*
 
 
 #### For ```"subject"``` :

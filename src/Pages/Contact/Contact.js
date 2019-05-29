@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
-import Reaptcha from 'reaptcha';
+import Reaptcha from 'reaptcha'
 import {Helmet} from 'react-helmet'
+import Noty from 'noty'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -9,6 +10,10 @@ import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
 import ShareButton from '../../Share-Button/ShareButton'
+
+// css
+import '../../../node_modules/noty/lib/noty.css'
+import '../../../node_modules/noty/lib/themes/bootstrap-v4.css'
 
 
 class Contact extends Component {
@@ -40,7 +45,7 @@ class Contact extends Component {
             //DarkMode
             ColorText: "",
 	        BorderH2: "",
-            backgroundForm: "",
+            backgroundInput: "",
             classPlaceholderForm: "",
 
             //DisplayShareButton
@@ -80,6 +85,8 @@ class Contact extends Component {
                     widthForm: '367px', 
                     heightForm: '427px'
                 }),
+
+                this.NotificationSpamMail(),
                 
                 setTimeout(() => {
                     window.location.reload();
@@ -88,7 +95,7 @@ class Contact extends Component {
     
             const { name, email, message } = this.state
     
-            const form = await axios.post('https://mail-send.yoanndelattre.com/mail/send', {
+            const form = await axios.post('https://mail-send-jubdpulxea-uc.a.run.app/mail/send', {
                 name,
                 email,
                 message
@@ -103,7 +110,7 @@ class Contact extends Component {
                 backgroundContainer: "rgb(88, 88, 88)",
                 ColorText: "#e6e6e6",
                 BorderH2: "3px solid #e6e6e6",
-                backgroundForm: "#6C6C6C" ,
+                backgroundInput: "#6C6C6C" ,
                 classPlaceholderForm: "classPlaceholderFormDark",
                 borderSubmit: "2px solid #e6e6e6",
             })
@@ -114,7 +121,7 @@ class Contact extends Component {
                 backgroundContainer: "rgb(165, 165, 165)",
                 ColorText: "rgb(77, 92, 102)",
                 BorderH2: "3px solid rgb(77, 92, 102)",
-                backgroundForm: "#e6e6e6",
+                backgroundInput: "#e6e6e6",
                 classPlaceholderForm: "classPlaceholderFormLight",
                 borderSubmit: "2px solid rgb(77, 92, 102)"
             })
@@ -153,6 +160,15 @@ class Contact extends Component {
         })
     }
 
+    NotificationSpamMail = () => {
+        new Noty({
+            text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
+            theme: 'bootstrap-v4',
+            type: 'success',
+            layout: 'bottomCenter'
+        }).show();
+    }
+
     render () {
         return (
             <Fragment>
@@ -172,7 +188,7 @@ class Contact extends Component {
                         displaySubmit={this.state.displaySubmit} 
                         ThemeCapcha={this.ThemeCapcha} 
                         classPlaceholderForm={this.state.classPlaceholderForm} 
-                        backgroundForm={this.state.backgroundForm} 
+                        backgroundInput={this.state.backgroundInput} 
                         BorderH2={this.state.BorderH2} 
                         ColorText={this.state.ColorText} 
                         heightForm={this.state.heightForm} 
