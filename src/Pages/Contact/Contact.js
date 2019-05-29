@@ -86,11 +86,7 @@ class Contact extends Component {
                     heightForm: '427px'
                 }),
 
-                this.NotificationSpamMail(),
-                
-                setTimeout(() => {
-                    window.location.reload();
-                }, 7500)
+                this.NotificationSpamMail()
             )
     
             const { name, email, message } = this.state
