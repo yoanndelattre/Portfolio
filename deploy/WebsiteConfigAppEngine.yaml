@@ -13,5 +13,5 @@ automatic_scaling:
   min_instances: 0
   max_idle_instances: 0
   min_idle_instances: 0
-  min_pending_latency: 30ms
-  max_pending_latency: 50ms
+  min_pending_latency: 50ms
+  max_pending_latency: 70ms
