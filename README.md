@@ -7,6 +7,12 @@
 
 &nbsp;
 
+## Continuous Integration Status Badge with CircleCi on ```dev``` branch :
+
+[![CircleCI](https://circleci.com/gh/yoanndelattre/Portfolio/tree/dev.svg?style=svg)](https://circleci.com/gh/yoanndelattre/Portfolio/tree/dev)
+
+&nbsp;
+
 ## Development URL server with Netlify (sync with "dev" branch) :
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/749084b0-af57-4589-8bad-7469abd2a3c6/deploy-status)](https://beta.yoanndelattre.com)
