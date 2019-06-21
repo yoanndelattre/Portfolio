@@ -4,8 +4,7 @@ import CookieBanner from 'react-cookie-banner'
 class CookieAlert extends Component {
 
     state = {
-        dismissOnScroll: false,
-        Dark: true
+        dismissOnScroll: false
     }
 
     render () {
