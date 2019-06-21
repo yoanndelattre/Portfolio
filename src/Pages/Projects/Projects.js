@@ -11,6 +11,7 @@ import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
 import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
 import ShareButton from '../../Share-Button/ShareButton'
+import CookieAlert from '../../Cookie-Alert/Cookie-Alert'
 
 // css
 import './Projects.css'
@@ -115,6 +116,7 @@ class Projects extends Component {
                 <Helmet>
                     <title>Projets • Yoann Delattre | Portfolio</title>
                 </Helmet>
+                <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
                         type="bars"

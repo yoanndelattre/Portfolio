@@ -10,6 +10,7 @@ import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
 import ShareButton from '../../Share-Button/ShareButton'
+import CookieAlert from '../../Cookie-Alert/Cookie-Alert'
 
 // css
 import '../../../node_modules/noty/lib/noty.css'
@@ -171,6 +172,7 @@ class Contact extends Component {
                 <Helmet>
                     <title>Contact • Yoann Delattre | Portfolio</title>
                 </Helmet>
+                <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
                         type="bars"
