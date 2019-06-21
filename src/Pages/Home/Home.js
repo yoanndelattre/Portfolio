@@ -7,6 +7,7 @@ import Navbar from '../../Navbar/Navbar'
 import Me from './Components/Me'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
 import ShareButton from '../../Share-Button/ShareButton'
+import CookieAlert from '../../Cookie-Alert/Cookie-Alert'
 
 // css
 import './Home.css'
@@ -97,6 +98,7 @@ class Home extends Component {
     render () {
         return (
             <Fragment>
+                <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
                         type="bars"
