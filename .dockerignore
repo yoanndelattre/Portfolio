@@ -1,0 +1,10 @@
+.git
+.circleci
+deploy
+node_modules
+skaffold
+.dockerignore
+.gitignore
+Dockerfile
+LICENSE
+README.md
