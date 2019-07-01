@@ -9,4 +9,4 @@ FROM nginx:alpine
 COPY --from=builder /app/build/. /usr/share/nginx/html/
 ADD https://storage.googleapis.com/assets-build-docker-portfolio/nginx-conf/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD echo -e "Portfolio is viewable at: http://localhost"; exec nginx -g 'daemon off;'
