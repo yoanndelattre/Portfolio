@@ -46,7 +46,7 @@ class Me extends Component {
                         <img src={Photo_Profil} alt="profil"/>
                         <div className="info-me">
                             <h1>Yoann Delattre</h1>
-                            <h1>16 ans</h1>
+                            <h1>17 ans</h1>
                             <h1>Terminale STI2D</h1>
                         </div>
                     </div>
