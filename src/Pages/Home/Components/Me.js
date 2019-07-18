@@ -33,6 +33,7 @@ import minikube_logo from './logo/devtools/minikube.png'
 import docker_desktop_logo from './logo/devtools/docker_desktop.png'
 import github_logo from './logo/devtools/github.png'
 import gitlab_logo from './logo/devtools/gitlab.png'
+import hyperv_logo from './logo/devtools/hyperv.png'
 
 // css
 import './Me.css'
@@ -81,6 +82,7 @@ class Me extends Component {
                         <p><a style={{ color: this.props.ColorText }} href="https://facebook.github.io/create-react-app" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://github.com/kubernetes/minikube/releases" target="blank">Minikube</a><img className="logo" src={minikube_logo} alt="minikube logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://hub.docker.com/editions/community/docker-ce-desktop-windows" target="blank">Docker Desktop</a><img className="logo" src={docker_desktop_logo} alt="docker desktop logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="blank">Hyper V</a><img className="logo" src={hyperv_logo} alt="hyperv logo"/></p>
                         <hr/>
                         <h3>Site Web :</h3>
                         <p><a style={{ color: this.props.ColorText }} href="https://todoist.com" target="blank">Todoist</a><img className="logo" src={todoist_logo} alt="todoist logo"/></p>
