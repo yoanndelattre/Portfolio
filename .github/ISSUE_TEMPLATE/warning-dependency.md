@@ -1,5 +1,5 @@
 ---
-name: " Warning Dependency"
+name: "Warning Dependency"
 about: Problem with an dependency
 title: ''
 labels: dependencies
