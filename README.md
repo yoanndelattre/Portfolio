@@ -77,7 +77,9 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * *```perf```* : Performance improvement.
 
-* *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .      
+* *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .
+
+* *```issue```* : Github issue.
      
     
 #### For ```"scope"``` (optional) :

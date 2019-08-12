@@ -11,10 +11,10 @@
     "react-helmet": "^5.2.1",
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^2.1.8",
     "react-share": "^3.0.0",
+    "react-scripts": "^3.1.0",
     "react-ui-cards": "^1.5.3",
-    "reaptcha": "^1.4.2"
+    "reaptcha": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
