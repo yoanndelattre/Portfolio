@@ -22,15 +22,15 @@ export default class Formulaire extends Component {
                         CONTACTEZ-MOI
                     </h1>
                     
-                    <p className={this.props.classPlaceholderForm} type="Nom:">
+                    <p className={this.props.classPlaceholderForm} type="Nom :">
                         <input style={{ color: this.props.ColorText }} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />
                     </p>
                     
-                    <p className={this.props.classPlaceholderForm} type="Email:">
+                    <p className={this.props.classPlaceholderForm} type="Email :">
                         <input style={{ color: this.props.ColorText }} type="email" value={this.props.email} required name="email" onChange={this.props.handleChange} />
                     </p>
                     
-                    <p className={this.props.classPlaceholderForm} type="Message:">
+                    <p className={this.props.classPlaceholderForm} type="Votre Message :">
                         <input style={{ color: this.props.ColorText }} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
                     </p>
                     
