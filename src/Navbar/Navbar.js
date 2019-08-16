@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import FlagsSelector from '../Language/flags-selector'
 
 //css
 import './Navbar.css'
@@ -135,6 +136,8 @@ class Navbar extends Component {
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
+
+                        <FlagsSelector/>
                         
                         <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} href="/Contact" >
                             Contact
@@ -182,6 +185,8 @@ class Navbar extends Component {
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
+
+                        <FlagsSelector/>
                         
                         <a style={{ color: this.state.ColorText, background: this.state.backgroundTextHoverContact }} onMouseEnter={this.OnMouseEnterContact} onMouseLeave={() => {this.setState ({ backgroundTextHoverContact: "" })}} href="/Contact" >
                             Contact
@@ -230,6 +235,8 @@ class Navbar extends Component {
                         <div className="switch-color">
                             {SliderColorMode}
                         </div>
+
+                        <FlagsSelector/>
                         
                         <a style={{ color: this.state.ColorTextFocus, background: this.state.backgroundTextFocusContact }} href="/Contact" >
                             Contact
