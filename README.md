@@ -102,6 +102,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```Docker``` *(Docker development environment).*
 
+* ```Language``` *(Language selector or geolocation).*
 
 #### For ```"subject"``` :
 

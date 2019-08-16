@@ -1,0 +1,16 @@
+.FlagsSelector {
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 20px
+}
+
+@media only screen and (max-width: 768px) {
+    .FlagsSelector {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
