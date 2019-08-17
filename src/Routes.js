@@ -12,7 +12,7 @@ export default function MainRouter () {
         <Router>
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route exact path="/Projets" component={Projects}/>
+                <Route exact path="/Projects" component={Projects}/>
                 <Route exact path="/Contact" component={Contact} />
                 <Route path="*" component={NotFound}/>
             </Switch>
