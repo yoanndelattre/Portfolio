@@ -7,6 +7,24 @@ class CookieAlert extends Component {
         dismissOnScroll: false
     }
 
+    CookieBannerMessage () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Ce site utilise des cookies.')
+        }
+        else {
+            return('This website uses cookies.')
+        }
+    }
+
+    CookieBannerButton () {
+        if(localStorage.getItem('language') === 'FR') {
+            return ('Accepter')
+        }
+        else {
+            return('Accept')
+        }
+    }
+
     render () {
 
         // Mobile
@@ -14,9 +32,9 @@ class CookieAlert extends Component {
             if (localStorage.getItem('DarkMode') === null) {
                 return (
                     <CookieBanner
-                        message="Ce site utilise des cookies."
+                        message={this.CookieBannerMessage()}
                         cookie="user-accept-cookies"
-                        buttonMessage="Accepter"
+                        buttonMessage={this.CookieBannerButton()}
                         dismissOnScroll={this.state.dismissOnScroll} 
                         styles={{
                             banner: {
@@ -41,9 +59,9 @@ class CookieAlert extends Component {
             if (localStorage.getItem('DarkMode') === "true") {
                 return (
                     <CookieBanner
-                        message="Ce site utilise des cookies."
+                        message={this.CookieBannerMessage()}
                         cookie="user-accept-cookies"
-                        buttonMessage="Accepter"
+                        buttonMessage={this.CookieBannerButton()}
                         dismissOnScroll={this.state.dismissOnScroll} 
                         styles={{
                             banner: {
@@ -69,9 +87,9 @@ class CookieAlert extends Component {
         if (localStorage.getItem('DarkMode') === null) {
             return (
                 <CookieBanner
-                    message="Ce site utilise des cookies."
+                    message={this.CookieBannerMessage()}
                     cookie="user-accept-cookies"
-                    buttonMessage="Accepter"
+                    buttonMessage={this.CookieBannerButton()}
                     dismissOnScroll={this.state.dismissOnScroll} 
                     styles={{
                         banner: {
@@ -96,9 +114,9 @@ class CookieAlert extends Component {
         if (localStorage.getItem('DarkMode') === "true") {
             return (
                 <CookieBanner
-                    message="Ce site utilise des cookies."
+                    message={this.CookieBannerMessage()}
                     cookie="user-accept-cookies"
-                    buttonMessage="Accepter"
+                    buttonMessage={this.CookieBannerButton()}
                     dismissOnScroll={this.state.dismissOnScroll} 
                     styles={{
                         banner: {
