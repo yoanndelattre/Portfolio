@@ -26,7 +26,7 @@ class Contact extends Component {
             name: '',
             email: '',
             message: '',
-            valueSubmit: 'Envoyer',
+            valueSubmit: '✉',
             fontSizeSubmit: '15px',
             paddingSubmit: '8px 12px',
             borderSubmit: '',
@@ -158,12 +158,22 @@ class Contact extends Component {
     }
 
     NotificationSpamMail = () => {
-        new Noty({
-            text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
-            theme: 'bootstrap-v4',
-            type: 'success',
-            layout: 'bottomCenter'
-        }).show();
+        if(localStorage.getItem('language') === 'FR') {
+            new Noty({
+                text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
+                theme: 'bootstrap-v4',
+                type: 'success',
+                layout: 'bottomCenter'
+            }).show();
+        }
+        else {
+            new Noty({
+                text: 'A confirmation email has been sent to you. If you can not find it, check in junk mail.',
+                theme: 'bootstrap-v4',
+                type: 'success',
+                layout: 'bottomCenter'
+            }).show();
+        }
     }
 
     render () {

@@ -5,6 +5,33 @@ import './Formulaire.css'
 
 export default class Formulaire extends Component {
 
+    ContactMe () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('CONTACTEZ-MOI')
+        }
+        else {
+            return('CONTACT-ME')
+        }
+    }
+
+    NameUser () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Nom :')
+        }
+        else {
+            return('Name :')
+        }
+    }
+
+    MessageUser () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Votre Message :')
+        }
+        else {
+            return('Your Message :')
+        }
+    }
+
     render () {
         return (
             <Fragment>
@@ -19,10 +46,10 @@ export default class Formulaire extends Component {
                     }}>
                     
                     <h1 style={{ color: this.props.ColorText, borderBottom: this.props.BorderH2 }}>
-                        CONTACTEZ-MOI
+                        {this.ContactMe()}
                     </h1>
                     
-                    <p className={this.props.classPlaceholderForm} type="Nom :">
+                    <p className={this.props.classPlaceholderForm} type={this.NameUser()}>
                         <input style={{ color: this.props.ColorText }} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />
                     </p>
                     
@@ -30,7 +57,7 @@ export default class Formulaire extends Component {
                         <input style={{ color: this.props.ColorText }} type="email" value={this.props.email} required name="email" onChange={this.props.handleChange} />
                     </p>
                     
-                    <p className={this.props.classPlaceholderForm} type="Votre Message :">
+                    <p className={this.props.classPlaceholderForm} type={this.MessageUser()}>
                         <input style={{ color: this.props.ColorText }} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
                     </p>
                     
