@@ -110,12 +110,22 @@ class Projects extends Component {
         }
     }
 
+    LanguageHtmlTag () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('fr')
+        }
+        else {
+            return('en')
+        }
+    }
+
     render () {
         return (
             <Fragment>
                 <Helmet>
                     <title>Projets • Yoann Delattre | Portfolio</title>
                 </Helmet>
+                <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
                 <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import ReactLoading from 'react-loading'
 import axios from 'axios'
+import {Helmet} from 'react-helmet'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -95,9 +96,19 @@ class Home extends Component {
         }
     }
 
+    LanguageHtmlTag () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('fr')
+        }
+        else {
+            return('en')
+        }
+    }
+
     render () {
         return (
             <Fragment>
+                <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
                 <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
