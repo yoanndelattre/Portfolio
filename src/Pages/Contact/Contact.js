@@ -91,11 +91,13 @@ class Contact extends Component {
             )
     
             const { name, email, message } = this.state
+            const languageUser = localStorage.getItem('language')
     
-            const form = await axios.post('https://mail-send-jubdpulxea-uc.a.run.app/mail/send', {
+            const form = await axios.post('https://mail-send-beta-jubdpulxea-uc.a.run.app/mail/send', {
                 name,
                 email,
-                message
+                message,
+                languageUser
             })
             console.log(form)
         }
