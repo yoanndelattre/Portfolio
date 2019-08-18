@@ -25,6 +25,9 @@ class FlagsSelector extends Component {
 
     onSelectFlag(countryCode){
         localStorage.setItem('language', countryCode)
+        if(window.location.pathname === "/Contact") {
+            window.location.reload();
+        }
     }
 
     render() {
