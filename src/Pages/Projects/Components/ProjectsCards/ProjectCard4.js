@@ -29,7 +29,7 @@ export default class ProjectCard4 extends Component {
 						<LinkWebsiteProject TitleWebsite={"Chatbox"} LinkWebsite={"https://chatbox.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-								Détails:
+								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
 								Site web permettant à différents utilisateurs de communiquer sous un pseudo qu'ils auront préalablement indiqué sur la page de connexion.

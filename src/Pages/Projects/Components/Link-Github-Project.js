@@ -7,6 +7,16 @@ import './Link-Github-Project.css'
 import github_logo from './logo/github.svg'
 
 class LinkGithubProject extends Component {
+
+	SourceCodeName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Code Source')
+        }
+        else {
+            return('Source Code')
+        }
+    }
+
     render () {
         return (
             <div className="repo-github-link">
@@ -14,7 +24,7 @@ class LinkGithubProject extends Component {
 					<button type="button" className="repo-github-link-button">
 						<img className="repo-github-link-button_ico" src={github_logo} alt="github logo" />
 						<span className="repo-github-link-button_text">
-							Code Source
+							{this.SourceCodeName()}
 						</span>
 					</button>
 				</a>

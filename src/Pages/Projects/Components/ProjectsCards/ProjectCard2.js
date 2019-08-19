@@ -10,6 +10,16 @@ import img_raspberrypi from '../img/raspberry-pi-3-bplus.jpg'
 import './ProjectsCards.css'
 
 export default class ProjectCard2 extends Component {
+
+	TutorialProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Tutoriel RaspberryPi cluster')
+        }
+        else {
+            return('Tutorial RaspberryPi cluster')
+        }
+    }
+
 	render () {
 		return (
 			<FlippingCard className="ProjectCard2" >
@@ -24,10 +34,10 @@ export default class ProjectCard2 extends Component {
 				</FlippingCardFront>
 				<FlippingCardBack>
 					<div className="BackCard FrontCard BackProjectCard2">
-					<LinkWebsiteProject TitleWebsite={<p className="LinkWebsiteProject_BackProjectCard2">Tutorial RaspberryPi cluster</p>} LinkWebsite={"https://medium.com/nycdev/k8s-on-pi-9cc14843d43"}/>
+					<LinkWebsiteProject TitleWebsite={<p className="LinkWebsiteProject_BackProjectCard2">{this.TutorialProjectName()}</p>} LinkWebsite={"https://medium.com/nycdev/k8s-on-pi-9cc14843d43"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-								Détails:
+								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
 								Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.

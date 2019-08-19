@@ -29,7 +29,7 @@ export default class ProjectCard3 extends Component {
 						<LinkWebsiteProject TitleWebsite={"Markdown Editor"} LinkWebsite={"https://markdown.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-								Détails:
+								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
 								Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".

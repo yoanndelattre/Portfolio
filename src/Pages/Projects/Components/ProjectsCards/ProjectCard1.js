@@ -27,7 +27,7 @@ export default class ProjectCard1 extends Component {
 					<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Portfolio"} />
 					<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 						<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-							Détails:
+							{this.props.DetailsName}
 						</h3>
 						<p style={{ fontSize: '14px', color: this.props.textFlippingCard }} className="text-details">
 							Ce site est hébergé sur Google Cloud Platform avec le service App Engine. Après la demande d’approbation de l’administrateur, les modifications du dépôt GitHub sont automatiquement déployé sur App Engine grâce à Cloud Build.
