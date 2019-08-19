@@ -19,6 +19,15 @@ export default class ProjectCard3 extends Component {
         else {
             return('Markdown Translator')
         }
+	}
+	
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web traducteur instantané de markdown.')
+        }
+        else {
+            return('Instant markdown translator website.')
+        }
     }
 
 	render () {
@@ -29,7 +38,7 @@ export default class ProjectCard3 extends Component {
 						avatar={logo_website} 
 						header={capture_markdown_editor}
 						name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>} 
-						positionName={<p className="PositionName">Site web traducteur instantané de markdown.</p>} 
+						positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>

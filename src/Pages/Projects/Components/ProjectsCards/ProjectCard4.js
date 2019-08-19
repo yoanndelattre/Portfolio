@@ -11,6 +11,16 @@ import capture_chatbox from '../img/capture-chatbox.png'
 import './ProjectsCards.css'
 
 export default class ProjectCard4 extends Component {
+
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web permettant à différents utilisateurs de communiquer.')
+        }
+        else {
+            return('Website allowing different users to communicate.')
+        }
+    }
+
 	render () {
 		return (
 			<FlippingCard className="ProjectCard4" >
@@ -19,7 +29,7 @@ export default class ProjectCard4 extends Component {
 						avatar={logo_website} 
 						header={capture_chatbox}
 						name={<h1 className="titleUserCard">Chatbox</h1>} 
-						positionName={<p className="PositionName">Site web permettant à différents utilisateurs de communiquer.</p>} 
+						positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>

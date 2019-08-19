@@ -18,6 +18,15 @@ export default class ProjectCard1 extends Component {
         else {
             return('Portfolio (this website)')
         }
+	}
+	
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web public qui expose mes projets et permet de me contacter.')
+        }
+        else {
+            return('Public website that exposes my projects and allow to contact me.')
+        }
     }
 
 	render () {
@@ -28,7 +37,7 @@ export default class ProjectCard1 extends Component {
 					avatar={logo_website} 
 					header={capture_portfolio} 
 					name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>}
-					positionName={<p className="PositionName">Site web public qui expose mes projets et permet de me contacter.</p>} 
+					positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
 					cardClass={this.props.classUserCard} 
 				/>
 			</FlippingCardFront>

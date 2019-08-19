@@ -18,6 +18,15 @@ export default class ProjectCard2 extends Component {
         else {
             return('Tutorial RaspberryPi cluster')
         }
+	}
+	
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Cluster de deux Raspberry Pi 3 avec Kubernetes.')
+        }
+        else {
+            return('Cluster of two Raspberry Pi 3 with Kubernetes.')
+        }
     }
 
 	render () {
@@ -28,7 +37,7 @@ export default class ProjectCard2 extends Component {
 						avatar={logo_kube} 
 						header={img_raspberrypi}
 						name={<h1 className="titleUserCard">Cluster Raspberry Pi</h1>} 
-						positionName={<p className="PositionName">Cluster de deux Raspberry Pi 3 avec Kubernetes.</p>} 
+						positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard} 
 					/>
 				</FlippingCardFront>

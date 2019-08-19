@@ -11,6 +11,16 @@ import capture_recipe_box from '../img/capture-recipe-box.png'
 import './ProjectsCards.css'
 
 export default class ProjectCard5 extends Component {
+
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web permettant à différents utilisateurs d’héberger leurs recettes.')
+        }
+        else {
+            return('Website allowing different users to host their recipes.')
+        }
+    }
+
 	render () {
 		return (
 			<FlippingCard className="ProjectCard5" >
@@ -19,7 +29,7 @@ export default class ProjectCard5 extends Component {
 						avatar={logo_website} 
 						header={capture_recipe_box}
 						name={<h1 className="titleUserCard">Boîte à Recette</h1>} 
-						positionName={<p className="PositionName PositionNameProjectCard5">Site web permettant à différents utilisateurs d’héberger leurs recettes.</p>} 
+						positionName={<p className="PositionName PositionNameProjectCard5">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>
