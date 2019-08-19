@@ -41,6 +41,61 @@ import medium_logo from './logo/devtools/medium.png'
 import './Me.css'
 
 class Me extends Component {
+
+    PersonalAge () {
+        if(localStorage.getItem('language') === 'FR') {
+            return(<h1>17 ans</h1>)
+        }
+        else {
+            return(<h1>17 years</h1>)
+        }
+    }
+
+    PersonalClass () {
+        if(localStorage.getItem('language') === 'FR') {
+            return(<h1>Terminale STI2D</h1>)
+        }
+        else {
+            return(<h1>Terminal STI2D</h1>)
+        }
+    }
+
+    SocialNetworksName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return(<h2>Réseaux Sociaux</h2>)
+        }
+        else {
+            return(<h2>Social Networks</h2>)
+        }
+    }
+
+    WorkToolsName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return(<h2>Mes outils de travail</h2>)
+        }
+        else {
+            return(<h2>My work tools</h2>)
+        }
+    }
+
+    SoftwareName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return(<h3>Logiciels :</h3>)
+        }
+        else {
+            return(<h3>Software :</h3>)
+        }
+    }
+
+    WebsiteName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return(<h3>Site Web :</h3>)
+        }
+        else {
+            return(<h3>Website :</h3>)
+        }
+    }
+
     render () {
         return (
             <Fragment>
@@ -49,12 +104,12 @@ class Me extends Component {
                         <img src={Photo_Profil} alt="profil"/>
                         <div className="info-me">
                             <h1>Yoann Delattre</h1>
-                            <h1>17 ans</h1>
-                            <h1>Terminale STI2D</h1>
+                            {this.PersonalAge()}
+                            {this.PersonalClass()}
                         </div>
                     </div>
                     <div style={{ background: this.props.backgroundCard }} className="social-me_card">
-                        <h2>Réseaux Sociaux</h2>
+                        {this.SocialNetworksName()}
                         <div>
                             <a className="twitter-btn" target="blank" href="https://twitter.com/yoanndelattre_">
                                 <img src={twitter_btn} alt="twitter logo" />
@@ -68,10 +123,10 @@ class Me extends Component {
                         </div>
                     </div>
                     <div style={{ background: this.props.backgroundCard }} className="devtools-me_card">
-                        <h2>Mes outils de travail</h2>
-                        <h3>Logiciels :</h3>
+                        {this.WorkToolsName()}
+                        {this.SoftwareName()}
                         <p><a style={{ color: this.props.ColorText }} href="https://code.visualstudio.com" target="blank">Visual Code Studio</a><img className="logo" src={vscode_logo} alt="vscode logo"/></p>
-                        <p><a style={{ color: this.props.ColorText }} href="https://www.adobe.com/fr/products/photoshop.html" target="blank">Photoshop CC 2019</a><img className="logo" src={photoshop_logo} alt="photoshop logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://www.adobe.com/products/photoshop.html" target="blank">Photoshop CC 2019</a><img className="logo" src={photoshop_logo} alt="photoshop logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://git-scm.com" target="blank">Git</a><img className="logo" src={git_logo} alt="git logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://chocolatey.org" target="blank">Chocolatey</a><img className="logo" src={chocolatey_logo} alt="chocolatey logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://github.com/docker/toolbox/releases" target="blank">Docker Toolbox</a><img className="logo" src={docker_toolbox_logo} alt="docker toolbox logo"/></p>
@@ -84,10 +139,10 @@ class Me extends Component {
                         <p><a style={{ color: this.props.ColorText }} href="https://facebook.github.io/create-react-app" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://github.com/kubernetes/minikube/releases" target="blank">Minikube</a><img className="logo" src={minikube_logo} alt="minikube logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://hub.docker.com/editions/community/docker-ce-desktop-windows" target="blank">Docker Desktop</a><img className="logo" src={docker_desktop_logo} alt="docker desktop logo"/></p>
-                        <p><a style={{ color: this.props.ColorText }} href="https://docs.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="blank">Hyper V</a><img className="logo" src={hyperv_logo} alt="hyperv logo"/></p>
+                        <p><a style={{ color: this.props.ColorText }} href="https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="blank">Hyper V</a><img className="logo" src={hyperv_logo} alt="hyperv logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://nordvpn.com/features" target="blank">NordVPN</a><img className="logo" src={nordvpn_logo} alt="nordvpn logo"/></p>
                         <hr/>
-                        <h3>Site Web :</h3>
+                        {this.WebsiteName()}
                         <p><a style={{ color: this.props.ColorText }} href="https://todoist.com" target="blank">Todoist</a><img className="logo" src={todoist_logo} alt="todoist logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://trello.com" target="blank">Trello</a><img className="logo" src={trello_logo} alt="trello logo"/></p>
                         <p><a style={{ color: this.props.ColorText }} href="https://zapier.com" target="blank">Zapier</a><img className="logo" src={zapier_logo} alt="zapier logo"/></p>

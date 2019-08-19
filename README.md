@@ -13,7 +13,7 @@
 
 &nbsp;
 
-## Development URL server with Netlify (sync with "dev" branch) :
+## Development URL server with Netlify (sync with ```dev``` branch) :
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/749084b0-af57-4589-8bad-7469abd2a3c6/deploy-status)](https://beta.yoanndelattre.com)
 
@@ -102,6 +102,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```Docker``` *(Docker development environment).*
 
+* ```Language``` *(Language selector or geolocation).*
 
 #### For ```"subject"``` :
 
