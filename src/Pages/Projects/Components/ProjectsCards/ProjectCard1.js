@@ -10,6 +10,16 @@ import capture_portfolio from '../img/capture-portfolio.JPG'
 import './ProjectsCards.css'
 
 export default class ProjectCard1 extends Component {
+
+	TitleProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Portfolio (ce site)')
+        }
+        else {
+            return('Portfolio (this website)')
+        }
+    }
+
 	render () {
 		return (
 		<FlippingCard className="ProjectCard1" >
@@ -17,7 +27,7 @@ export default class ProjectCard1 extends Component {
 				<UserCard 
 					avatar={logo_website} 
 					header={capture_portfolio} 
-					name={<h1 className="titleUserCard">Portfolio (ce site)</h1>}
+					name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>}
 					positionName={<p className="PositionName">Site web public qui expose mes projets et permet de me contacter.</p>} 
 					cardClass={this.props.classUserCard} 
 				/>

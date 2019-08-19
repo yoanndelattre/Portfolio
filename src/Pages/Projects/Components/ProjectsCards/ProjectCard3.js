@@ -11,6 +11,16 @@ import capture_markdown_editor from '../img/capture-markdown-editor.png'
 import './ProjectsCards.css'
 
 export default class ProjectCard3 extends Component {
+
+	TitleProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Traducteur Markdown')
+        }
+        else {
+            return('Markdown Translator')
+        }
+    }
+
 	render () {
 		return (
 			<FlippingCard className="ProjectCard3" >
@@ -18,7 +28,7 @@ export default class ProjectCard3 extends Component {
 					<UserCard 
 						avatar={logo_website} 
 						header={capture_markdown_editor}
-						name={<h1 className="titleUserCard">Traducteur Markdown</h1>} 
+						name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>} 
 						positionName={<p className="PositionName">Site web traducteur instantané de markdown.</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
