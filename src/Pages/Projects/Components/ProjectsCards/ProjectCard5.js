@@ -19,6 +19,15 @@ export default class ProjectCard5 extends Component {
         else {
             return('Website allowing different users to host their recipes.')
         }
+	}
+	
+	SummaryProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web permettant à différents utilisateurs d’héberger leurs recettes et de les modifier grâce à un système d’authentification via un compte Google ou Facebook.')
+        }
+        else {
+            return('Website allowing different users to host their recipes and modify them through an authentication system via a Google or Facebook account.')
+        }
     }
 
 	render () {
@@ -42,7 +51,7 @@ export default class ProjectCard5 extends Component {
 								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web permettant à différents utilisateurs d’héberger leurs recettes et de les modifier grâce à un système d’authentification via un compte Google ou Facebook.
+								{this.SummaryProjectName()}
 							</p>
 						</div>
 					</div>

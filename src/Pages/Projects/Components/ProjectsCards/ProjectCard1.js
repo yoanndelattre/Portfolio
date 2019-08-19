@@ -27,6 +27,15 @@ export default class ProjectCard1 extends Component {
         else {
             return('Public website that exposes my projects and allow to contact me.')
         }
+	}
+	
+	SummaryProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Ce site est hébergé sur Google Cloud Platform avec le service App Engine. Après la demande d’approbation de l’administrateur, les modifications du dépôt GitHub sont automatiquement déployé sur App Engine grâce à Cloud Build.')
+        }
+        else {
+            return('This site is hosted on Google Cloud Platform with the App Engine service. After the administrator’s request for approval, changes to the GitHub repository are automatically deployed to App Engine through Cloud Build.')
+        }
     }
 
 	render () {
@@ -49,7 +58,7 @@ export default class ProjectCard1 extends Component {
 							{this.props.DetailsName}
 						</h3>
 						<p style={{ fontSize: '14px', color: this.props.textFlippingCard }} className="text-details">
-							Ce site est hébergé sur Google Cloud Platform avec le service App Engine. Après la demande d’approbation de l’administrateur, les modifications du dépôt GitHub sont automatiquement déployé sur App Engine grâce à Cloud Build.
+							{this.SummaryProjectName()}
 						</p>
 					</div>
 				</div>

@@ -27,6 +27,15 @@ export default class ProjectCard2 extends Component {
         else {
             return('Cluster of two Raspberry Pi 3 with Kubernetes.')
         }
+	}
+	
+	SummaryProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes. Après la demande d’approbation de l’administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l’application.')
+        }
+        else {
+            return('Cluster with two Raspberry Pi (Raspberry Pi 3 B and Raspberry Pi 3 B +) that work with Kubernetes. After the administrator’s request for approval, new containers are automatically started to update the application.')
+        }
     }
 
 	render () {
@@ -49,7 +58,7 @@ export default class ProjectCard2 extends Component {
 								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes. Après la demande d'approbation de l'administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l'application.
+								{this.SummaryProjectName()}
 							</p>
 						</div>
 					</div>

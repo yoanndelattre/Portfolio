@@ -28,6 +28,15 @@ export default class ProjectCard3 extends Component {
         else {
             return('Instant markdown translator website.')
         }
+	}
+	
+	SummaryProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l’aide de la fonction "Local Storage".')
+        }
+        else {
+            return('Website instant markdown translator, the entered text is automatically saved in the browser using the "Local Storage" function.')
+        }
     }
 
 	render () {
@@ -51,7 +60,7 @@ export default class ProjectCard3 extends Component {
 								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".
+								{this.SummaryProjectName()}
 							</p>
 						</div>
 					</div>
