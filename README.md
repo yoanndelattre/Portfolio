@@ -104,6 +104,8 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```Language``` *(Language selector or geolocation).*
 
+* ```CookieBanner``` *(Cookie Banner).*
+
 #### For ```"subject"``` :
 
 * Explanation of the modifications made *(short sentence in English).*
