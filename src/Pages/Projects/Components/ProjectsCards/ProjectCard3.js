@@ -11,6 +11,34 @@ import capture_markdown_editor from '../img/capture-markdown-editor.png'
 import './ProjectsCards.css'
 
 export default class ProjectCard3 extends Component {
+
+	TitleProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Traducteur Markdown')
+        }
+        else {
+            return('Markdown Translator')
+        }
+	}
+	
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web traducteur instantané de markdown.')
+        }
+        else {
+            return('Instant markdown translator website.')
+        }
+	}
+	
+	SummaryProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l’aide de la fonction "Local Storage".')
+        }
+        else {
+            return('Website instant markdown translator, the entered text is automatically saved in the browser using the "Local Storage" function.')
+        }
+    }
+
 	render () {
 		return (
 			<FlippingCard className="ProjectCard3" >
@@ -18,8 +46,8 @@ export default class ProjectCard3 extends Component {
 					<UserCard 
 						avatar={logo_website} 
 						header={capture_markdown_editor}
-						name={<h1 className="titleUserCard">Traducteur Markdown</h1>} 
-						positionName={<p className="PositionName">Site web traducteur instantané de markdown.</p>} 
+						name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>} 
+						positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>
@@ -29,10 +57,10 @@ export default class ProjectCard3 extends Component {
 						<LinkWebsiteProject TitleWebsite={"Markdown Editor"} LinkWebsite={"https://markdown.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-								Détails:
+								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l'aide de la fonction "Local Storage".
+								{this.SummaryProjectName()}
 							</p>
 						</div>
 					</div>

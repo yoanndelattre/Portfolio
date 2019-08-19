@@ -13,6 +13,12 @@ class FlagsSelector extends Component {
         alignOptions: ''
     }
 
+    AutoReloadContactPage () {
+        if(window.location.pathname === "/Contact") {
+            window.location.reload();
+        }
+    }
+
     componentDidMount() {
         getGeoInfo()
         if (window.innerWidth <= 768) {
@@ -23,8 +29,9 @@ class FlagsSelector extends Component {
         }
     }
 
-    onSelectFlag(countryCode){
+    onSelectFlag = (countryCode) => {
         localStorage.setItem('language', countryCode)
+        this.AutoReloadContactPage()
     }
 
     render() {

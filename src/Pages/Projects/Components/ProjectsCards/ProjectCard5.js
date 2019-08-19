@@ -11,6 +11,25 @@ import capture_recipe_box from '../img/capture-recipe-box.png'
 import './ProjectsCards.css'
 
 export default class ProjectCard5 extends Component {
+
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web permettant à différents utilisateurs d’héberger leurs recettes.')
+        }
+        else {
+            return('Website allowing different users to host their recipes.')
+        }
+	}
+	
+	SummaryProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web permettant à différents utilisateurs d’héberger leurs recettes et de les modifier grâce à un système d’authentification via un compte Google ou Facebook.')
+        }
+        else {
+            return('Website allowing different users to host their recipes and modify them through an authentication system via a Google or Facebook account.')
+        }
+    }
+
 	render () {
 		return (
 			<FlippingCard className="ProjectCard5" >
@@ -19,7 +38,7 @@ export default class ProjectCard5 extends Component {
 						avatar={logo_website} 
 						header={capture_recipe_box}
 						name={<h1 className="titleUserCard">Boîte à Recette</h1>} 
-						positionName={<p className="PositionName PositionNameProjectCard5">Site web permettant à différents utilisateurs d’héberger leurs recettes.</p>} 
+						positionName={<p className="PositionName PositionNameProjectCard5">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>
@@ -29,10 +48,10 @@ export default class ProjectCard5 extends Component {
 						<LinkWebsiteProject TitleWebsite={"Boîte à Recettes"} LinkWebsite={"https://recette.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-								Détails:
+								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web permettant à différents utilisateurs d’héberger leurs recettes et de les modifier grâce à un système d’authentification via un compte Google ou Facebook.
+								{this.SummaryProjectName()}
 							</p>
 						</div>
 					</div>

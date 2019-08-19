@@ -11,6 +11,25 @@ import capture_chatbox from '../img/capture-chatbox.png'
 import './ProjectsCards.css'
 
 export default class ProjectCard4 extends Component {
+
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web permettant à différents utilisateurs de communiquer.')
+        }
+        else {
+            return('Website allowing different users to communicate.')
+        }
+	}
+	
+	SummaryProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web permettant à différents utilisateurs de communiquer sous un pseudo qu’ils auront préalablement indiqué sur la page de connexion.')
+        }
+        else {
+            return('Website allowing different users to communicate under a username they have previously indicated on the login page.')
+        }
+    }
+
 	render () {
 		return (
 			<FlippingCard className="ProjectCard4" >
@@ -19,7 +38,7 @@ export default class ProjectCard4 extends Component {
 						avatar={logo_website} 
 						header={capture_chatbox}
 						name={<h1 className="titleUserCard">Chatbox</h1>} 
-						positionName={<p className="PositionName">Site web permettant à différents utilisateurs de communiquer.</p>} 
+						positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>
@@ -29,10 +48,10 @@ export default class ProjectCard4 extends Component {
 						<LinkWebsiteProject TitleWebsite={"Chatbox"} LinkWebsite={"https://chatbox.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-								Détails:
+								{this.props.DetailsName}
 							</h3>
 							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								Site web permettant à différents utilisateurs de communiquer sous un pseudo qu'ils auront préalablement indiqué sur la page de connexion.
+								{this.SummaryProjectName()}
 							</p>
 						</div>
 					</div>

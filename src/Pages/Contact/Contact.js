@@ -26,7 +26,7 @@ class Contact extends Component {
             name: '',
             email: '',
             message: '',
-            valueSubmit: 'Envoyer',
+            valueSubmit: '✉',
             fontSizeSubmit: '15px',
             paddingSubmit: '8px 12px',
             borderSubmit: '',
@@ -91,11 +91,13 @@ class Contact extends Component {
             )
     
             const { name, email, message } = this.state
+            const languageUser = localStorage.getItem('language')
     
             const form = await axios.post('https://mail-send-jubdpulxea-uc.a.run.app/mail/send', {
                 name,
                 email,
-                message
+                message,
+                languageUser
             })
             console.log(form)
         }
@@ -158,12 +160,31 @@ class Contact extends Component {
     }
 
     NotificationSpamMail = () => {
-        new Noty({
-            text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
-            theme: 'bootstrap-v4',
-            type: 'success',
-            layout: 'bottomCenter'
-        }).show();
+        if(localStorage.getItem('language') === 'FR') {
+            new Noty({
+                text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
+                theme: 'bootstrap-v4',
+                type: 'success',
+                layout: 'bottomCenter'
+            }).show();
+        }
+        else {
+            new Noty({
+                text: 'A confirmation email has been sent to you. If you can not find it, check in junk mail.',
+                theme: 'bootstrap-v4',
+                type: 'success',
+                layout: 'bottomCenter'
+            }).show();
+        }
+    }
+
+    LanguageHtmlTag () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('fr')
+        }
+        else {
+            return('en')
+        }
     }
 
     render () {
@@ -172,6 +193,7 @@ class Contact extends Component {
                 <Helmet>
                     <title>Contact • Yoann Delattre | Portfolio</title>
                 </Helmet>
+                <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
                 <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading

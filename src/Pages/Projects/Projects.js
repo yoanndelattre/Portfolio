@@ -110,12 +110,49 @@ class Projects extends Component {
         }
     }
 
+    LanguageHtmlTag () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('fr')
+        }
+        else {
+            return('en')
+        }
+    }
+
+    ProjectsHtmlName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Projets')
+        }
+        else {
+            return('Projects')
+        }
+    }
+
+    MyProjectsName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Mes Projets')
+        }
+        else {
+            return('My Projects')
+        }
+    }
+
+    DetailsName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Détails:')
+        }
+        else {
+            return('Details:')
+        }
+    }
+
     render () {
         return (
             <Fragment>
                 <Helmet>
-                    <title>Projets • Yoann Delattre | Portfolio</title>
+                    <title>{this.ProjectsHtmlName()} • Yoann Delattre | Portfolio</title>
                 </Helmet>
+                <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
                 <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
@@ -127,14 +164,14 @@ class Projects extends Component {
                 <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
                     <h1 style={{ color: this.state.textTitle }} className="title">
-                        Mes Projets
+                        {this.MyProjectsName()}
                     </h1>
                     <div className="cards">
-                        <ProjectCard1 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard2 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard3 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard4 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard5 textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard1 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard2 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard3 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard4 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        <ProjectCard5 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                     </div>
                     <ShareButton display={this.state.displayShareButton}/>
                     {ReportProblem}
