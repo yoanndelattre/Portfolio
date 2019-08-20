@@ -32,6 +32,15 @@ export default class Formulaire extends Component {
         }
     }
 
+    WidthborderBottom () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('206px')
+        }
+        else {
+            return('163px')
+        }
+    }
+
     render () {
         return (
             <Fragment>
@@ -45,7 +54,7 @@ export default class Formulaire extends Component {
                         }
                     }}>
                     
-                    <h1 style={{ color: this.props.ColorText, borderBottom: this.props.BorderH2 }}>
+                    <h1 style={{ color: this.props.ColorText, borderBottom: this.props.BorderH2, width: this.WidthborderBottom() }}>
                         {this.ContactMe()}
                     </h1>
                     
