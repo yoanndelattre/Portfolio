@@ -2,7 +2,7 @@
 .circleci
 deploy
 node_modules
-skaffold
+dev-docker
 .dockerignore
 .gitignore
 Dockerfile
