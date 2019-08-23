@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-export function getGeoInfo() {
-    axios.get('https://ipapi.co/json/')
+export async function getGeoInfo() {
+    await axios.get('https://ipapi.co/json/')
     .then((response) => {
         if (localStorage.getItem('language') === null) {
             if( 
