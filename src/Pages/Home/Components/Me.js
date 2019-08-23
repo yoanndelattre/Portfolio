@@ -7,7 +7,6 @@ import Photo_Profil from '../img/Photo-Profil.jpg'
 import twitter_btn from './logo/twitter.png'
 import linkedin_btn from './logo/linkedin.png'
 import github_btn from './logo/github.png'
-
 import vscode_logo from './logo/devtools/VSCode.png'
 import photoshop_logo from './logo/devtools/photoshop.png'
 import git_logo from './logo/devtools/git.png'
