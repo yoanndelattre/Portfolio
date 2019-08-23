@@ -14,7 +14,7 @@
     "react-router-dom": "^5.0.1",
     "react-share": "^3.0.0",
     "react-scripts": "^3.1.1",
-    "react-ui-cards": "^1.5.3",
+    "react-ui-cards": "^2.0.0",
     "reaptcha": "^1.6.0"
   },
   "scripts": {
