@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {getGeoInfo} from './location'
 import ReactFlagsSelect from 'react-flags-select'
+import ReactLoading from 'react-loading'
 
 // css
 import 'react-flags-select/css/react-flags-select.css'
@@ -34,6 +35,16 @@ class FlagsSelector extends Component {
         this.AutoReloadContactPage()
     }
 
+    colorLoading () {
+        if (localStorage.getItem('DarkMode') === "true") {
+            return("white")
+        }
+        
+        if (localStorage.getItem('DarkMode') === null) {
+            return ("black")
+        }
+    }
+
     render() {
         if(localStorage.getItem('language')) {
             return(
@@ -48,7 +59,11 @@ class FlagsSelector extends Component {
             )
         }
         else {
-            return(null)
+            return(
+                <div className='loadingpageflag'>
+                    <ReactLoading type="balls" color={this.colorLoading()} width={60}/>
+                </div>
+            )
         }
     }
 }

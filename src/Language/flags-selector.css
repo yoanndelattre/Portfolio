@@ -4,6 +4,13 @@
     margin-left: 20px
 }
 
+.loadingpageflag {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: -5px;
+    position: absolute;
+}
+
 @media only screen and (max-width: 768px) {
     .FlagsSelector {
         position: absolute;
