@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 // img
 import Photo_Profil from '../img/Photo-Profil.jpg'
