@@ -90,6 +90,8 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```ContactPage```
 
+* ```404Page```
+
 * ```SystemSendMail``` *(Strategy of sending mails in the form of the contact page).*
 
 * ```SystemLoading``` *(loading between pages).*
