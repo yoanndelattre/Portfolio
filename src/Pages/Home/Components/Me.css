@@ -2,7 +2,8 @@
 .me_card {
     padding: 20px;
     display: table;
-    margin: 22px auto;
+    margin: 22px auto auto auto;
+    border-radius: 8px;
 }
 
 /* About Card */ 

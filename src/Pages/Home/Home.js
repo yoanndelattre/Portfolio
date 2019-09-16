@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import ReactLoading from 'react-loading'
 import axios from 'axios'
 import {Helmet} from 'react-helmet'
@@ -107,7 +107,7 @@ class Home extends Component {
 
     render () {
         return (
-            <Fragment>
+            <div>
                 <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
                 <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
@@ -132,7 +132,7 @@ class Home extends Component {
                     <ShareButton display='flex'/>
                     {ReportProblem}
                 </div>
-            </Fragment>
+            </div>
         )
     }
 }
