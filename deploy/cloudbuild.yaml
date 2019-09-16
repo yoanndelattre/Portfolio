@@ -3,14 +3,6 @@ steps:
 - id: "Copy index html Analytics"
   name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', "gs://analytics_portfolio-perso-box-config/index.html", "./public/index.html"]
-  
-- id: "Copy robots.txt file"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://analytics_portfolio-perso-box-config/robots.txt", "./public/"]
-
-- id: "Copy sitemap.xml file"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://analytics_portfolio-perso-box-config/sitemap.xml", "./public/"]
 
 - id: "Install dependency"
   name: 'gcr.io/cloud-builders/npm'
