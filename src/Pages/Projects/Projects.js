@@ -161,20 +161,22 @@ class Projects extends Component {
                         width={'10%'}
                     />
                 </div>
-                <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
-                    <Navbar UpdateComponent={this.UpdateComponent} />
-                    <h1 style={{ color: this.state.textTitle }} className="title">
-                        {this.MyProjectsName()}
-                    </h1>
-                    <div className="cards">
-                        <ProjectCard1 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard2 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard3 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard4 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                        <ProjectCard5 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                <div>
+                    <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
+                        <Navbar UpdateComponent={this.UpdateComponent} />
+                        <h1 style={{ color: this.state.textTitle }} className="title">
+                            {this.MyProjectsName()}
+                        </h1>
+                        <div className="cards">
+                            <ProjectCard1 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard2 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard3 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard4 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard5 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                        </div>
+                        <ShareButton display={this.state.displayShareButton}/>
+                        {ReportProblem}
                     </div>
-                    <ShareButton display={this.state.displayShareButton}/>
-                    {ReportProblem}
                 </div>
             </Fragment>
         )
