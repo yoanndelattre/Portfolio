@@ -73,6 +73,13 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 768px) {
+    .form{
+        margin:calc(40vh - 200px) auto;
+        transform: scale(0.9)
+    }
+}
+
 @media only screen and (max-height: 534px) {
     .form{
         transform: scale(0.7)
