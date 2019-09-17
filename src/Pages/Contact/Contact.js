@@ -15,7 +15,7 @@ import CookieAlert from '../../Cookie-Alert/Cookie-Alert'
 // css
 import '../../../node_modules/noty/lib/noty.css'
 import '../../../node_modules/noty/lib/themes/bootstrap-v4.css'
-
+import './Contact.css'
 
 class Contact extends Component {
 
@@ -201,7 +201,7 @@ class Contact extends Component {
                         width={'10%'}
                     />
                 </div>
-                <div style={{ display: this.state.displayApp, backgroundColor: this.state.backgroundContainer, height: "100%" }}>
+                <div className="ContactContainer" style={{ display: this.state.displayApp, backgroundColor: this.state.backgroundContainer, height: "100%" }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
                     <Formulaire 
                         displaySubmit={this.state.displaySubmit} 
