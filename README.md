@@ -39,6 +39,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * *```feature```* : For the development of a new feature.
 
+&nbsp;
 
 #### For ```"target"``` :
 
