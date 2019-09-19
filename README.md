@@ -106,7 +106,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```Language``` *(Language selector).*
 
-* ```CookieBanner``` *(Cookie Banner).*
+* ```CookieBanner``` *(Cookie Banner info at the bottom of the page).*
 
 #### For ```"subject"``` :
 
