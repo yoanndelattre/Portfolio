@@ -104,7 +104,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```Docker``` *(Docker development environment).*
 
-* ```Language``` *(Language selector or geolocation).*
+* ```Language``` *(Language selector).*
 
 * ```CookieBanner``` *(Cookie Banner).*
 
