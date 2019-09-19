@@ -108,10 +108,13 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```CookieBanner``` *(Cookie Banner info at the bottom of the page).*
 
+&nbsp;
+
 #### For ```"subject"``` :
 
 * Explanation of the modifications made *(short sentence in English).*
 
+&nbsp;
 
 #### For ```"issues"``` (optional) :
 
