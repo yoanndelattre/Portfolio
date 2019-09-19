@@ -92,9 +92,9 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```404Page```
 
-* ```SystemSendMail``` *(Strategy of sending mails in the form of the contact page).*
+* ```SendMail``` *(Strategy of sending mails in the form of the contact page).*
 
-* ```SystemLoading``` *(loading between pages).*
+* ```Loading``` *(Loading between pages).*
 
 * ```ColorMode``` *(Dark Mode).*
 
