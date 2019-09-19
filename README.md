@@ -39,12 +39,10 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * *```feature```* : For the development of a new feature.
 
-* *```hotfix```* : For quick fixes (one or two commit).
-
 
 #### For ```"target"``` :
 
-* Name of the new feature or bug name resolved (```hotfix/FailLogin```).
+* Name of the new feature or bug name resolved (```feature/LoginPage```).
 
 
 
@@ -71,7 +69,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * *```feat```* : Adding a new feature (usually in the ```feature``` branch) .
 
-* *```fix```* : Bug fix (usually in the ```hotfix``` branch) .
+* *```fix```* : Bug fix .
 
 * *```test```* : Change test strategy with reactjs .
 
