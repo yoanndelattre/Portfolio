@@ -79,7 +79,8 @@ Link dev server -> https://beta.yoanndelattre.com
 * *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .
 
 * *```issue```* : Github issue.
-     
+
+&nbsp;     
     
 #### For ```"scope"``` (optional) :
 
