@@ -2,7 +2,7 @@
     outline: none;
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
-    margin:calc(40vh - 160px) auto;
+    margin:calc(40vh - 180px) auto;
     padding:20px 30px;
     max-width:calc(100vw - 40px);
     box-sizing:border-box;
