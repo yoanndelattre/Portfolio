@@ -7,7 +7,7 @@
     "noty": "^3.2.0-beta",
     "react": "^16.9.0",
     "react-cookie-banner": "^4.0.0",
-    "react-dom": "^16.9.0",
+    "react-dom": "^16.10.1",
     "react-flags-select": "^1.1.10",
     "react-helmet": "^5.2.1",
     "react-loading": "^2.0.3",
