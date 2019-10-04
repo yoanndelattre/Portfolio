@@ -147,7 +147,7 @@ class Me extends Component {
                     <p><a style={{ color: this.props.ColorText }} href="https://codeanywhere.com" target="blank">Codeanywhere</a><img className="logo" src={codeanywhere_logo} alt="codeanywhere logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://domains.google.com" target="blank">Google Domains</a><img className="logo" src={google_domains_logo} alt="google domains logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://cloud.google.com" target="blank">Google Cloud Platform</a><img className="logo" src={gcp_logo} alt="google cloud platform logo"/></p>
-                    <p><a style={{ color: this.props.ColorText }} href="https://kubernetes.io/docs" target="blank">Kubernetes</a><img className="logo" src={k8s_logo} alt="kubernetes logo"/></p>
+                    <p><a style={{ color: this.props.ColorText }} href="https://kubernetes.io" target="blank">Kubernetes</a><img className="logo" src={k8s_logo} alt="kubernetes logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://github.com" target="blank">GitHub</a><img className="logo" src={github_logo} alt="github logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://gitlab.com" target="blank">GitLab</a><img className="logo" src={gitlab_logo} alt="gitlab logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://medium.com" target="blank">Medium</a><img className="logo" src={medium_logo} alt="medium logo"/></p>
