@@ -134,7 +134,7 @@ class Me extends Component {
                     <p><a style={{ color: this.props.ColorText }} href="https://www.vmware.com" target="blank">VmWare</a><img className="logo" src={vmware_logo} alt="vmware logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://create-react-app.dev" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://github.com/kubernetes/minikube/releases" target="blank">Minikube</a><img className="logo" src={minikube_logo} alt="minikube logo"/></p>
-                    <p><a style={{ color: this.props.ColorText }} href="https://hub.docker.com/editions/community/docker-ce-desktop-windows" target="blank">Docker Desktop</a><img className="logo" src={docker_desktop_logo} alt="docker desktop logo"/></p>
+                    <p><a style={{ color: this.props.ColorText }} href="https://www.docker.com/products/docker-desktop" target="blank">Docker Desktop</a><img className="logo" src={docker_desktop_logo} alt="docker desktop logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="blank">Hyper V</a><img className="logo" src={hyperv_logo} alt="hyperv logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://nordvpn.com/features" target="blank">NordVPN</a><img className="logo" src={nordvpn_logo} alt="nordvpn logo"/></p>
                     <hr/>
