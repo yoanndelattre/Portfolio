@@ -134,7 +134,7 @@ class Me extends Component {
                     <p><a style={{ color: this.props.ColorText }} href="https://www.virtualbox.org" target="blank">VirtualBox</a><img className="logo" src={virtualbox_logo} alt="virtualbox logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://www.vmware.com" target="blank">VmWare</a><img className="logo" src={vmware_logo} alt="vmware logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://github.com/FredrikNoren/ungit" target="blank">Ungit</a><img className="logo" src={ungit_logo} alt="ungit logo"/></p>
-                    <p><a style={{ color: this.props.ColorText }} href="https://facebook.github.io/create-react-app" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
+                    <p><a style={{ color: this.props.ColorText }} href="https://create-react-app.dev" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://github.com/kubernetes/minikube/releases" target="blank">Minikube</a><img className="logo" src={minikube_logo} alt="minikube logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://hub.docker.com/editions/community/docker-ce-desktop-windows" target="blank">Docker Desktop</a><img className="logo" src={docker_desktop_logo} alt="docker desktop logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="blank">Hyper V</a><img className="logo" src={hyperv_logo} alt="hyperv logo"/></p>
