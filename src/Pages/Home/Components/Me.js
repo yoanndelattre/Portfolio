@@ -17,7 +17,6 @@ import hamachi_logo from './logo/devtools/hamachi.png'
 import nodejs_logo from './logo/devtools/nodejs.png'
 import virtualbox_logo from './logo/devtools/virtualbox.png'
 import vmware_logo from './logo/devtools/vmware.png'
-import ungit_logo from './logo/devtools/ungit.png'
 import react_logo from './logo/devtools/react.png'
 import todoist_logo from './logo/devtools/todoist.png'
 import trello_logo from './logo/devtools/trello.png'
@@ -133,7 +132,6 @@ class Me extends Component {
                     <p><a style={{ color: this.props.ColorText }} href="https://nodejs.org" target="blank">NodeJs</a><img className="logo" src={nodejs_logo} alt="nodejs logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://www.virtualbox.org" target="blank">VirtualBox</a><img className="logo" src={virtualbox_logo} alt="virtualbox logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://www.vmware.com" target="blank">VmWare</a><img className="logo" src={vmware_logo} alt="vmware logo"/></p>
-                    <p><a style={{ color: this.props.ColorText }} href="https://github.com/FredrikNoren/ungit" target="blank">Ungit</a><img className="logo" src={ungit_logo} alt="ungit logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://create-react-app.dev" target="blank">Create React App</a><img className="logo" src={react_logo} alt="react logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://github.com/kubernetes/minikube/releases" target="blank">Minikube</a><img className="logo" src={minikube_logo} alt="minikube logo"/></p>
                     <p><a style={{ color: this.props.ColorText }} href="https://hub.docker.com/editions/community/docker-ce-desktop-windows" target="blank">Docker Desktop</a><img className="logo" src={docker_desktop_logo} alt="docker desktop logo"/></p>
