@@ -1,19 +1,20 @@
 {
   "name": "portfolio",
-  "version": "1.1.5",
+  "version": "1.2.5",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
     "noty": "^3.2.0-beta",
-    "react": "^16.9.0",
+    "react": "^16.10.1",
     "react-cookie-banner": "^4.0.0",
-    "react-dom": "^16.9.0",
+    "react-dom": "^16.10.1",
+    "react-flags-select": "^1.1.10",
     "react-helmet": "^5.2.1",
     "react-loading": "^2.0.3",
-    "react-router-dom": "^5.0.1",
-    "react-share": "^3.0.0",
-    "react-scripts": "^3.1.0",
-    "react-ui-cards": "^1.5.3",
+    "react-router-dom": "^5.1.1",
+    "react-share": "^3.0.1",
+    "react-scripts": "^3.1.2",
+    "react-ui-cards": "^2.0.0",
     "reaptcha": "^1.6.0"
   },
   "scripts": {

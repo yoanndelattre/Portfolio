@@ -1,4 +1,4 @@
-body, html {
+#root, body, html {
   height: 100%;
   margin: 0;
 }
@@ -12,11 +12,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.loadingpage {
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: black;
 }

@@ -13,7 +13,7 @@
 
 &nbsp;
 
-## Development URL server with Netlify (sync with "dev" branch) :
+## Development URL server with Netlify (sync with ```dev``` branch) :
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/749084b0-af57-4589-8bad-7469abd2a3c6/deploy-status)](https://beta.yoanndelattre.com)
 
@@ -39,12 +39,11 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * *```feature```* : For the development of a new feature.
 
-* *```hotfix```* : For quick fixes (one or two commit).
-
+&nbsp;
 
 #### For ```"target"``` :
 
-* Name of the new feature or bug name resolved (```hotfix/FailLogin```).
+* Name of the new feature or bug name resolved (```feature/LoginPage```).
 
 
 
@@ -71,7 +70,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * *```feat```* : Adding a new feature (usually in the ```feature``` branch) .
 
-* *```fix```* : Bug fix (usually in the ```hotfix``` branch) .
+* *```fix```* : Bug fix .
 
 * *```test```* : Change test strategy with reactjs .
 
@@ -80,7 +79,8 @@ Link dev server -> https://beta.yoanndelattre.com
 * *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .
 
 * *```issue```* : Github issue.
-     
+
+&nbsp;     
     
 #### For ```"scope"``` (optional) :
 
@@ -90,9 +90,11 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```ContactPage```
 
-* ```SystemSendMail``` *(Strategy of sending mails in the form of the contact page).*
+* ```404Page```
 
-* ```SystemLoading``` *(loading between pages).*
+* ```SendMail``` *(Strategy of sending mails in the form of the contact page).*
+
+* ```Loading``` *(Loading between pages).*
 
 * ```ColorMode``` *(Dark Mode).*
 
@@ -102,11 +104,17 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```Docker``` *(Docker development environment).*
 
+* ```Language``` *(Language selector).*
+
+* ```CookieBanner``` *(Cookie Banner info at the bottom of the page).*
+
+&nbsp;
 
 #### For ```"subject"``` :
 
 * Explanation of the modifications made *(short sentence in English).*
 
+&nbsp;
 
 #### For ```"issues"``` (optional) :
 

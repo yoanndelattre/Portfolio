@@ -1,7 +1,7 @@
 #notfound {
     position: relative;
     height: 100vh;
-  }
+}
   
 #notfound .notfound {
     position: absolute;
@@ -26,14 +26,12 @@
 }
   
 .notfound .notfound-404 h1 {
+    color: #b1b1b1;
     font-family: 'Titillium Web', sans-serif;
     font-size: 186px;
     font-weight: 900;
     margin: 0px;
     text-transform: uppercase;
-    background: url('./text.png');
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-size: cover;
     background-position: center;
 }

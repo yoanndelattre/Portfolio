@@ -1,7 +1,8 @@
 version: '3'
 services:
   portfolio:
-    build: .
+    build:
+      context: ../
     ports:
       - 80:80
     tty: true

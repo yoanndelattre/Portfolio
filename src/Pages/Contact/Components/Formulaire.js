@@ -5,6 +5,42 @@ import './Formulaire.css'
 
 export default class Formulaire extends Component {
 
+    ContactMe () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('CONTACTEZ-MOI')
+        }
+        else {
+            return('CONTACT-ME')
+        }
+    }
+
+    NameUser () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Nom :')
+        }
+        else {
+            return('Name :')
+        }
+    }
+
+    MessageUser () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Votre Message :')
+        }
+        else {
+            return('Your Message :')
+        }
+    }
+
+    WidthborderBottom () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('206px')
+        }
+        else {
+            return('163px')
+        }
+    }
+
     render () {
         return (
             <Fragment>
@@ -18,19 +54,19 @@ export default class Formulaire extends Component {
                         }
                     }}>
                     
-                    <h1 style={{ color: this.props.ColorText, borderBottom: this.props.BorderH2 }}>
-                        CONTACTEZ-MOI
+                    <h1 style={{ color: this.props.ColorText, borderBottom: this.props.BorderH2, width: this.WidthborderBottom() }}>
+                        {this.ContactMe()}
                     </h1>
                     
-                    <p className={this.props.classPlaceholderForm} type="Nom:">
+                    <p className={this.props.classPlaceholderForm} type={this.NameUser()}>
                         <input style={{ color: this.props.ColorText }} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />
                     </p>
                     
-                    <p className={this.props.classPlaceholderForm} type="Email:">
+                    <p className={this.props.classPlaceholderForm} type="Email :">
                         <input style={{ color: this.props.ColorText }} type="email" value={this.props.email} required name="email" onChange={this.props.handleChange} />
                     </p>
                     
-                    <p className={this.props.classPlaceholderForm} type="Message:">
+                    <p className={this.props.classPlaceholderForm} type={this.MessageUser()}>
                         <input style={{ color: this.props.ColorText }} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
                     </p>
                     

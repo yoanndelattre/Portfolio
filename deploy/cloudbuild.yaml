@@ -2,15 +2,7 @@ steps:
 
 - id: "Copy index html Analytics"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://analytics_portfolio-perso-box-config/index.html", "./public/index.html"]
-  
-- id: "Copy robots.txt file"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://analytics_portfolio-perso-box-config/robots.txt", "./public/"]
-
-- id: "Copy sitemap.xml file"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://analytics_portfolio-perso-box-config/sitemap.xml", "./public/"]
+  args: ['cp', "gs://analytics_portfolio-box-config/index.html", "./public/index.html"]
 
 - id: "Install dependency"
   name: 'gcr.io/cloud-builders/npm'
@@ -22,20 +14,16 @@ steps:
 
 - id: "Download Express server"
   name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-237410/r/github_yoanndelattre_express-server-gcp', './master/github_yoanndelattre_express-server-gcp']
-
-- id: "Create app_files folder"
-  name: 'ubuntu'
-  args: ['bash', './master/github_yoanndelattre_express-server-gcp/deploy/CreateFolderApp.sh']
+  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-237410/r/github_yoanndelattre_express-server-gcp', './webserver_prod']
 
 - id: "Move Website Portfolio Project folder"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['rsync', '-d', '-r', './build/.', './master/github_yoanndelattre_express-server-gcp/app_files/']
+  name: 'alpine'
+  args: ['sh', '-c', 'cp -rf ./build/. ./webserver_prod/app_files/']
 
-- id: "Move WebsiteConfigAppEngine.yaml in github_yoanndelattre_express-server-gcp folder"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['mv', './deploy/WebsiteConfigAppEngine.yaml', './master/github_yoanndelattre_express-server-gcp/']
+- id: "Move WebsiteConfigAppEngine.yaml in webserver_prod folder"
+  name: 'alpine'
+  args: ['sh', '-c', 'mv ./deploy/WebsiteConfigAppEngine.yaml ./webserver_prod/']
 
 - id: "DEPLOY APP ENGINE"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', './master/github_yoanndelattre_express-server-gcp/WebsiteConfigAppEngine.yaml', './deploy/dispatch.yaml', '--version=1']
+  args: ['app', 'deploy', './webserver_prod/WebsiteConfigAppEngine.yaml', './deploy/dispatch.yaml', '--version=1']

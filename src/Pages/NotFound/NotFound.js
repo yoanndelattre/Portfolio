@@ -1,9 +1,6 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 
-// Components
-import CookieAlert from '../../Cookie-Alert/Cookie-Alert'
-
 // css
 import './NotFound.css'
 
@@ -12,7 +9,6 @@ const NotFound = () => (
 	<Helmet>
         <title>404 Error NotFound</title>
     </Helmet>
-	<CookieAlert/>
 		<div className="notfound">
 			<div className="notfound-404">
 				<h1>404</h1>

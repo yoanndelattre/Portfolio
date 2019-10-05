@@ -1,7 +1,10 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
-import './index.css';
-import * as serviceWorker from './serviceWorker';
+import ReactDOM from 'react-dom'
+import * as serviceWorker from './serviceWorker'
+
+// css
+import './index.css'
+import './loading.css'
 
 // Routes
 import MainRouter from './Routes'
