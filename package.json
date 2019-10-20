@@ -15,7 +15,7 @@
     "react-share": "^3.0.1",
     "react-scripts": "^3.2.0",
     "react-ui-cards": "^2.0.0",
-    "reaptcha": "^1.6.0"
+    "reaptcha": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
