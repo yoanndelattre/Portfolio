@@ -84,11 +84,11 @@ Link dev server -> https://beta.yoanndelattre.com
     
 #### For ```"scope"``` (optional) :
 
-* ```HomePage```
+* ```HomePage``` */*
 
-* ```ProjectsPage```
+* ```ProjectsPage``` */Projects*
 
-* ```ContactPage```
+* ```ContactPage``` */Contact*
 
 * ```404Page```
 
