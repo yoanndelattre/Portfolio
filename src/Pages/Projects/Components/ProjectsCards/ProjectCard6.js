@@ -22,10 +22,10 @@ export default class ProjectCard6 extends Component {
 	
 	SummaryProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Dmv est un petit outil en ligne de commande écrit en javascript avec nodejs. Cette application créer une machine virtuelle temporaire sur la plate-forme Google Cloud avec Compute Engine avec un réseau et un pare-feu déjà configuré. Vous pouvez ensuite vous connecter en ssh à cette machine virtuelle.')
+            return('Dvm est un petit outil en ligne de commande écrit en javascript avec nodejs. Cette application créer une machine virtuelle temporaire sur la plate-forme Google Cloud avec Compute Engine avec un réseau et un pare-feu déjà configuré. Vous pouvez ensuite vous connecter en ssh à cette machine virtuelle.')
         }
         else {
-            return('Dmv is a small command line tool written in javascript with nodejs. This application create a temporary virtual machine on Google Cloud Platform with Compute Engine with a network and a firewall already configured. You can then connect in ssh to this virtual machine.')
+            return('Dvm is a small command line tool written in javascript with nodejs. This application create a temporary virtual machine on Google Cloud Platform with Compute Engine with a network and a firewall already configured. You can then connect in ssh to this virtual machine.')
         }
 	}
 
