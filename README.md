@@ -90,7 +90,7 @@ Link dev server -> https://beta.yoanndelattre.com
 
 * ```ContactPage``` */Contact*
 
-* ```404Page```
+* ```404Page``` */page_not_found*
 
 * ```SendMail``` *(Strategy of sending mails in the form of the contact page).*
 
