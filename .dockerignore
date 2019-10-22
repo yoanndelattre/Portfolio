@@ -3,7 +3,6 @@
 .github
 deploy
 node_modules
-dev_docker
 .dockerignore
 .gitignore
 Dockerfile

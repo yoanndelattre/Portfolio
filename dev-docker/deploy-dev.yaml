@@ -12,7 +12,7 @@ spec:
       - image: portfolio-dev
         name: portfolio-dev-container   
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           name:  webview
 
 ---
@@ -25,5 +25,5 @@ spec:
   selector:
     app: portfolio-dev
   ports:
-  - port: 80
+  - port: 8080
   type: LoadBalancer
