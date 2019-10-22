@@ -18,4 +18,4 @@ steps:
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'portfolio', '--image=gcr.io/portfolio-project-07/portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=1m', '--max-instances=12']
+  args: ['beta', 'run', 'deploy', 'portfolio', '--image=gcr.io/portfolio-project-07/portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=1m', '--max-instances=12', '--memory=256Mi']
