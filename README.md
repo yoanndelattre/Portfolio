@@ -77,29 +77,29 @@
 
 * ```404Page``` */page_not_found*
 
-* ```MailSend``` *(Strategy of sending mails with the form of the contact page).*
+* ```MailSend``` *(Strategy of sending mails with the form of the contact page) .*
 
-* ```Loading``` *(Loading between pages).*
+* ```Loading``` *(Loading between pages) .*
 
-* ```ColorMode``` *(Dark Mode).*
+* ```ColorMode``` *(Dark Mode) .*
 
-* ```GCP``` *(Strategy of deployment on Google Gloud Platfrom with Cloud Run).*
+* ```GCP``` *(Strategy of deployment on Google Gloud Platfrom with Cloud Run) .*
 
-* ```Skaffold``` *(Skaffold development environment).*
+* ```Skaffold``` *(Skaffold development environment) .*
 
-* ```Docker``` *(Docker environment).*
+* ```Docker``` *(Docker environment) .*
 
-* ```Language``` *(Language selector).*
+* ```Language``` *(Language selector) .*
 
-* ```CookieBanner``` *(Cookie Banner info at the bottom of the page).*
+* ```CookieBanner``` *(Cookie Banner info at the bottom of the page) .*
 
-* ```Config``` : Modification of the config files (for example modification of the *package.json* file) .
+* ```Config``` : *(Modification of the config files) .*
 
-* ```CircleCi``` : Modification of circleci configuration files for unit tests .
+* ```CircleCi``` : *(Modification of circleci configuration files for unit tests) .*
 
-* ```Github``` : Modification of configuration files for the Github repository .
+* ```Github``` : *(Modification of configuration files for the Github repository) .*
 
-* ```SEO``` : SEO improvement .
+* ```SEO``` : *(SEO improvement) .*
 
 
 #### For ```"subject"``` :
