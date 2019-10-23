@@ -5,7 +5,7 @@
 
 [![CircleCI](https://circleci.com/gh/yoanndelattre/Portfolio/tree/master.svg?style=svg)](https://circleci.com/gh/yoanndelattre/Portfolio/tree/master)
 
-&nbsp;
+&nbsp;  
 &nbsp;
 
 
@@ -13,10 +13,10 @@
 
 &nbsp;
 
-### Structure : 
+### Structure :
 *```"type"/"target"```*
 
-### Example : 
+### Example :
 ```feature/flipCard```
 
 &nbsp;
@@ -32,7 +32,7 @@
 
 * Name of the new feature or bug name resolved (```feature/LoginPage```).
 
-&nbsp;  
+&nbsp;
 &nbsp;
 
 
@@ -40,17 +40,17 @@
 
 &nbsp;
 
-### Structure : 
-*```"type"("scope"):"subject"```*      
+### Structure :
+*```"type"("scope"):"subject"```*  
 *```("issues")```*
 
-### Example : 
+### Example :
 ```feat(ProjectsPage):add dark color in front card```  
 ```Fixes #45```
 
 &nbsp;
 
-#### For ```"type"``` : 
+#### For ```"type"``` :
 
 * ```docs``` : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
 
@@ -66,7 +66,7 @@
 
 * ```issue``` : Github issue.
 
-    
+
 #### For ```"scope"``` (optional) :
 
 * ```HomePage``` */*
