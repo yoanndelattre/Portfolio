@@ -99,6 +99,8 @@
 
 * ```Github``` : Modification of configuration files for the Github repository .
 
+* ```SEO``` : SEO improvement .
+
 
 #### For ```"subject"``` :
 
