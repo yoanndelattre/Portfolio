@@ -98,6 +98,7 @@ class Contact extends Component {
                 languageUser
             })
                 .then(function (response) {
+                    console.log(response.data)
                     if(response.data === "success_mail_send") {
                         this.NotificationSpamMailSuccess()
                     }
