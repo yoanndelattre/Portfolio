@@ -62,7 +62,7 @@
 
 * *```test```* : Change test strategy with reactjs .
 
-* *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .
+* *```refactor```* : Change of the code which does not change the functioning (for example delete of spaces) .
 
 * *```issue```* : Github issue.
 
@@ -77,7 +77,7 @@
 
 * ```404Page``` */page_not_found*
 
-* ```MailSend``` *(Strategy of sending mails in the form of the contact page).*
+* ```MailSend``` *(Strategy of sending mails with the form of the contact page).*
 
 * ```Loading``` *(Loading between pages).*
 
