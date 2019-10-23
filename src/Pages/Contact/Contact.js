@@ -93,7 +93,7 @@ class Contact extends Component {
             const { name, email, message } = this.state
             const languageUser = localStorage.getItem('language')
     
-            await axios.post('https://mail-send-gvxzswdqqa-ew.a.run.app/mail/send', {
+            await axios.post(process.env.REACT_APP_URL_POST, {
                 name,
                 email,
                 message,
