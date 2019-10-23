@@ -8,8 +8,8 @@
 &nbsp;
 &nbsp;
 
-## Branch Method :
 
+## Branch Method :
 
 ### Structure : 
 *```"type"/"target"```*
@@ -21,20 +21,18 @@
 
 #### For ```"type"``` :
 
-* *```dev```* : For the general development of the application (this branch is created rather at the beginning of the project or for the development of the next version of the application).
+* *```dev```* : For the general development of the application (this branch is created for the development of the next version of the application).
 
-* *```feature```* : For the development of a new feature.
+* *```feature```* : For the development of a new feature (this branch will then merge with the ```dev``` branch).
 
-&nbsp;
 
 #### For ```"target"``` :
 
 * Name of the new feature or bug name resolved (```feature/LoginPage```).
 
-
-
 &nbsp;  
 &nbsp;
+
 
 ## Commit Method :
 
@@ -66,7 +64,6 @@
 
 * *```issue```* : Github issue.
 
-&nbsp;     
     
 #### For ```"scope"``` (optional) :
 
@@ -94,13 +91,11 @@
 
 * ```CookieBanner``` *(Cookie Banner info at the bottom of the page).*
 
-&nbsp;
 
 #### For ```"subject"``` :
 
 * Explanation of the modifications made *(short sentence in English).*
 
-&nbsp;
 
 #### For ```"issues"``` (optional) :
 
