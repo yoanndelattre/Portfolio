@@ -95,6 +95,8 @@
 
 * ```Config``` : Modification of the config files (for example modification of the *package.json* file) .
 
+* ```CircleCi``` : Modification of circleci configuration files for unit tests .
+
 
 #### For ```"subject"``` :
 
