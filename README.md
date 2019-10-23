@@ -52,19 +52,19 @@
 
 #### For ```"type"``` : 
 
-* *```docs```* : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
+* ```docs``` : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
 
-* *```feat```* : Adding a new feature (usually in the ```feature``` branch) .
+* ```feat``` : Adding a new feature (usually in the ```feature``` branch) .
 
-* *```fix```* : Bug fix .
+* ```fix``` : Bug fix .
 
-* *```simplification```* : Simplification of a method or code in general .
+* ```simplification``` : Simplification of a method or code in general .
 
-* *```test```* : Change test strategy with reactjs .
+* ```test``` : Change test strategy with reactjs .
 
-* *```refactor```* : Change of the code which does not change the functioning (for example delete of spaces) .
+* ```refactor``` : Change of the code which does not change the functioning (for example delete of spaces) .
 
-* *```issue```* : Github issue.
+* ```issue``` : Github issue.
 
     
 #### For ```"scope"``` (optional) :
@@ -93,7 +93,7 @@
 
 * ```CookieBanner``` *(Cookie Banner info at the bottom of the page).*
 
-* ```config``` : Modification of the config files (for example modification of the *package.json* file) .
+* ```Config``` : Modification of the config files (for example modification of the *package.json* file) .
 
 
 #### For ```"subject"``` :
