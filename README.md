@@ -52,7 +52,7 @@
 
 #### For ```"type"``` : 
 
-* *```config```* : Modification of the config files (for example modification of the *package.json* file).
+* *```config```* : Modification of the config files (for example modification of the *package.json* file) .
 
 * *```docs```* : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
 
@@ -61,8 +61,6 @@
 * *```fix```* : Bug fix .
 
 * *```test```* : Change test strategy with reactjs .
-
-* *```perf```* : Performance improvement.
 
 * *```refactor```* : Change of the code which does not change the functioning (delete of spaces for example) .
 
