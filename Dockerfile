@@ -1,7 +1,8 @@
 FROM node:alpine as builder
 WORKDIR /app
-ADD . .
+ADD *.json ./
 RUN npm install
+ADD . .
 RUN REACT_APP_URL_POST='https://mail-send-gvxzswdqqa-ew.a.run.app/mail/send' npm run build
 
 FROM nginx:alpine
