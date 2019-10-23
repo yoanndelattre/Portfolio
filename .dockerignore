@@ -1,8 +1,9 @@
 .git
+node_modules
 .circleci
 .github
 deploy
-node_modules
+k8s
 .dockerignore
 .gitignore
 Dockerfile

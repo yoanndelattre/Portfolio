@@ -1,9 +1,5 @@
 steps:
 
-- id: "Copy index.html Analytics"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://portfolio_analytics/index.html", "./public/"]
-
 - id: "Pull app image"
   name: 'gcr.io/cloud-builders/docker'
   args: ['pull', 'gcr.io/portfolio-project-07/portfolio:latest']

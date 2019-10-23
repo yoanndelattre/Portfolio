@@ -1,0 +1,13 @@
+apiVersion: skaffold/v1beta16
+kind: Config
+metadata:
+  name: portfolio-dev
+build:
+  artifacts:
+  - image: portfolio-dev
+    context: ../
+deploy:
+  kubectl:
+    manifests:
+    - portfolio-dev-deploy.yaml
+    - portfolio-dev-service.yaml
