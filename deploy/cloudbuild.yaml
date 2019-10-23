@@ -11,6 +11,7 @@ steps:
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/portfolio-project-07/portfolio:latest', '.']
+  env: ['REACT_APP_URL_POST=https://mail-send-gvxzswdqqa-ew.a.run.app/mail/send']
 
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
