@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: portfolio-dev
+spec:
+  template:
+    metadata:
+      labels:
+        app: portfolio-dev
+    spec:
+      containers:
+      - name: portfolio-dev
+        image: portfolio-dev
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
