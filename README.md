@@ -52,8 +52,6 @@
 
 #### For ```"type"``` : 
 
-* *```config```* : Modification of the config files (for example modification of the *package.json* file) .
-
 * *```docs```* : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
 
 * *```feat```* : Adding a new feature (usually in the ```feature``` branch) .
@@ -83,15 +81,17 @@
 
 * ```ColorMode``` *(Dark Mode).*
 
-* ```GCP``` *(Strategy of deployment on Google Gloud Platfrom).*
+* ```GCP``` *(Strategy of deployment on Google Gloud Platfrom with Cloud Run).*
 
 * ```Skaffold``` *(Skaffold development environment).*
 
-* ```Docker``` *(Docker development environment).*
+* ```Docker``` *(Docker environment).*
 
 * ```Language``` *(Language selector).*
 
 * ```CookieBanner``` *(Cookie Banner info at the bottom of the page).*
+
+* ```config``` : Modification of the config files (for example modification of the *package.json* file) .
 
 
 #### For ```"subject"``` :
