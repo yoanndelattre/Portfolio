@@ -85,9 +85,7 @@ class Contact extends Component {
                     borderForm: '3px solid green', 
                     widthForm: '367px', 
                     heightForm: '427px'
-                }),
-
-                this.NotificationSpamMail()
+                })
             )
     
             const { name, email, message } = this.state
@@ -99,6 +97,14 @@ class Contact extends Component {
                 message,
                 languageUser
             })
+                .then(function (response) {
+                    if(response.data === "success_mail_send") {
+                        this.NotificationSpamMailSuccess()
+                    }
+                    else {
+                        this.NotificationSpamMailFail()
+                    }
+                })
         }
     }
 
@@ -158,7 +164,7 @@ class Contact extends Component {
         })
     }
 
-    NotificationSpamMail = () => {
+    NotificationSpamMailSuccess = () => {
         if(localStorage.getItem('language') === 'FR') {
             new Noty({
                 text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
@@ -172,6 +178,25 @@ class Contact extends Component {
                 text: 'A confirmation email has been sent to you. If you can not find it, check in junk mail.',
                 theme: 'bootstrap-v4',
                 type: 'success',
+                layout: 'bottomCenter'
+            }).show();
+        }
+    }
+
+    NotificationSpamMailFail = () => {
+        if(localStorage.getItem('language') === 'FR') {
+            new Noty({
+                text: 'Erreur, votre message n’a pas pu être envoyé.',
+                theme: 'bootstrap-v4',
+                type: 'error',
+                layout: 'bottomCenter'
+            }).show();
+        }
+        else {
+            new Noty({
+                text: 'Error, your message could not be sent.',
+                theme: 'bootstrap-v4',
+                type: 'error',
                 layout: 'bottomCenter'
             }).show();
         }
