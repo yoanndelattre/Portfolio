@@ -52,7 +52,7 @@
 
 #### For ```"type"``` : 
 
-* *```build```* : Modification of the build system (for example modification of the *package.json* file).
+* *```config```* : Modification of the config files (for example modification of the *package.json* file).
 
 * *```docs```* : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
 
