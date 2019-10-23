@@ -97,6 +97,8 @@
 
 * ```CircleCi``` : Modification of circleci configuration files for unit tests .
 
+* ```Github``` : Modification of configuration files for the Github repository .
+
 
 #### For ```"subject"``` :
 
