@@ -78,7 +78,7 @@
 
 * ```404Page``` */page_not_found*
 
-* ```SendMail``` *(Strategy of sending mails in the form of the contact page).*
+* ```MailSend``` *(Strategy of sending mails in the form of the contact page).*
 
 * ```Loading``` *(Loading between pages).*
 
