@@ -11,6 +11,8 @@
 
 ## Branch Method :
 
+&nbsp;
+
 ### Structure : 
 *```"type"/"target"```*
 
@@ -35,6 +37,8 @@
 
 
 ## Commit Method :
+
+&nbsp;
 
 ### Structure : 
 *```"type"("scope"):"subject"```*      
