@@ -23,9 +23,9 @@
 
 #### For ```"type"``` :
 
-* *```dev```* : For the general development of the application (this branch is created for the development of the next version of the application).
+* *```dev```* : For the general development of the application (this branch will be created to gather all the changes of the ```feature``` branch).
 
-* *```feature```* : For the development of a new feature (this branch will then merge with the ```dev``` branch).
+* *```feature```* : For the development of a new feature.
 
 
 #### For ```"target"``` :
