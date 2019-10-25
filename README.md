@@ -23,7 +23,7 @@
 
 #### For ```"type"``` :
 
-* *```dev```* : For the general development of the application (this branch will be created to gather all the changes of the ```feature``` branch).
+* *```dev```* : For the general development of the application (this branch will be created to gather all the changes of the "feature" branch).
 
 * *```feature```* : For the development of a new feature.
 
