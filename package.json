@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.4.0",
+  "description": "Personal Portfolio",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
