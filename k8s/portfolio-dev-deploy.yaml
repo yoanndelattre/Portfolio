@@ -12,5 +12,8 @@ spec:
       - name: portfolio-dev
         image: portfolio-dev
         imagePullPolicy: IfNotPresent
+        env:
+        - name: PORT
+          value: "80"
         ports:
-        - containerPort: 8080
+        - containerPort: 80
