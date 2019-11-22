@@ -7,10 +7,10 @@ export default class Formulaire extends Component {
 
     ContactMe () {
         if(localStorage.getItem('language') === 'FR') {
-            return('CONTACTEZ-MOI')
+            return('Contactez-Moi')
         }
         else {
-            return('CONTACT-ME')
+            return('Contact Me')
         }
     }
 
