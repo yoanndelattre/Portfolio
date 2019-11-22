@@ -27,6 +27,8 @@
 
 * *```feature```* : For the development of a new feature.
 
+* *```fix```* : For fix a bug or problem.
+
 
 #### For ```"target"``` :
 
