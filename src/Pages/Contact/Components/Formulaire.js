@@ -7,10 +7,10 @@ export default class Formulaire extends Component {
 
     ContactMe () {
         if(localStorage.getItem('language') === 'FR') {
-            return('CONTACTEZ-MOI')
+            return('Contactez-Moi')
         }
         else {
-            return('CONTACT-ME')
+            return('Contact Me')
         }
     }
 
@@ -34,10 +34,10 @@ export default class Formulaire extends Component {
 
     WidthborderBottom () {
         if(localStorage.getItem('language') === 'FR') {
-            return('206px')
+            return('180px')
         }
         else {
-            return('163px')
+            return('140px')
         }
     }
 
