@@ -30,11 +30,7 @@ class Home extends Component {
         ColorText: '',
         backgroundMeCard: '',
         backgroundMeCardSmart: '',
-        backgroundVersion: '',
-        backgroundCard: '',
-
-        // Releases number Repo GitHub
-        ReleasesRepo: '',
+        backgroundCard: ''
     }
 
     componentDidMount () {
@@ -55,10 +51,6 @@ class Home extends Component {
 
         }
         this.UpdateComponent()
-
-        // Releases number Repo GitHub
-        axios.get('https://api.github.com/repos/yoanndelattre/Portfolio/releases/latest')
-            .then(response => this.setState({ ReleasesRepo: response.data.tag_name}))
     }
 
     Loading = () => {
@@ -67,20 +59,18 @@ class Home extends Component {
 
     UpdateComponent = () => {
         if (localStorage.getItem('DarkMode') === "true") {
-            this.setState ({ 
-                backgroundMeCard: "rgb(107, 107, 107)", 
-                backgroundVersion: "gray", 
-                ColorText: 'white', 
-                backgroundCard: "rgb(63, 63, 63)" 
+            this.setState ({
+                backgroundMeCard: "rgb(107, 107, 107)",
+                ColorText: 'white',
+                backgroundCard: "rgb(63, 63, 63)"
             })
         }
         
         if (localStorage.getItem('DarkMode') === null) {
-            this.setState ({ 
-                backgroundMeCard: "rgb(218, 218, 218)", 
-                backgroundVersion: "rgb(218, 218, 218)", 
-                ColorText: "black", 
-                backgroundCard: "rgb(165, 165, 165)" 
+            this.setState ({
+                backgroundMeCard: "rgb(218, 218, 218)",
+                ColorText: "black",
+                backgroundCard: "rgb(165, 165, 165)"
             })
         }
 
@@ -119,9 +109,6 @@ class Home extends Component {
                 </div>
                 <div onLoad={this.Loading} className="mainContainer" style={{ display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer }}>
                     <Navbar UpdateComponent={this.UpdateComponent} />
-                    <span className="version" style={{ background: this.state.backgroundVersion, color: this.state.ColorText }}>
-                        <a className="version-link" href="https://github.com/yoanndelattre/Portfolio/releases" target="blank" style={{ color: this.state.ColorText }}>{this.state.ReleasesRepo}</a>
-                    </span>
                     <div className="home_card">
                         <Me 
                             ColorText={this.state.ColorText} 
