@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactLoading from 'react-loading'
-import axios from 'axios'
 import {Helmet} from 'react-helmet'
 
 // Components
