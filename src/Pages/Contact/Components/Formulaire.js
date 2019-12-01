@@ -16,7 +16,7 @@ export default class Formulaire extends Component {
 
     NameUser () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Nom :')
+            return('Nom et Prénom :')
         }
         else {
             return('Name :')
