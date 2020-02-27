@@ -1,62 +1,60 @@
 import React, { Component } from 'react'
 import { FlippingCard, FlippingCardBack, FlippingCardFront, UserCard } from 'react-ui-cards'
 import LinkGithubProject from '../Link-Github-Project'
-import LinkWebsiteProject from '../Link-Website-Project'
 
 // img
-import logo_website from '../logo/logo-website.png'
-import capture_recipe_box from '../img/capture-recipe-box.png'
+import logo_shell from '../logo/logo-shell.png'
+import capture_dvm from '../img/capture-dvm.png'
 
 // css 
 import './ProjectsCards.css'
 
 export default class ProjectCard5 extends Component {
-
+	
 	DescriptionProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Site web permettant à différents utilisateurs d’héberger leurs recettes.')
+            return('Application permettant d’automatiser la création de machines virtuelles pour le développement.')
         }
         else {
-            return('Website allowing different users to host their recipes.')
+            return('Application to automate virtual machine creation for development.')
         }
 	}
 	
 	SummaryProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Site web permettant à différents utilisateurs d’héberger leurs recettes et de les modifier grâce à un système d’authentification via un compte Google ou Facebook.')
+            return('Dvm est un petit outil en ligne de commande écrit en javascript avec nodejs. Cette application créer une machine virtuelle temporaire sur Google Cloud Platform avec Compute Engine avec un réseau et un pare-feu déjà configuré. Vous pouvez ensuite vous connecter en ssh à cette machine virtuelle.')
         }
         else {
-            return('Website allowing different users to host their recipes and modify them through an authentication system via a Google or Facebook account.')
+            return('Dvm is a small command line tool written in javascript with nodejs. This application create a temporary virtual machine on Google Cloud Platform with Compute Engine with a network and a firewall already configured. You can then connect in ssh to this virtual machine.')
         }
-    }
+	}
 
 	render () {
 		return (
-			<FlippingCard className="ProjectCard5" >
-				<FlippingCardFront>
-					<UserCard 
-						avatar={logo_website} 
-						header={capture_recipe_box}
-						name={<h1 className="titleUserCard">Boîte à Recette</h1>} 
-						positionName={<p className="PositionName PositionNameProjectCard5">{this.DescriptionProjectName()}</p>} 
-						cardClass={this.props.classUserCard}  
-					/>
-				</FlippingCardFront>
-      	<FlippingCardBack>
-					<div className="BackCard FrontCard BackProjectCard5">
-						<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Recipe-Box"} />
-						<LinkWebsiteProject TitleWebsite={"Boîte à Recettes"} LinkWebsite={"https://recette.yoanndelattre.com"}/>
-						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
-							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
-								{this.props.DetailsName}
-							</h3>
-							<p style={{ color: this.props.textFlippingCard }} className="text-details">
-								{this.SummaryProjectName()}
-							</p>
-						</div>
+		<FlippingCard className="ProjectCard5" >
+			<FlippingCardFront>
+				<UserCard 
+					avatar={logo_shell} 
+					header={capture_dvm} 
+					name={<h1 className="titleUserCard">dvm</h1>}
+					positionName={<p className="PositionName PositionNameProjectCard5">{this.DescriptionProjectName()}</p>} 
+					cardClass={this.props.classUserCard} 
+				/>
+			</FlippingCardFront>
+			<FlippingCardBack>
+				<div className="BackCard BackProjectCard5">
+					<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/dvm"} />
+					<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
+						<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
+							{this.props.DetailsName}
+						</h3>
+						<p style={{ fontSize: '14px', color: this.props.textFlippingCard }} className="text-details">
+							{this.SummaryProjectName()}
+						</p>
 					</div>
-  	  	</FlippingCardBack>
-    	</FlippingCard>
+				</div>
+			</FlippingCardBack>
+  		</FlippingCard>
 		)
 	}
 }
