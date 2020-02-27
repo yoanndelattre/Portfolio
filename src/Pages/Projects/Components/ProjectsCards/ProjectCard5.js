@@ -9,7 +9,7 @@ import capture_dvm from '../img/capture-dvm.png'
 // css 
 import './ProjectsCards.css'
 
-export default class ProjectCard6 extends Component {
+export default class ProjectCard5 extends Component {
 	
 	DescriptionProjectName () {
         if(localStorage.getItem('language') === 'FR') {
@@ -31,18 +31,18 @@ export default class ProjectCard6 extends Component {
 
 	render () {
 		return (
-		<FlippingCard className="ProjectCard6" >
+		<FlippingCard className="ProjectCard5" >
 			<FlippingCardFront>
 				<UserCard 
 					avatar={logo_shell} 
 					header={capture_dvm} 
 					name={<h1 className="titleUserCard">dvm</h1>}
-					positionName={<p className="PositionName PositionNameProjectCard6">{this.DescriptionProjectName()}</p>} 
+					positionName={<p className="PositionName PositionNameProjectCard5">{this.DescriptionProjectName()}</p>} 
 					cardClass={this.props.classUserCard} 
 				/>
 			</FlippingCardFront>
 			<FlippingCardBack>
-				<div className="BackCard BackProjectCard6">
+				<div className="BackCard BackProjectCard5">
 					<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/dvm"} />
 					<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 						<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
