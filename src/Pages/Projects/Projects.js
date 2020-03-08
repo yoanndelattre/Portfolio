@@ -8,7 +8,6 @@ import ProjectCard1 from './Components/ProjectsCards/ProjectCard1'
 import ProjectCard2 from './Components/ProjectsCards/ProjectCard2'
 import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
 import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
-import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
 import ShareButton from '../../Share-Button/ShareButton'
 import CookieAlert from '../../Cookie-Alert/Cookie-Alert'
@@ -172,7 +171,6 @@ class Projects extends Component {
                             <ProjectCard2 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                             <ProjectCard3 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                             <ProjectCard4 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                            <ProjectCard5 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                         </div>
                         <ShareButton display={this.state.displayShareButton}/>
                         {ReportProblem}
