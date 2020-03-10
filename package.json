@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
     "axios": "^0.19.2",
     "noty": "^3.2.0-beta",
     "react": "^16.13.0",
