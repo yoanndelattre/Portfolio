@@ -13,7 +13,7 @@
     "react-cookie-banner": "^4.1.0",
     "react-dom": "^16.13.0",
     "react-flags-select": "^1.1.12",
-    "react-helmet": "^5.2.1",
+    "react-helmet-async": "^1.0.4",
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
