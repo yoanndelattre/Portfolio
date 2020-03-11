@@ -97,6 +97,8 @@
 
 * ```Config``` : *(Modification of the config files) .*
 
+* ```Package``` : *(Add or remove package/dependencie) .*
+
 * ```CircleCi``` : *(Modification of circleci configuration files for unit tests) .*
 
 * ```Github``` : *(Modification of configuration files for the Github repository) .*
