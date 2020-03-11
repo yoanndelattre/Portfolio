@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactLoading from 'react-loading'
-import {Helmet} from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
@@ -97,7 +97,9 @@ class Home extends Component {
     render () {
         return (
             <div>
-                <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
+                <HelmetProvider>
+                    <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
+                </HelmetProvider>
                 <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
