@@ -8,7 +8,7 @@ import './flags-selector.css'
 class FlagsSelector extends Component {
 
     state = {
-        selectedSize: '30',
+        selectedSize: 30,
         alignOptions: ''
     }
 
@@ -16,7 +16,7 @@ class FlagsSelector extends Component {
         this.InitLanguageDefault()
         if (window.innerWidth <= 768) {
             this.setState({
-                selectedSize: '25',
+                selectedSize: 25,
                 alignOptions: 'left'
             })
         }

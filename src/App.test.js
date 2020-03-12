@@ -1,11 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-// Routes
+import { render } from '@testing-library/react';
 import MainRouter from './Routes'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<MainRouter/>, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('renders learn react link', () => {
+  const { getByText } = render(<MainRouter/>);
+  const linkElement = getByText(/Yoann Delattre | Portfolio/i);
+  expect(linkElement).toBeInTheDocument();
 });

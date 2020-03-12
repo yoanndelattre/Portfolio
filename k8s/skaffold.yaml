@@ -6,6 +6,8 @@ build:
   artifacts:
   - image: portfolio-dev
     context: ../
+    docker:
+        dockerfile: Dockerfile.dev
 deploy:
   kubectl:
     manifests:

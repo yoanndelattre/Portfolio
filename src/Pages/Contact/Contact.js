@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import Reaptcha from 'reaptcha'
-import {Helmet} from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Noty from 'noty'
 
 // Components
@@ -189,10 +189,12 @@ class Contact extends Component {
     render () {
         return (
             <Fragment>
-                <Helmet>
-                    <title>Contact • Yoann Delattre | Portfolio</title>
-                </Helmet>
-                <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
+                <HelmetProvider>
+                    <Helmet>
+                        <title>Contact • Yoann Delattre | Portfolio</title>
+                    </Helmet>
+                    <Helmet htmlAttributes={{ lang : this.LanguageHtmlTag() }}/>
+                </HelmetProvider>
                 <CookieAlert/>
                 <div className="loadingpage" style={{ display: this.state.displayLoading }}>
                     <ReactLoading
