@@ -5,8 +5,8 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/user-event": "^10.0.0",
     "@testing-library/react": "^10.0.1",
-    "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "noty": "^3.2.0-beta",
     "react": "^16.13.0",
