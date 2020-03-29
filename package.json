@@ -11,7 +11,7 @@
     "noty": "^3.2.0-beta",
     "react": "^16.13.1",
     "react-cookie-banner": "^4.1.0",
-    "react-dom": "^16.13.0",
+    "react-dom": "^16.13.1",
     "react-flags-select": "^1.1.12",
     "react-helmet-async": "^1.0.4",
     "react-loading": "^2.0.3",
