@@ -15,3 +15,5 @@ steps:
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'deploy', 'portfolio', '--image=gcr.io/personal-website-269509/portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=1m', '--max-instances=24', '--memory=256Mi']
+
+timeout: 300s
