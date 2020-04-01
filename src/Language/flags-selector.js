@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactFlagsSelect from 'react-flags-select'
+import detectBrowserLanguage from 'detect-browser-language'
 
 // css
 import 'react-flags-select/css/react-flags-select.css'
@@ -24,7 +25,12 @@ class FlagsSelector extends Component {
 
     InitLanguageDefault () {
         if (localStorage.getItem('language') === null) {
-            localStorage.setItem('language', "FR")
+            if (detectBrowserLanguage() === "fr-FR") {
+                localStorage.setItem('language', "FR")
+            }
+            else {
+                localStorage.setItem('language', "US")
+            }
         }
     }
 
