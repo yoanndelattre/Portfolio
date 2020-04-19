@@ -32,7 +32,7 @@
 
 #### For ```"target"``` :
 
-* Name of the new feature or bug name resolved (```feature/LoginPage```).
+* Name of the new feature or bug name resolved.
 
 &nbsp;
 &nbsp;
@@ -43,33 +43,16 @@
 &nbsp;
 
 ### Structure :
-*```"type"("scope"):"subject"```*  
+*```"type":"subject"```*  
 *```("issues")```*
 
 ### Example :
-```feat(ProjectsPage):add dark color in front card```  
+```feat:add dark color in front card```  
 ```Fixes #45```
 
 &nbsp;
 
 #### For ```"type"``` :
-
-* ```docs``` : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
-
-* ```feat``` : Adding a new feature (usually in the ```feature``` branch) .
-
-* ```fix``` : Bug fix .
-
-* ```simplification``` : Simplification of a method or code in general .
-
-* ```test``` : Change test strategy with reactjs .
-
-* ```refactor``` : Change of the code which does not change the functioning (for example delete of spaces) .
-
-* ```issue``` : Github issue.
-
-
-#### For ```"scope"``` (optional) :
 
 * ```HomePage``` */*
 
@@ -99,11 +82,15 @@
 
 * ```Package``` : *(Add or remove package/dependencie) .*
 
+* ```Test``` : *(Change test strategy with reactjs) .*
+
 * ```CircleCi``` : *(Modification of circleci configuration files for unit tests) .*
 
 * ```Github``` : *(Modification of configuration files for the Github repository) .*
 
 * ```SEO``` : *(SEO improvement) .*
+
+* ```Docs``` : *(Modification of the documentation) .*
 
 
 #### For ```"subject"``` :
