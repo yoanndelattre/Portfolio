@@ -54,6 +54,8 @@
 
 #### For ```"type"``` :
 
+* ```AllPages```
+
 * ```HomePage``` */*
 
 * ```ProjectsPage``` */Projects*
