@@ -32,7 +32,7 @@
 
 #### For ```"target"``` :
 
-* Name of the new feature or bug name resolved (```feature/LoginPage```).
+* Name of the new feature or bug name resolved.
 
 &nbsp;
 &nbsp;
