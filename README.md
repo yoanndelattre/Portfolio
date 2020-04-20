@@ -17,7 +17,7 @@
 *```"type"/"target"```*
 
 ### Example :
-```feature/flipCard```
+```feat/flipCard```
 
 &nbsp;
 
@@ -25,7 +25,7 @@
 
 * *```dev```* : For the general development of the application (this branch will be created to gather all the changes of the "feature" branch).
 
-* *```feature```* : For the development of a new feature.
+* *```feat```* : For the development of a new feature.
 
 * *```fix```* : For fix a bug or problem.
 
@@ -47,7 +47,7 @@
 *```("issues")```*
 
 ### Example :
-```feat:add dark color in front card```  
+```ProjectsPage:add dark color in front card```  
 ```Fixes #45```
 
 &nbsp;
