@@ -31,10 +31,10 @@ export default class ProjectCard3 extends Component {
 	
 	SummaryProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes. Après la demande d’approbation de l’administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l’application.')
+            return('Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes.')
         }
         else {
-            return('Cluster with two Raspberry Pi (Raspberry Pi 3 B and Raspberry Pi 3 B +) that work with Kubernetes. After the administrator’s request for approval, new containers are automatically started to update the application.')
+            return('Cluster with two Raspberry Pi (Raspberry Pi 3 B and Raspberry Pi 3 B +) that work with Kubernetes.')
         }
     }
 
