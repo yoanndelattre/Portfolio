@@ -31,10 +31,10 @@ export default class ProjectCard1 extends Component {
 	
 	SummaryProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Ce site est hébergé sur Google Cloud Platform avec le service App Engine. Après la demande d’approbation de l’administrateur, les modifications du dépôt GitHub sont automatiquement déployé sur App Engine grâce à Cloud Build.')
+            return('Site Web public qui expose les logiciels et les sites web que j’utilise. Qui présente mes projects et qui permet de me contacter. Hébergé par le service Cloud Run sur Google Cloud Platform.')
         }
         else {
-            return('This site is hosted on Google Cloud Platform with the App Engine service. After the administrator’s request for approval, changes to the GitHub repository are automatically deployed to App Engine through Cloud Build.')
+            return('Public website that exposes the software and websites I use. Who presents my projects and who allows me to contact me. Hosted by the Cloud Run service on Google Cloud Platform.')
         }
     }
 
