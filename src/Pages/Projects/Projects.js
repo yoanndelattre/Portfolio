@@ -5,6 +5,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 // Components
 import Navbar from '../../Navbar/Navbar'
 import ProjectCard1 from './Components/ProjectsCards/ProjectCard1'
+import ProjectCard2 from './Components/ProjectsCards/ProjectCard2'
 import ProjectCard3 from './Components/ProjectsCards/ProjectCard3'
 import ProjectCard4 from './Components/ProjectsCards/ProjectCard4'
 import ProjectCard5 from './Components/ProjectsCards/ProjectCard5'
@@ -170,6 +171,7 @@ class Projects extends Component {
                         </h1>
                         <div className="cards">
                             <ProjectCard1 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                            <ProjectCard2 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                             <ProjectCard3 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                             <ProjectCard4 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
                             <ProjectCard5 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
