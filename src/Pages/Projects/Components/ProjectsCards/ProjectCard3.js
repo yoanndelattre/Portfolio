@@ -1,41 +1,40 @@
 import React, { Component } from 'react'
 import { FlippingCard, FlippingCardBack, FlippingCardFront, UserCard } from 'react-ui-cards'
-import LinkGithubProject from '../Link-Github-Project'
 import LinkWebsiteProject from '../Link-Website-Project'
 
 // img
-import logo_website from '../logo/logo-website.png'
-import capture_markdown_editor from '../img/capture-markdown-editor.png'
+import logo_kube from '../logo/kube-logo.png'
+import img_raspberrypi from '../img/raspberry-pi-3-bplus.jpg'
 
 // css 
 import './ProjectsCards.css'
 
 export default class ProjectCard3 extends Component {
 
-	TitleProjectName () {
+	TutorialProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Traducteur Markdown')
+            return('Tutoriel Lien')
         }
         else {
-            return('Markdown Translator')
+            return('Tutorial Link')
         }
 	}
 	
 	DescriptionProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Site web traducteur instantané de markdown.')
+            return('Cluster de deux Raspberry Pi 3 avec Kubernetes.')
         }
         else {
-            return('Instant markdown translator website.')
+            return('Cluster of two Raspberry Pi 3 with Kubernetes.')
         }
 	}
 	
 	SummaryProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l’aide de la fonction "Local Storage".')
+            return('Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes. Après la demande d’approbation de l’administrateur, de nouveaux conteneurs sont automatiquement démarrés pour mettre à jour l’application.')
         }
         else {
-            return('Website instant markdown translator, the entered text is automatically saved in the browser using the "Local Storage" function.')
+            return('Cluster with two Raspberry Pi (Raspberry Pi 3 B and Raspberry Pi 3 B +) that work with Kubernetes. After the administrator’s request for approval, new containers are automatically started to update the application.')
         }
     }
 
@@ -44,17 +43,16 @@ export default class ProjectCard3 extends Component {
 			<FlippingCard className="ProjectCard3" >
 				<FlippingCardFront>
 					<UserCard 
-						avatar={logo_website} 
-						header={capture_markdown_editor}
-						name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>} 
+						avatar={logo_kube} 
+						header={img_raspberrypi}
+						name={<h1 className="titleUserCard">Cluster Raspberry Pi</h1>} 
 						positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
-						cardClass={this.props.classUserCard}  
+						cardClass={this.props.classUserCard} 
 					/>
 				</FlippingCardFront>
 				<FlippingCardBack>
 					<div className="BackCard FrontCard BackProjectCard3">
-						<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Markdown-Editor"} />
-						<LinkWebsiteProject TitleWebsite={"Markdown Editor"} LinkWebsite={"https://markdown.yoanndelattre.com"}/>
+					<LinkWebsiteProject TitleWebsite={this.TutorialProjectName()} LinkWebsite={"https://medium.com/nycdev/k8s-on-pi-9cc14843d43"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
 								{this.props.DetailsName}
@@ -65,7 +63,7 @@ export default class ProjectCard3 extends Component {
 						</div>
 					</div>
 				</FlippingCardBack>
-    		</FlippingCard>
+			</FlippingCard>
 		)
 	}
 }

@@ -5,28 +5,37 @@ import LinkWebsiteProject from '../Link-Website-Project'
 
 // img
 import logo_website from '../logo/logo-website.png'
-import capture_chatbox from '../img/capture-chatbox.png'
+import capture_markdown_editor from '../img/capture-markdown-editor.png'
 
 // css 
 import './ProjectsCards.css'
 
 export default class ProjectCard4 extends Component {
 
-	DescriptionProjectName () {
+	TitleProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Site web permettant à différents utilisateurs de communiquer.')
+            return('Traducteur Markdown')
         }
         else {
-            return('Website allowing different users to communicate.')
+            return('Markdown Translator')
+        }
+	}
+	
+	DescriptionProjectName () {
+        if(localStorage.getItem('language') === 'FR') {
+            return('Site web traducteur instantané de markdown.')
+        }
+        else {
+            return('Instant markdown translator website.')
         }
 	}
 	
 	SummaryProjectName () {
         if(localStorage.getItem('language') === 'FR') {
-            return('Site web permettant à différents utilisateurs de communiquer sous un pseudo qu’ils auront préalablement indiqué sur la page de connexion.')
+            return('Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l’aide de la fonction "Local Storage".')
         }
         else {
-            return('Website allowing different users to communicate under a username they have previously indicated on the login page.')
+            return('Website instant markdown translator, the entered text is automatically saved in the browser using the "Local Storage" function.')
         }
     }
 
@@ -36,16 +45,16 @@ export default class ProjectCard4 extends Component {
 				<FlippingCardFront>
 					<UserCard 
 						avatar={logo_website} 
-						header={capture_chatbox}
-						name={<h1 className="titleUserCard">Chatbox</h1>} 
+						header={capture_markdown_editor}
+						name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>} 
 						positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>} 
 						cardClass={this.props.classUserCard}  
 					/>
 				</FlippingCardFront>
-      	<FlippingCardBack>
+				<FlippingCardBack>
 					<div className="BackCard FrontCard BackProjectCard4">
-						<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Web-Chatbox"} />
-						<LinkWebsiteProject TitleWebsite={"Chatbox"} LinkWebsite={"https://chatbox.yoanndelattre.com"}/>
+						<LinkGithubProject LinkGithub={"https://github.com/yoanndelattre/Markdown-Editor"} />
+						<LinkWebsiteProject TitleWebsite={"Markdown Editor"} LinkWebsite={"https://markdown.yoanndelattre.com"}/>
 						<div style={{ backgroundColor: this.props.backgroundFlippingCardBack }} className="details">
 							<h3 style={{ color: this.props.textFlippingCard }} className="title-details">
 								{this.props.DetailsName}
@@ -55,8 +64,8 @@ export default class ProjectCard4 extends Component {
 							</p>
 						</div>
 					</div>
-  	  	</FlippingCardBack>
-    	</FlippingCard>
+				</FlippingCardBack>
+    		</FlippingCard>
 		)
 	}
 }
