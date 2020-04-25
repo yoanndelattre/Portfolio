@@ -138,8 +138,8 @@ class Navbar extends Component {
                 <header>
                     <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
                         
-                        <h1 style={{ color: this.state.ColorText }}>
-                            <a href="/">Yoann Delattre | Portfolio</a>
+                        <h1>
+                            <a style={{ color: this.state.ColorText }} href="/">Yoann Delattre | Portfolio</a>
                         </h1>
                         
                         <div className="switch-color">
@@ -187,8 +187,8 @@ class Navbar extends Component {
                 <header>
                     <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
                         
-                        <h1 style={{ color: this.state.ColorText }}>
-                            <a href="/">Yoann Delattre | Portfolio</a>
+                        <h1>
+                            <a style={{ color: this.state.ColorText }} href="/">Yoann Delattre | Portfolio</a>
                         </h1>
                         
                         <div className="switch-color">
@@ -237,8 +237,8 @@ class Navbar extends Component {
                 <header>
                     <div style={{ backgroundColor: this.state.backgroundNavBar }} className="link">
                         
-                        <h1 style={{ color: this.state.ColorText }}>
-                            <a href="/">Yoann Delattre | Portfolio</a>
+                        <h1>
+                            <a style={{ color: this.state.ColorText }} href="/">Yoann Delattre | Portfolio</a>
                         </h1>
                         
                         <div className="switch-color">
