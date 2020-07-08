@@ -42,10 +42,10 @@ class Me extends Component {
 
     PersonalAge () {
         if(localStorage.getItem('language') === 'FR') {
-            return(<h1>17 ans</h1>)
+            return(<h1>18 ans</h1>)
         }
         else {
-            return(<h1>17 years</h1>)
+            return(<h1>18 years</h1>)
         }
     }
 
