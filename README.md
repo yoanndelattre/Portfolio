@@ -72,8 +72,6 @@
 
 * ```GCP``` *(Strategy of deployment on Google Gloud Platfrom with Cloud Run) .*
 
-* ```Skaffold``` *(Skaffold development environment) .*
-
 * ```Docker``` *(Docker environment) .*
 
 * ```Language``` *(Language selector) .*
