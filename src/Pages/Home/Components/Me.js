@@ -51,10 +51,10 @@ class Me extends Component {
 
     PersonalClass () {
         if(localStorage.getItem('language') === 'FR') {
-            return(<h1>Terminale STI2D</h1>)
+            return(<h1>CESI École d'ingénieur</h1>)
         }
         else {
-            return(<h1>Terminal STI2D</h1>)
+            return(<h1>CESI Engineer school</h1>)
         }
     }
 
