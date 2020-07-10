@@ -71,35 +71,45 @@ class Contact extends Component {
         })
     }
 
-    async handleSubmit(e) {
+    handleSubmit(e) {
         if (this.state.verifyCaptcha === "true") {
             e.preventDefault(
+
+                this.SendMessage(),
+
                 this.setState({
-                    name: '', 
-                    email: '', 
-                    message: '', 
-                    valueSubmit: '✓', 
-                    fontSizeSubmit: '35px', 
-                    paddingSubmit: '0 6px', 
-                    borderSubmit: '2px solid green', 
-                    borderForm: '3px solid green', 
-                    widthForm: '367px', 
-                    heightForm: '427px'
+                    valueSubmit: 'loading...'
                 }),
 
-                this.NotificationSpamMail()
+                setTimeout(() => {
+                    this.setState({
+                        name: '', 
+                        email: '', 
+                        message: '', 
+                        valueSubmit: '✓', 
+                        fontSizeSubmit: '35px', 
+                        paddingSubmit: '0 6px', 
+                        borderSubmit: '2px solid green', 
+                        borderForm: '3px solid green', 
+                        widthForm: '367px', 
+                        heightForm: '427px'
+                    })
+                    this.NotificationSpamMail()
+                }, 1250)
             )
-    
-            const { name, email, message } = this.state
-            const languageUser = localStorage.getItem('language')
-    
-            await axios.post(process.env.REACT_APP_URL_POST, {
-                name,
-                email,
-                message,
-                languageUser
-            })
         }
+    }
+
+    SendMessage = () => {
+        const { name, email, message } = this.state
+        const languageUser = localStorage.getItem('language')
+    
+        axios.post(process.env.REACT_APP_URL_POST, {
+            name,
+            email,
+            message,
+            languageUser
+        })
     }
 
     UpdateComponent = () => {
