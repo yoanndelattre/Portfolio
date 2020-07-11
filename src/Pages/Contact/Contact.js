@@ -74,28 +74,10 @@ class Contact extends Component {
     handleSubmit(e) {
         if (this.state.verifyCaptcha === "true") {
             e.preventDefault(
-
-                this.SendMessage(),
-
                 this.setState({
                     valueSubmit: 'loading...'
                 }),
-
-                setTimeout(() => {
-                    this.setState({
-                        name: '', 
-                        email: '', 
-                        message: '', 
-                        valueSubmit: '✓', 
-                        fontSizeSubmit: '35px', 
-                        paddingSubmit: '0 6px', 
-                        borderSubmit: '2px solid green', 
-                        borderForm: '3px solid green', 
-                        widthForm: '367px', 
-                        heightForm: '427px'
-                    })
-                    this.NotificationSpamMail()
-                }, 1250)
+                this.SendMessage()
             )
         }
     }
@@ -109,7 +91,28 @@ class Contact extends Component {
             email,
             message,
             languageUser
+        }).then((response) => {
+            const status = response.status
+            if (status === 200) {
+                this.SendingConfirmationTrue()
+            }
         })
+    }
+
+    SendingConfirmationTrue = () => {
+        this.setState({
+            name: '', 
+            email: '', 
+            message: '', 
+            valueSubmit: '✓', 
+            fontSizeSubmit: '35px', 
+            paddingSubmit: '0 6px', 
+            borderSubmit: '2px solid green', 
+            borderForm: '3px solid green', 
+            widthForm: '367px', 
+            heightForm: '427px'
+        })
+        this.NotificationSpamMailTrue()
     }
 
     UpdateComponent = () => {
@@ -168,7 +171,7 @@ class Contact extends Component {
         })
     }
 
-    NotificationSpamMail = () => {
+    NotificationSpamMailTrue = () => {
         if(localStorage.getItem('language') === 'FR') {
             new Noty({
                 text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
