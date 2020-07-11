@@ -71,35 +71,71 @@ class Contact extends Component {
         })
     }
 
-    async handleSubmit(e) {
+    handleSubmit(e) {
         if (this.state.verifyCaptcha === "true") {
             e.preventDefault(
                 this.setState({
-                    name: '', 
-                    email: '', 
-                    message: '', 
-                    valueSubmit: '✓', 
-                    fontSizeSubmit: '35px', 
-                    paddingSubmit: '0 6px', 
-                    borderSubmit: '2px solid green', 
-                    borderForm: '3px solid green', 
-                    widthForm: '367px', 
-                    heightForm: '427px'
+                    valueSubmit: 'loading...'
                 }),
-
-                this.NotificationSpamMail()
+                this.SendMessage()
             )
-    
-            const { name, email, message } = this.state
-            const languageUser = localStorage.getItem('language')
-    
-            await axios.post(process.env.REACT_APP_URL_POST, {
+        }
+    }
+
+    SendMessage = () => {
+        const { name, email, message } = this.state
+        const languageUser = localStorage.getItem('language')
+
+        try {
+            axios.post(process.env.REACT_APP_URL_POST, {
                 name,
                 email,
                 message,
                 languageUser
+            }).then((response) => {
+                const status = response.status
+                if (status === 200) {
+                    this.SendingConfirmationTrue()
+                }
+                else {
+                    this.SendingConfirmationFalse()
+                }
             })
+        } catch (error) {
+            this.SendingConfirmationFalse()
         }
+    }
+
+    SendingConfirmationTrue = () => {
+        this.setState({
+            name: '', 
+            email: '', 
+            message: '', 
+            valueSubmit: '✓', 
+            fontSizeSubmit: '35px', 
+            paddingSubmit: '0 6px', 
+            borderSubmit: '2px solid green', 
+            borderForm: '3px solid green', 
+            widthForm: '367px', 
+            heightForm: '427px'
+        })
+        this.NotificationSpamMailTrue()
+    }
+
+    SendingConfirmationFalse = () => {
+        this.setState({
+            name: '', 
+            email: '', 
+            message: '', 
+            valueSubmit: 'X', 
+            fontSizeSubmit: '35px', 
+            paddingSubmit: '0 6px', 
+            borderSubmit: '2px solid red', 
+            borderForm: '3px solid red', 
+            widthForm: '367px', 
+            heightForm: '427px'
+        })
+        this.NotificationSpamMailFalse()
     }
 
     UpdateComponent = () => {
@@ -158,7 +194,7 @@ class Contact extends Component {
         })
     }
 
-    NotificationSpamMail = () => {
+    NotificationSpamMailTrue = () => {
         if(localStorage.getItem('language') === 'FR') {
             new Noty({
                 text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
@@ -172,6 +208,25 @@ class Contact extends Component {
                 text: 'A confirmation email has been sent to you. If you can not find it, check in junk mail.',
                 theme: 'bootstrap-v4',
                 type: 'success',
+                layout: 'bottomCenter'
+            }).show();
+        }
+    }
+
+    NotificationSpamMailFalse = () => {
+        if(localStorage.getItem('language') === 'FR') {
+            new Noty({
+                text: 'Une erreur est survenue. Veuillez réessayer plus tard.',
+                theme: 'bootstrap-v4',
+                type: 'error',
+                layout: 'bottomCenter'
+            }).show();
+        }
+        else {
+            new Noty({
+                text: 'An error has occurred. Please try again later.',
+                theme: 'bootstrap-v4',
+                type: 'error',
                 layout: 'bottomCenter'
             }).show();
         }
