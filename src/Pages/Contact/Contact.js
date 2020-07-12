@@ -86,7 +86,6 @@ class Contact extends Component {
         const { name, email, message } = this.state
         const languageUser = localStorage.getItem('language')
 
-        try {
             axios.post(process.env.REACT_APP_URL_POST, {
                 name,
                 email,
@@ -100,10 +99,10 @@ class Contact extends Component {
                 else {
                     this.SendingConfirmationFalse()
                 }
+            }).catch( error => {
+                this.SendingConfirmationFalse()
+                console.log(error)
             })
-        } catch (error) {
-            this.SendingConfirmationFalse()
-        }
     }
 
     SendingConfirmationTrue = () => {
@@ -120,6 +119,9 @@ class Contact extends Component {
             heightForm: '427px'
         })
         this.NotificationSpamMailTrue()
+        setTimeout(() => {
+            window.location.reload();
+        }, 15000);
     }
 
     SendingConfirmationFalse = () => {
@@ -136,6 +138,9 @@ class Contact extends Component {
             heightForm: '427px'
         })
         this.NotificationSpamMailFalse()
+        setTimeout(() => {
+            window.location.reload();
+        }, 15000);
     }
 
     UpdateComponent = () => {
