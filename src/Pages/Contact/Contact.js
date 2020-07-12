@@ -119,6 +119,9 @@ class Contact extends Component {
             heightForm: '427px'
         })
         this.NotificationSpamMailTrue()
+        setTimeout(() => {
+            window.location.reload();
+        }, 15000);
     }
 
     SendingConfirmationFalse = () => {
@@ -135,6 +138,9 @@ class Contact extends Component {
             heightForm: '427px'
         })
         this.NotificationSpamMailFalse()
+        setTimeout(() => {
+            window.location.reload();
+        }, 15000);
     }
 
     UpdateComponent = () => {
