@@ -68,6 +68,11 @@
     color:#fff
 }
 
+.loadingSubmit {
+    margin: auto;
+    padding-top: 10px;
+}
+
 .Capcha {
     display: flex;
     justify-content: center;

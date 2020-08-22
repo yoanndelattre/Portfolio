@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import ReactLoading from 'react-loading'
 
 // css
 import './Formulaire.css'
@@ -41,6 +42,15 @@ export default class Formulaire extends Component {
         }
     }
 
+    LoadingSubmit () {
+        if (this.props.loadingSubmit === true) {
+            return(<ReactLoading type="spin" color="#000000" width={'15%'} className="loadingSubmit" />)
+        }
+        else {
+            return(<input style={{ display: this.props.displaySubmit, fontSize: this.props.fontSizeSubmit, padding: this.props.paddingSubmit, border: this.props.borderSubmit, color: this.props.ColorText }} type="submit" value={this.props.valueSubmit} />)
+        }
+    }
+
     render () {
         return (
             <Fragment>
@@ -70,11 +80,7 @@ export default class Formulaire extends Component {
                         <input style={{ color: this.props.ColorText }} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
                     </p>
                     
-                    <input 
-                        style={{ display: this.props.displaySubmit, fontSize: this.props.fontSizeSubmit, padding: this.props.paddingSubmit, border: this.props.borderSubmit, color: this.props.ColorText }} 
-                        type="submit" 
-                        value={this.props.valueSubmit} 
-                    />
+                    {this.LoadingSubmit()}
                     
                     <div className="Capcha">
                         <this.props.ThemeCapcha/>

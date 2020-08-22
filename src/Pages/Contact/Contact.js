@@ -3,10 +3,10 @@ import axios from 'axios'
 import Reaptcha from 'reaptcha'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Noty from 'noty'
+import ReactLoading from 'react-loading'
 
 // Components
 import Navbar from '../../Navbar/Navbar'
-import ReactLoading from 'react-loading'
 import Formulaire from './Components/Formulaire'
 import {ReportProblem} from '../../Report-Problem/Report-Problem'
 import ShareButton from '../../Share-Button/ShareButton'
@@ -27,6 +27,7 @@ class Contact extends Component {
             email: '',
             message: '',
             valueSubmit: '✉',
+            loadingSubmit: false,
             fontSizeSubmit: '15px',
             paddingSubmit: '8px 12px',
             borderSubmit: '',
@@ -75,7 +76,7 @@ class Contact extends Component {
         if (this.state.verifyCaptcha === "true") {
             e.preventDefault(
                 this.setState({
-                    valueSubmit: 'loading...'
+                    loadingSubmit: true
                 }),
                 this.SendMessage()
             )
@@ -110,7 +111,8 @@ class Contact extends Component {
             name: '', 
             email: '', 
             message: '', 
-            valueSubmit: '✓', 
+            valueSubmit: '✓',
+            loadingSubmit: false,
             fontSizeSubmit: '35px', 
             paddingSubmit: '0 6px', 
             borderSubmit: '2px solid green', 
@@ -129,7 +131,8 @@ class Contact extends Component {
             name: '', 
             email: '', 
             message: '', 
-            valueSubmit: 'X', 
+            valueSubmit: 'X',
+            loadingSubmit: false,
             fontSizeSubmit: '35px', 
             paddingSubmit: '0 6px', 
             borderSubmit: '2px solid red', 
@@ -279,6 +282,7 @@ class Contact extends Component {
                         paddingSubmit={this.state.paddingSubmit} 
                         fontSizeSubmit={this.state.fontSizeSubmit} 
                         valueSubmit={this.state.valueSubmit} 
+                        loadingSubmit={this.state.loadingSubmit}
                         name={this.state.name} 
                         email={this.state.email}
                         message={this.state.message} 
