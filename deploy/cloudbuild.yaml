@@ -6,14 +6,14 @@ steps:
 
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/portfolio-287719/portfolio:latest', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/portfolio:latest', '.']
 
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/portfolio-287719/portfolio:latest']
+  args: ['push', 'gcr.io/$PROJECT_ID/portfolio:latest']
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'portfolio', '--image=gcr.io/portfolio-287719/portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=30s', '--max-instances=100', '--memory=256Mi', '--cpu=2']
+  args: ['run', 'deploy', 'portfolio', '--image=gcr.io/$PROJECT_ID/portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=30s', '--max-instances=100', '--memory=256Mi', '--cpu=2']
 
 timeout: 300s
