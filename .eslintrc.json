@@ -24,5 +24,9 @@
         "babel"
     ],
     "rules": {
+        "require-jsdoc": 0,
+        "no-invalid-this": 0,
+        "react/prop-types": 0,
+        "babel/no-invalid-this": 1
     }
 }
