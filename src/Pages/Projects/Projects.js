@@ -65,14 +65,14 @@ class Projects extends Component {
         });
       }
 
-      this.UpdateComponent();
+      this.updateComponent();
     }
 
     Loading = () => {
       this.setState({displayApp: 'block', displayLoading: 'none'});
     }
 
-    UpdateComponent = () => {
+    updateComponent = () => {
       if (localStorage.getItem('DarkMode') === 'true') {
         this.setState({
           textFlippingCard: 'white',
@@ -106,7 +106,7 @@ class Projects extends Component {
       }
     }
 
-    LanguageHtmlTag() {
+    languageHtmlTag() {
       if (localStorage.getItem('language') === 'FR') {
         return ('fr');
       } else {
@@ -114,7 +114,7 @@ class Projects extends Component {
       }
     }
 
-    ProjectsHtmlName() {
+    projectsHtmlName() {
       if (localStorage.getItem('language') === 'FR') {
         return ('Projets');
       } else {
@@ -122,7 +122,7 @@ class Projects extends Component {
       }
     }
 
-    MyProjectsName() {
+    myProjectsName() {
       if (localStorage.getItem('language') === 'FR') {
         return ('Mes Projets');
       } else {
@@ -130,7 +130,7 @@ class Projects extends Component {
       }
     }
 
-    DetailsName() {
+    detailsName() {
       if (localStorage.getItem('language') === 'FR') {
         return ('Détails:');
       } else {
@@ -143,12 +143,16 @@ class Projects extends Component {
         <Fragment>
           <HelmetProvider>
             <Helmet>
-              <title>{this.ProjectsHtmlName()} • Yoann Delattre | Portfolio</title>
+              <title>
+                {this.projectsHtmlName()} • Yoann Delattre | Portfolio
+              </title>
             </Helmet>
-            <Helmet htmlAttributes={{lang: this.LanguageHtmlTag()}}/>
+            <Helmet htmlAttributes={{lang: this.languageHtmlTag()}}/>
           </HelmetProvider>
           <CookieAlert/>
-          <div className="loadingpage" style={{display: this.state.displayLoading}}>
+          <div
+            className="loadingpage"
+            style={{display: this.state.displayLoading}}>
             <ReactLoading
               type="bars"
               color="#fff"
@@ -156,18 +160,54 @@ class Projects extends Component {
             />
           </div>
           <div>
-            <div onLoad={this.Loading} className={this.state.classprojectsContainer} style={{display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
-              <Navbar UpdateComponent={this.UpdateComponent} />
+            <div
+              onLoad={this.Loading}
+              className={this.state.classprojectsContainer}
+              style={{display: this.state.displayApp,
+                backgroundImage: this.state.backgroundImage,
+                backgroundColor: this.state.backgroundContainer,
+              }}>
+              <Navbar updateComponent={this.updateComponent} />
               <h1 style={{color: this.state.textTitle}} className="title">
-                {this.MyProjectsName()}
+                {this.myProjectsName()}
               </h1>
               <div className="cards">
-                <ProjectCard1 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                <ProjectCard2 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                <ProjectCard3 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                <ProjectCard4 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                <ProjectCard5 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
-                <ProjectCard6 DetailsName={this.DetailsName()} textFlippingCard={this.state.textFlippingCard} backgroundFlippingCardBack={this.state.backgroundFlippingCardBack} />
+                <ProjectCard1
+                  DetailsName={this.detailsName()}
+                  textFlippingCard={this.state.textFlippingCard}
+                  backgroundFlippingCardBack={
+                    this.state.backgroundFlippingCardBack
+                  } />
+                <ProjectCard2
+                  DetailsName={this.detailsName()}
+                  textFlippingCard={this.state.textFlippingCard}
+                  backgroundFlippingCardBack={
+                    this.state.backgroundFlippingCardBack
+                  } />
+                <ProjectCard3
+                  DetailsName={this.detailsName()}
+                  textFlippingCard={this.state.textFlippingCard}
+                  backgroundFlippingCardBack={
+                    this.state.backgroundFlippingCardBack
+                  } />
+                <ProjectCard4
+                  DetailsName={this.detailsName()}
+                  textFlippingCard={this.state.textFlippingCard}
+                  backgroundFlippingCardBack={
+                    this.state.backgroundFlippingCardBack
+                  } />
+                <ProjectCard5
+                  DetailsName={this.detailsName()}
+                  textFlippingCard={this.state.textFlippingCard}
+                  backgroundFlippingCardBack={
+                    this.state.backgroundFlippingCardBack
+                  } />
+                <ProjectCard6
+                  DetailsName={this.detailsName()}
+                  textFlippingCard={this.state.textFlippingCard}
+                  backgroundFlippingCardBack={
+                    this.state.backgroundFlippingCardBack
+                  } />
               </div>
               <ShareButton display={this.state.displayShareButton}/>
               {ReportProblem}
