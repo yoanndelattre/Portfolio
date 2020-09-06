@@ -3,14 +3,14 @@ import {FlippingCard, FlippingCardBack, FlippingCardFront, UserCard} from 'react
 import LinkGithubProject from '../Link-Github-Project';
 
 // img
-import logo_mail from '../logo/logo-mail.png';
-import capture_contact_page from '../img/capture-contact-page.png';
+import LogoMail from '../logo/logo-mail.png';
+import CaptureContactPage from '../img/capture-contact-page.png';
 
 // css
 import './ProjectsCards.css';
 
 export default class ProjectCard2 extends Component {
-  DescriptionProjectName() {
+  descriptionProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Service backend pour l’envoi de courrier lié au site Portfolio.');
     } else {
@@ -18,7 +18,7 @@ export default class ProjectCard2 extends Component {
     }
   }
 
-  SummaryProjectName() {
+  summaryProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Application qui reçoit le message à envoyer par mail via une requête POST du site web Portfolio. Hébergé par le service Cloud Run sur Google Cloud Platform.');
     } else {
@@ -31,10 +31,10 @@ export default class ProjectCard2 extends Component {
       <FlippingCard className="ProjectCard2" >
         <FlippingCardFront>
           <UserCard
-            avatar={logo_mail}
-            header={capture_contact_page}
+            avatar={LogoMail}
+            header={CaptureContactPage}
             name={<h1 className="titleUserCard">Mail Send</h1>}
-            positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>}
+            positionName={<p className="PositionName">{this.descriptionProjectName()}</p>}
             cardClass={this.props.classUserCard}
           />
         </FlippingCardFront>
@@ -46,12 +46,12 @@ export default class ProjectCard2 extends Component {
                 {this.props.DetailsName}
               </h3>
               <p style={{color: this.props.textFlippingCard}} className="text-details">
-                {this.SummaryProjectName()}
+                {this.summaryProjectName()}
               </p>
             </div>
           </div>
         </FlippingCardBack>
-    		</FlippingCard>
+      </FlippingCard>
     );
   }
 }

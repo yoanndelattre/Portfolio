@@ -4,14 +4,14 @@ import LinkGithubProject from '../Link-Github-Project';
 import LinkWebsiteProject from '../Link-Website-Project';
 
 // img
-import logo_website from '../logo/logo-website.png';
-import capture_chatbox from '../img/capture-chatbox.png';
+import LogoWebsite from '../logo/logo-website.png';
+import CaptureChatbox from '../img/capture-chatbox.png';
 
 // css
 import './ProjectsCards.css';
 
 export default class ProjectCard5 extends Component {
-  DescriptionProjectName() {
+  descriptionProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Site web permettant à différents utilisateurs de communiquer.');
     } else {
@@ -19,7 +19,7 @@ export default class ProjectCard5 extends Component {
     }
   }
 
-  SummaryProjectName() {
+  summaryProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Site web permettant à différents utilisateurs de communiquer sous un pseudo qu’ils auront préalablement indiqué sur la page de connexion. Hébergé par le service Cloud Run sur Google Cloud Platform.');
     } else {
@@ -32,14 +32,14 @@ export default class ProjectCard5 extends Component {
       <FlippingCard className="ProjectCard5" >
         <FlippingCardFront>
           <UserCard
-            avatar={logo_website}
-            header={capture_chatbox}
+            avatar={LogoWebsite}
+            header={CaptureChatbox}
             name={<h1 className="titleUserCard">Chatbox</h1>}
-            positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>}
+            positionName={<p className="PositionName">{this.descriptionProjectName()}</p>}
             cardClass={this.props.classUserCard}
           />
         </FlippingCardFront>
-      	<FlippingCardBack>
+        <FlippingCardBack>
           <div className="BackCard FrontCard BackProjectCard5">
             <LinkGithubProject LinkGithub={'https://github.com/yoanndelattre/Web-Chatbox'} />
             <LinkWebsiteProject TitleWebsite={'Chatbox'} LinkWebsite={'https://chatbox.yoanndelattre.com'}/>
@@ -48,12 +48,12 @@ export default class ProjectCard5 extends Component {
                 {this.props.DetailsName}
               </h3>
               <p style={{color: this.props.textFlippingCard}} className="text-details">
-                {this.SummaryProjectName()}
+                {this.summaryProjectName()}
               </p>
             </div>
           </div>
-  	  	</FlippingCardBack>
-    	</FlippingCard>
+        </FlippingCardBack>
+      </FlippingCard>
     );
   }
 }

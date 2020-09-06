@@ -3,14 +3,14 @@ import {FlippingCard, FlippingCardBack, FlippingCardFront, UserCard} from 'react
 import LinkGithubProject from '../Link-Github-Project';
 
 // img
-import logo_request from '../logo/logo-request.png';
-import capture_request from '../img/capture-request.png';
+import LogoRequest from '../logo/logo-request.png';
+import CaptureRequest from '../img/capture-request.png';
 
 // css
 import './ProjectsCards.css';
 
 export default class ProjectCard6 extends Component {
-  DescriptionProjectName() {
+  descriptionProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Request Middleware est une application qui envoie des requêtes GET aux services.');
     } else {
@@ -18,7 +18,7 @@ export default class ProjectCard6 extends Component {
     }
   }
 
-  SummaryProjectName() {
+  summaryProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('L’application reçoit une requête POST avec des variables comme l’url cible. Et une requête GET est envoyée à l’url cible.');
     } else {
@@ -31,14 +31,14 @@ export default class ProjectCard6 extends Component {
       <FlippingCard className="ProjectCard6" >
         <FlippingCardFront>
           <UserCard
-            avatar={logo_request}
-            header={capture_request}
+            avatar={LogoRequest}
+            header={CaptureRequest}
             name={<h1 className="titleUserCard">Request Middleware</h1>}
-            positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>}
+            positionName={<p className="PositionName">{this.descriptionProjectName()}</p>}
             cardClass={this.props.classUserCard}
           />
         </FlippingCardFront>
-      	<FlippingCardBack>
+        <FlippingCardBack>
           <div className="BackCard FrontCard BackProjectCard6">
             <LinkGithubProject LinkGithub={'https://github.com/yoanndelattre/Request-Middleware'} />
             <div style={{backgroundColor: this.props.backgroundFlippingCardBack}} className="details">
@@ -46,12 +46,12 @@ export default class ProjectCard6 extends Component {
                 {this.props.DetailsName}
               </h3>
               <p style={{color: this.props.textFlippingCard}} className="text-details">
-                {this.SummaryProjectName()}
+                {this.summaryProjectName()}
               </p>
             </div>
           </div>
-  	  	</FlippingCardBack>
-    	</FlippingCard>
+        </FlippingCardBack>
+      </FlippingCard>
     );
   }
 }

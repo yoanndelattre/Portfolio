@@ -4,14 +4,14 @@ import LinkGithubProject from '../Link-Github-Project';
 import LinkWebsiteProject from '../Link-Website-Project';
 
 // img
-import logo_website from '../logo/logo-website.png';
-import capture_markdown_editor from '../img/capture-markdown-editor.png';
+import LogoWebsite from '../logo/logo-website.png';
+import CaptureMarkdownEditor from '../img/capture-markdown-editor.png';
 
 // css
 import './ProjectsCards.css';
 
 export default class ProjectCard4 extends Component {
-  TitleProjectName() {
+  titleProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Traducteur Markdown');
     } else {
@@ -19,7 +19,7 @@ export default class ProjectCard4 extends Component {
     }
   }
 
-  DescriptionProjectName() {
+  descriptionProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Site web traducteur instantané de markdown.');
     } else {
@@ -27,7 +27,7 @@ export default class ProjectCard4 extends Component {
     }
   }
 
-  SummaryProjectName() {
+  summaryProjectName() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Site web traducteur instantané de markdown, le texte saisi est automatiquement sauvegardé dans le navigateur à l’aide de la fonction "Local Storage". Hébergé par le service Cloud Run sur Google Cloud Platform.');
     } else {
@@ -40,10 +40,10 @@ export default class ProjectCard4 extends Component {
       <FlippingCard className="ProjectCard4" >
         <FlippingCardFront>
           <UserCard
-            avatar={logo_website}
-            header={capture_markdown_editor}
-            name={<h1 className="titleUserCard">{this.TitleProjectName()}</h1>}
-            positionName={<p className="PositionName">{this.DescriptionProjectName()}</p>}
+            avatar={LogoWebsite}
+            header={CaptureMarkdownEditor}
+            name={<h1 className="titleUserCard">{this.titleProjectName()}</h1>}
+            positionName={<p className="PositionName">{this.descriptionProjectName()}</p>}
             cardClass={this.props.classUserCard}
           />
         </FlippingCardFront>
@@ -56,12 +56,12 @@ export default class ProjectCard4 extends Component {
                 {this.props.DetailsName}
               </h3>
               <p style={{color: this.props.textFlippingCard}} className="text-details">
-                {this.SummaryProjectName()}
+                {this.summaryProjectName()}
               </p>
             </div>
           </div>
         </FlippingCardBack>
-    		</FlippingCard>
+      </FlippingCard>
     );
   }
 }
