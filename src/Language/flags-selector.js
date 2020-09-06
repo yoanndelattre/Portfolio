@@ -13,7 +13,7 @@ class FlagsSelector extends Component {
     }
 
     componentDidMount() {
-      this.InitLanguageDefault();
+      this.initLanguageDefault();
       if (window.innerWidth <= 768) {
         this.setState({
           selectedSize: 25,
@@ -22,7 +22,7 @@ class FlagsSelector extends Component {
       }
     }
 
-    InitLanguageDefault() {
+    initLanguageDefault() {
       if (localStorage.getItem('language') === null) {
         if (detectBrowserLanguage() === 'fr-FR') {
           localStorage.setItem('language', 'FR');
@@ -32,7 +32,7 @@ class FlagsSelector extends Component {
       }
     }
 
-    AutoReloadContactPage() {
+    autoReloadContactPage() {
       if (window.location.pathname === '/Contact') {
         window.location.reload();
       }
@@ -40,7 +40,7 @@ class FlagsSelector extends Component {
 
     onSelectFlag = (countryCode) => {
       localStorage.setItem('language', countryCode);
-      this.AutoReloadContactPage();
+      this.autoReloadContactPage();
     }
 
     colorLoading() {
