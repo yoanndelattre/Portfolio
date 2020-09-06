@@ -1,13 +1,5 @@
 import React, {Component} from 'react';
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  EmailShareButton,
-  EmailIcon} from 'react-share';
+import {FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterShareButton, TwitterIcon, EmailShareButton, EmailIcon} from 'react-share';
 
 // css
 import './ShareButton.css';
