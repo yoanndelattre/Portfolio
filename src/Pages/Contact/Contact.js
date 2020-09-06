@@ -45,7 +45,7 @@ class Contact extends Component {
 
       // DarkMode
       ColorText: '',
-	        BorderH2: '',
+      BorderH2: '',
       backgroundInput: '',
       classPlaceholderForm: '',
 
@@ -58,7 +58,7 @@ class Contact extends Component {
   }
 
   componentDidMount() {
-    this.UpdateComponent();
+    this.updateComponent();
 
     if (window.innerWidth <= 768) {
       this.setState({displayShareButton: 'none'});
@@ -77,12 +77,12 @@ class Contact extends Component {
             this.setState({
               loadingSubmit: true,
             }),
-            this.SendMessage(),
+            this.sendMessage(),
         );
       }
     }
 
-    SendMessage = () => {
+    sendMessage = () => {
       const {name, email, message} = this.state;
       const languageUser = localStorage.getItem('language');
 
@@ -94,17 +94,17 @@ class Contact extends Component {
       }).then((response) => {
         const status = response.status;
         if (status === 200) {
-          this.SendingConfirmationTrue();
+          this.sendingConfirmationTrue();
         } else {
-          this.SendingConfirmationFalse();
+          this.sendingConfirmationFalse();
         }
       }).catch( (error) => {
-        this.SendingConfirmationFalse();
+        this.sendingConfirmationFalse();
         console.log(error);
       });
     }
 
-    SendingConfirmationTrue = () => {
+    sendingConfirmationTrue = () => {
       this.setState({
         name: '',
         email: '',
@@ -118,13 +118,13 @@ class Contact extends Component {
         widthForm: '367px',
         heightForm: '427px',
       });
-      this.NotificationSpamMailTrue();
+      this.notificationSpamMailTrue();
       setTimeout(() => {
         window.location.reload();
       }, 15000);
     }
 
-    SendingConfirmationFalse = () => {
+    sendingConfirmationFalse = () => {
       this.setState({
         name: '',
         email: '',
@@ -138,13 +138,13 @@ class Contact extends Component {
         widthForm: '367px',
         heightForm: '427px',
       });
-      this.NotificationSpamMailFalse();
+      this.notificationSpamMailFalse();
       setTimeout(() => {
         window.location.reload();
       }, 15000);
     }
 
-    UpdateComponent = () => {
+    updateComponent = () => {
       if (localStorage.getItem('DarkMode') === 'true') {
         this.setState({
           backgroundContainer: 'rgb(88, 88, 88)',
@@ -169,14 +169,14 @@ class Contact extends Component {
     }
 
     ThemeCapcha = () => {
-      const token_key = '6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG';
+      const TokenKey = '6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG';
 
       return (
         <div style={{display: this.state.displayCapcha}}>
           <Reaptcha
             onRender={this.Loading}
             onVerify={this.onVerify}
-            sitekey={token_key}
+            sitekey={TokenKey}
           />
         </div>
       );
@@ -200,7 +200,7 @@ class Contact extends Component {
       });
     }
 
-    NotificationSpamMailTrue = () => {
+    notificationSpamMailTrue = () => {
       if (localStorage.getItem('language') === 'FR') {
         new Noty({
           text: 'Un mail de confirmation vous a été envoyé. Si vous ne le trouvez pas, vérifier dans les courriers indésirables.',
@@ -218,7 +218,7 @@ class Contact extends Component {
       }
     }
 
-    NotificationSpamMailFalse = () => {
+    notificationSpamMailFalse = () => {
       if (localStorage.getItem('language') === 'FR') {
         new Noty({
           text: 'Une erreur est survenue. Veuillez réessayer plus tard.',
@@ -236,7 +236,7 @@ class Contact extends Component {
       }
     }
 
-    LanguageHtmlTag() {
+    languageHtmlTag() {
       if (localStorage.getItem('language') === 'FR') {
         return ('fr');
       } else {
@@ -251,7 +251,7 @@ class Contact extends Component {
             <Helmet>
               <title>Contact • Yoann Delattre | Portfolio</title>
             </Helmet>
-            <Helmet htmlAttributes={{lang: this.LanguageHtmlTag()}}/>
+            <Helmet htmlAttributes={{lang: this.languageHtmlTag()}}/>
           </HelmetProvider>
           <CookieAlert/>
           <div className="loadingpage" style={{display: this.state.displayLoading}}>
@@ -262,7 +262,7 @@ class Contact extends Component {
             />
           </div>
           <div className="ContactContainer" style={{display: this.state.displayApp, backgroundColor: this.state.backgroundContainer, height: '100%'}}>
-            <Navbar UpdateComponent={this.UpdateComponent} />
+            <Navbar updateComponent={this.updateComponent} />
             <Formulaire
               displaySubmit={this.state.displaySubmit}
               ThemeCapcha={this.ThemeCapcha}
