@@ -47,14 +47,14 @@ class Home extends Component {
           });
         }
       }
-      this.UpdateComponent();
+      this.updateComponent();
     }
 
     Loading = () => {
       this.setState({displayApp: 'block', displayLoading: 'none'});
     }
 
-    UpdateComponent = () => {
+    updateComponent = () => {
       if (localStorage.getItem('DarkMode') === 'true') {
         this.setState({
           backgroundMeCard: 'rgb(107, 107, 107)',
@@ -83,7 +83,7 @@ class Home extends Component {
       }
     }
 
-    LanguageHtmlTag() {
+    languageHtmlTag() {
       if (localStorage.getItem('language') === 'FR') {
         return ('fr');
       } else {
@@ -95,7 +95,7 @@ class Home extends Component {
       return (
         <div>
           <HelmetProvider>
-            <Helmet htmlAttributes={{lang: this.LanguageHtmlTag()}}/>
+            <Helmet htmlAttributes={{lang: this.languageHtmlTag()}}/>
           </HelmetProvider>
           <CookieAlert/>
           <div className="loadingpage" style={{display: this.state.displayLoading}}>
@@ -106,7 +106,7 @@ class Home extends Component {
             />
           </div>
           <div onLoad={this.Loading} className="mainContainer" style={{display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
-            <Navbar UpdateComponent={this.UpdateComponent} />
+            <Navbar updateComponent={this.updateComponent} />
             <div className="home_card">
               <Me
                 ColorText={this.state.ColorText}
