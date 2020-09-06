@@ -5,7 +5,7 @@ import ReactLoading from 'react-loading';
 import './Formulaire.css';
 
 export default class Formulaire extends Component {
-  ContactMe() {
+  contactMe() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Contactez-Moi');
     } else {
@@ -13,7 +13,7 @@ export default class Formulaire extends Component {
     }
   }
 
-  NameUser() {
+  nameUser() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Nom et Prénom :');
     } else {
@@ -21,7 +21,7 @@ export default class Formulaire extends Component {
     }
   }
 
-  MessageUser() {
+  messageUser() {
     if (localStorage.getItem('language') === 'FR') {
       return ('Votre Message :');
     } else {
@@ -29,7 +29,7 @@ export default class Formulaire extends Component {
     }
   }
 
-  WidthborderBottom() {
+  widthborderBottom() {
     if (localStorage.getItem('language') === 'FR') {
       return ('180px');
     } else {
@@ -37,7 +37,7 @@ export default class Formulaire extends Component {
     }
   }
 
-  LoadingSubmit() {
+  loadingSubmit() {
     if (this.props.loadingSubmit === true) {
       return (<ReactLoading type="spin" color="#000000" width={'15%'} className="loadingSubmit" />);
     } else {
@@ -50,7 +50,12 @@ export default class Formulaire extends Component {
       <Fragment>
         <form
           onSubmit={this.props.handleSubmit}
-          style={{border: this.props.borderForm, width: this.props.widthForm, height: this.props.heightForm, background: this.props.backgroundInput}}
+          style={{
+            border: this.props.borderForm,
+            width: this.props.widthForm,
+            height: this.props.heightForm,
+            background: this.props.backgroundInput,
+          }}
           className="form"
           onKeyPress={(event) => {
             if (event.which === 13 /* Enter */) {
@@ -58,23 +63,34 @@ export default class Formulaire extends Component {
             }
           }}>
 
-          <h1 style={{color: this.props.ColorText, borderBottom: this.props.BorderH2, width: this.WidthborderBottom()}}>
-            {this.ContactMe()}
+          <h1
+            style={{
+              color: this.props.ColorText,
+              borderBottom: this.props.BorderH2,
+              width: this.widthborderBottom(),
+            }}>
+            {this.contactMe()}
           </h1>
 
-          <p className={this.props.classPlaceholderForm} type={this.NameUser()}>
+          <p
+            className={this.props.classPlaceholderForm}
+            type={this.nameUser()}>
             <input style={{color: this.props.ColorText}} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />
           </p>
 
-          <p className={this.props.classPlaceholderForm} type="Email :">
+          <p
+            className={this.props.classPlaceholderForm}
+            type="Email :">
             <input style={{color: this.props.ColorText}} type="email" value={this.props.email} required name="email" onChange={this.props.handleChange} />
           </p>
 
-          <p className={this.props.classPlaceholderForm} type={this.MessageUser()}>
+          <p
+            className={this.props.classPlaceholderForm}
+            type={this.messageUser()}>
             <input style={{color: this.props.ColorText}} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
           </p>
 
-          {this.LoadingSubmit()}
+          {this.loadingSubmit()}
 
           <div className="Capcha">
             <this.props.ThemeCapcha/>
