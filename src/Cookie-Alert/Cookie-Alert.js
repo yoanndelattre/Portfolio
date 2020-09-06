@@ -6,7 +6,7 @@ class CookieAlert extends Component {
       dismissOnScroll: false,
     }
 
-    CookieBannerMessage() {
+    cookieBannerMessage() {
       if (localStorage.getItem('language') === 'FR') {
         return ('Ce site utilise des cookies.');
       } else {
@@ -14,7 +14,7 @@ class CookieAlert extends Component {
       }
     }
 
-    CookieBannerButton() {
+    cookieBannerButton() {
       if (localStorage.getItem('language') === 'FR') {
         return ('Accepter');
       } else {
@@ -22,7 +22,7 @@ class CookieAlert extends Component {
       }
     }
 
-    CookieBannerbackgroundColor() {
+    cookieBannerbackgroundColor() {
       if (localStorage.getItem('DarkMode') === null) {
         return ('rgb(218, 218, 218)');
       }
@@ -31,7 +31,7 @@ class CookieAlert extends Component {
       }
     }
 
-    CookieMessageColor() {
+    cookieMessageColor() {
       if (localStorage.getItem('DarkMode') === null) {
         return ('black');
       }
@@ -40,7 +40,7 @@ class CookieAlert extends Component {
       }
     }
 
-    CookieButtonColor() {
+    cookieButtonColor() {
       if (localStorage.getItem('DarkMode') === null) {
         return ('white');
       }
@@ -54,25 +54,25 @@ class CookieAlert extends Component {
       if (window.innerWidth <= 768) {
         return (
           <CookieBanner
-            message={this.CookieBannerMessage()}
+            message={this.cookieBannerMessage()}
             cookie="user-accept-cookies"
-            buttonMessage={this.CookieBannerButton()}
+            buttonMessage={this.cookieBannerButton()}
             dismissOnScroll={this.state.dismissOnScroll}
             styles={{
               banner: {
                 position: 'fixed',
                 bottom: '0',
                 width: '100%',
-                backgroundColor: this.CookieBannerbackgroundColor(),
+                backgroundColor: this.cookieBannerbackgroundColor(),
                 textAlign: 'left',
               },
               message: {
-                color: this.CookieMessageColor(),
+                color: this.cookieMessageColor(),
                 marginLeft: '20px',
               },
               button: {
                 backgroundColor: 'grey',
-                color: this.CookieButtonColor(),
+                color: this.cookieButtonColor(),
               },
             }}
           />
@@ -80,9 +80,9 @@ class CookieAlert extends Component {
       }
       return (
         <CookieBanner
-          message={this.CookieBannerMessage()}
+          message={this.cookieBannerMessage()}
           cookie="user-accept-cookies"
-          buttonMessage={this.CookieBannerButton()}
+          buttonMessage={this.cookieBannerButton()}
           dismissOnScroll={this.state.dismissOnScroll}
           styles={{
             banner: {
@@ -91,14 +91,14 @@ class CookieAlert extends Component {
               width: '50%',
               marginLeft: '25%',
               borderRadius: '5px',
-              backgroundColor: this.CookieBannerbackgroundColor(),
+              backgroundColor: this.cookieBannerbackgroundColor(),
             },
             message: {
-              color: this.CookieMessageColor(),
+              color: this.cookieMessageColor(),
             },
             button: {
               backgroundColor: 'grey',
-              color: this.CookieButtonColor(),
+              color: this.cookieButtonColor(),
             },
           }}
         />
