@@ -28,6 +28,8 @@
         "require-jsdoc": 0,
         "no-invalid-this": 0,
         "react/prop-types": 0,
-        "babel/no-invalid-this": 1
+        "babel/no-invalid-this": 1,
+        "spaced-comment": 0,
+        "max-len": ["error", { "ignoreStrings": true }]
     }
 }
