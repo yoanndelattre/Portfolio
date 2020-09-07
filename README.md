@@ -76,6 +76,8 @@
 
 * ```Language``` *(Language selector) .*
 
+* ```Navbar``` *(Navbar in all pages) .*
+
 * ```CookieBanner``` *(Cookie Banner info at the bottom of the page) .*
 
 * ```Config``` : *(Modification of the config files) .*
