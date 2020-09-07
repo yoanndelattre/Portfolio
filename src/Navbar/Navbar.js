@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import FlagsSelector from '../Language/flags-selector';
+import {backgroundNavBar, colorText, backgroundNavBarSmart, colorTextFocus, backgroundTextFocus} from './assets/style';
+import {projectsCategoryName} from './assets/language';
 
 // css
 import './Navbar.css';
@@ -9,15 +11,18 @@ import './SliderColorMode.css';
 import SunIco from './ico/sun.png';
 import MoonIco from './ico/moon.png';
 
+const darkModeSelecting = () => {
+  if (localStorage.getItem('DarkMode') === 'true') {
+    return true;
+  }
+
+  if (localStorage.getItem('DarkMode') === null) {
+    return false;
+  }
+};
+
 class Navbar extends Component {
     state = {
-      ColorText: '',
-      backgroundNavBar: '',
-      backgroundNavBarSmart: '',
-      ColorTextFocus: '',
-      backgroundTextFocusHome: '',
-      backgroundTextFocusProjects: '',
-      backgroundTextFocusContact: '',
       backgroundTextHoverHome: '',
       backgroundTextHoverProjects: '',
       backgroundTextHoverContact: '',
@@ -25,7 +30,7 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
-      this.updateComponent();
+      darkModeSelecting();
     }
 
     handleChange = (event) => {
@@ -35,36 +40,10 @@ class Navbar extends Component {
       if (event.target.checked === false) {
         localStorage.removeItem('DarkMode');
       }
+      darkModeSelecting();
 
       // Update Component
       this.props.updateComponent();
-      this.updateComponent();
-    }
-
-    updateComponent = () => {
-      if (localStorage.getItem('DarkMode') === 'true') {
-        this.setState({
-          backgroundNavBar: '#333',
-          ColorText: 'white',
-          backgroundNavBarSmart: 'rgb(165, 165, 165)',
-          ColorTextFocus: 'black',
-          backgroundTextFocusHome: 'rgb(218, 218, 218)',
-          backgroundTextFocusProjects: 'rgb(218, 218, 218)',
-          backgroundTextFocusContact: 'rgb(218, 218, 218)',
-        });
-      }
-
-      if (localStorage.getItem('DarkMode') === null) {
-        this.setState({
-          backgroundNavBar: 'rgb(218, 218, 218)',
-          ColorText: 'black',
-          backgroundNavBarSmart: 'rgb(218, 218, 218)',
-          ColorTextFocus: 'white',
-          backgroundTextFocusHome: 'rgb(51, 51, 51)',
-          backgroundTextFocusProjects: 'rgb(51, 51, 51)',
-          backgroundTextFocusContact: 'rgb(51, 51, 51)',
-        });
-      }
     }
 
     OnMouseEnterHome = () => {
@@ -97,14 +76,6 @@ class Navbar extends Component {
       }
     }
 
-    projectsCategoryName() {
-      if (localStorage.getItem('language') === 'FR') {
-        return ('Projets');
-      } else {
-        return ('Projects');
-      }
-    }
-
     render() {
       const SliderColorMode = (
         <Fragment>
@@ -133,10 +104,10 @@ class Navbar extends Component {
       if (window.location.pathname === '/') {
         return (
           <header>
-            <div style={{backgroundColor: this.state.backgroundNavBar}} className="link">
+            <div style={{backgroundColor: backgroundNavBar()}} className="link">
 
               <h1>
-                <a style={{color: this.state.ColorText}} href="/">Yoann Delattre | Portfolio</a>
+                <a style={{color: colorText()}} href="/">Yoann Delattre | Portfolio</a>
               </h1>
 
               <div className="switch-color">
@@ -147,7 +118,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverContact,
                 }}
                 onMouseEnter={this.OnMouseEnterContact}
@@ -160,7 +131,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverProjects,
                 }}
                 onMouseEnter={this.OnMouseEnterProjects}
@@ -168,21 +139,21 @@ class Navbar extends Component {
                   this.setState({backgroundTextHoverProjects: ''});
                 }}
                 href="/Projects" >
-                {this.projectsCategoryName()}
+                {projectsCategoryName()}
               </a>
 
               <a
                 style={{
-                  color: this.state.ColorTextFocus,
-                  background: this.state.backgroundTextFocusHome,
+                  color: colorTextFocus(),
+                  background: backgroundTextFocus(),
                 }}
                 href="/" >
                 Home
               </a>
 
               <a style={{
-                color: this.state.ColorTextFocus,
-                background: this.state.backgroundTextFocusHome,
+                color: colorTextFocus(),
+                background: backgroundTextFocus(),
               }}
               className='smart-screen'
               href="/" >
@@ -191,7 +162,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverProjects,
                 }}
                 onMouseEnter={this.OnMouseEnterProjects}
@@ -200,12 +171,12 @@ class Navbar extends Component {
                 }}
                 className='smart-screen'
                 href="/Projects" >
-                {this.projectsCategoryName()}
+                {projectsCategoryName()}
               </a>
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverContact,
                 }}
                 onMouseEnter={this.OnMouseEnterContact}
@@ -218,7 +189,9 @@ class Navbar extends Component {
               </a>
 
               <div
-                style={{background: this.state.backgroundNavBarSmart}}
+                style={{
+                  background: backgroundNavBarSmart(),
+                }}
                 className="switch-color-smart">
                 {SliderColorMode}
               </div>
@@ -232,10 +205,10 @@ class Navbar extends Component {
       if (window.location.pathname === '/Projects') {
         return (
           <header>
-            <div style={{backgroundColor: this.state.backgroundNavBar}} className="link">
+            <div style={{backgroundColor: backgroundNavBar()}} className="link">
 
               <h1>
-                <a style={{color: this.state.ColorText}} href="/">Yoann Delattre | Portfolio</a>
+                <a style={{color: colorText()}} href="/">Yoann Delattre | Portfolio</a>
               </h1>
 
               <div className="switch-color">
@@ -246,7 +219,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverContact,
                 }}
                 onMouseEnter={this.OnMouseEnterContact}
@@ -259,15 +232,15 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorTextFocus,
-                  background: this.state.backgroundTextFocusProjects,
+                  color: colorTextFocus(),
+                  background: backgroundTextFocus(),
                 }}
                 href="/Projects" >
-                {this.projectsCategoryName()}
+                {projectsCategoryName()}
               </a>
 
               <a
-                style={{color: this.state.ColorText,
+                style={{color: colorText(),
                   background: this.state.backgroundTextHoverHome,
                 }}
                 onMouseEnter={this.OnMouseEnterHome}
@@ -280,7 +253,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverHome,
                 }}
                 onMouseEnter={this.OnMouseEnterHome}
@@ -294,17 +267,17 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorTextFocus,
-                  background: this.state.backgroundTextFocusProjects,
+                  color: colorTextFocus(),
+                  background: backgroundTextFocus(),
                 }}
                 className='smart-screen'
                 href="/Projects" >
-                {this.projectsCategoryName()}
+                {projectsCategoryName()}
               </a>
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverContact,
                 }}
                 onMouseEnter={this.OnMouseEnterContact}
@@ -318,7 +291,7 @@ class Navbar extends Component {
 
               <div
                 style={{
-                  background: this.state.backgroundNavBarSmart,
+                  background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
                 {SliderColorMode}
@@ -334,10 +307,10 @@ class Navbar extends Component {
       if (window.location.pathname === '/Contact') {
         return (
           <header>
-            <div style={{backgroundColor: this.state.backgroundNavBar}} className="link">
+            <div style={{backgroundColor: backgroundNavBar()}} className="link">
 
               <h1>
-                <a style={{color: this.state.ColorText}} href="/">Yoann Delattre | Portfolio</a>
+                <a style={{color: colorText()}} href="/">Yoann Delattre | Portfolio</a>
               </h1>
 
               <div className="switch-color">
@@ -348,8 +321,8 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorTextFocus,
-                  background: this.state.backgroundTextFocusContact,
+                  color: colorTextFocus(),
+                  background: backgroundTextFocus(),
                 }}
                 href="/Contact" >
                 Contact
@@ -357,7 +330,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverProjects,
                 }}
                 onMouseEnter={this.OnMouseEnterProjects}
@@ -365,12 +338,12 @@ class Navbar extends Component {
                   this.setState({backgroundTextHoverProjects: ''});
                 }}
                 href="/Projects" >
-                {this.projectsCategoryName()}
+                {projectsCategoryName()}
               </a>
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverHome,
                 }}
                 onMouseEnter={this.OnMouseEnterHome}
@@ -383,7 +356,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverHome,
                 }}
                 onMouseEnter={this.OnMouseEnterHome}
@@ -397,7 +370,7 @@ class Navbar extends Component {
 
               <a
                 style={{
-                  color: this.state.ColorText,
+                  color: colorText(),
                   background: this.state.backgroundTextHoverProjects,
                 }}
                 onMouseEnter={this.OnMouseEnterProjects}
@@ -406,13 +379,13 @@ class Navbar extends Component {
                 }}
                 className='smart-screen'
                 href="/Projects" >
-                {this.projectsCategoryName()}
+                {projectsCategoryName()}
               </a>
 
               <a
                 style={{
-                  color: this.state.ColorTextFocus,
-                  background: this.state.backgroundTextFocusContact,
+                  color: colorTextFocus(),
+                  background: backgroundTextFocus(),
                 }}
                 className='smart-screen'
                 href="/Contact" >
@@ -421,7 +394,7 @@ class Navbar extends Component {
 
               <div
                 style={{
-                  background: this.state.backgroundNavBarSmart,
+                  background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
                 {SliderColorMode}
@@ -435,3 +408,4 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+export {darkModeSelecting};
