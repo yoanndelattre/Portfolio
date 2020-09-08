@@ -41,9 +41,6 @@ class Navbar extends Component {
         localStorage.removeItem('DarkMode');
       }
       darkModeSelecting();
-
-      // Update Component
-      this.props.updateComponent();
     }
 
     OnMouseEnterHome = () => {
