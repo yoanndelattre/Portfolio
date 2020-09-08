@@ -1,44 +1,13 @@
 import React, {Component, Fragment} from 'react';
 import ReactLoading from 'react-loading';
 import {colorText, borderH2, backgroundInput, classPlaceholderForm} from './assets/style';
+import {contactMe, nameUser, messageUser, widthborderBottom} from './assets/language';
 
 // css
 import './Formulaire.css';
 
 export default class Formulaire extends Component {
-  contactMe() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('Contactez-Moi');
-    } else {
-      return ('Contact Me');
-    }
-  }
-
-  nameUser() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('Nom et Prénom :');
-    } else {
-      return ('Name :');
-    }
-  }
-
-  messageUser() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('Votre Message :');
-    } else {
-      return ('Your Message :');
-    }
-  }
-
-  widthborderBottom() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('180px');
-    } else {
-      return ('140px');
-    }
-  }
-
-  loadingSubmit() {
+  submit() {
     if (this.props.loadingSubmit === true) {
       return (<ReactLoading type="spin" color="#000000" width={'15%'} className="loadingSubmit" />);
     } else {
@@ -68,14 +37,14 @@ export default class Formulaire extends Component {
             style={{
               color: colorText(),
               borderBottom: borderH2(),
-              width: this.widthborderBottom(),
+              width: widthborderBottom(),
             }}>
-            {this.contactMe()}
+            {contactMe()}
           </h1>
 
           <p
             className={classPlaceholderForm()}
-            type={this.nameUser()}>
+            type={nameUser()}>
             <input style={{color: colorText()}} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />
           </p>
 
@@ -87,11 +56,11 @@ export default class Formulaire extends Component {
 
           <p
             className={classPlaceholderForm()}
-            type={this.messageUser()}>
+            type={messageUser()}>
             <input style={{color: colorText()}} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
           </p>
 
-          {this.loadingSubmit()}
+          {this.submit()}
 
           <div className="Capcha">
             <this.props.ThemeCapcha/>
