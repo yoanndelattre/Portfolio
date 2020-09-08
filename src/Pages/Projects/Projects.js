@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import ReactLoading from 'react-loading';
 import {Helmet, HelmetProvider} from 'react-helmet-async';
 
 // Components
@@ -20,64 +19,44 @@ import {languageHtmlTag, projectsHtmlName, myProjectsName} from './assets/langua
 import './Projects.css';
 
 class Projects extends Component {
-    state = {
-      // load
-      displayApp: 'none',
-      displayLoading: 'flex',
-    }
-
-    Loading = () => {
-      this.setState({displayApp: 'block', displayLoading: 'none'});
-    }
-
-    render() {
-      return (
-        <Fragment>
-          <HelmetProvider>
-            <Helmet>
-              <title>
-                {projectsHtmlName()} • Yoann Delattre | Portfolio
-              </title>
-            </Helmet>
-            <Helmet htmlAttributes={{lang: languageHtmlTag()}}/>
-          </HelmetProvider>
-          <CookieAlert/>
+  render() {
+    return (
+      <Fragment>
+        <HelmetProvider>
+          <Helmet>
+            <title>
+              {projectsHtmlName()} • Yoann Delattre | Portfolio
+            </title>
+          </Helmet>
+          <Helmet htmlAttributes={{lang: languageHtmlTag()}}/>
+        </HelmetProvider>
+        <CookieAlert/>
+        <div>
           <div
-            className="loadingpage"
-            style={{display: this.state.displayLoading}}>
-            <ReactLoading
-              type="bars"
-              color="#fff"
-              width={'10%'}
-            />
-          </div>
-          <div>
-            <div
-              onLoad={this.Loading}
-              className={classprojectsContainer()}
-              style={{display: this.state.displayApp,
-                backgroundImage: backgroundImage(),
-                backgroundColor: backgroundContainer(),
-              }}>
-              <Navbar updateComponent={this.updateComponent} />
-              <h1 style={{color: textTitle()}} className="title">
-                {myProjectsName()}
-              </h1>
-              <div className="cards">
-                <ProjectCard1/>
-                <ProjectCard2/>
-                <ProjectCard3/>
-                <ProjectCard4/>
-                <ProjectCard5/>
-                <ProjectCard6/>
-              </div>
-              <ShareButton display={displayShareButton()}/>
-              {ReportProblem}
+            className={classprojectsContainer()}
+            style={{
+              backgroundImage: backgroundImage(),
+              backgroundColor: backgroundContainer(),
+            }}>
+            <Navbar updateComponent={this.updateComponent} />
+            <h1 style={{color: textTitle()}} className="title">
+              {myProjectsName()}
+            </h1>
+            <div className="cards">
+              <ProjectCard1/>
+              <ProjectCard2/>
+              <ProjectCard3/>
+              <ProjectCard4/>
+              <ProjectCard5/>
+              <ProjectCard6/>
             </div>
+            <ShareButton display={displayShareButton()}/>
+            {ReportProblem}
           </div>
-        </Fragment>
-      );
-    }
+        </div>
+      </Fragment>
+    );
+  }
 }
 
 export default Projects;
