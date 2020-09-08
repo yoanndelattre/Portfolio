@@ -41,9 +41,9 @@ export const softwareName = () => {
 };
 
 export const websiteName = () => {
-    if (flagsSelecting() === 'fr') {
-      return ('Site Web :');
-    } else {
-      return ('Website :');
-    }
-  };
+  if (flagsSelecting() === 'fr') {
+    return ('Site Web :');
+  } else {
+    return ('Website :');
+  }
+};

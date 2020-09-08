@@ -1,4 +1,4 @@
-import {darkModeSelecting} from '../../../../Navbar/Navbar';
+import {darkModeSelecting} from '../../../../ColorMode/ColorMode';
 
 export const backgroundMeCard = () => {
   if (darkModeSelecting() === true) {

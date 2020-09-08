@@ -1,4 +1,4 @@
-import {darkModeSelecting} from '../Navbar';
+import {darkModeSelecting} from '../../ColorMode/ColorMode';
 
 export const backgroundNavBar = () => {
   if (darkModeSelecting() === true) {

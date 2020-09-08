@@ -1,25 +1,11 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
+import ColorMode from '../ColorMode/ColorMode';
 import FlagsSelector from '../Language/flags-selector';
 import {backgroundNavBar, colorText, backgroundNavBarSmart, colorTextFocus, backgroundTextFocus} from './assets/style';
 import {projectsCategoryName} from './assets/language';
 
 // css
 import './Navbar.css';
-import './SliderColorMode.css';
-
-// ico
-import SunIco from './ico/sun.png';
-import MoonIco from './ico/moon.png';
-
-const darkModeSelecting = () => {
-  if (localStorage.getItem('DarkMode') === 'true') {
-    return true;
-  }
-
-  if (localStorage.getItem('DarkMode') === null) {
-    return false;
-  }
-};
 
 class Navbar extends Component {
     state = {
@@ -27,20 +13,6 @@ class Navbar extends Component {
       backgroundTextHoverProjects: '',
       backgroundTextHoverContact: '',
 
-    }
-
-    componentDidMount() {
-      darkModeSelecting();
-    }
-
-    handleChange = (event) => {
-      if (event.target.checked === true) {
-        localStorage.setItem('DarkMode', true);
-      }
-      if (event.target.checked === false) {
-        localStorage.removeItem('DarkMode');
-      }
-      darkModeSelecting();
     }
 
     OnMouseEnterHome = () => {
@@ -74,29 +46,6 @@ class Navbar extends Component {
     }
 
     render() {
-      const SliderColorMode = (
-        <Fragment>
-          <img
-            className="ico-sun"
-            src={SunIco}
-            alt="sun mode"
-          />
-          <label className="switch">
-            <input
-              defaultChecked={localStorage.getItem('DarkMode')}
-              onChange={this.handleChange}
-              type="checkbox"
-            />
-            <span className="slider"></span>
-          </label>
-          <img
-            className="ico-moon"
-            src={MoonIco}
-            alt="sun mode"
-          />
-        </Fragment>
-      );
-
       // Home
       if (window.location.pathname === '/') {
         return (
@@ -108,7 +57,7 @@ class Navbar extends Component {
               </h1>
 
               <div className="switch-color">
-                {SliderColorMode}
+                <ColorMode/>
               </div>
 
               <FlagsSelector/>
@@ -190,7 +139,7 @@ class Navbar extends Component {
                   background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
-                {SliderColorMode}
+                <ColorMode/>
               </div>
 
             </div>
@@ -209,7 +158,7 @@ class Navbar extends Component {
               </h1>
 
               <div className="switch-color">
-                {SliderColorMode}
+                <ColorMode/>
               </div>
 
               <FlagsSelector/>
@@ -291,7 +240,7 @@ class Navbar extends Component {
                   background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
-                {SliderColorMode}
+                <ColorMode/>
               </div>
 
             </div>
@@ -311,7 +260,7 @@ class Navbar extends Component {
               </h1>
 
               <div className="switch-color">
-                {SliderColorMode}
+                <ColorMode/>
               </div>
 
               <FlagsSelector/>
@@ -394,7 +343,7 @@ class Navbar extends Component {
                   background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
-                {SliderColorMode}
+                <ColorMode/>
               </div>
 
             </div>
@@ -405,4 +354,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-export {darkModeSelecting};

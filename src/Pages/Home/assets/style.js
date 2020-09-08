@@ -1,4 +1,4 @@
-import {darkModeSelecting} from '../../../Navbar/Navbar';
+import {darkModeSelecting} from '../../../ColorMode/ColorMode';
 import Mainbackground from '../img/Mainbackground.jpg';
 
 export const backgroundContainer = () => {
