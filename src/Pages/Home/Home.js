@@ -8,94 +8,28 @@ import Me from './Components/Me';
 import {ReportProblem} from '../../Report-Problem/Report-Problem';
 import ShareButton from '../../Share-Button/ShareButton';
 import CookieAlert from '../../Cookie-Alert/Cookie-Alert';
+import {backgroundContainer, backgroundImage} from './assets/style';
+import {languageHtmlTag} from './assets/language';
 
 // css
 import './Home.css';
 
-// background
-import Mainbackground from './img/Mainbackground.jpg';
-
 class Home extends Component {
     state = {
-      backgroundImage: `url(${ Mainbackground })`,
-      backgroundContainer: '',
-
       // load
       displayApp: 'none',
       displayLoading: 'flex',
-
-      // DarkMode
-      ColorText: '',
-      backgroundMeCard: '',
-      backgroundMeCardSmart: '',
-      backgroundCard: '',
-    }
-
-    componentDidMount() {
-      if (window.innerWidth <= 768) {
-        this.setState({backgroundImage: 'none'});
-
-        if (localStorage.getItem('DarkMode') === 'true') {
-          this.setState({
-            backgroundContainer: 'rgb(88, 88, 88)',
-          });
-        }
-
-        if (localStorage.getItem('DarkMode') === null) {
-          this.setState({
-            backgroundContainer: 'rgb(165, 165, 165)',
-          });
-        }
-      }
-      this.updateComponent();
     }
 
     Loading = () => {
       this.setState({displayApp: 'block', displayLoading: 'none'});
     }
 
-    updateComponent = () => {
-      if (localStorage.getItem('DarkMode') === 'true') {
-        this.setState({
-          backgroundMeCard: 'rgb(107, 107, 107)',
-          ColorText: 'white',
-          backgroundCard: 'rgb(63, 63, 63)',
-        });
-      }
-
-      if (localStorage.getItem('DarkMode') === null) {
-        this.setState({
-          backgroundMeCard: 'rgb(218, 218, 218)',
-          ColorText: 'black',
-          backgroundCard: 'rgb(165, 165, 165)',
-        });
-      }
-
-
-      if (window.innerWidth <= 768) {
-        if (localStorage.getItem('DarkMode') === 'true') {
-          this.setState({backgroundMeCardSmart: 'rgb(107, 107, 107)', backgroundContainer: 'rgb(88, 88, 88)'});
-        }
-
-        if (localStorage.getItem('DarkMode') === null) {
-          this.setState({backgroundMeCardSmart: 'rgb(218, 218, 218)', backgroundContainer: 'rgb(165, 165, 165)'});
-        }
-      }
-    }
-
-    languageHtmlTag() {
-      if (localStorage.getItem('language') === 'FR') {
-        return ('fr');
-      } else {
-        return ('en');
-      }
-    }
-
     render() {
       return (
         <div>
           <HelmetProvider>
-            <Helmet htmlAttributes={{lang: this.languageHtmlTag()}}/>
+            <Helmet htmlAttributes={{lang: languageHtmlTag()}}/>
           </HelmetProvider>
           <CookieAlert/>
           <div className="loadingpage" style={{display: this.state.displayLoading}}>
@@ -105,14 +39,10 @@ class Home extends Component {
               width={'10%'}
             />
           </div>
-          <div onLoad={this.Loading} className="mainContainer" style={{display: this.state.displayApp, backgroundImage: this.state.backgroundImage, backgroundColor: this.state.backgroundContainer}}>
-            <Navbar updateComponent={this.updateComponent} />
+          <div onLoad={this.Loading} className="mainContainer" style={{display: this.state.displayApp, backgroundImage: backgroundImage(), backgroundColor: backgroundContainer()}}>
+            <Navbar/>
             <div className="home_card">
-              <Me
-                ColorText={this.state.ColorText}
-                backgroundMeCard={this.state.backgroundMeCard}
-                backgroundCard={this.state.backgroundCard}
-              />
+              <Me/>
             </div>
             <ShareButton display='flex'/>
             {ReportProblem}
