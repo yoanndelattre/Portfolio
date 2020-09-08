@@ -4,7 +4,6 @@ import * as serviceWorker from './serviceWorker';
 
 // css
 import './index.css';
-import './loading.css';
 
 // Routes
 import MainRouter from './Routes';

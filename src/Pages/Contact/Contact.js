@@ -19,6 +19,7 @@ import {languageHtmlTag} from './assets/language';
 import '../../../node_modules/noty/lib/noty.css';
 import '../../../node_modules/noty/lib/themes/bootstrap-v4.css';
 import './Contact.css';
+import './loading.css';
 
 class Contact extends Component {
   constructor() {
