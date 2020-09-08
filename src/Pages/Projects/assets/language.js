@@ -17,9 +17,9 @@ export const projectsHtmlName = () => {
 };
 
 export const myProjectsName = () => {
-    if (flagsSelecting() === 'fr') {
-      return ('Mes Projets');
-    } else {
-      return ('My Projects');
-    }
-  };
+  if (flagsSelecting() === 'fr') {
+    return ('Mes Projets');
+  } else {
+    return ('My Projects');
+  }
+};
