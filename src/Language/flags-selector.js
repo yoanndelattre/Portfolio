@@ -32,15 +32,8 @@ class FlagsSelector extends Component {
     flagsSelecting();
   }
 
-  autoReloadContactPage() {
-    if (window.location.pathname === '/Contact') {
-      window.location.reload();
-    }
-  }
-
   onSelectFlag = (countryCode) => {
     localStorage.setItem('language', countryCode);
-    this.autoReloadContactPage();
     flagsSelecting();
   }
 
