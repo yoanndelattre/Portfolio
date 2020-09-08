@@ -80,11 +80,13 @@
 
 * ```CookieBanner``` *(Cookie Banner info at the bottom of the page) .*
 
+* ```ShareButton``` *(Share Buttons) .*
+
 * ```Config``` : *(Modification of the config files) .*
 
 * ```Package``` : *(Add or remove package/dependencie) .*
 
-```ESlint``` : *(ESlint syntax error) .*
+* ```ESlint``` : *(ESlint syntax error) .*
 
 * ```Test``` : *(Change test strategy with reactjs) .*
 
