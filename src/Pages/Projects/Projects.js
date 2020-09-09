@@ -19,6 +19,16 @@ import {languageHtmlTag, projectsHtmlName, myProjectsName} from './assets/langua
 import './Projects.css';
 
 class Projects extends Component {
+  state = {
+    updateColorMode: '',
+  }
+
+  updateColorMode = () => {
+    this.setState({
+      updateColorMode: localStorage.getItem('DarkMode'),
+    });
+  }
+
   render() {
     return (
       <Fragment>
@@ -38,7 +48,7 @@ class Projects extends Component {
               backgroundImage: backgroundImage(),
               backgroundColor: backgroundContainer(),
             }}>
-            <Navbar updateComponent={this.updateComponent} />
+            <Navbar updateColorMode={this.updateColorMode} />
             <h1 style={{color: textTitle()}} className="title">
               {myProjectsName()}
             </h1>

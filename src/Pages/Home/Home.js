@@ -14,6 +14,16 @@ import {languageHtmlTag} from './assets/language';
 import './Home.css';
 
 class Home extends Component {
+  state = {
+    updateColorMode: '',
+  }
+
+  updateColorMode = () => {
+    this.setState({
+      updateColorMode: localStorage.getItem('DarkMode'),
+    });
+  }
+
   render() {
     return (
       <div>
@@ -22,7 +32,7 @@ class Home extends Component {
         </HelmetProvider>
         <CookieAlert/>
         <div className="mainContainer" style={{backgroundImage: backgroundImage(), backgroundColor: backgroundContainer()}}>
-          <Navbar/>
+          <Navbar updateColorMode={this.updateColorMode}/>
           <div className="home_card">
             <Me/>
           </div>

@@ -12,7 +12,15 @@ class Navbar extends Component {
       backgroundTextHoverHome: '',
       backgroundTextHoverProjects: '',
       backgroundTextHoverContact: '',
+      updateColorMode: '',
 
+    }
+
+    updateColorMode = () => {
+      this.setState({
+        updateColorMode: localStorage.getItem('DarkMode'),
+      });
+      this.props.updateColorMode();
     }
 
     OnMouseEnterHome = () => {
@@ -57,7 +65,7 @@ class Navbar extends Component {
               </h1>
 
               <div className="switch-color">
-                <ColorMode/>
+                <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
               <FlagsSelector/>
@@ -139,7 +147,7 @@ class Navbar extends Component {
                   background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
-                <ColorMode/>
+                <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
             </div>
@@ -158,7 +166,7 @@ class Navbar extends Component {
               </h1>
 
               <div className="switch-color">
-                <ColorMode/>
+                <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
               <FlagsSelector/>
@@ -240,7 +248,7 @@ class Navbar extends Component {
                   background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
-                <ColorMode/>
+                <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
             </div>
@@ -260,7 +268,7 @@ class Navbar extends Component {
               </h1>
 
               <div className="switch-color">
-                <ColorMode/>
+                <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
               <FlagsSelector/>
@@ -343,7 +351,7 @@ class Navbar extends Component {
                   background: backgroundNavBarSmart(),
                 }}
                 className="switch-color-smart">
-                <ColorMode/>
+                <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
             </div>

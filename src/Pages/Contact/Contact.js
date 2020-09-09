@@ -45,6 +45,9 @@ class Contact extends Component {
       // display Captcha
       displaySubmit: 'none',
       displayCapcha: 'inline-block',
+
+      // update ColorMode
+      updateColorMode: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -197,6 +200,12 @@ class Contact extends Component {
       }
     }
 
+    updateColorMode = () => {
+      this.setState({
+        updateColorMode: localStorage.getItem('DarkMode'),
+      });
+    }
+
     render() {
       return (
         <Fragment>
@@ -215,7 +224,7 @@ class Contact extends Component {
             />
           </div>
           <div className="ContactContainer" style={{display: this.state.displayApp, backgroundColor: backgroundContainer(), height: '100%'}}>
-            <Navbar/>
+            <Navbar updateColorMode={this.updateColorMode}/>
             <Formulaire
               displaySubmit={this.state.displaySubmit}
               ThemeCapcha={this.ThemeCapcha}

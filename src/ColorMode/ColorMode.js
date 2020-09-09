@@ -29,6 +29,7 @@ class ColorMode extends Component {
     if (event.target.checked === false) {
       localStorage.removeItem('DarkMode');
     }
+    this.props.updateColorMode();
     darkModeSelecting();
   }
 
