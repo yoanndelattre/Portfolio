@@ -17,6 +17,10 @@ const flagsSelecting = () => {
 };
 
 class FlagsSelector extends Component {
+  state = {
+    updateflagsSelecting: '',
+  }
+
   componentDidMount() {
     this.initLanguageDefault();
   }
@@ -29,7 +33,14 @@ class FlagsSelector extends Component {
         localStorage.setItem('language', 'US');
       }
     }
+    this.updateflagsSelecting();
     flagsSelecting();
+  }
+
+  updateflagsSelecting = () => {
+    this.setState({
+      updateflagsSelecting: localStorage.getItem('language'),
+    });
   }
 
   onSelectFlag = (countryCode) => {
