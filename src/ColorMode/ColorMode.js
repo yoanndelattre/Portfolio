@@ -5,7 +5,7 @@ import SunIco from './ico/sun.png';
 import MoonIco from './ico/moon.png';
 
 // css
-import './SliderColorMode.css';
+import './ColorMode.css';
 
 const darkModeSelecting = () => {
   if (localStorage.getItem('DarkMode') === 'true') {
