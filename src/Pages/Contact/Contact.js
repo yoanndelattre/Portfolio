@@ -60,6 +60,13 @@ class Contact extends Component {
     });
   }
 
+  Loading = () => {
+    this.setState({
+      displayApp: 'block',
+      displayLoading: 'none',
+    });
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -139,37 +146,6 @@ class Contact extends Component {
     }, 15000);
   }
 
-  ThemeCapcha = () => {
-    const TokenKey = '6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG';
-
-    return (
-      <div style={{display: this.state.displayCapcha}}>
-        <Reaptcha
-          onRender={this.Loading}
-          onVerify={this.onVerify}
-          sitekey={TokenKey}
-        />
-      </div>
-    );
-  }
-
-  onVerify = () => {
-    this.setState({verifyCaptcha: 'true'});
-    setTimeout(() => {
-      this.setState({
-        displaySubmit: 'block',
-        displayCapcha: 'none',
-      });
-    }, 1000);
-  }
-
-  Loading = () => {
-    this.setState({
-      displayApp: 'block',
-      displayLoading: 'none',
-    });
-  }
-
   notificationSpamMailTrue = () => {
     if (flagsSelecting() === 'fr') {
       new Noty({
@@ -204,6 +180,30 @@ class Contact extends Component {
         layout: 'bottomCenter',
       }).show();
     }
+  }
+
+  ThemeCapcha = () => {
+    const TokenKey = '6LcSSJIUAAAAAL5q0Z-IT9INdd5dEjq_XgVGTGgG';
+
+    return (
+      <div style={{display: this.state.displayCapcha}}>
+        <Reaptcha
+          onRender={this.Loading}
+          onVerify={this.onVerify}
+          sitekey={TokenKey}
+        />
+      </div>
+    );
+  }
+
+  onVerify = () => {
+    this.setState({verifyCaptcha: 'true'});
+    setTimeout(() => {
+      this.setState({
+        displaySubmit: 'block',
+        displayCapcha: 'none',
+      });
+    }, 1000);
   }
 
   render() {
