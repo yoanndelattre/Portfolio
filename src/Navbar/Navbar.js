@@ -14,7 +14,6 @@ class Navbar extends Component {
       backgroundTextHoverContact: '',
       updateflagsSelecting: '',
       updateColorMode: '',
-
     }
 
     updateflagsSelecting = () => {
