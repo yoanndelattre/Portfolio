@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {FlippingCard, FlippingCardBack, FlippingCardFront, UserCard} from 'react-ui-cards';
 import LinkGithubProject from '../../Link-Github-Project/Link-Github-Project';
-import {textFlippingCard, backgroundFlippingCardBack, detailsName} from './assets/style';
-import {titleProjectName, descriptionProjectName, summaryProjectName} from './assets/language';
+import {textFlippingCard, backgroundFlippingCardBack} from './assets/style';
+import {titleProjectName, descriptionProjectName, detailsName, summaryProjectName} from './assets/language';
 
 // img
 import LogoWebsite from '../../logo/logo-website.png';

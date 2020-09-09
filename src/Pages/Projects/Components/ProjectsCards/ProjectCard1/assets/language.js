@@ -16,6 +16,14 @@ export const descriptionProjectName = () => {
   }
 };
 
+export const detailsName = () => {
+  if (flagsSelecting() === 'fr') {
+    return ('Détails:');
+  } else {
+    return ('Details:');
+  }
+};
+
 export const summaryProjectName = () => {
   if (flagsSelecting() === 'fr') {
     return ('Site Web public qui expose les logiciels et les sites web que j’utilise. Qui présente mes projects et qui permet de me contacter. Hébergé par le service Cloud Run sur Google Cloud Platform.');

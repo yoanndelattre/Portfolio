@@ -8,6 +8,14 @@ export const descriptionProjectName = () => {
   }
 };
 
+export const detailsName = () => {
+  if (flagsSelecting() === 'fr') {
+    return ('Détails:');
+  } else {
+    return ('Details:');
+  }
+};
+
 export const summaryProjectName = () => {
   if (flagsSelecting() === 'fr') {
     return ('Application qui reçoit le message à envoyer par mail via une requête POST du site web Portfolio. Hébergé par le service Cloud Run sur Google Cloud Platform.');

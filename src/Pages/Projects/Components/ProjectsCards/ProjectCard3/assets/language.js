@@ -16,6 +16,14 @@ export const descriptionProjectName = () => {
   }
 };
 
+export const detailsName = () => {
+  if (flagsSelecting() === 'fr') {
+    return ('Détails:');
+  } else {
+    return ('Details:');
+  }
+};
+
 export const summaryProjectName = () => {
   if (flagsSelecting() === 'fr') {
     return ('Cluster composé de deux Raspberry Pi ( Raspberry Pi 3 B et Raspberry Pi 3 B+ ) qui fonctionnent avec Kubernetes.');

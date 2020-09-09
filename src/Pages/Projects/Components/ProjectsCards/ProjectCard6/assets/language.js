@@ -8,6 +8,14 @@ export const descriptionProjectName = () => {
   }
 };
 
+export const detailsName = () => {
+  if (flagsSelecting() === 'fr') {
+    return ('Détails:');
+  } else {
+    return ('Details:');
+  }
+};
+
 export const summaryProjectName = () => {
   if (flagsSelecting() === 'fr') {
     return ('L’application reçoit une requête POST avec des variables comme l’url cible. Et une requête GET est envoyée à l’url cible.');

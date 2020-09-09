@@ -17,12 +17,3 @@ export const backgroundFlippingCardBack = () => {
     return ('rgb(218, 218, 218)');
   }
 };
-
-export const detailsName = () => {
-  if (darkModeSelecting() === true) {
-    return ('Détails:');
-  }
-  if (darkModeSelecting() === false) {
-    return ('Details:');
-  }
-};

@@ -8,6 +8,14 @@ export const descriptionProjectName = () => {
   }
 };
 
+export const detailsName = () => {
+  if (flagsSelecting() === 'fr') {
+    return ('Détails:');
+  } else {
+    return ('Details:');
+  }
+};
+
 export const summaryProjectName = () => {
   if (flagsSelecting() === 'fr') {
     return ('Site web permettant à différents utilisateurs de communiquer sous un pseudo qu’ils auront préalablement indiqué sur la page de connexion. Hébergé par le service Cloud Run sur Google Cloud Platform.');

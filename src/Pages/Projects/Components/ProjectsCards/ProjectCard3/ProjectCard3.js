@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {FlippingCard, FlippingCardBack, FlippingCardFront, UserCard} from 'react-ui-cards';
 import LinkWebsiteProject from '../../Link-Website-Project/Link-Website-Project';
-import {textFlippingCard, backgroundFlippingCardBack, detailsName} from './assets/style';
-import {tutorialProjectName, descriptionProjectName, summaryProjectName} from './assets/language';
+import {textFlippingCard, backgroundFlippingCardBack} from './assets/style';
+import {tutorialProjectName, descriptionProjectName, detailsName, summaryProjectName} from './assets/language';
 
 // img
 import LogoKube from '../../logo/kube-logo.png';
