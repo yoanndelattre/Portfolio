@@ -15,7 +15,14 @@ import './Home.css';
 
 class Home extends Component {
   state = {
+    updateflagsSelecting: '',
     updateColorMode: '',
+  }
+
+  updateflagsSelecting = () => {
+    this.setState({
+      updateflagsSelecting: localStorage.getItem('language'),
+    });
   }
 
   updateColorMode = () => {
@@ -32,7 +39,9 @@ class Home extends Component {
         </HelmetProvider>
         <CookieAlert/>
         <div className="mainContainer" style={{backgroundImage: backgroundImage(), backgroundColor: backgroundContainer()}}>
-          <Navbar updateColorMode={this.updateColorMode}/>
+          <Navbar
+            updateColorMode={this.updateColorMode}
+            updateflagsSelecting={this.updateflagsSelecting}/>
           <div className="home_card">
             <Me/>
           </div>

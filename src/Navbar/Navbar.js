@@ -12,8 +12,16 @@ class Navbar extends Component {
       backgroundTextHoverHome: '',
       backgroundTextHoverProjects: '',
       backgroundTextHoverContact: '',
+      updateflagsSelecting: '',
       updateColorMode: '',
 
+    }
+
+    updateflagsSelecting = () => {
+      this.setState({
+        updateflagsSelecting: localStorage.getItem('language'),
+      });
+      this.props.updateflagsSelecting();
     }
 
     updateColorMode = () => {
@@ -68,7 +76,7 @@ class Navbar extends Component {
                 <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
-              <FlagsSelector/>
+              <FlagsSelector updateflagsSelecting={this.updateflagsSelecting}/>
 
               <a
                 style={{
@@ -169,7 +177,7 @@ class Navbar extends Component {
                 <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
-              <FlagsSelector/>
+              <FlagsSelector updateflagsSelecting={this.updateflagsSelecting}/>
 
               <a
                 style={{
@@ -271,7 +279,7 @@ class Navbar extends Component {
                 <ColorMode updateColorMode={this.updateColorMode}/>
               </div>
 
-              <FlagsSelector/>
+              <FlagsSelector updateflagsSelecting={this.updateflagsSelecting}/>
 
               <a
                 style={{

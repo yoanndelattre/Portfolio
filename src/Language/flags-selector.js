@@ -34,6 +34,7 @@ class FlagsSelector extends Component {
       }
     }
     this.updateflagsSelecting();
+    this.props.updateflagsSelecting();
     flagsSelecting();
   }
 
@@ -45,6 +46,7 @@ class FlagsSelector extends Component {
 
   onSelectFlag = (countryCode) => {
     localStorage.setItem('language', countryCode);
+    this.props.updateflagsSelecting();
     flagsSelecting();
   }
 

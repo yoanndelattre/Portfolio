@@ -48,10 +48,18 @@ class Contact extends Component {
 
       // update ColorMode
       updateColorMode: '',
+      // update Language flag
+      updateflagsSelecting: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  updateflagsSelecting = () => {
+    this.setState({
+      updateflagsSelecting: localStorage.getItem('language'),
+    });
   }
 
   updateColorMode = () => {
@@ -224,7 +232,9 @@ class Contact extends Component {
           />
         </div>
         <div className="ContactContainer" style={{display: this.state.displayApp, backgroundColor: backgroundContainer(), height: '100%'}}>
-          <Navbar updateColorMode={this.updateColorMode}/>
+          <Navbar
+            updateColorMode={this.updateColorMode}
+            updateflagsSelecting={this.updateflagsSelecting}/>
           <Formulaire
             displaySubmit={this.state.displaySubmit}
             ThemeCapcha={this.ThemeCapcha}

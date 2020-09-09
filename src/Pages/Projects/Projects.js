@@ -20,7 +20,14 @@ import './Projects.css';
 
 class Projects extends Component {
   state = {
+    updateflagsSelecting: '',
     updateColorMode: '',
+  }
+
+  updateflagsSelecting = () => {
+    this.setState({
+      updateflagsSelecting: localStorage.getItem('language'),
+    });
   }
 
   updateColorMode = () => {
@@ -48,7 +55,9 @@ class Projects extends Component {
               backgroundImage: backgroundImage(),
               backgroundColor: backgroundContainer(),
             }}>
-            <Navbar updateColorMode={this.updateColorMode} />
+            <Navbar
+              updateColorMode={this.updateColorMode}
+              updateflagsSelecting={this.updateflagsSelecting}/>
             <h1 style={{color: textTitle()}} className="title">
               {myProjectsName()}
             </h1>
