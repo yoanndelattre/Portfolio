@@ -97,12 +97,17 @@ class Contact extends Component {
     const languageUser = flagsSelecting();
 
     axios.post(process.env.REACT_APP_URL_POST,
-      JSON.stringify({
-      name,
-      email,
-      message,
-      languageUser,
-    })).then((response) => {
+        {
+          headers: {
+            'content-type': 'application/json',
+          },
+        },
+        JSON.stringify({
+          name,
+          email,
+          message,
+          languageUser,
+        })).then((response) => {
       const status = response.status;
       if (status === 200) {
         this.sendingConfirmationTrue();
