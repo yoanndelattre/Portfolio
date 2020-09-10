@@ -98,6 +98,7 @@ class Contact extends Component {
 
     fetch(process.env.REACT_APP_URL_POST, {
       method: 'post',
+      headers: { 'Content-Type': 'application/json' },
       body: {
         name,
         email,
