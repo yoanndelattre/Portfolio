@@ -103,7 +103,7 @@ class Contact extends Component {
         name,
         email,
         message,
-        languageUser,
+        //languageUser,
       }),
     }).then((response) => {
       const status = response.status;
