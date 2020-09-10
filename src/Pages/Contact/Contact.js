@@ -98,13 +98,14 @@ class Contact extends Component {
 
     fetch(process.env.REACT_APP_URL_POST, {
       method: 'post',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+      body: {
         name,
         email,
         message,
         languageUser,
-      })
+      }
     }).then((response) => {
       const status = response.status;
       if (status === 200) {
