@@ -101,7 +101,7 @@ class Contact extends Component {
       url: process.env.REACT_APP_URL_POST,
       config: {
         headers: {
-          'Access-Control-Allow-Origin': 'https://yoanndelattre.com',
+          'Access-Control-Allow-Origin': '*',
         }
       },
       data: {
