@@ -96,11 +96,20 @@ class Contact extends Component {
     const {name, email, message} = this.state;
     const languageUser = flagsSelecting();
 
-    axios.post(process.env.REACT_APP_URL_POST, {
-      name,
-      email,
-      message,
-      languageUser,
+    axios({
+      method: 'post',
+      url: process.env.REACT_APP_URL_POST,
+      config: {
+        headers: {
+          'Access-Control-Allow-Origin': 'https://yoanndelattre.com',
+        }
+      },
+      data: {
+        name,
+        email,
+        message,
+        languageUser,
+      }
     }).then((response) => {
       const status = response.status;
       if (status === 200) {
