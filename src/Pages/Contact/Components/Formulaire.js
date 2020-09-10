@@ -1,47 +1,17 @@
 import React, {Component, Fragment} from 'react';
 import ReactLoading from 'react-loading';
+import {colorText, borderH2, backgroundInput, classPlaceholderForm} from './assets/style';
+import {contactMe, nameUser, messageUser, widthborderBottom} from './assets/language';
 
 // css
 import './Formulaire.css';
 
 export default class Formulaire extends Component {
-  contactMe() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('Contactez-Moi');
-    } else {
-      return ('Contact Me');
-    }
-  }
-
-  nameUser() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('Nom et Prénom :');
-    } else {
-      return ('Name :');
-    }
-  }
-
-  messageUser() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('Votre Message :');
-    } else {
-      return ('Your Message :');
-    }
-  }
-
-  widthborderBottom() {
-    if (localStorage.getItem('language') === 'FR') {
-      return ('180px');
-    } else {
-      return ('140px');
-    }
-  }
-
-  loadingSubmit() {
+  submit() {
     if (this.props.loadingSubmit === true) {
       return (<ReactLoading type="spin" color="#000000" width={'15%'} className="loadingSubmit" />);
     } else {
-      return (<input style={{display: this.props.displaySubmit, fontSize: this.props.fontSizeSubmit, padding: this.props.paddingSubmit, border: this.props.borderSubmit, color: this.props.ColorText}} type="submit" value={this.props.valueSubmit} />);
+      return (<input style={{display: this.props.displaySubmit, fontSize: this.props.fontSizeSubmit, padding: this.props.paddingSubmit, border: this.props.borderSubmit, color: colorText()}} type="submit" value={this.props.valueSubmit} />);
     }
   }
 
@@ -54,7 +24,7 @@ export default class Formulaire extends Component {
             border: this.props.borderForm,
             width: this.props.widthForm,
             height: this.props.heightForm,
-            background: this.props.backgroundInput,
+            background: backgroundInput(),
           }}
           className="form"
           onKeyPress={(event) => {
@@ -65,32 +35,32 @@ export default class Formulaire extends Component {
 
           <h1
             style={{
-              color: this.props.ColorText,
-              borderBottom: this.props.BorderH2,
-              width: this.widthborderBottom(),
+              color: colorText(),
+              borderBottom: borderH2(),
+              width: widthborderBottom(),
             }}>
-            {this.contactMe()}
+            {contactMe()}
           </h1>
 
           <p
-            className={this.props.classPlaceholderForm}
-            type={this.nameUser()}>
-            <input style={{color: this.props.ColorText}} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />
+            className={classPlaceholderForm()}
+            type={nameUser()}>
+            <input style={{color: colorText()}} type="text" value={this.props.name} required name="name" onChange={this.props.handleChange} />
           </p>
 
           <p
-            className={this.props.classPlaceholderForm}
+            className={classPlaceholderForm()}
             type="Email :">
-            <input style={{color: this.props.ColorText}} type="email" value={this.props.email} required name="email" onChange={this.props.handleChange} />
+            <input style={{color: colorText()}} type="email" value={this.props.email} required name="email" onChange={this.props.handleChange} />
           </p>
 
           <p
-            className={this.props.classPlaceholderForm}
-            type={this.messageUser()}>
-            <input style={{color: this.props.ColorText}} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
+            className={classPlaceholderForm()}
+            type={messageUser()}>
+            <input style={{color: colorText()}} type="text" value={this.props.message} required name="message" onChange={this.props.handleChange} />
           </p>
 
-          {this.loadingSubmit()}
+          {this.submit()}
 
           <div className="Capcha">
             <this.props.ThemeCapcha/>
