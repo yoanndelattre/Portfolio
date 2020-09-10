@@ -96,15 +96,9 @@ class Contact extends Component {
     const {name, email, message} = this.state;
     const languageUser = flagsSelecting();
 
-    axios({
+    fetch(process.env.REACT_APP_URL_POST, {
       method: 'post',
-      url: process.env.REACT_APP_URL_POST,
-      config: {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      },
-      data: {
+      body: {
         name,
         email,
         message,
