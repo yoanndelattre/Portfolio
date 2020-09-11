@@ -2,7 +2,7 @@ FROM node:lts-alpine as builder
 WORKDIR /app
 ADD . .
 RUN npm install --production
-RUN REACT_APP_URL_POST='https://mail-send-portfolio-3numllpmqq-ew.a.run.app/mail/send' npm run build
+RUN REACT_APP_URL_POST='https://mail-send-3numllpmqq-ew.a.run.app/mail/send' npm run build
 
 FROM nginx:alpine
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
