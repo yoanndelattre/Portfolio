@@ -96,15 +96,11 @@ class Contact extends Component {
     const {name, email, message} = this.state;
     const languageUser = flagsSelecting();
 
-    axios({
-      method: 'post',
-      url: process.env.REACT_APP_URL_POST,
-      data: JSON.stringify({
-        name,
-        email,
-        message,
-        languageUser,
-      }),
+    axios.post(process.env.REACT_APP_URL_POST, {
+      name,
+      email,
+      message,
+      languageUser,
     }).then((response) => {
       const status = response.status;
       if (status === 200) {
