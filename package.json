@@ -4,21 +4,21 @@
   "description": "Personal Portfolio",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.0.4",
-    "@testing-library/user-event": "^12.1.6",
-    "axios": "^0.20.0",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.0",
     "detect-browser-language": "0.0.2",
     "noty": "^3.2.0-beta",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-cookie-banner": "^4.1.0",
     "react-dom": "^16.13.1",
     "react-flags-select": "^1.1.13",
     "react-helmet-async": "^1.0.7",
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
-    "react-share": "^4.3.0",
+    "react-scripts": "^4.0.0",
+    "react-share": "^4.3.1",
     "react-ui-cards": "^2.0.0",
     "reaptcha": "^1.7.2"
   },
@@ -51,9 +51,9 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.11.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-react": "^7.21.2"
+    "eslint-plugin-react": "^7.21.5"
   }
 }
