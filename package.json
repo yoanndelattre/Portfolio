@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.3.0",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "detect-browser-language": "0.0.2",
     "noty": "^3.2.0-beta",
     "react": "^16.14.0",
