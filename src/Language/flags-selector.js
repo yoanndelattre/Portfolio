@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactFlagsSelect from 'react-flags-select';
 import detectBrowserLanguage from 'detect-browser-language';
-import {selectedSize, alignOptions} from './assets/style';
+import {selectedSize} from './assets/style';
 
 // css
 import './flags-selector.css';
@@ -59,8 +59,8 @@ class FlagsSelector extends Component {
           onSelect={this.onSelectFlag}
           showSelectedLabel={false}
           selectedSize={selectedSize()}
-          alignOptions={alignOptions()}
-          fullWidth={false}/>
+          fullWidth={false}
+          alignOptionsToRight/>
       );
     } else {
       return (null);
