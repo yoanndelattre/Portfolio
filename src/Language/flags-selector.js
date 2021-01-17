@@ -53,7 +53,7 @@ class FlagsSelector extends Component {
     if (localStorage.getItem('language')) {
       return (
         <ReactFlagsSelect
-          defaultCountry={localStorage.getItem('language')}
+          selected={localStorage.getItem('language')}
           countries={['FR', 'US']}
           className="FlagsSelector"
           onSelect={this.onSelectFlag}
