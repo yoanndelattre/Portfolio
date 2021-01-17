@@ -4,7 +4,6 @@ import detectBrowserLanguage from 'detect-browser-language';
 import {selectedSize, alignOptions} from './assets/style';
 
 // css
-import 'react-flags-select/css/react-flags-select.css';
 import './flags-selector.css';
 
 const flagsSelecting = () => {
