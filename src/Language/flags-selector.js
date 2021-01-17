@@ -59,7 +59,8 @@ class FlagsSelector extends Component {
           onSelect={this.onSelectFlag}
           showSelectedLabel={false}
           selectedSize={selectedSize()}
-          alignOptions={alignOptions()}/>
+          alignOptions={alignOptions()}
+          fullWidth={false}/>
       );
     } else {
       return (null);
