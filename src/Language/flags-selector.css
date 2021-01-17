@@ -1,6 +1,6 @@
 .FlagsSelector {
     display: inline-block;
-    position: absolute;
+    position: absolute !important; /* for surpassing .ReactFlagsSelect-module_flagsSelectInline__cUnnz class*/
     margin-left: 20px;
 }
 
