@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import ReactFlagsSelect from 'react-flags-select';
 import detectBrowserLanguage from 'detect-browser-language';
-import {selectedSize, alignOptions} from './assets/style';
+import {selectedSize} from './assets/style';
 
 // css
-import 'react-flags-select/css/react-flags-select.css';
 import './flags-selector.css';
 
 const flagsSelecting = () => {
@@ -54,13 +53,14 @@ class FlagsSelector extends Component {
     if (localStorage.getItem('language')) {
       return (
         <ReactFlagsSelect
-          defaultCountry={localStorage.getItem('language')}
+          selected={localStorage.getItem('language')}
           countries={['FR', 'US']}
           className="FlagsSelector"
           onSelect={this.onSelectFlag}
           showSelectedLabel={false}
           selectedSize={selectedSize()}
-          alignOptions={alignOptions()}/>
+          fullWidth={false}
+          alignOptionsToRight/>
       );
     } else {
       return (null);

@@ -1,16 +1,11 @@
 .FlagsSelector {
-    position: absolute;
-    margin-top: -6px;
-    margin-left: 20px
+    display: inline-block;
+    position: absolute !important; /* for surpassing .ReactFlagsSelect-module_flagsSelectInline__cUnnz class*/
+    margin-left: 20px;
 }
 
 @media only screen and (max-width: 768px) {
     .FlagsSelector {
-        position: absolute;
-        display: inline-block;
-        top: -4px;
         right: 0;
-        margin-top: 0;
-        margin-left: 0;
     }
 }

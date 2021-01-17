@@ -5,9 +5,3 @@ export const selectedSize = () => {
     return 30;
   }
 };
-
-export const alignOptions = () => {
-  if (window.innerWidth <= 768) {
-    return 'left';
-  }
-};
