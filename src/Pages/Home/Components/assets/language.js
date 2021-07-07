@@ -1,10 +1,10 @@
 import {flagsSelecting} from '../../../../Language/flags-selector';
 
-export const personalAge = () => {
+export const personalAgeUnit = () => {
   if (flagsSelecting() === 'fr') {
-    return ('18 ans');
+    return ('ans');
   } else {
-    return ('18 years');
+    return ('years');
   }
 };
 

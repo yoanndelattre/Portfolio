@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {backgroundMeCard, colorText, backgroundCard} from './assets/style';
-import {personalAge, personalClass, socialNetworksName, workToolsName, softwareName, websiteName} from './assets/language';
+import {personalAgeUnit, personalClass, socialNetworksName, workToolsName, softwareName, websiteName} from './assets/language';
 
 // img
 import PhotoProfil from '../img/Photo-Profil.jpg';
@@ -41,6 +41,18 @@ import MediumLogo from './logo/devtools/medium.png';
 import './Me.css';
 
 class Me extends Component {
+  componentDidMount() {
+    this.getPersonalAge();
+  }
+
+  getPersonalAge = () => {
+    const birthdayDate = new Date('July 7, 2002 00:00:00');
+    const date = new Date();
+    let PersonalAge = Math.abs(date-birthdayDate);
+    PersonalAge = Math.floor(PersonalAge / 31536000000);
+    return PersonalAge;
+  }
+
   render() {
     return (
       <div className="me_card" style={{background: backgroundMeCard(), color: colorText()}} >
@@ -48,7 +60,7 @@ class Me extends Component {
           <img src={PhotoProfil} alt="profil"/>
           <div className="info-me">
             <h1>Yoann Delattre</h1>
-            <h1>{personalAge()}</h1>
+            <h1>{this.getPersonalAge()} {personalAgeUnit()}</h1>
             <h1>{personalClass()}</h1>
           </div>
         </div>
