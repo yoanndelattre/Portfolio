@@ -20,7 +20,7 @@
     "react-scripts": "^4.0.3",
     "react-share": "^4.4.0",
     "react-ui-cards": "^2.0.0",
-    "reaptcha": "^1.7.2"
+    "reaptcha": "^1.7.3"
   },
   "scripts": {
     "start": "react-scripts start",
