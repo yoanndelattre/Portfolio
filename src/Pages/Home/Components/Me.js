@@ -80,7 +80,7 @@ class Me extends Component {
         </div>
         <div style={{background: backgroundCard()}} className="devtools-me_card">
           <h2>{workToolsName()}</h2>
-          < h3>{softwareName()}</h3>
+          <h3>{softwareName()}</h3>
           <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">Visual Code Studio</a><img className="logo" src={VscodeLogo} alt="vscode logo"/></p>
           <p><a style={{color: colorText()}} href="https://www.adobe.com/products/photoshop.html" target="blank">Photoshop CC 2019</a><img className="logo" src={PhotoshopLogo} alt="photoshop logo"/></p>
           <p><a style={{color: colorText()}} href="https://git-scm.com" target="blank">Git</a><img className="logo" src={GitLogo} alt="git logo"/></p>
