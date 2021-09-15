@@ -107,7 +107,7 @@ class Me extends Component {
           <p><a style={{color: colorText()}} href="https://nordvpn.com/features" target="blank">NordVPN</a><img className="logo" src={NordvpnLogo} alt="nordvpn logo"/></p>
           <hr/>
           <h3>Crypto :</h3>
-          <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">Binance</a><img className="logo" src={BinanceLogo} alt="binance logo"/></p>
+          <p><a style={{color: colorText()}} href="https://www.binance.com/fr/register?ref=UV80NG5X" target="blank">Binance</a><img className="logo" src={BinanceLogo} alt="binance logo"/></p>
           <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">Coinbase</a><img className="logo" src={CoinbaseLogo} alt="coinbase logo"/></p>
           <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">FTX</a><img className="logo" src={FTXLogo} alt="ftx logo"/></p>
           <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">Yield App</a><img className="logo" src={YieldAppLogo} alt="yield app logo"/></p>
