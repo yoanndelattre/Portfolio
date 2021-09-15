@@ -115,7 +115,7 @@ class Me extends Component {
           <p><a style={{color: colorText()}} href="https://metamask.io" target="blank">Metamask</a><img className="logo" src={MetamaskLogo} alt="metamask logo"/></p>
           <p><a style={{color: colorText()}} href="https://phantom.app" target="blank">Phantom</a><img className="logo" src={PhantomLogo} alt="phantom logo"/></p>
           <p><a style={{color: colorText()}} href="https://www.xdefi.io" target="blank">XDEFI</a><img className="logo" src={XDEFILogo} alt="xdefi logo"/></p>
-          <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">CoinMarketCap</a><img className="logo" src={CoinMarketCapLogo} alt="coinmarketcap logo"/></p>
+          <p><a style={{color: colorText()}} href="https://coinmarketcap.com" target="blank">CoinMarketCap</a><img className="logo" src={CoinMarketCapLogo} alt="coinmarketcap logo"/></p>
           <hr/>
           <h3>{websiteName()}</h3>
           <p><a style={{color: colorText()}} href="https://todoist.com" target="blank">Todoist</a><img className="logo" src={TodoistLogo} alt="todoist logo"/></p>
