@@ -113,7 +113,7 @@ class Me extends Component {
           <p><a style={{color: colorText()}} href="https://yield.app" target="blank">Yield App</a><img className="logo" src={YieldAppLogo} alt="yield app logo"/></p>
           <p><a style={{color: colorText()}} href="https://get.maiar.com/referral/k7wnikeez5" target="blank">Maiar</a><img className="logo" src={MaiarLogo} alt="maiar logo"/></p>
           <p><a style={{color: colorText()}} href="https://metamask.io" target="blank">Metamask</a><img className="logo" src={MetamaskLogo} alt="metamask logo"/></p>
-          <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">Phantom</a><img className="logo" src={PhantomLogo} alt="phantom logo"/></p>
+          <p><a style={{color: colorText()}} href="https://phantom.app" target="blank">Phantom</a><img className="logo" src={PhantomLogo} alt="phantom logo"/></p>
           <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">XDEFI</a><img className="logo" src={XDEFILogo} alt="xdefi logo"/></p>
           <p><a style={{color: colorText()}} href="https://code.visualstudio.com" target="blank">CoinMarketCap</a><img className="logo" src={CoinMarketCapLogo} alt="coinmarketcap logo"/></p>
           <hr/>
