@@ -1,0 +1,16 @@
+{
+	"name": "React VS Code Remote Container",
+	"build": {
+		"dockerfile": "Dockerfile",
+	},
+	"settings": {},
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	],
+	"portsAttributes": {
+		"3000": {
+			"onAutoForward": "notify"
+		}
+	},
+	"postCreateCommand": "npm install"
+}
