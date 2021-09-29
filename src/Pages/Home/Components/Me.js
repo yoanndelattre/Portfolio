@@ -37,7 +37,6 @@ import HypervLogo from './logo/devtools/hyperv.png';
 import NordvpnLogo from './logo/devtools/nordvpn.png';
 import MediumLogo from './logo/devtools/medium.png';
 import BinanceLogo from './logo/devtools/binance.png';
-import CoinbaseLogo from './logo/devtools/coinbase.png';
 import FTXLogo from './logo/devtools/ftx.png';
 import YieldAppLogo from './logo/devtools/yieldapp.png';
 import MaiarLogo from './logo/devtools/maiar.png';
@@ -108,7 +107,6 @@ class Me extends Component {
           <hr/>
           <h3>Crypto :</h3>
           <p><a style={{color: colorText()}} href="https://www.binance.com/fr/register?ref=UV80NG5X" target="blank">Binance</a><img className="logo" src={BinanceLogo} alt="binance logo"/></p>
-          <p><a style={{color: colorText()}} href="https://www.coinbase.com/join/delatt_xk1" target="blank">Coinbase</a><img className="logo" src={CoinbaseLogo} alt="coinbase logo"/></p>
           <p><a style={{color: colorText()}} href="https://ftx.com/#a=41887580" target="blank">FTX</a><img className="logo" src={FTXLogo} alt="ftx logo"/></p>
           <p><a style={{color: colorText()}} href="https://yield.app" target="blank">Yield App</a><img className="logo" src={YieldAppLogo} alt="yield app logo"/></p>
           <p><a style={{color: colorText()}} href="https://get.maiar.com/referral/k7wnikeez5" target="blank">Maiar</a><img className="logo" src={MaiarLogo} alt="maiar logo"/></p>
