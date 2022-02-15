@@ -26,9 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -48,12 +46,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.8.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-react": "^7.28.0"
   }
 }
