@@ -86,8 +86,6 @@
 
 * ```Package``` : *(Add or remove package/dependencie) .*
 
-* ```ESlint``` : *(ESlint syntax error) .*
-
 * ```Test``` : *(Change test strategy with reactjs) .*
 
 * ```CircleCi``` : *(Modification of circleci configuration files for unit tests) .*
