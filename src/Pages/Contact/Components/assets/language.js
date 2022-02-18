@@ -12,7 +12,7 @@ export const nameUser = () => {
   if (flagsSelecting() === 'fr') {
     return ('Nom et Prénom :');
   } else {
-    return ('Name :');
+    return ('Full name :');
   }
 };
 
