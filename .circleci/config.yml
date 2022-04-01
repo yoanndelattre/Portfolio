@@ -11,7 +11,7 @@ jobs:
             - v1-dependencies-
       - run:
           name: install dependency
-          command: npm install
+          command: npm install --legacy-peer-deps
       - save_cache:
           paths:
             - node_modules
