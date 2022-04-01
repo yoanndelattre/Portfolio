@@ -12,5 +12,5 @@
 			"onAutoForward": "notify"
 		}
 	},
-	"postCreateCommand": "npm install"
+	"postCreateCommand": "npm install --legacy-peer-deps"
 }
