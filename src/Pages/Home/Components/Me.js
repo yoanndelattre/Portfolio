@@ -105,16 +105,6 @@ class Me extends Component {
           <p><a style={{color: colorText()}} href="https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="blank">Hyper V</a><img className="logo" src={HypervLogo} alt="hyperv logo"/></p>
           <p><a style={{color: colorText()}} href="https://nordvpn.com/features" target="blank">NordVPN</a><img className="logo" src={NordvpnLogo} alt="nordvpn logo"/></p>
           <hr/>
-          <h3>Crypto :</h3>
-          <p><a style={{color: colorText()}} href="https://www.binance.com/fr/register?ref=UV80NG5X" target="blank">Binance</a><img className="logo" src={BinanceLogo} alt="binance logo"/></p>
-          <p><a style={{color: colorText()}} href="https://ftx.com/#a=41887580" target="blank">FTX</a><img className="logo" src={FTXLogo} alt="ftx logo"/></p>
-          <p><a style={{color: colorText()}} href="https://yield.app" target="blank">Yield App</a><img className="logo" src={YieldAppLogo} alt="yield app logo"/></p>
-          <p><a style={{color: colorText()}} href="https://get.maiar.com/referral/k7wnikeez5" target="blank">Maiar</a><img className="logo" src={MaiarLogo} alt="maiar logo"/></p>
-          <p><a style={{color: colorText()}} href="https://metamask.io" target="blank">Metamask</a><img className="logo" src={MetamaskLogo} alt="metamask logo"/></p>
-          <p><a style={{color: colorText()}} href="https://phantom.app" target="blank">Phantom</a><img className="logo" src={PhantomLogo} alt="phantom logo"/></p>
-          <p><a style={{color: colorText()}} href="https://www.xdefi.io" target="blank">XDEFI</a><img className="logo" src={XDEFILogo} alt="xdefi logo"/></p>
-          <p><a style={{color: colorText()}} href="https://coinmarketcap.com" target="blank">CoinMarketCap</a><img className="logo" src={CoinMarketCapLogo} alt="coinmarketcap logo"/></p>
-          <hr/>
           <h3>{websiteName()}</h3>
           <p><a style={{color: colorText()}} href="https://todoist.com" target="blank">Todoist</a><img className="logo" src={TodoistLogo} alt="todoist logo"/></p>
           <p><a style={{color: colorText()}} href="https://trello.com" target="blank">Trello</a><img className="logo" src={TrelloLogo} alt="trello logo"/></p>
