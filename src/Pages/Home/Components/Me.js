@@ -36,14 +36,6 @@ import GitlabLogo from './logo/devtools/gitlab.png';
 import HypervLogo from './logo/devtools/hyperv.png';
 import NordvpnLogo from './logo/devtools/nordvpn.png';
 import MediumLogo from './logo/devtools/medium.png';
-import BinanceLogo from './logo/devtools/binance.png';
-import FTXLogo from './logo/devtools/ftx.png';
-import YieldAppLogo from './logo/devtools/yieldapp.png';
-import MaiarLogo from './logo/devtools/maiar.png';
-import MetamaskLogo from './logo/devtools/metamask.png';
-import PhantomLogo from './logo/devtools/phantom.png';
-import XDEFILogo from './logo/devtools/xdefi.png';
-import CoinMarketCapLogo from './logo/devtools/coinmarketcap.png';
 
 // css
 import './Me.css';
