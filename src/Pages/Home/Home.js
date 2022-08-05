@@ -6,7 +6,6 @@ import Navbar from '../../Navbar/Navbar';
 import Me from './Components/Me';
 import {ReportProblem} from '../../Report-Problem/Report-Problem';
 import ShareButton from '../../Share-Button/ShareButton';
-import CookieAlert from '../../Cookie-Alert/Cookie-Alert';
 import {backgroundContainer, backgroundImage} from './assets/style';
 import {languageHtmlTag} from './assets/language';
 
@@ -37,7 +36,6 @@ class Home extends Component {
         <HelmetProvider>
           <Helmet htmlAttributes={{lang: languageHtmlTag()}}/>
         </HelmetProvider>
-        <CookieAlert/>
         <div className="mainContainer" style={{backgroundImage: backgroundImage(), backgroundColor: backgroundContainer()}}>
           <Navbar
             updateColorMode={this.updateColorMode}

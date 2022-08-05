@@ -10,7 +10,6 @@ import Navbar from '../../Navbar/Navbar';
 import Formulaire from './Components/Formulaire';
 import {ReportProblem} from '../../Report-Problem/Report-Problem';
 import ShareButton from '../../Share-Button/ShareButton';
-import CookieAlert from '../../Cookie-Alert/Cookie-Alert';
 import {flagsSelecting} from '../../Language/flags-selector';
 import {backgroundContainer, displayShareButton} from './assets/style';
 import {languageHtmlTag} from './assets/language';
@@ -223,7 +222,6 @@ class Contact extends Component {
           </Helmet>
           <Helmet htmlAttributes={{lang: languageHtmlTag()}}/>
         </HelmetProvider>
-        <CookieAlert/>
         <div className="loadingpage" style={{display: this.state.displayLoading}}>
           <ReactLoading
             type="bars"

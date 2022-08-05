@@ -12,7 +12,6 @@ import ProjectCard6 from './Components/ProjectsCards/ProjectCard6/ProjectCard6';
 import ProjectCard7 from './Components/ProjectsCards/ProjectCard7/ProjectCard7';
 import {ReportProblem} from '../../Report-Problem/Report-Problem';
 import ShareButton from '../../Share-Button/ShareButton';
-import CookieAlert from '../../Cookie-Alert/Cookie-Alert';
 import {textTitle, backgroundContainer, backgroundImage, classprojectsContainer, displayShareButton} from './assets/style';
 import {languageHtmlTag, projectsHtmlName, myProjectsName} from './assets/language';
 
@@ -48,7 +47,6 @@ class Projects extends Component {
           </Helmet>
           <Helmet htmlAttributes={{lang: languageHtmlTag()}}/>
         </HelmetProvider>
-        <CookieAlert/>
         <div>
           <div
             className={classprojectsContainer()}
