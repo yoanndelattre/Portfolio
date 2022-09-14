@@ -10,7 +10,7 @@ export const personalAgeUnit = () => {
 
 export const personalClass = () => {
   if (flagsSelecting() === 'fr') {
-    return ('CESI prépa d\'ingénieur');
+    return ('CESI école d\'ingénieurs');
   } else {
     return ('CESI Engineer school');
   }
