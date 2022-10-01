@@ -11,10 +11,10 @@ export default function MainRouter() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={Home}/>
-        <Route exact path="/Projects" element={Projects}/>
-        <Route exact path="/Contact" element={Contact} />
-        <Route path="*" element={NotFound}/>
+        <Route path="/Projects" element={<Projects/>}/>
+        <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </Router>
   );
