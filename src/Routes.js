@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 // Pages
 import Home from './Pages/Home/Home';
@@ -10,12 +10,12 @@ import NotFound from './Pages/NotFound/NotFound';
 export default function MainRouter() {
   return (
     <Router>
-      <Switch>
+      <Routes>
         <Route exact path="/" component={Home}/>
         <Route exact path="/Projects" component={Projects}/>
         <Route exact path="/Contact" component={Contact} />
         <Route path="*" component={NotFound}/>
-      </Switch>
+      </Routes>
     </Router>
   );
 }
