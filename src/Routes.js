@@ -11,10 +11,10 @@ export default function MainRouter() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/Projects" component={Projects}/>
-        <Route exact path="/Contact" component={Contact} />
-        <Route path="*" component={NotFound}/>
+        <Route exact path="/" element={Home}/>
+        <Route exact path="/Projects" element={Projects}/>
+        <Route exact path="/Contact" element={Contact} />
+        <Route path="*" element={NotFound}/>
       </Routes>
     </Router>
   );
