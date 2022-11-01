@@ -1,6 +1,7 @@
 FROM node:lts-alpine as builder
 WORKDIR /app
 ADD . .
+RUN apk add --no-cache python3 make g++
 RUN npm install --legacy-peer-deps
 RUN REACT_APP_URL_POST='https://mail-send-3numllpmqq-ew.a.run.app/mail/send' npm run build
 
