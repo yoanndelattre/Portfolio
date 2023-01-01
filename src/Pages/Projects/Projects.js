@@ -9,7 +9,6 @@ import ProjectCard3 from './Components/ProjectsCards/ProjectCard3/ProjectCard3';
 import ProjectCard4 from './Components/ProjectsCards/ProjectCard4/ProjectCard4';
 import ProjectCard5 from './Components/ProjectsCards/ProjectCard5/ProjectCard5';
 import ProjectCard6 from './Components/ProjectsCards/ProjectCard6/ProjectCard6';
-import ProjectCard7 from './Components/ProjectsCards/ProjectCard7/ProjectCard7';
 import {ReportProblem} from '../../Report-Problem/Report-Problem';
 import ShareButton from '../../Share-Button/ShareButton';
 import {textTitle, backgroundContainer, backgroundImage, classprojectsContainer, displayShareButton} from './assets/style';
@@ -67,7 +66,6 @@ class Projects extends Component {
               <ProjectCard4/>
               <ProjectCard5/>
               <ProjectCard6/>
-              <ProjectCard7/>
             </div>
             <ShareButton display={displayShareButton()}/>
             {ReportProblem}
