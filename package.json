@@ -19,7 +19,7 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
     "react-share": "^4.4.1",
-    "react-ui-cards": "^3.0.2",
+    "react-ui-cards": "^3.1.0",
     "reaptcha": "^1.12.1"
   },
   "scripts": {
