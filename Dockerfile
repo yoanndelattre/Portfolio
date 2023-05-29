@@ -1,4 +1,4 @@
-FROM klakegg/hugo:ext-alpine-onbuild as builder
+FROM klakegg/hugo:ext-alpine as builder
 WORKDIR /app
 COPY . .
 RUN hugo --minify
