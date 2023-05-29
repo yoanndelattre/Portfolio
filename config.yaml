@@ -82,7 +82,7 @@ params:
       - job: "IT Apprentice"
         company: "Volvo Trucks"
         companyUrl: "https://www.volvotrucks.com"
-        date: "Oct. 2022 - present"
+        date: "Oct 2022 - present"
         featuredLink:
           enable: false
         info:
@@ -92,12 +92,12 @@ params:
       - job: "IT Technician"
         company: "Corden Pharma"
         companyUrl: "https://cordenpharma.com"
-        date: "Avr. 2022 - Sept 2022"
+        date: "Avr 2022 - Sept 2022"
         featuredLink:
           enable: false
         info:
           enable: false
-        content: "fgfgsfgsfgs"
+        content: "I was troubleshooting both on-site and remote users. And I was in charge of infrastructure modernization projects."
 
   projects:
     enable: true
