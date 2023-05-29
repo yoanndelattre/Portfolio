@@ -1,0 +1,199 @@
+baseURL: "https://yoanndelattre.com"
+languageCode: "en-us"
+title: "Yoann Delattre"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+  page:
+    - "HTML"
+
+Paginate: 3
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Yoann Delattre"
+  description: "Website about me and my projects"
+  favicon: "/favicon.ico"
+  useBootstrapCDN: true
+  animate: true
+  theme:
+    defaultTheme: "dark"
+    disableThemeToggle: true
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+  navbar:
+    align: ms-auto
+    disableSearch: true
+    showBrandLogo: false
+    brandName: "Portfolio"
+ 
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Yoann DELATTRE"
+    subtitle: "Alternship  student at a computer engineering school"
+    content: "I'm interested in new technologies, cryptocurrencies, artificial intelligence and machine learning."
+    image: /images/ProfilePicture.jpg
+    bottomImage:
+      enable: false
+    button:
+      enable: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/yoanndelattre
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/yoann-delattre
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/AboutMe.jpg"
+    content: "I'm currently 20 years old and in my 1st year of computer engineering school, doing a alternship with the Volvo Trucks."
+    skills:
+      enable: true
+      title: "Here are some of the technologies I've worked with:"
+      items:
+        - "Azure DevOps"
+        - "Google Cloud Platform"
+        - "GitHub"
+        - "GitLab"    
+        - "Docker"
+        - "Kubernetes"
+        - "Visual Studio Code"
+        - "Git"
+        - "NodeJS"
+        - "GoLang"
+
+  experience:
+    enable: true
+    title: "Experience"
+    items:
+      - job: "IT Apprentice"
+        company: "Volvo Trucks"
+        companyUrl: "https://www.volvotrucks.com"
+        date: "Oct. 2022 - present"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: "I'm working on various analysis topics at user level. And I'm helping to develop new functionalities and modernize."
+
+      - job: "IT Technician"
+        company: "Corden Pharma"
+        companyUrl: "https://cordenpharma.com"
+        date: "Avr. 2022 - Sept 2022"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: "fgfgsfgsfgs"
+
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Hugo Profile
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Image Converter
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        badges:
+          - "Django"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: gurusabarisha@gmail.com
+    btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+  
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com
+      linkedin: https://linkedin.com
+      twitter: https://twitter.com
+      instagram: https://instagram.com
+      facebook: https://facebook.com
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
