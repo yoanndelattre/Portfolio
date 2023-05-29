@@ -159,6 +159,10 @@ params:
       emailCaption: "Enter your email address"
       messageCaption: "Enter your message here"
 
+  footer:
+    recentPosts:
+      enable: false
+
   terms:
     read: "Read"
     toc: "Table Of Contents"
