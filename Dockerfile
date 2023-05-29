@@ -1,15 +1,13 @@
-FROM node:lts-alpine as builder
+FROM klakegg/hugo:ext-alpine-onbuild as builder
 WORKDIR /app
-ADD . .
-RUN apk add --no-cache python3 make g++
-RUN npm install --legacy-peer-deps
-RUN REACT_APP_URL_POST='https://mail-send-3numllpmqq-ew.a.run.app/mail/send' npm run build
+COPY . .
+RUN hugo --minify
 
 FROM nginx:alpine
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY docker/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY docker/nginx/docker-entrypoint.sh /docker-entrypoint.sh
-COPY --from=builder /app/build/. /usr/share/nginx/html/
+COPY --from=builder /app/public /usr/share/nginx/html
 RUN chmod +x /docker-entrypoint.sh
 EXPOSE $PORT
 ENTRYPOINT ["/docker-entrypoint.sh"]
