@@ -150,42 +150,15 @@ params:
 
   contact:
     enable: true
-    # title: "Custom Name"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
+    title: "Contact"
+    content: "If you'd like to contact me about any subject, just send me an e-mail."
     btnName: Mail me
-    # formspree:
-    #   enable: true # `contact.email` value will be ignored
-    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
-    #   emailCaption: "Enter your email address"
-    #   messageCaption: "Enter your message here"
-  
-  footer:
-    recentPosts:
-      path: "blogs"
-      count: 3
-      title: Recent Posts
+    formspree:
       enable: true
-      disableFeaturedImage: false
-    socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
-      facebook: https://facebook.com
-  # List pages like blogs and posts
-  listPages:
-    disableFeaturedImage: false
+      formId: myyaavek
+      emailCaption: "Enter your email address"
+      messageCaption: "Enter your message here"
 
-  # Single pages like blog and post
-  singlePages:
-    readTime:
-      enable: true
-      content: "min read"
-    scrollprogress:
-      enable: true
-
-  # For translations
   terms:
     read: "Read"
     toc: "Table Of Contents"
