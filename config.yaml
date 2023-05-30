@@ -101,6 +101,44 @@ params:
           enable: false
         content: "I was troubleshooting both on-site and remote users. And I was in charge of infrastructure modernization projects."
 
+  education:
+    enable: true
+    title: "Education"
+    index: false
+    items:
+      - title: "IT Engineering"
+        school:
+          name: "CESI"
+          url: "https://www.cesi.fr"
+        date: "2022 - 2025"
+        content: "Alternship program for IT engineers"
+      - title: "Preparatory class"
+        school:
+          name: "CESI"
+          url: "https://www.cesi.fr"
+        date: "2020 - 2022"
+        content: |-
+          Specialized IT preparatory cycle
+
+          Skills acquired:
+          - HTML
+          - CSS
+          - JavaScript
+          - ReactJs
+          - PHP
+          - Bootstrap
+          - GoLang
+          - Python
+          - SQL
+          - C
+          - C++
+          - Git
+      - title: "High School"
+        school:
+          name: "Lycée Clos Maire"
+        date: "2017 - 2020"
+        content: "STI2D subsidiary"
+
   projects:
     enable: true
     # title: "Custom Name"
