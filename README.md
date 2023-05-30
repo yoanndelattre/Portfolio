@@ -52,6 +52,8 @@
 
 * ```ExperiencePage``` */#experience*
 
+* ```EducationPage``` */#education*
+
 * ```ProjectsPage``` */#projects*
 
 * ```ContactPage``` */#contact*
