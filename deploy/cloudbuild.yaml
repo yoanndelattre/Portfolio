@@ -10,6 +10,6 @@ steps:
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'portfolio', '--image=gcr.io/$PROJECT_ID/portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=130', '--platform=managed', '--timeout=10s', '--max-instances=50', '--min-instances=0', '--memory=256Mi', '--cpu=2']
+  args: ['run', 'deploy', 'portfolio', '--image=gcr.io/$PROJECT_ID/portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=130', '--platform=managed', '--timeout=10s', '--max-instances=50', '--min-instances=0', '--memory=128Mi', '--cpu=1']
 
 timeout: 300s
