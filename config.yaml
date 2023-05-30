@@ -25,7 +25,7 @@ params:
   animate: true
   theme:
     defaultTheme: "dark"
-    disableThemeToggle: true
+    disableThemeToggle: false
   font:
     fontSize: 1rem
     fontWeight: 400
