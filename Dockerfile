@@ -1,7 +1,9 @@
 FROM klakegg/hugo:ext-alpine as builder
 WORKDIR /app
 COPY . .
-RUN hugo --minify
+RUN git submodule init && \
+    git submodule update && \
+    hugo --minify
 
 FROM nginx:alpine
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
