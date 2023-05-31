@@ -197,6 +197,16 @@ params:
           - ".NET"
           - "WPF"
           - "Azure DevOps"
+      - title: "FAP-classification"
+        content: "FAP-classification retrieving training images from various online sources. These training images will train the FAP recognition data model."
+        image: /images/project6.jpg
+        badges:
+          - "Python"
+          - "TensorFlow"
+          - "GCP"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/FAP-classification
 
   contact:
     enable: true
