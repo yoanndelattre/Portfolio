@@ -1,0 +1,236 @@
+baseURL: "https://yoanndelattre.com"
+languageCode: "en-us"
+title: "Yoann Delattre"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+  page:
+    - "HTML"
+
+Paginate: 3
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Yoann Delattre"
+  description: "Website about me and my projects"
+  favicon: "/favicon.ico"
+  useBootstrapCDN: true
+  animate: true
+  theme:
+    defaultTheme: "dark"
+    disableThemeToggle: false
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+  navbar:
+    align: ms-auto
+    disableSearch: true
+    showBrandLogo: false
+    brandName: "Portfolio"
+ 
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Yoann DELATTRE"
+    subtitle: "Alternship  student at a computer engineering school"
+    content: "I'm interested in new technologies, cryptocurrencies, artificial intelligence and machine learning."
+    image: /images/ProfilePicture.jpg
+    bottomImage:
+      enable: false
+    button:
+      enable: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/yoanndelattre
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/yoann-delattre
+        - icon: fab fa-mastodon
+          url: https://mastodon.yoanndelattre.com/@yoann
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/AboutMe.jpg"
+    content: "I'm currently 20 years old and in my 1st year of computer engineering school, doing a alternship with the Volvo Trucks."
+    skills:
+      enable: true
+      title: "Here are some of the technologies I've worked with:"
+      items:
+        - "Azure DevOps"
+        - "Google Cloud Platform"
+        - "GitHub"
+        - "GitLab"    
+        - "Docker"
+        - "Kubernetes"
+        - "Visual Studio Code"
+        - "Git"
+        - "NodeJS"
+        - "GoLang"
+
+  experience:
+    enable: true
+    title: "Experience"
+    items:
+      - job: "IT Apprentice"
+        company: "Volvo Trucks"
+        companyUrl: "https://www.volvotrucks.com"
+        date: "Oct 2022 - present"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: "I'm working on various analysis topics at user level. And I'm helping to develop new functionalities and modernize."
+
+      - job: "IT Technician"
+        company: "Corden Pharma"
+        companyUrl: "https://cordenpharma.com"
+        date: "Avr 2022 - Sept 2022"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: "I was troubleshooting both on-site and remote users. And I was in charge of infrastructure modernization projects."
+
+  education:
+    enable: true
+    title: "Education"
+    index: false
+    items:
+      - title: "IT Engineering"
+        school:
+          name: "CESI"
+          url: "https://www.cesi.fr"
+        date: "2022 - 2025"
+        content: "Alternship program for IT engineers"
+      - title: "Preparatory class"
+        school:
+          name: "CESI"
+          url: "https://www.cesi.fr"
+        date: "2020 - 2022"
+        content: |-
+          Specialized IT preparatory cycle
+
+          Skills acquired:
+          - HTML
+          - CSS
+          - JavaScript
+          - ReactJs
+          - PHP
+          - Bootstrap
+          - GoLang
+          - Python
+          - SQL
+          - C
+          - C++
+          - Git
+      - title: "High School"
+        school:
+          name: "Lycée Clos Maire"
+        date: "2017 - 2020"
+        content: "STI2D subsidiary"
+
+  projects:
+    enable: true
+    title: "Projects"
+    items:
+      - title: "Portfolio"
+        content: "Website made with the Hugo framework. Hosted by the Cloud Run service on Google Cloud Platform."
+        image: /images/project1.png
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/Portfolio
+      - title: "Markdown Translator"
+        content: "Markdown translator, the entered text is automatically saved in the browser using the Local Storage function. Hosted by the Cloud Run service on Google Cloud Platform."
+        image: /images/project2.png
+        featured:
+          name: Demo
+          link: https://markdown.yoanndelattre.com
+        badges:
+          - "ReactJS"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/Markdown-Editor
+      - title: "Chatbox"
+        content: "Website allowing different users to communicate under a username they have previously indicated on the login page. Hosted by the Cloud Run service on Google Cloud Platform."
+        image: /images/project3.png
+        featured:
+          name: Demo
+          link: https://chatbox.yoanndelattre.com
+        badges:
+          - "ReactJS"
+          - "Bootstrap"
+          - "Javascript"
+          - "Firebase"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/Web-Chatbox
+      - title: "Request Middleware"
+        content: "The application receives a POST request with variables like the target url. And a GET request is sent to the target url."
+        image: /images/project4.jpg
+        badges:
+          - "NodeJS"
+          - "Express"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/Request-Middleware
+      - title: "EasySave"
+        content: "Visual data backup application with incrementation."
+        image: /images/project5.png
+        badges:
+          - "C#"
+          - ".NET"
+          - "WPF"
+          - "Azure DevOps"
+      - title: "FAP-classification"
+        content: "FAP-classification retrieving training images from various online sources. These training images will train the FAP recognition data model."
+        image: /images/project6.jpg
+        badges:
+          - "Python"
+          - "TensorFlow"
+          - "GCP"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/FAP-classification
+
+  contact:
+    enable: true
+    title: "Contact"
+    content: "If you'd like to contact me about any subject, just send me an e-mail."
+    btnName: Mail me
+    formspree:
+      enable: true
+      formId: myyaavek
+      emailCaption: "Enter your email address"
+      messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      enable: false
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
