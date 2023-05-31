@@ -141,52 +141,62 @@ params:
 
   projects:
     enable: true
-    # title: "Custom Name"
+    title: "Projects"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
-        featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
+      - title: "Portfolio"
+        content: "Website made with the Hugo framework. Hosted by the Cloud Run service on Google Cloud Platform."
+        image: /images/project1.png
         badges:
           - "Hugo"
           - "Bootstrap"
-          - "Javascript"
         links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
-
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
+            url: https://github.com/yoanndelattre/Portfolio
+      - title: "Markdown Translator"
+        content: "Markdown translator, the entered text is automatically saved in the browser using the Local Storage function. Hosted by the Cloud Run service on Google Cloud Platform."
+        image: /images/project2.png
         featured:
           name: Demo
-          link: https://django-converter.herokuapp.com
+          link: https://markdown.yoanndelattre.com
         badges:
-          - "Django"
-          - "Bootstrap"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
-
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
-        featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
-        badges:
-          - "Hugo"
+          - "ReactJS"
           - "Bootstrap"
           - "Javascript"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+            url: https://github.com/yoanndelattre/Markdown-Editor
+      - title: "Chatbox"
+        content: "Website allowing different users to communicate under a username they have previously indicated on the login page. Hosted by the Cloud Run service on Google Cloud Platform."
+        image: /images/project3.png
+        featured:
+          name: Demo
+          link: https://chatbox.yoanndelattre.com
+        badges:
+          - "ReactJS"
+          - "Bootstrap"
+          - "Javascript"
+          - "Firebase"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/Web-Chatbox
+      - title: "Request Middleware"
+        content: "The application receives a POST request with variables like the target url. And a GET request is sent to the target url."
+        image: /images/project4.jpg
+        badges:
+          - "NodeJS"
+          - "Express"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yoanndelattre/Request-Middleware
+      - title: "EasySave"
+        content: "Visual data backup application with incrementation."
+        image: /images/project5.png
+        badges:
+          - "C#"
+          - ".NET"
+          - "WPF"
+          - "Azure DevOps"
 
   contact:
     enable: true
