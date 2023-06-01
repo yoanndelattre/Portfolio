@@ -1,0 +1,4 @@
+User-agent: *
+
+# Sitemap files
+Sitemap: https://yoanndelattre.com/sitemap.xml

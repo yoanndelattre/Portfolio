@@ -10,7 +10,7 @@ outputs:
     - "HTML"
 
 Paginate: 3
-enableRobotsTXT: true
+enableRobotsTXT: false
 
 markup:
   goldmark:

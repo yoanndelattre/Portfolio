@@ -9,6 +9,7 @@ FROM nginx:alpine
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY docker/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY docker/nginx/docker-entrypoint.sh /docker-entrypoint.sh
+COPY docker/nginx/robots.txt /usr/share/nginx/html/robots.txt
 COPY --from=builder /app/public /usr/share/nginx/html
 RUN chmod +x /docker-entrypoint.sh
 EXPOSE $PORT
