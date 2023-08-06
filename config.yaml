@@ -61,7 +61,7 @@ params:
     enable: true
     title: "About Me"
     image: "/images/AboutMe.jpg"
-    content: "I'm currently 20 years old and in my 1st year of computer engineering school, doing a alternship with the Volvo Trucks."
+    content: "I'm currently 21 years old and in my 1st year of computer engineering school, doing a alternship with the Volvo Trucks."
     skills:
       enable: true
       title: "Here are some of the technologies I've worked with:"
