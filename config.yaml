@@ -165,20 +165,6 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/yoanndelattre/Markdown-Editor
-      - title: "Chatbox"
-        content: "Website allowing different users to communicate under a username they have previously indicated on the login page. Hosted by the Cloud Run service on Google Cloud Platform."
-        image: /images/project3.png
-        featured:
-          name: Demo
-          link: https://chatbox.yoanndelattre.com
-        badges:
-          - "ReactJS"
-          - "Bootstrap"
-          - "Javascript"
-          - "Firebase"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/yoanndelattre/Web-Chatbox
       - title: "Request Middleware"
         content: "The application receives a POST request with variables like the target url. And a GET request is sent to the target url."
         image: /images/project4.jpg
