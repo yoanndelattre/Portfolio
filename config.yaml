@@ -41,7 +41,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Yoann DELATTRE"
-    subtitle: "Alternship  student at a computer engineering school"
+    subtitle: "Apprenticeship student at a computer engineering school"
     content: "I'm interested in new technologies, cryptocurrencies, artificial intelligence and machine learning."
     image: /images/ProfilePicture.jpg
     bottomImage:
@@ -61,7 +61,7 @@ params:
     enable: true
     title: "About Me"
     image: "/images/AboutMe.jpg"
-    content: "I'm currently 21 years old and in my 1st year of computer engineering school, doing a alternship with the Volvo Trucks."
+    content: "I'm currently 21 years old and in my 1st year of computer engineering school, doing a apprenticeship with the Volvo Trucks."
     skills:
       enable: true
       title: "Here are some of the technologies I've worked with:"
@@ -111,7 +111,7 @@ params:
           name: "CESI"
           url: "https://www.cesi.fr"
         date: "2022 - 2025"
-        content: "Alternship program for IT engineers"
+        content: "Apprenticeship program for IT engineers"
       - title: "Preparatory class"
         school:
           name: "CESI"
