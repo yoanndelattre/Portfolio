@@ -54,8 +54,6 @@ params:
           url: https://github.com/yoanndelattre
         - icon: fab fa-linkedin
           url: https://www.linkedin.com/in/yoann-delattre
-        - icon: fab fa-mastodon
-          url: https://mastodon.yoanndelattre.com/@yoann
 
   about:
     enable: true
