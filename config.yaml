@@ -165,16 +165,6 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/yoanndelattre/Markdown-Editor
-      - title: "Request Middleware"
-        content: "The application receives a POST request with variables like the target url. And a GET request is sent to the target url."
-        image: /images/project4.jpg
-        badges:
-          - "NodeJS"
-          - "Express"
-          - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/yoanndelattre/Request-Middleware
       - title: "EasySave"
         content: "Visual data backup application with incrementation."
         image: /images/project5.png
