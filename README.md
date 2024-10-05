@@ -3,15 +3,11 @@
 
 ## Branch Method :
 
-&nbsp;
-
 ### Structure :
 *```"type"/"target"```*
 
 ### Example :
 ```feat/flipCard```
-
-&nbsp;
 
 #### For ```"type"``` :
 
@@ -32,8 +28,6 @@
 
 ## Commit Method :
 
-&nbsp;
-
 ### Structure :
 *```"type":"subject"```*  
 *```("issues")```*
@@ -41,8 +35,6 @@
 ### Example :
 ```HomePage:add dark color in front card```  
 ```Fixes #45```
-
-&nbsp;
 
 #### For ```"type"``` :
 
