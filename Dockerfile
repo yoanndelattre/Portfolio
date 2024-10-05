@@ -1,4 +1,4 @@
-FROM klakegg/hugo:ext-alpine as builder
+FROM klakegg/hugo:ext-alpine AS builder
 WORKDIR /app
 COPY . .
 RUN git submodule init && \
