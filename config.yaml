@@ -80,8 +80,8 @@ params:
     title: "Experience"
     items:
       - job: "IT Apprentice"
-        company: "Volvo Trucks"
-        companyUrl: "https://www.volvotrucks.com"
+        company: "Volvo Group"
+        companyUrl: "https://www.volvogroup.com"
         date: "Oct 2022 - present"
         featuredLink:
           enable: false
