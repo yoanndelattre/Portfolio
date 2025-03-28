@@ -1,7 +1,9 @@
-FROM klakegg/hugo:ext-alpine AS builder
+FROM ubuntu:latest AS builder
 WORKDIR /app
 COPY . .
-RUN git submodule init && \
+RUN apt update && \
+    apt install -y git hugo && \
+    git submodule init && \
     git submodule update && \
     hugo --minify
 
