@@ -9,7 +9,9 @@ outputs:
   page:
     - "HTML"
 
-Paginate: 3
+pagination:
+  pagerSize: 3
+
 enableRobotsTXT: false
 
 markup:
