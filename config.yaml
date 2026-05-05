@@ -165,7 +165,7 @@ params:
           - icon: fab fa-github
             url: https://github.com/yoanndelattre/Portfolio
       - title: "EasySave"
-        content: "Visual data backup application with incrementation."
+        content: "Graphical backup application supporting incremental backups."
         image: /images/project5.png
         badges:
           - "C#"
@@ -173,7 +173,7 @@ params:
           - "WPF"
           - "Azure DevOps"
       - title: "FAP-classification"
-        content: "FAP-classification retrieving training images from various online sources. These training images will train the FAP recognition data model."
+        content: "Image classification project using training data retrieved from online sources to build a FAP recognition model."
         image: /images/project6.jpg
         badges:
           - "Python"
@@ -186,7 +186,7 @@ params:
   contact:
     enable: true
     title: "Contact"
-    content: "If you'd like to contact me about any subject, just send me an e-mail."
+    content: "If you'd like to contact me, feel free to send me an email."
     btnName: Mail me
     formspree:
       enable: true
@@ -200,7 +200,7 @@ params:
 
   terms:
     read: "Read"
-    toc: "Table Of Contents"
+    toc: "Table of Contents"
     copyright: "All rights reserved"
     pageNotFound: "Page not found"
     emailText: "Check out this site"
