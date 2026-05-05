@@ -61,7 +61,7 @@ params:
     enable: true
     title: "About Me"
     image: "/images/AboutMe.jpg"
-    content: "I’m currently 23 years old and I currently work in the medical diagnostics sector at BioMérieux."
+    content: "I’m 23 years old and currently work in the medical diagnostics sector at bioMérieux."
     skills:
       enable: true
       title: "Here are some of the technologies I've worked with:"
