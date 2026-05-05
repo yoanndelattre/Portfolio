@@ -75,8 +75,8 @@ params:
         - "Kubernetes"
         - "Visual Studio Code"
         - "Git"
-        - "NodeJS"
-        - "GoLang"
+        - "Node.js"
+        - "Go"
         - "Terraform"
 
   experience:
