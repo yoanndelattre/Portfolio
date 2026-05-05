@@ -43,7 +43,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Yoann DELATTRE"
-    subtitle: "AProfessional Systems Engineer @ BioMérieux"
+    subtitle: "Professional Systems Engineer @ BioMérieux"
     content: "I'm interested in new technologies, cryptocurrencies, artificial intelligence and machine learning."
     image: /images/ProfilePicture.jpg
     bottomImage:
