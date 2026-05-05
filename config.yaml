@@ -162,19 +162,6 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/yoanndelattre/Portfolio
-      - title: "Markdown Translator"
-        content: "Markdown translator, the entered text is automatically saved in the browser using the Local Storage function. Hosted by the Cloud Run service on Google Cloud Platform."
-        image: /images/project2.png
-        featured:
-          name: Demo
-          link: https://markdown.yoanndelattre.com
-        badges:
-          - "ReactJS"
-          - "Bootstrap"
-          - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/yoanndelattre/Markdown-Editor
       - title: "EasySave"
         content: "Visual data backup application with incrementation."
         image: /images/project5.png
