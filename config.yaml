@@ -149,7 +149,7 @@ params:
         school:
           name: "Lycée Clos Maire"
         date: "2017 - 2020"
-        content: "STI2D subsidiary"
+        content: "STI2D technological baccalaureate"
 
   projects:
     enable: true
