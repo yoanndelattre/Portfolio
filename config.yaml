@@ -156,7 +156,7 @@ params:
     title: "Projects"
     items:
       - title: "Portfolio"
-        content: "Website made with the Hugo framework. Hosted by the Cloud Run service on Google Cloud Platform."
+        content: "Website built with Hugo and hosted on Google Cloud Run."
         image: /images/project1.png
         badges:
           - "Hugo"
