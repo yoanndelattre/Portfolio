@@ -79,15 +79,25 @@ params:
     enable: true
     title: "Experience"
     items:
-      - job: "IT Apprentice"
-        company: "Volvo Group"
-        companyUrl: "https://www.volvogroup.com"
-        date: "Oct 2022 - present"
+      - job: "Professional Systems Engineer"
+        company: "Biomerieux"
+        companyUrl: "https://www.biomerieux.com"
+        date: "Oct 2025 - now"
         featuredLink:
           enable: false
         info:
           enable: false
-        content: "I'm working on various analysis topics at user level. And I'm helping to develop new functionalities and modernize."
+        content: "Contributed to the development, architecture, CI/CD, and performance testing of medical support applications."
+
+      - job: "IT Apprentice"
+        company: "Volvo Group"
+        companyUrl: "https://www.volvogroup.com"
+        date: "Oct 2022 - Sept 2025"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: "I worked on various analysis topics at user level, and I helped develop new functionalities and modernize."
 
       - job: "IT Technician"
         company: "Corden Pharma"
