@@ -106,7 +106,7 @@ params:
       - job: "IT Technician"
         company: "Corden Pharma"
         companyUrl: "https://cordenpharma.com"
-        date: "Avr 2022 - Sept 2022"
+        date: "Apr 2022 - Sep 2022"
         featuredLink:
           enable: false
         info:
